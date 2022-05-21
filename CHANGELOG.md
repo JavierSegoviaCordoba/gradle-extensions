@@ -4,8 +4,6 @@
 
 ### Added
 
-- `GradleRunner.clean` function which launch `clean` task
-
 ### Changed
 
 ### Deprecated
@@ -14,9 +12,17 @@
 
 ### Fixed
 
-- `cleanBuildDirectory` function doesn't delete any subproject `build` directory
-
 ### Updated
+
+## [1.0.0-alpha.3] - 2022-05-21
+
+### Added
+
+- `GradleRunner.clean` function which launch `clean` task
+
+### Fixed
+
+- `cleanBuildDirectory` function doesn't delete any subproject `build` directory
 
 ## [1.0.0-alpha.2] - 2022-05-21
 
