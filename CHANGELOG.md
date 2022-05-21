@@ -4,6 +4,9 @@
 
 ### Added
 
+- `GradleRunner.gradleConfigurationCacheTestKitTest` function
+- `GradleRunner.gradleBuildCacheTestKitTest` function
+
 ### Changed
 
 ### Deprecated

@@ -12,6 +12,10 @@ public final class com/javiersc/gradle/testkit/extensions/GradleTestKitExtension
 	public static final fun cleanBuildDirectory (Lorg/gradle/testkit/runner/GradleRunner;)V
 	public static final fun configurationCache (Lorg/gradle/testkit/runner/GradleRunner;)Ljava/lang/String;
 	public static final fun configurationCacheProblemsWarn (Lorg/gradle/testkit/runner/GradleRunner;)Ljava/lang/String;
+	public static final fun gradleBuildCacheTestKitTest (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;ZZZLjava/lang/String;ZLkotlin/jvm/functions/Function1;)V
+	public static synthetic fun gradleBuildCacheTestKitTest$default (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;ZZZLjava/lang/String;ZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+	public static final fun gradleConfigurationCacheTestKitTest (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;ZZZLjava/lang/String;ZLkotlin/jvm/functions/Function1;)V
+	public static synthetic fun gradleConfigurationCacheTestKitTest$default (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;ZZZLjava/lang/String;ZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
 	public static final fun gradleTestKitTest (Ljava/lang/String;ZZZLjava/lang/String;ZLkotlin/jvm/functions/Function1;)V
 	public static synthetic fun gradleTestKitTest$default (Ljava/lang/String;ZZZLjava/lang/String;ZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
 	public static final fun info (Lorg/gradle/testkit/runner/GradleRunner;)Ljava/lang/String;

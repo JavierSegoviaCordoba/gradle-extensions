@@ -1,6 +1,7 @@
 package com.javiersc.gradle.testkit.extensions
 
 import org.gradle.testkit.runner.GradleRunner
+import org.gradle.testkit.runner.TaskOutcome
 
 fun gradleTestKitTest(
     sandboxPath: String? = null,
@@ -24,6 +25,83 @@ fun gradleTestKitTest(
             if (withArgumentsFromTXT) withArgumentsFromTXT()
         }
     )
+}
+
+fun GradleRunner.gradleConfigurationCacheTestKitTest(
+    sandboxPath: String? = null,
+    withDebug: Boolean = true,
+    withPluginClasspath: Boolean = true,
+    withArgumentsFromTXT: Boolean = false,
+    prefix: String = sandboxPath ?: "",
+    isolated: Boolean = false,
+    preTest: GradleRunner.() -> Unit,
+) {
+    gradleTestKitTest(
+        sandboxPath,
+        withDebug,
+        withPluginClasspath,
+        withArgumentsFromTXT,
+        prefix,
+        isolated,
+    ) {
+        preTest(this)
+        val task =
+            checkNotNull(arguments.firstOrNull()) {
+                "There is not a task in the arguments to check if configuration cache works"
+            }
+        andWithConfigurationCache()
+        andWithNoBuildCache()
+        build()
+
+        val result = build()
+
+        if (!result.output.contains("Reusing configuration cache")) {
+            error("Configuration cache is not working")
+        }
+        val outcome =
+            checkNotNull(result.task(task)) { "The outcome for the task $task is null" }.outcome
+
+        if (outcome != TaskOutcome.UP_TO_DATE) {
+            error("The outcome is $outcome and must be UP-TO-DATE")
+        }
+    }
+}
+
+fun GradleRunner.gradleBuildCacheTestKitTest(
+    sandboxPath: String? = null,
+    withDebug: Boolean = true,
+    withPluginClasspath: Boolean = true,
+    withArgumentsFromTXT: Boolean = false,
+    prefix: String = sandboxPath ?: "",
+    isolated: Boolean = false,
+    preTest: GradleRunner.() -> Unit,
+) {
+    gradleTestKitTest(
+        sandboxPath,
+        withDebug,
+        withPluginClasspath,
+        withArgumentsFromTXT,
+        prefix,
+        isolated,
+    ) {
+        preTest(this)
+        val task =
+            checkNotNull(arguments.firstOrNull()) {
+                "There is not a task in the arguments to check if configuration cache works"
+            }
+        andWithBuildCache()
+        build()
+        cleanBuildDirectory()
+
+        val result = build()
+
+        val outcome =
+            checkNotNull(result.task(task)) { "The outcome for the task $task is null" }.outcome
+
+        if (outcome != TaskOutcome.FROM_CACHE) {
+            error("The outcome is $outcome and must be FROM-CACHE")
+        }
+    }
 }
 
 fun GradleRunner.withArgumentsFromTXT() {
