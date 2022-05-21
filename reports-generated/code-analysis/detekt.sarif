@@ -26,9 +26,30 @@
             }
           ],
           "message": {
-            "text": "The function gradleTestKitTest(sandboxPath: String?, arguments: List<String>?, withDebug: Boolean, withPluginClasspath: Boolean, prefix: String, isolated: Boolean, test: GradleRunner.() -> Unit) has too many parameters. The current threshold is set to 6."
+            "text": "The function gradleTestKitTest(sandboxPath: String?, withDebug: Boolean, withPluginClasspath: Boolean, withArgumentsFromTXT: Boolean, prefix: String, isolated: Boolean, test: GradleRunner.() -> Unit) has too many parameters. The current threshold is set to 6."
           },
           "ruleId": "detekt.complexity.LongParameterList"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt' with '19' functions detected. Defined threshold inside files is set to '11'"
+          },
+          "ruleId": "detekt.complexity.TooManyFunctions"
         },
         {
           "level": "warning",
@@ -50,6 +71,174 @@
             "text": "This comment contains 'TODO:' that has been defined as forbidden in detekt."
           },
           "ruleId": "detekt.style.ForbiddenComment"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 18,
+                  "startLine": 36
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "info is returning a constant. Prefer declaring a constant instead."
+          },
+          "ruleId": "detekt.style.FunctionOnlyReturningConstant"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 18,
+                  "startLine": 42
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "stacktrace is returning a constant. Prefer declaring a constant instead."
+          },
+          "ruleId": "detekt.style.FunctionOnlyReturningConstant"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 18,
+                  "startLine": 48
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "scan is returning a constant. Prefer declaring a constant instead."
+          },
+          "ruleId": "detekt.style.FunctionOnlyReturningConstant"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 18,
+                  "startLine": 54
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "buildCache is returning a constant. Prefer declaring a constant instead."
+          },
+          "ruleId": "detekt.style.FunctionOnlyReturningConstant"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 18,
+                  "startLine": 60
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "noBuildCache is returning a constant. Prefer declaring a constant instead."
+          },
+          "ruleId": "detekt.style.FunctionOnlyReturningConstant"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 18,
+                  "startLine": 66
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "configurationCache is returning a constant. Prefer declaring a constant instead."
+          },
+          "ruleId": "detekt.style.FunctionOnlyReturningConstant"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 18,
+                  "startLine": 72
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "noConfigurationCache is returning a constant. Prefer declaring a constant instead."
+          },
+          "ruleId": "detekt.style.FunctionOnlyReturningConstant"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 18,
+                  "startLine": 78
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "configurationCacheProblemsWarn is returning a constant. Prefer declaring a constant instead."
+          },
+          "ruleId": "detekt.style.FunctionOnlyReturningConstant"
         }
       ],
       "tool": {
