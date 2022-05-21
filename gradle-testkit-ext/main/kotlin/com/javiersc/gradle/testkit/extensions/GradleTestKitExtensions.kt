@@ -74,6 +74,7 @@ fun gradleBuildCacheTestKitTest(
     withArgumentsFromTXT: Boolean = false,
     prefix: String = sandboxPath ?: "",
     isolated: Boolean = true,
+    invalidate: GradleRunner.() -> Unit,
     preTest: GradleRunner.() -> Unit,
 ) {
     gradleTestKitTest(
@@ -91,6 +92,8 @@ fun gradleBuildCacheTestKitTest(
             }
         andWithBuildCache()
         build()
+
+        invalidate()
         cleanBuildDirectory()
 
         val result = build()

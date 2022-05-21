@@ -4,6 +4,8 @@
 
 ### Added
 
+- `invalidate` function to `gradleBuildCacheTestKitTest`
+
 ### Changed
 
 ### Deprecated
