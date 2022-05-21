@@ -27,7 +27,7 @@ fun gradleTestKitTest(
     )
 }
 
-fun GradleRunner.gradleConfigurationCacheTestKitTest(
+fun gradleConfigurationCacheTestKitTest(
     sandboxPath: String? = null,
     withDebug: Boolean = true,
     withPluginClasspath: Boolean = true,
@@ -67,13 +67,13 @@ fun GradleRunner.gradleConfigurationCacheTestKitTest(
     }
 }
 
-fun GradleRunner.gradleBuildCacheTestKitTest(
+fun gradleBuildCacheTestKitTest(
     sandboxPath: String? = null,
     withDebug: Boolean = true,
     withPluginClasspath: Boolean = true,
     withArgumentsFromTXT: Boolean = false,
     prefix: String = sandboxPath ?: "",
-    isolated: Boolean = false,
+    isolated: Boolean = true,
     preTest: GradleRunner.() -> Unit,
 ) {
     gradleTestKitTest(

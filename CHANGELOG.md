@@ -10,6 +10,9 @@
 
 ### Removed
 
+- `GradleRunner` receiver from `gradleConfigurationCacheTestKitTest` function
+- `GradleRunner` receiver from `gradleBuildCacheTestKitTest` function
+
 ### Fixed
 
 ### Updated
