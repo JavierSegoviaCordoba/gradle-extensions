@@ -1,0 +1,7 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:gradle-ext
+com.javiersc.gradle.extensions
+module:gradle-testkit-ext
+com.javiersc.gradle.testkit.extensions
