@@ -1,10 +1,10 @@
-site_name: '"{{ name }}"'
-site_description: '"{{ description }}"'
+site_name: 'Gradle TestKit DSL'
+site_description: 'Kotlin like extensions for Gradle TestKit'
 site_author: 'Javier Segovia Córdoba'
 remote_branch: gh-pages
 
-repo_name: '"{{ repo }}"'
-repo_url: 'https://github.com/JavierSegoviaCordoba/"{{ repo }}"'
+repo_name: 'gradle-testkit-dsl'
+repo_url: 'https://github.com/JavierSegoviaCordoba/gradle-testkit-dsl'
 
 copyright: 'Copyright &copy; 2021 Javier Segovia Córdoba'
 

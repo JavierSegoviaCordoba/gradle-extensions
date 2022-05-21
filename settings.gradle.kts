@@ -1,4 +1,4 @@
-// TODO: Uncomment"{{ rootProject.name = providers.gradleProperty("project.name").forUseAtConfigurationTime().get() }}"
+rootProject.name = providers.gradleProperty("project.name").forUseAtConfigurationTime().get()
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 enableFeaturePreview("VERSION_CATALOGS")
