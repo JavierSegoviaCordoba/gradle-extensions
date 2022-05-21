@@ -1,7 +1,7 @@
 package com.javiersc.gradle.testkit.extensions.integration.tests
 
+import com.javiersc.gradle.testkit.extensions.andWithInfo
 import com.javiersc.gradle.testkit.extensions.gradleTestKitTest
-import com.javiersc.gradle.testkit.extensions.withInfo
 import kotlin.test.Test
 
 class GradleTestKitExtensionsTest {
@@ -9,7 +9,7 @@ class GradleTestKitExtensionsTest {
     @Test
     fun test() =
         gradleTestKitTest(sandboxPath = "fake-file") {
-            withInfo()
+            andWithInfo()
             println(build().output)
         }
 }
