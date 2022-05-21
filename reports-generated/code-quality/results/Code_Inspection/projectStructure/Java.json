@@ -1,0 +1,56 @@
+{
+  "modules": [
+    {
+      "name": "gradle-extensions",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.gradle-ext",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.gradle-testkit-ext",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.gradle-testkit-ext-integration-tests",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.buildSrc",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.gradle-ext.test",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.gradle-ext.main",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.gradle-testkit-ext.test",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.gradle-testkit-ext.main",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.gradle-testkit-ext-integration-tests.test",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.gradle-testkit-ext-integration-tests.main",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.buildSrc.test",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions.buildSrc.main",
+      "languageLevel": 11
+    }
+  ]
+}

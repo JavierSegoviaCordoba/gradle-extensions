@@ -1,0 +1,129 @@
+{"version":"3","listProblem":[{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-testkit-ext-integration-tests/build.gradle.kts",
+      "language": "kotlin",
+      "line": 22,
+      "offset": 19,
+      "length": 8,
+      "code": {
+        "startLine": 20,
+        "length": 8,
+        "offset": 72,
+        "surroundingCode": "dependencies {\n    implementation(gradleKotlinDsl())\n    implementation(projects.gradleExt)\n\n    testImplementation(libs.jetbrains.kotlin.kotlinTest)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions.gradle-testkit-ext-integration-tests",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-7824990867109723314"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: gradleExt",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-testkit-ext-integration-tests/build.gradle.kts",
+      "language": "kotlin",
+      "line": 22,
+      "offset": 28,
+      "length": 9,
+      "code": {
+        "startLine": 20,
+        "length": 9,
+        "offset": 81,
+        "surroundingCode": "dependencies {\n    implementation(gradleKotlinDsl())\n    implementation(projects.gradleExt)\n\n    testImplementation(libs.jetbrains.kotlin.kotlinTest)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions.gradle-testkit-ext-integration-tests",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "3235343800955853610"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-testkit-ext-integration-tests/build.gradle.kts",
+      "language": "kotlin",
+      "line": 27,
+      "offset": 23,
+      "length": 8,
+      "code": {
+        "startLine": 25,
+        "length": 8,
+        "offset": 81,
+        "surroundingCode": "    testImplementation(libs.kotest.kotestAssertionsCore)\n\n    testImplementation(projects.gradleTestkitExt)\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions.gradle-testkit-ext-integration-tests",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-8120841309490049949"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: gradleTestkitExt",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-testkit-ext-integration-tests/build.gradle.kts",
+      "language": "kotlin",
+      "line": 27,
+      "offset": 32,
+      "length": 16,
+      "code": {
+        "startLine": 25,
+        "length": 16,
+        "offset": 90,
+        "surroundingCode": "    testImplementation(libs.kotest.kotestAssertionsCore)\n\n    testImplementation(projects.gradleTestkitExt)\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions.gradle-testkit-ext-integration-tests",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-4201549443494016357"
+}]}
