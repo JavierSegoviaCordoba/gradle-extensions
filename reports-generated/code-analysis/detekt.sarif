@@ -68,7 +68,7 @@
             }
           ],
           "message": {
-            "text": "The function gradleBuildCacheTestKitTest(sandboxPath: String?, withDebug: Boolean, withPluginClasspath: Boolean, withArgumentsFromTXT: Boolean, prefix: String, isolated: Boolean, preTest: GradleRunner.() -> Unit) has too many parameters. The current threshold is set to 6."
+            "text": "The function gradleBuildCacheTestKitTest(sandboxPath: String?, withDebug: Boolean, withPluginClasspath: Boolean, withArgumentsFromTXT: Boolean, prefix: String, isolated: Boolean, invalidate: GradleRunner.() -> Unit, preTest: GradleRunner.() -> Unit) has too many parameters. The current threshold is set to 6."
           },
           "ruleId": "detekt.complexity.LongParameterList"
         },
@@ -125,7 +125,7 @@
                 },
                 "region": {
                   "startColumn": 18,
-                  "startLine": 123
+                  "startLine": 126
                 }
               }
             }
@@ -146,7 +146,7 @@
                 },
                 "region": {
                   "startColumn": 18,
-                  "startLine": 129
+                  "startLine": 132
                 }
               }
             }
@@ -167,7 +167,7 @@
                 },
                 "region": {
                   "startColumn": 18,
-                  "startLine": 135
+                  "startLine": 138
                 }
               }
             }
@@ -188,7 +188,7 @@
                 },
                 "region": {
                   "startColumn": 18,
-                  "startLine": 141
+                  "startLine": 144
                 }
               }
             }
@@ -209,7 +209,7 @@
                 },
                 "region": {
                   "startColumn": 18,
-                  "startLine": 147
+                  "startLine": 150
                 }
               }
             }
@@ -230,7 +230,7 @@
                 },
                 "region": {
                   "startColumn": 18,
-                  "startLine": 153
+                  "startLine": 156
                 }
               }
             }
@@ -251,7 +251,7 @@
                 },
                 "region": {
                   "startColumn": 18,
-                  "startLine": 159
+                  "startLine": 162
                 }
               }
             }
@@ -272,7 +272,7 @@
                 },
                 "region": {
                   "startColumn": 18,
-                  "startLine": 165
+                  "startLine": 168
                 }
               }
             }
