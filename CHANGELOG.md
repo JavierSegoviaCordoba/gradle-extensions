@@ -4,6 +4,20 @@
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Updated
+
+## [1.0.0-alpha.2] - 2022-05-21
+
+### Added
+
 - `withScan` function
 - `withConfigurationCache` function
 - `withNoBuildCache` function
@@ -24,14 +38,6 @@
 
 - all `with...` functions to `andWith...`
 - `gradleTestKitTest` function uses `withArgumentsFromTXT` flag instead of list of arguments
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Updated
 
 ## [1.0.0-alpha.1] - 2022-05-21
 
