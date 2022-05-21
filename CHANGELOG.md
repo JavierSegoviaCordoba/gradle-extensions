@@ -4,20 +4,26 @@
 
 ### Added
 
-- `invalidate` function to `gradleBuildCacheTestKitTest`
-
 ### Changed
 
 ### Deprecated
 
 ### Removed
 
-- `GradleRunner` receiver from `gradleConfigurationCacheTestKitTest` function
-- `GradleRunner` receiver from `gradleBuildCacheTestKitTest` function
-
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.5] - 2022-05-21
+
+### Added
+
+- `invalidate` function to `gradleBuildCacheTestKitTest`
+
+### Removed
+
+- `GradleRunner` receiver from `gradleConfigurationCacheTestKitTest` function
+- `GradleRunner` receiver from `gradleBuildCacheTestKitTest` function
 
 ## [1.0.0-alpha.4] - 2022-05-21
 
