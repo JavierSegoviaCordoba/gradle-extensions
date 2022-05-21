@@ -1,7 +1,6 @@
-rootProject.name = providers.gradleProperty("project.name").forUseAtConfigurationTime().get()
+rootProject.name = providers.gradleProperty("project.name").get()
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-enableFeaturePreview("VERSION_CATALOGS")
 
 pluginManagement {
     repositories {
@@ -25,4 +24,6 @@ dependencyResolutionManagement {
     }
 }
 
-include(":library")
+include(":gradle-ext")
+include(":gradle-testkit-ext")
+include(":gradle-testkit-ext-integration-tests")

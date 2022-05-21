@@ -1,0 +1,8 @@
+public final class com/javiersc/gradle/testkit/extensions/GradleTestKitExtensionsKt {
+	public static final fun cleanBuildDirectory (Lorg/gradle/testkit/runner/GradleRunner;)Z
+	public static final fun gradleTestKitTest (Ljava/lang/String;Ljava/util/List;ZZLjava/lang/String;ZLkotlin/jvm/functions/Function1;)V
+	public static synthetic fun gradleTestKitTest$default (Ljava/lang/String;Ljava/util/List;ZZLjava/lang/String;ZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+	public static final fun withInfo (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public static final fun withStacktrace (Lorg/gradle/testkit/runner/GradleRunner;)V
+}
+
