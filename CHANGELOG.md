@@ -4,6 +4,13 @@
 
 ### Added
 
+- `withScan` function
+- `withConfigurationCache` function
+- `withNoBuildCache` function
+- `withConfigurationCache` function
+- `withNoConfigurationCache` function
+- `withConfigurationCacheProblemsWarn` function
+
 ### Changed
 
 ### Deprecated
@@ -20,7 +27,3 @@
 
 - `gradle-ext` project
 - `gradle-testkit-ext` project
-
-## [0.0.0] - 2021-10-15
-
-- No changes

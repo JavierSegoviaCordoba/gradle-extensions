@@ -20,7 +20,7 @@ fun gradleTestKitTest(
         GradleRunner.create().apply {
             withDebug(withDebug)
             if (withPluginClasspath) withPluginClasspath()
-            if (isolated) withTestKitDir(createSandboxCacheDirectory(prefix))
+            if (isolated) withTestKitDir(createSandboxIsolatedDirectory(prefix))
             withProjectDir(projectDir)
             withArguments(arguments ?: argumentsTxt)
         }
@@ -35,4 +35,28 @@ fun GradleRunner.withInfo() {
 
 fun GradleRunner.withStacktrace() {
     withArguments(arguments + "--stacktrace")
+}
+
+fun GradleRunner.withScan() {
+    withArguments(arguments + "--scan")
+}
+
+fun GradleRunner.withBuildCache() {
+    withArguments(arguments + "--build-cache")
+}
+
+fun GradleRunner.withNoBuildCache() {
+    withArguments(arguments + "--no-build-cache")
+}
+
+fun GradleRunner.withConfigurationCache() {
+    withArguments(arguments + "--configuration-cache")
+}
+
+fun GradleRunner.withNoConfigurationCache() {
+    withArguments(arguments + "--no-configuration-cache")
+}
+
+fun GradleRunner.withConfigurationCacheProblemsWarn() {
+    withArguments(arguments + "--configuration-cache-problems=warn")
 }
