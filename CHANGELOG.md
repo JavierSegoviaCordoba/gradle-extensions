@@ -4,6 +4,8 @@
 
 ### Added
 
+- `GradleRunner.clean` function which launch `clean` task
+
 ### Changed
 
 ### Deprecated
@@ -12,18 +14,20 @@
 
 ### Fixed
 
+- `cleanBuildDirectory` function doesn't delete any subproject `build` directory
+
 ### Updated
 
 ## [1.0.0-alpha.2] - 2022-05-21
 
 ### Added
 
-- `withScan` function
-- `withConfigurationCache` function
-- `withNoBuildCache` function
-- `withConfigurationCache` function
-- `withNoConfigurationCache` function
-- `withConfigurationCacheProblemsWarn` function
+- `andWithScan` function
+- `andWithConfigurationCache` function
+- `andWithNoBuildCache` function
+- `andWithConfigurationCache` function
+- `andWithNoConfigurationCache` function
+- `andWithConfigurationCacheProblemsWarn` function
 - `withArgumentsFromTXT` function
 - `scan` and `addWithScan` functions
 - `info` and `addWithInfo` functions

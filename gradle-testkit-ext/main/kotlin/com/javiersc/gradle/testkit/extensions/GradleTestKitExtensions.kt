@@ -1,6 +1,5 @@
 package com.javiersc.gradle.testkit.extensions
 
-import java.io.File
 import org.gradle.testkit.runner.GradleRunner
 
 fun gradleTestKitTest(
@@ -31,7 +30,17 @@ fun GradleRunner.withArgumentsFromTXT() {
     withArguments(argumentsTxt)
 }
 
-fun GradleRunner.cleanBuildDirectory(): Boolean = File("${projectDir}/build").deleteRecursively()
+fun GradleRunner.clean() {
+    val previousArgs: List<String> = arguments.toList()
+    withArguments("clean").build()
+    withArguments(previousArgs)
+}
+
+fun GradleRunner.cleanBuildDirectory() {
+    for (file in projectDir.walkTopDown()) {
+        if (file.isDirectory && file.name == "build") file.deleteRecursively()
+    }
+}
 
 fun GradleRunner.info(): String = "--info"
 
