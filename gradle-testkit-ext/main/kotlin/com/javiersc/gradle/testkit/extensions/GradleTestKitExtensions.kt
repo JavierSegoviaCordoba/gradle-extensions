@@ -74,7 +74,7 @@ fun gradleBuildCacheTestKitTest(
     withArgumentsFromTXT: Boolean = false,
     prefix: String = sandboxPath ?: "",
     isolated: Boolean = true,
-    invalidate: GradleRunner.() -> Unit,
+    invalidate: (GradleRunner.() -> Unit)? = null,
     preTest: GradleRunner.() -> Unit,
 ) {
     gradleTestKitTest(
@@ -93,7 +93,7 @@ fun gradleBuildCacheTestKitTest(
         andWithBuildCache()
         build()
 
-        invalidate()
+        invalidate?.invoke(this)
         cleanBuildDirectory()
 
         val result = build()
@@ -101,8 +101,10 @@ fun gradleBuildCacheTestKitTest(
         val outcome =
             checkNotNull(result.task(task)) { "The outcome for the task $task is null" }.outcome
 
-        if (outcome != TaskOutcome.FROM_CACHE) {
-            error("The outcome is $outcome and must be FROM-CACHE")
+        val expectOutcome = if (invalidate == null) TaskOutcome.FROM_CACHE else TaskOutcome.SUCCESS
+
+        if (outcome != expectOutcome) {
+            error("The outcome is $outcome and must be $expectOutcome")
         }
     }
 }

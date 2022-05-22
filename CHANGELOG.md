@@ -12,6 +12,8 @@
 
 ### Fixed
 
+- Invalidated `gradleBuildCacheTestKitTest` is not SUCCESS
+
 ### Updated
 
 ## [1.0.0-alpha.5] - 2022-05-21
