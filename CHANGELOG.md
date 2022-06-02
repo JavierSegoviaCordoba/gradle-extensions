@@ -4,8 +4,6 @@
 
 ### Added
 
-- `Project.isRootProject: Boolean` property
-
 ### Changed
 
 ### Deprecated
@@ -15,6 +13,12 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.7] - 2022-06-02
+
+### Added
+
+- `Project.isRootProject: Boolean` property
 
 ## [1.0.0-alpha.6] - 2022-05-22
 
