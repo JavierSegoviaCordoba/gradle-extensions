@@ -4,6 +4,8 @@
 
 ### Added
 
+- `Project.isRootProject: Boolean` property
+
 ### Changed
 
 ### Deprecated

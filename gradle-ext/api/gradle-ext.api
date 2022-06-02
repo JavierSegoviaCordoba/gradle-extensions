@@ -13,3 +13,7 @@ public final class com/javiersc/gradle/extensions/LoggingKt {
 	public static synthetic fun warnColored$default (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
 }
 
+public final class com/javiersc/gradle/extensions/ProjectKt {
+	public static final fun isRootProject (Lorg/gradle/api/Project;)Z
+}
+

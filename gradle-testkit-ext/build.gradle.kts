@@ -5,6 +5,10 @@ plugins {
     `javiersc-publish`
 }
 
+kotlin {
+    explicitApi()
+}
+
 dependencies {
     implementation(gradleKotlinDsl())
     implementation(gradleTestKit())

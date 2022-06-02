@@ -1,9 +1,11 @@
+@file:Suppress("unused")
+
 package com.javiersc.gradle.testkit.extensions
 
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
 
-fun gradleTestKitTest(
+public fun gradleTestKitTest(
     sandboxPath: String? = null,
     withDebug: Boolean = true,
     withPluginClasspath: Boolean = true,
@@ -27,7 +29,7 @@ fun gradleTestKitTest(
     )
 }
 
-fun gradleConfigurationCacheTestKitTest(
+public fun gradleConfigurationCacheTestKitTest(
     sandboxPath: String? = null,
     withDebug: Boolean = true,
     withPluginClasspath: Boolean = true,
@@ -67,7 +69,7 @@ fun gradleConfigurationCacheTestKitTest(
     }
 }
 
-fun gradleBuildCacheTestKitTest(
+public fun gradleBuildCacheTestKitTest(
     sandboxPath: String? = null,
     withDebug: Boolean = true,
     withPluginClasspath: Boolean = true,
@@ -109,66 +111,67 @@ fun gradleBuildCacheTestKitTest(
     }
 }
 
-fun GradleRunner.withArgumentsFromTXT() {
+public fun GradleRunner.withArgumentsFromTXT() {
     withArguments(argumentsTxt)
 }
 
-fun GradleRunner.clean() {
+public fun GradleRunner.clean() {
     val previousArgs: List<String> = arguments.toList()
     withArguments("clean").build()
     withArguments(previousArgs)
 }
 
-fun GradleRunner.cleanBuildDirectory() {
+public fun GradleRunner.cleanBuildDirectory() {
     for (file in projectDir.walkTopDown()) {
         if (file.isDirectory && file.name == "build") file.deleteRecursively()
     }
 }
 
-fun GradleRunner.info(): String = "--info"
+public fun GradleRunner.info(): String = "--info"
 
-fun GradleRunner.andWithInfo() {
+public fun GradleRunner.andWithInfo() {
     withArguments(arguments + info())
 }
 
-fun GradleRunner.stacktrace(): String = "--stacktrace"
+public fun GradleRunner.stacktrace(): String = "--stacktrace"
 
-fun GradleRunner.andWithStacktrace() {
+public fun GradleRunner.andWithStacktrace() {
     withArguments(arguments + stacktrace())
 }
 
-fun GradleRunner.scan(): String = "--scan"
+public fun GradleRunner.scan(): String = "--scan"
 
-fun GradleRunner.andWithScan() {
+public fun GradleRunner.andWithScan() {
     withArguments(arguments + scan())
 }
 
-fun GradleRunner.buildCache(): String = "--build-cache"
+public fun GradleRunner.buildCache(): String = "--build-cache"
 
-fun GradleRunner.andWithBuildCache() {
+public fun GradleRunner.andWithBuildCache() {
     withArguments(arguments + buildCache())
 }
 
-fun GradleRunner.noBuildCache(): String = "--no-build-cache"
+public fun GradleRunner.noBuildCache(): String = "--no-build-cache"
 
-fun GradleRunner.andWithNoBuildCache() {
+public fun GradleRunner.andWithNoBuildCache() {
     withArguments(arguments + noBuildCache())
 }
 
-fun GradleRunner.configurationCache(): String = "--configuration-cache"
+public fun GradleRunner.configurationCache(): String = "--configuration-cache"
 
-fun GradleRunner.andWithConfigurationCache() {
+public fun GradleRunner.andWithConfigurationCache() {
     withArguments(arguments + configurationCache())
 }
 
-fun GradleRunner.noConfigurationCache(): String = "--no-configuration-cache"
+public fun GradleRunner.noConfigurationCache(): String = "--no-configuration-cache"
 
-fun GradleRunner.andWithNoConfigurationCache() {
+public fun GradleRunner.andWithNoConfigurationCache() {
     withArguments(arguments + noConfigurationCache())
 }
 
-fun GradleRunner.configurationCacheProblemsWarn(): String = "--configuration-cache-problems=warn"
+public fun GradleRunner.configurationCacheProblemsWarn(): String =
+    "--configuration-cache-problems=warn"
 
-fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
+public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
     withArguments(arguments + configurationCacheProblemsWarn())
 }
