@@ -1,4 +1,4 @@
-@file:Suppress("unused")
+@file:Suppress("UnusedReceiverParameter")
 
 package com.javiersc.gradle.testkit.extensions
 
@@ -125,6 +125,18 @@ public fun GradleRunner.cleanBuildDirectory() {
     for (file in projectDir.walkTopDown()) {
         if (file.isDirectory && file.name == "build") file.deleteRecursively()
     }
+}
+
+public fun GradleRunner.projectProperty(value: String): String = "-P$value"
+
+public fun GradleRunner.andWithProjectProperty(value: String) {
+    withArguments(arguments + projectProperty(value))
+}
+
+public fun GradleRunner.systemProperty(value: String): String = "-D$value"
+
+public fun GradleRunner.andWithSystemProperty(value: String) {
+    withArguments(arguments + systemProperty(value))
 }
 
 public fun GradleRunner.info(): String = "--info"

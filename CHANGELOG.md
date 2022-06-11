@@ -4,6 +4,9 @@
 
 ### Added
 
+- `GradleRunner.andWithProjectProperty` function
+- `GradleRunner.andWithSystemProperty` function
+
 ### Changed
 
 ### Deprecated
