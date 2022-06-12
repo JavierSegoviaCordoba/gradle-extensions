@@ -14,6 +14,11 @@
 	<error line="178" column="25" severity="warning" message="noConfigurationCache is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
 	<error line="184" column="25" severity="warning" message="configurationCacheProblemsWarn is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
 </file>
+<file name="gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt">
+	<error line="17" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="23" column="17" severity="warning" message="RuntimeException is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="11" column="1" severity="warning" message="This comment contains &apos;TODO:&apos; that has been defined as forbidden in detekt." source="detekt.ForbiddenComment" />
+</file>
 <file name="buildSrc/build.gradle.kts">
 	<error line="12" column="5" severity="warning" message="This comment contains &apos;TODO:&apos; that has been defined as forbidden in detekt." source="detekt.ForbiddenComment" />
 </file>

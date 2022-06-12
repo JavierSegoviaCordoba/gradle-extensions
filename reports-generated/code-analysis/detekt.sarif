@@ -99,6 +99,69 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
+                  "uri": "gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 18,
+                  "startLine": 17
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled."
+          },
+          "ruleId": "detekt.exceptions.TooGenericExceptionCaught"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 17,
+                  "startLine": 23
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "RuntimeException is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case."
+          },
+          "ruleId": "detekt.exceptions.TooGenericExceptionThrown"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 11
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "This comment contains 'TODO:' that has been defined as forbidden in detekt."
+          },
+          "ruleId": "detekt.style.ForbiddenComment"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
                   "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },

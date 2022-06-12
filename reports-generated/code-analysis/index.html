@@ -157,11 +157,11 @@
 
 <div>
   <ul>
-    <li>15 number of properties</li>
-    <li>39 number of functions</li>
+    <li>17 number of properties</li>
+    <li>40 number of functions</li>
     <li>2 number of classes</li>
     <li>4 number of packages</li>
-    <li>13 number of kt files</li>
+    <li>14 number of kt files</li>
   </ul>
 </div>
 
@@ -170,22 +170,22 @@
 
 <div>
   <ul>
-    <li>463 lines of code (loc)</li>
-    <li>361 source lines of code (sloc)</li>
-    <li>267 logical lines of code (lloc)</li>
-    <li>2 comment lines of code (cloc)</li>
-    <li>58 cyclomatic complexity (mcc)</li>
-    <li>21 cognitive complexity</li>
-    <li>13 number of total code smells</li>
+    <li>493 lines of code (loc)</li>
+    <li>386 source lines of code (sloc)</li>
+    <li>283 logical lines of code (lloc)</li>
+    <li>3 comment lines of code (cloc)</li>
+    <li>65 cyclomatic complexity (mcc)</li>
+    <li>29 cognitive complexity</li>
+    <li>16 number of total code smells</li>
     <li>0% comment source ratio</li>
-    <li>217 mcc per 1,000 lloc</li>
-    <li>48 code smells per 1,000 lloc</li>
+    <li>229 mcc per 1,000 lloc</li>
+    <li>56 code smells per 1,000 lloc</li>
   </ul>
 </div>
 
 
 <h2>Findings</h2>
-<div>Total: 13
+<div>Total: 16
   <h3>complexity: 4</h3>
   <details id="LongParameterList" open="open">
     <summary class="rule-container"><span class="rule">LongParameterList: 3 </span><span class="description">The more parameters a function has the more complex it is. Long parameter lists are often used to control complex algorithms and violate the Single Responsibility Principle. Prefer functions with short parameter lists.</span></summary>
@@ -236,9 +236,40 @@
       </li>
     </ul>
   </details>
-  <h3>style: 9</h3>
+  <h3>exceptions: 2</h3>
+  <details id="TooGenericExceptionCaught" open="open">
+    <summary class="rule-container"><span class="rule">TooGenericExceptionCaught: 1 </span><span class="description">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span></summary>
+    <ul>
+      <li><span class="location">gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt:17:18</span><span class="message">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span>
+        <pre><code><span class="lineno">  14 </span>        try {
+<span class="lineno">  15 </span>            val method: Method = Provider::class.java.getMethod(&quot;forUseAtConfigurationTime&quot;)
+<span class="lineno">  16 </span>            method(provider) as Provider&lt;S&gt;
+<span class="lineno">  17 </span>        } catch (<span class="error">e: Exception</span>) {
+<span class="lineno">  18 </span>            val shouldThrowRuntimeException =
+<span class="lineno">  19 </span>                e is NoSuchMethodException ||
+<span class="lineno">  20 </span>                    e is IllegalAccessException ||
+</code></pre>
+      </li>
+    </ul>
+  </details>
+  <details id="TooGenericExceptionThrown" open="open">
+    <summary class="rule-container"><span class="rule">TooGenericExceptionThrown: 1 </span><span class="description">The thrown exception is too generic. Prefer throwing project specific exceptions to handle error cases.</span></summary>
+    <ul>
+      <li><span class="location">gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt:23:17</span><span class="message">RuntimeException is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case.</span>
+        <pre><code><span class="lineno">  20 </span>                    e is IllegalAccessException ||
+<span class="lineno">  21 </span>                    e is InvocationTargetException
+<span class="lineno">  22 </span>            if (shouldThrowRuntimeException) {
+<span class="lineno">  23 </span>                <span class="error">throw RuntimeException(&quot;Could not mark provider usage for configuration time.&quot;, e)</span>
+<span class="lineno">  24 </span>            } else {
+<span class="lineno">  25 </span>                throw e
+<span class="lineno">  26 </span>            }
+</code></pre>
+      </li>
+    </ul>
+  </details>
+  <h3>style: 10</h3>
   <details id="ForbiddenComment" open="open">
-    <summary class="rule-container"><span class="rule">ForbiddenComment: 1 </span><span class="description">Flags a forbidden comment.</span></summary>
+    <summary class="rule-container"><span class="rule">ForbiddenComment: 2 </span><span class="description">Flags a forbidden comment.</span></summary>
     <ul>
       <li><span class="location">buildSrc/build.gradle.kts:12:5</span><span class="message">This comment contains 'TODO:' that has been defined as forbidden in detekt.</span>
         <pre><code><span class="lineno">   9 </span>}
@@ -248,6 +279,16 @@
 <span class="lineno">  13 </span>    //  https://github.com/gradle/gradle/issues/15383#issuecomment-779893192
 <span class="lineno">  14 </span>    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 <span class="lineno">  15 </span>    implementation(files(pluginLibs.javaClass.superclass.protectionDomain.codeSource.location))
+</code></pre>
+      </li>
+      <li><span class="location">gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt:11:1</span><span class="message">This comment contains 'TODO:' that has been defined as forbidden in detekt.</span>
+        <pre><code><span class="lineno">   8 </span>import org.gradle.util.GradleVersion.current
+<span class="lineno">   9 </span>import org.gradle.util.GradleVersion.version
+<span class="lineno">  10 </span>
+<span class="lineno">  11 </span><span class="error">// TODO: Remove it when Gradle 7.0 adoption is very high</span>
+<span class="lineno">  12 </span>public fun &lt;S&gt; forUseAtConfigurationTime(provider: Provider&lt;S&gt;): Provider&lt;S&gt; {
+<span class="lineno">  13 </span>    return if (current() &gt;= version(&quot;6.5&quot;) &amp;&amp; current() &lt; version(&quot;7.0&quot;)) {
+<span class="lineno">  14 </span>        try {
 </code></pre>
       </li>
     </ul>
@@ -340,7 +381,7 @@
 </div>
 
 
-generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-06-11 23:36:49 UTC.
+generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-06-12 19:07:46 UTC.
 
 </body>
 </html>
