@@ -4,6 +4,7 @@
 
 ### Added
 
+- `forUseAtConfigurationTime` function
 - `GradleRunner.andWithProjectProperty` function
 - `GradleRunner.andWithSystemProperty` function
 

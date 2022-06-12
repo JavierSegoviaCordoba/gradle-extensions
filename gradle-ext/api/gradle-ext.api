@@ -1,3 +1,7 @@
+public final class com/javiersc/gradle/extensions/ForUseAtConfigurationTimeKt {
+	public static final fun forUseAtConfigurationTime (Lorg/gradle/api/provider/Provider;)Lorg/gradle/api/provider/Provider;
+}
+
 public final class com/javiersc/gradle/extensions/LoggingKt {
 	public static final fun debugColored (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;)V
 	public static synthetic fun debugColored$default (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
