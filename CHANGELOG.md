@@ -4,9 +4,6 @@
 
 ### Added
 
-- `GradleRunner.gradlew` function
-- value argument to set the resulting task to `testBuildCache` and `testConfigurationCache`
-
 ### Changed
 
 ### Deprecated
@@ -16,6 +13,13 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.13] - 2022-06-14
+
+### Added
+
+- `GradleRunner.gradlew` function
+- value argument to set the resulting task to `testBuildCache` and `testConfigurationCache`
 
 ## [1.0.0-alpha.12] - 2022-06-14
 
