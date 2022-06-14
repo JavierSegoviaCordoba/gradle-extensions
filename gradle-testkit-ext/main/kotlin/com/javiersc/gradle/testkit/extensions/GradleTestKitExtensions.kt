@@ -10,7 +10,7 @@ public fun gradleTestKitTest(
     withDebug: Boolean = true,
     withPluginClasspath: Boolean = true,
     withArgumentsFromTXT: Boolean = false,
-    prefix: String = sandboxPath ?: "",
+    prefix: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: "",
     isolated: Boolean = false,
     test: GradleRunner.() -> Unit,
 ) {
@@ -34,7 +34,7 @@ public fun gradleConfigurationCacheTestKitTest(
     withDebug: Boolean = true,
     withPluginClasspath: Boolean = true,
     withArgumentsFromTXT: Boolean = false,
-    prefix: String = sandboxPath ?: "",
+    prefix: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: "",
     isolated: Boolean = false,
     preTest: GradleRunner.() -> Unit,
 ) {
@@ -74,7 +74,7 @@ public fun gradleBuildCacheTestKitTest(
     withDebug: Boolean = true,
     withPluginClasspath: Boolean = true,
     withArgumentsFromTXT: Boolean = false,
-    prefix: String = sandboxPath ?: "",
+    prefix: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: "",
     isolated: Boolean = true,
     invalidate: (GradleRunner.() -> Unit)? = null,
     preTest: GradleRunner.() -> Unit,
@@ -187,3 +187,5 @@ public fun GradleRunner.configurationCacheProblemsWarn(): String =
 public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
     withArguments(arguments + configurationCacheProblemsWarn())
 }
+
+private fun String.sanitizedSandboxPathPrefix(): String = replace("/", "--").replace("\\", "--")

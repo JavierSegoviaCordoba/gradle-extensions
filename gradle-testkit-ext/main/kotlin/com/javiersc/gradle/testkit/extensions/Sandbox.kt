@@ -1,7 +1,7 @@
 package com.javiersc.gradle.testkit.extensions
 
 import java.io.File
-import java.nio.file.Files
+import java.nio.file.Files.createTempDirectory
 import java.nio.file.Path
 import java.nio.file.Paths
 import org.gradle.testkit.runner.GradleRunner
@@ -16,10 +16,10 @@ internal fun String.copyResourceTo(destination: File) {
 }
 
 internal fun createSandboxDirectory(prefix: String): File =
-    Files.createTempDirectory(sandboxPath, "$prefix-").toFile()
+    createTempDirectory(sandboxPath, if (prefix.isBlank()) prefix else "$prefix-").toFile()
 
 internal fun createSandboxIsolatedDirectory(prefix: String): File =
-    Files.createTempDirectory(sandboxIsolatedPath, "$prefix-").toFile()
+    createTempDirectory(sandboxIsolatedPath, if (prefix.isBlank()) prefix else "$prefix-").toFile()
 
 internal val GradleRunner.argumentsTxt: List<String>
     get() {
