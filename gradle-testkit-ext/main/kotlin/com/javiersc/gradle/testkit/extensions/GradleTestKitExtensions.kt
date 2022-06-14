@@ -80,6 +80,12 @@ public fun GradleRunner.withArgumentsFromTXT() {
     withArguments(argumentsTxt)
 }
 
+public fun GradleRunner.gradlew(vararg arguments: String) {
+    val previousArgs: List<String> = this.arguments.toList()
+    withArguments(*arguments).build()
+    withArguments(previousArgs)
+}
+
 public fun GradleRunner.clean() {
     val previousArgs: List<String> = arguments.toList()
     withArguments("clean").build()
