@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="4.3">
+<file name="gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt">
+	<error line="8" column="29" severity="warning" message="The function gradleTestKitTest(sandboxPath: String?, withDebug: Boolean, withPluginClasspath: Boolean, withArgumentsFromTXT: Boolean, prefix: String, isolated: Boolean, test: GradleRunner.() -&gt; Unit) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="32" column="47" severity="warning" message="The function gradleConfigurationCacheTestKitTest(sandboxPath: String?, withDebug: Boolean, withPluginClasspath: Boolean, withArgumentsFromTXT: Boolean, prefix: String, isolated: Boolean, preTest: GradleRunner.() -&gt; Unit) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="72" column="39" severity="warning" message="The function gradleBuildCacheTestKitTest(sandboxPath: String?, withDebug: Boolean, withPluginClasspath: Boolean, withArgumentsFromTXT: Boolean, prefix: String, isolated: Boolean, invalidate: (GradleRunner.() -&gt; Unit)?, preTest: GradleRunner.() -&gt; Unit) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
+	<error line="3" column="1" severity="warning" message="File &apos;/home/runner/work/gradle-extensions/gradle-extensions/gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt&apos; with &apos;26&apos; functions detected. Defined threshold inside files is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+	<error line="142" column="25" severity="warning" message="info is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
+	<error line="148" column="25" severity="warning" message="stacktrace is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
+	<error line="154" column="25" severity="warning" message="scan is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
+	<error line="160" column="25" severity="warning" message="buildCache is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
+	<error line="166" column="25" severity="warning" message="noBuildCache is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
+	<error line="172" column="25" severity="warning" message="configurationCache is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
+	<error line="178" column="25" severity="warning" message="noConfigurationCache is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
+	<error line="184" column="25" severity="warning" message="configurationCacheProblemsWarn is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
+</file>
+<file name="gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt">
+	<error line="17" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="23" column="17" severity="warning" message="RuntimeException is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="11" column="1" severity="warning" message="This comment contains &apos;TODO:&apos; that has been defined as forbidden in detekt." source="detekt.ForbiddenComment" />
+</file>
+<file name="buildSrc/build.gradle.kts">
+	<error line="12" column="5" severity="warning" message="This comment contains &apos;TODO:&apos; that has been defined as forbidden in detekt." source="detekt.ForbiddenComment" />
+</file>
+</checkstyle>

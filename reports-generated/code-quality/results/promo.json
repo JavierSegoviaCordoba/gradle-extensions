@@ -1,0 +1,32 @@
+{"version":"3","listProblem":[{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Class \"FakePlugin\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "class",
+      "path": "gradle-testkit-ext-integration-tests/main/kotlin/com/javiersc/gradle/testkit/extensions/integration/tests/FakePlugin.kt",
+      "language": "kotlin",
+      "line": 8,
+      "offset": 15,
+      "length": 10,
+      "code": {
+        "startLine": 6,
+        "length": 10,
+        "offset": 46,
+        "surroundingCode": "import org.gradle.api.Project\n\nabstract class FakePlugin : Plugin<Project> {\n\n    override fun apply(target: Project) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions.gradle-testkit-ext-integration-tests.main",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "2381833253870621916"
+}]}
