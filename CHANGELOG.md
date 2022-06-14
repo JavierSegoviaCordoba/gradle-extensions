@@ -6,18 +6,24 @@
 
 ### Changed
 
-- `gradleBuildCacheTestKitTest` is now `GradleRunner.testBuildCache`
-- `gradleConfigurationCacheTestKitTest` is now `GradleRunner.testConfigurationCache`
-
 ### Deprecated
 
 ### Removed
 
-- `withArgumentsFromTXT` value argument from `gradleTestKitTest`
-
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.12] - 2022-06-14
+
+### Changed
+
+- `gradleBuildCacheTestKitTest` is now `GradleRunner.testBuildCache`
+- `gradleConfigurationCacheTestKitTest` is now `GradleRunner.testConfigurationCache`
+
+### Removed
+
+- `withArgumentsFromTXT` value argument from `gradleTestKitTest`
 
 ## [1.0.0-alpha.11] - 2022-06-14
 
