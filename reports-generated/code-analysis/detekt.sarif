@@ -47,7 +47,7 @@
             }
           ],
           "message": {
-            "text": "File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt' with '27' functions detected. Defined threshold inside files is set to '11'"
+            "text": "File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt' with '28' functions detected. Defined threshold inside files is set to '11'"
           },
           "ruleId": "detekt.complexity.TooManyFunctions"
         },
@@ -125,7 +125,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 107
+                  "startLine": 113
                 }
               }
             }
@@ -146,7 +146,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 113
+                  "startLine": 119
                 }
               }
             }
@@ -167,7 +167,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 119
+                  "startLine": 125
                 }
               }
             }
@@ -188,7 +188,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 125
+                  "startLine": 131
                 }
               }
             }
@@ -209,7 +209,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 131
+                  "startLine": 137
                 }
               }
             }
@@ -230,7 +230,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 137
+                  "startLine": 143
                 }
               }
             }
@@ -251,7 +251,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 143
+                  "startLine": 149
                 }
               }
             }
@@ -272,7 +272,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 149
+                  "startLine": 155
                 }
               }
             }
