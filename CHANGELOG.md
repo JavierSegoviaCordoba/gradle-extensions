@@ -12,9 +12,13 @@
 
 ### Fixed
 
-- `gradleBuildCacheTestKitTest` and `gradleConfigurationCacheTestKitTest` task output is null always
-
 ### Updated
+
+## [1.0.0-alpha.11] - 2022-06-14
+
+### Fixed
+
+- `gradleBuildCacheTestKitTest` and `gradleConfigurationCacheTestKitTest` task output is null always
 
 ## [1.0.0-alpha.10] - 2022-06-14
 
