@@ -12,6 +12,8 @@
 
 ### Fixed
 
+- `gradleBuildCacheTestKitTest` and `gradleConfigurationCacheTestKitTest` task output is null always
+
 ### Updated
 
 ## [1.0.0-alpha.10] - 2022-06-14

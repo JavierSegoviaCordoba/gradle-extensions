@@ -47,24 +47,27 @@ public fun gradleConfigurationCacheTestKitTest(
         isolated,
     ) {
         preTest(this)
-        val task =
+        val taskName =
             checkNotNull(arguments.firstOrNull()) {
                 "There is not a task in the arguments to check if configuration cache works"
             }
+        val task = ":$taskName"
+
         andWithConfigurationCache()
         andWithNoBuildCache()
         build()
 
         val result = build()
 
-        if (!result.output.contains("Reusing configuration cache")) {
-            error("Configuration cache is not working")
+        check(result.output.contains("Reusing configuration cache")) {
+            "Configuration cache is not working"
         }
+
         val outcome =
             checkNotNull(result.task(task)) { "The outcome for the task $task is null" }.outcome
 
-        if (outcome != TaskOutcome.UP_TO_DATE) {
-            error("The outcome is $outcome and must be UP-TO-DATE")
+        check(outcome == TaskOutcome.UP_TO_DATE) {
+            "The outcome is $outcome and must be UP-TO-DATE"
         }
     }
 }
@@ -88,10 +91,12 @@ public fun gradleBuildCacheTestKitTest(
         isolated,
     ) {
         preTest(this)
-        val task =
+        val taskName =
             checkNotNull(arguments.firstOrNull()) {
                 "There is not a task in the arguments to check if configuration cache works"
             }
+        val task = ":$taskName"
+
         andWithBuildCache()
         build()
 
@@ -105,9 +110,7 @@ public fun gradleBuildCacheTestKitTest(
 
         val expectOutcome = if (invalidate == null) TaskOutcome.FROM_CACHE else TaskOutcome.SUCCESS
 
-        if (outcome != expectOutcome) {
-            error("The outcome is $outcome and must be $expectOutcome")
-        }
+        check(outcome == expectOutcome) { "The outcome is $outcome and must be $expectOutcome" }
     }
 }
 
