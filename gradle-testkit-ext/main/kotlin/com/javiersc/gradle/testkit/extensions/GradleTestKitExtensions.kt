@@ -30,7 +30,7 @@ public fun gradleTestKitTest(
 public fun GradleRunner.testBuildCache(invalidate: (GradleRunner.() -> Unit)? = null) {
     val taskName =
         checkNotNull(arguments.firstOrNull()) {
-            "There is not a task in the arguments to check if configuration cache works"
+            "There is not a task in the arguments to check if build cache works"
         }
     val task = ":$taskName"
 
