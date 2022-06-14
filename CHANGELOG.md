@@ -12,10 +12,14 @@
 
 ### Fixed
 
+### Updated
+
+## [1.0.0-alpha.10] - 2022-06-14
+
+### Fixed
+
 - invalid characters in `prefix` by replacing them with `--`
 - unnecessary hyphen when `prefix` is blank in sandbox directories
-
-### Updated
 
 ## [1.0.0-alpha.9] - 2022-06-14
 
