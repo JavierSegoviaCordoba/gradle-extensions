@@ -27,9 +27,12 @@ public fun gradleTestKitTest(
     )
 }
 
-public fun GradleRunner.testBuildCache(invalidate: (GradleRunner.() -> Unit)? = null) {
+public fun GradleRunner.testBuildCache(
+    resultingTask: String? = null,
+    invalidate: (GradleRunner.() -> Unit)? = null,
+) {
     val taskName =
-        checkNotNull(arguments.firstOrNull()) {
+        checkNotNull(resultingTask ?: arguments.firstOrNull()) {
             "There is not a task in the arguments to check if build cache works"
         }
     val task = ":$taskName"
@@ -50,9 +53,9 @@ public fun GradleRunner.testBuildCache(invalidate: (GradleRunner.() -> Unit)? = 
     check(outcome == expectOutcome) { "The outcome is $outcome and must be $expectOutcome" }
 }
 
-public fun GradleRunner.testConfigurationCache() {
+public fun GradleRunner.testConfigurationCache(resultingTask: String? = null) {
     val taskName =
-        checkNotNull(arguments.firstOrNull()) {
+        checkNotNull(resultingTask ?: arguments.firstOrNull()) {
             "There is not a task in the arguments to check if configuration cache works"
         }
     val task = ":$taskName"

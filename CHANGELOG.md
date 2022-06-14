@@ -4,6 +4,8 @@
 
 ### Added
 
+- value argument to set the resulting task to `testBuildCache` and `testConfigurationCache`
+
 ### Changed
 
 ### Deprecated
