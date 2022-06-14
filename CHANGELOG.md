@@ -4,12 +4,6 @@
 
 ### Added
 
-- `TaskContainer.namedLazily` function
-- `TaskContainer.maybeRegisterLazily` function
-- `forUseAtConfigurationTime` function
-- `GradleRunner.andWithProjectProperty` function
-- `GradleRunner.andWithSystemProperty` function
-
 ### Changed
 
 ### Deprecated
@@ -19,6 +13,16 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.8] - 2022-06-14
+
+### Added
+
+- `TaskContainer.namedLazily` function
+- `TaskContainer.maybeRegisterLazily` function
+- `forUseAtConfigurationTime` function
+- `GradleRunner.andWithProjectProperty` function
+- `GradleRunner.andWithSystemProperty` function
 
 ## [1.0.0-alpha.7] - 2022-06-02
 
