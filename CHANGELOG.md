@@ -4,6 +4,8 @@
 
 ### Added
 
+- `TaskContainer.namedLazily` function
+- `TaskContainer.maybeRegisterLazily` function
 - `forUseAtConfigurationTime` function
 - `GradleRunner.andWithProjectProperty` function
 - `GradleRunner.andWithSystemProperty` function
