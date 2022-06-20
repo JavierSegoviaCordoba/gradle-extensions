@@ -221,7 +221,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.4",
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
           "type": "Library"
         },
         {
@@ -374,7 +374,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.4",
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
           "type": "Library"
         },
         {
@@ -694,13 +694,13 @@
           "path": "file://$PROJECT_DIR$/gradle-testkit-ext-integration-tests/test",
           "sourceFolders": [
             {
-              "path": "file://$PROJECT_DIR$/gradle-testkit-ext-integration-tests/test/resources",
-              "type": "TestResource",
+              "path": "file://$PROJECT_DIR$/gradle-testkit-ext-integration-tests/test/kotlin",
+              "type": "TestSource",
               "packagePrefix": ""
             },
             {
-              "path": "file://$PROJECT_DIR$/gradle-testkit-ext-integration-tests/test/kotlin",
-              "type": "TestSource",
+              "path": "file://$PROJECT_DIR$/gradle-testkit-ext-integration-tests/test/resources",
+              "type": "TestResource",
               "packagePrefix": ""
             }
           ]
@@ -852,7 +852,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.4",
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
           "type": "Library"
         },
         {
@@ -1057,7 +1057,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.4",
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
           "type": "Library"
         },
         {
