@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `com.android.tools.build:gradle -> 7.2.1`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.3`
 
 ## [1.0.0-alpha.13] - 2022-06-14
