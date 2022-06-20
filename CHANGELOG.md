@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.10.1`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.3`
 
 ## [1.0.0-alpha.13] - 2022-06-14
