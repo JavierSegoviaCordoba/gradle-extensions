@@ -14,6 +14,7 @@
 
 ### Updated
 
+- `io.kotest:kotest-assertions-core -> 5.3.1`
 - `org.jetbrains.kotlinx:binary-compatibility-validator -> 0.10.1`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core -> 1.6.3`
 
