@@ -6,6 +6,8 @@
 
 ### Changed
 
+- `gradlew` and `clean` return type from `Unit` to `BuildResult`
+
 ### Deprecated
 
 ### Removed

@@ -2,6 +2,7 @@
 
 package com.javiersc.gradle.testkit.extensions
 
+import org.gradle.testkit.runner.BuildResult
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
 
@@ -80,16 +81,18 @@ public fun GradleRunner.withArgumentsFromTXT() {
     withArguments(argumentsTxt)
 }
 
-public fun GradleRunner.gradlew(vararg arguments: String) {
+public fun GradleRunner.gradlew(vararg arguments: String): BuildResult {
     val previousArgs: List<String> = this.arguments.toList()
-    withArguments(*arguments).build()
+    val result: BuildResult = withArguments(*arguments).build()
     withArguments(previousArgs)
+    return result
 }
 
-public fun GradleRunner.clean() {
+public fun GradleRunner.clean(): BuildResult {
     val previousArgs: List<String> = arguments.toList()
-    withArguments("clean").build()
+    val result: BuildResult = withArguments("clean").build()
     withArguments(previousArgs)
+    return result
 }
 
 public fun GradleRunner.cleanBuildDirectory() {
