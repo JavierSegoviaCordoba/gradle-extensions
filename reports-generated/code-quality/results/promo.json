@@ -13,14 +13,14 @@
       "type": "method",
       "path": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
       "language": "kotlin",
-      "line": 116,
+      "line": 158,
       "offset": 11,
       "length": 12,
       "code": {
-        "startLine": 114,
+        "startLine": 156,
         "length": 12,
         "offset": 14,
-        "surroundingCode": "}\n\npublic fun GradleRunner.info(): String = \"--info\"\n\npublic fun GradleRunner.andWithInfo() {"
+        "surroundingCode": "}\n\npublic fun GradleRunner.configurationCacheProblemsWarn(): String =\n    \"--configuration-cache-problems=warn\"\n"
       }
     }
   ],
@@ -28,7 +28,7 @@
     "module": "gradle-extensions.gradle-testkit-ext.main",
     "inspectionName": "UnusedReceiverParameter"
   },
-  "hash": "-4143341440487623828"
+  "hash": "-6316478824735197786"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -44,14 +44,14 @@
       "type": "method",
       "path": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
       "language": "kotlin",
-      "line": 140,
+      "line": 152,
       "offset": 11,
       "length": 12,
       "code": {
-        "startLine": 138,
+        "startLine": 150,
         "length": 12,
         "offset": 14,
-        "surroundingCode": "}\n\npublic fun GradleRunner.noBuildCache(): String = \"--no-build-cache\"\n\npublic fun GradleRunner.andWithNoBuildCache() {"
+        "surroundingCode": "}\n\npublic fun GradleRunner.noConfigurationCache(): String = \"--no-configuration-cache\"\n\npublic fun GradleRunner.andWithNoConfigurationCache() {"
       }
     }
   ],
@@ -59,100 +59,7 @@
     "module": "gradle-extensions.gradle-testkit-ext.main",
     "inspectionName": "UnusedReceiverParameter"
   },
-  "hash": "-8060329234376502191"
-},{
-  "tool": "Code Inspection",
-  "category": "Redundant constructs",
-  "type": "Unused receiver parameter",
-  "tags": [
-    "kotlin"
-  ],
-  "severity": "High",
-  "comment": "Receiver parameter is never used",
-  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
-  "sources": [
-    {
-      "type": "method",
-      "path": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
-      "language": "kotlin",
-      "line": 110,
-      "offset": 11,
-      "length": 12,
-      "code": {
-        "startLine": 108,
-        "length": 12,
-        "offset": 14,
-        "surroundingCode": "}\n\npublic fun GradleRunner.systemProperty(value: String): String = \"-D$value\"\n\npublic fun GradleRunner.andWithSystemProperty(value: String) {"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "gradle-extensions.gradle-testkit-ext.main",
-    "inspectionName": "UnusedReceiverParameter"
-  },
-  "hash": "5933794478458968143"
-},{
-  "tool": "Code Inspection",
-  "category": "Redundant constructs",
-  "type": "Unused receiver parameter",
-  "tags": [
-    "kotlin"
-  ],
-  "severity": "High",
-  "comment": "Receiver parameter is never used",
-  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
-  "sources": [
-    {
-      "type": "method",
-      "path": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
-      "language": "kotlin",
-      "line": 122,
-      "offset": 11,
-      "length": 12,
-      "code": {
-        "startLine": 120,
-        "length": 12,
-        "offset": 14,
-        "surroundingCode": "}\n\npublic fun GradleRunner.stacktrace(): String = \"--stacktrace\"\n\npublic fun GradleRunner.andWithStacktrace() {"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "gradle-extensions.gradle-testkit-ext.main",
-    "inspectionName": "UnusedReceiverParameter"
-  },
-  "hash": "4577412986944503282"
-},{
-  "tool": "Code Inspection",
-  "category": "Redundant constructs",
-  "type": "Unused receiver parameter",
-  "tags": [
-    "kotlin"
-  ],
-  "severity": "High",
-  "comment": "Receiver parameter is never used",
-  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
-  "sources": [
-    {
-      "type": "method",
-      "path": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
-      "language": "kotlin",
-      "line": 146,
-      "offset": 11,
-      "length": 12,
-      "code": {
-        "startLine": 144,
-        "length": 12,
-        "offset": 14,
-        "surroundingCode": "}\n\npublic fun GradleRunner.configurationCache(): String = \"--configuration-cache\"\n\npublic fun GradleRunner.andWithConfigurationCache() {"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "gradle-extensions.gradle-testkit-ext.main",
-    "inspectionName": "UnusedReceiverParameter"
-  },
-  "hash": "-286275087248999218"
+  "hash": "2165972766228020751"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -199,14 +106,14 @@
       "type": "method",
       "path": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
       "language": "kotlin",
-      "line": 158,
+      "line": 146,
       "offset": 11,
       "length": 12,
       "code": {
-        "startLine": 156,
+        "startLine": 144,
         "length": 12,
         "offset": 14,
-        "surroundingCode": "}\n\npublic fun GradleRunner.configurationCacheProblemsWarn(): String =\n    \"--configuration-cache-problems=warn\"\n"
+        "surroundingCode": "}\n\npublic fun GradleRunner.configurationCache(): String = \"--configuration-cache\"\n\npublic fun GradleRunner.andWithConfigurationCache() {"
       }
     }
   ],
@@ -214,7 +121,69 @@
     "module": "gradle-extensions.gradle-testkit-ext.main",
     "inspectionName": "UnusedReceiverParameter"
   },
-  "hash": "-6316478824735197786"
+  "hash": "-286275087248999218"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused receiver parameter",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Receiver parameter is never used",
+  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+      "language": "kotlin",
+      "line": 110,
+      "offset": 11,
+      "length": 12,
+      "code": {
+        "startLine": 108,
+        "length": 12,
+        "offset": 14,
+        "surroundingCode": "}\n\npublic fun GradleRunner.systemProperty(value: String): String = \"-D$value\"\n\npublic fun GradleRunner.andWithSystemProperty(value: String) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions.gradle-testkit-ext.main",
+    "inspectionName": "UnusedReceiverParameter"
+  },
+  "hash": "5933794478458968143"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused receiver parameter",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Receiver parameter is never used",
+  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+      "language": "kotlin",
+      "line": 140,
+      "offset": 11,
+      "length": 12,
+      "code": {
+        "startLine": 138,
+        "length": 12,
+        "offset": 14,
+        "surroundingCode": "}\n\npublic fun GradleRunner.noBuildCache(): String = \"--no-build-cache\"\n\npublic fun GradleRunner.andWithNoBuildCache() {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions.gradle-testkit-ext.main",
+    "inspectionName": "UnusedReceiverParameter"
+  },
+  "hash": "-8060329234376502191"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
@@ -261,14 +230,14 @@
       "type": "method",
       "path": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
       "language": "kotlin",
-      "line": 152,
+      "line": 122,
       "offset": 11,
       "length": 12,
       "code": {
-        "startLine": 150,
+        "startLine": 120,
         "length": 12,
         "offset": 14,
-        "surroundingCode": "}\n\npublic fun GradleRunner.noConfigurationCache(): String = \"--no-configuration-cache\"\n\npublic fun GradleRunner.andWithNoConfigurationCache() {"
+        "surroundingCode": "}\n\npublic fun GradleRunner.stacktrace(): String = \"--stacktrace\"\n\npublic fun GradleRunner.andWithStacktrace() {"
       }
     }
   ],
@@ -276,7 +245,38 @@
     "module": "gradle-extensions.gradle-testkit-ext.main",
     "inspectionName": "UnusedReceiverParameter"
   },
-  "hash": "2165972766228020751"
+  "hash": "4577412986944503282"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused receiver parameter",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Receiver parameter is never used",
+  "detailsInfo": "Reports receiver parameter of extension functions and properties that is not used.\n\n**Remove redundant receiver parameter** can be used to amend the code automatically.",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+      "language": "kotlin",
+      "line": 116,
+      "offset": 11,
+      "length": 12,
+      "code": {
+        "startLine": 114,
+        "length": 12,
+        "offset": 14,
+        "surroundingCode": "}\n\npublic fun GradleRunner.info(): String = \"--info\"\n\npublic fun GradleRunner.andWithInfo() {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions.gradle-testkit-ext.main",
+    "inspectionName": "UnusedReceiverParameter"
+  },
+  "hash": "-4143341440487623828"
 },{
   "tool": "Code Inspection",
   "category": "Redundant constructs",
