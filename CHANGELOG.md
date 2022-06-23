@@ -6,13 +6,19 @@
 
 ### Changed
 
-- `gradlew` and `clean` return type from `Unit` to `BuildResult`
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### Updated
+
+## [1.0.0-alpha.14] - 2022-06-23
+
+### Changed
+
+- `gradlew` and `clean` return type from `Unit` to `BuildResult`
 
 ### Updated
 
