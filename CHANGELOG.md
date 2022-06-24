@@ -6,6 +6,7 @@
 
 - `Project.module` getter
 - `Project.library` getter
+- `GradlewRunner.gradlewArgumentsFromTXT` function
 
 ### Changed
 

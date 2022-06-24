@@ -12,4 +12,5 @@ kotlin {
 dependencies {
     implementation(gradleKotlinDsl())
     implementation(gradleTestKit())
+    implementation(libs.javiersc.kotlin.kotlinStdlib)
 }
