@@ -4,6 +4,9 @@
 
 ### Added
 
+- `Project.module` getter
+- `Project.library` getter
+
 ### Changed
 
 ### Deprecated
