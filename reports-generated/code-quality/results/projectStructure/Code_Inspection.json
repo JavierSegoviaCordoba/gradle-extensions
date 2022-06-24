@@ -521,6 +521,10 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
+          "type": "Library"
+        },
+        {
           "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
           "type": "Library"
         },
@@ -667,6 +671,10 @@
         },
         {
           "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
           "type": "Library"
         },
         {
@@ -836,7 +844,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.0",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.1",
           "type": "Library"
         },
         {
@@ -868,7 +876,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.3.0",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.3.1",
           "type": "Library"
         },
         {
@@ -884,7 +892,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.3.0",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.3.1",
           "type": "Library"
         },
         {
@@ -904,7 +912,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.3.0",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.3.1",
           "type": "Library"
         },
         {
@@ -1224,7 +1232,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.10.0",
+          "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.10.1",
           "type": "Library"
         },
         {
@@ -2263,7 +2271,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.10.0",
+          "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.10.1",
           "type": "Library"
         },
         {

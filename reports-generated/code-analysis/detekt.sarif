@@ -47,7 +47,7 @@
             }
           ],
           "message": {
-            "text": "File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt' with '28' functions detected. Defined threshold inside files is set to '11'"
+            "text": "File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt' with '29' functions detected. Defined threshold inside files is set to '11'"
           },
           "ruleId": "detekt.complexity.TooManyFunctions"
         },
@@ -92,6 +92,27 @@
             "text": "RuntimeException is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case."
           },
           "ruleId": "detekt.exceptions.TooGenericExceptionThrown"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 12,
+                  "startLine": 85
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty."
+          },
+          "ruleId": "detekt.performance.SpreadOperator"
         },
         {
           "level": "warning",
@@ -146,7 +167,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 116
+                  "startLine": 120
                 }
               }
             }
@@ -167,7 +188,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 122
+                  "startLine": 126
                 }
               }
             }
@@ -188,7 +209,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 128
+                  "startLine": 132
                 }
               }
             }
@@ -209,7 +230,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 134
+                  "startLine": 138
                 }
               }
             }
@@ -230,7 +251,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 140
+                  "startLine": 144
                 }
               }
             }
@@ -251,7 +272,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 146
+                  "startLine": 150
                 }
               }
             }
@@ -272,7 +293,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 152
+                  "startLine": 156
                 }
               }
             }
@@ -293,7 +314,7 @@
                 },
                 "region": {
                   "startColumn": 25,
-                  "startLine": 158
+                  "startLine": 162
                 }
               }
             }

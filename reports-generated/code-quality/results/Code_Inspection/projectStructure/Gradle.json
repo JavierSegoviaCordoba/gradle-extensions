@@ -10,6 +10,14 @@
       "version": "1.6.21"
     },
     {
+      "ideaName": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
+      "gradleName": "com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
+      "unresolved": false,
+      "groupId": "com.javiersc.kotlin",
+      "artifactId": "kotlin-stdlib-jvm",
+      "version": "0.1.0-alpha.5"
+    },
+    {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
       "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
       "unresolved": false,
@@ -42,14 +50,6 @@
       "version": "13.0"
     },
     {
-      "ideaName": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
-      "gradleName": "com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
-      "unresolved": false,
-      "groupId": "com.javiersc.kotlin",
-      "artifactId": "kotlin-stdlib-jvm",
-      "version": "0.1.0-alpha.5"
-    },
-    {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.21",
       "gradleName": "org.jetbrains.kotlin:kotlin-test:1.6.21",
       "unresolved": false,
@@ -58,12 +58,12 @@
       "version": "1.6.21"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.0",
-      "gradleName": "io.kotest:kotest-assertions-core-jvm:5.3.0",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.1",
+      "gradleName": "io.kotest:kotest-assertions-core-jvm:5.3.1",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-core-jvm",
-      "version": "5.3.0"
+      "version": "5.3.1"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.21",
@@ -82,12 +82,12 @@
       "version": "5.6.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.3.0",
-      "gradleName": "io.kotest:kotest-assertions-shared-jvm:5.3.0",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.3.1",
+      "gradleName": "io.kotest:kotest-assertions-shared-jvm:5.3.1",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-shared-jvm",
-      "version": "5.3.0"
+      "version": "5.3.1"
     },
     {
       "ideaName": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
@@ -114,12 +114,12 @@
       "version": "1.2.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-api-jvm:5.3.0",
-      "gradleName": "io.kotest:kotest-assertions-api-jvm:5.3.0",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-api-jvm:5.3.1",
+      "gradleName": "io.kotest:kotest-assertions-api-jvm:5.3.1",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-api-jvm",
-      "version": "5.3.0"
+      "version": "5.3.1"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
@@ -146,12 +146,12 @@
       "version": "5.6.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-common-jvm:5.3.0",
-      "gradleName": "io.kotest:kotest-common-jvm:5.3.0",
+      "ideaName": "Gradle: io.kotest:kotest-common-jvm:5.3.1",
+      "gradleName": "io.kotest:kotest-common-jvm:5.3.1",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-common-jvm",
-      "version": "5.3.0"
+      "version": "5.3.1"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
@@ -218,12 +218,12 @@
       "version": "1.6.21"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.10.0",
-      "gradleName": "org.jetbrains.kotlinx:binary-compatibility-validator:0.10.0",
+      "ideaName": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.10.1",
+      "gradleName": "org.jetbrains.kotlinx:binary-compatibility-validator:0.10.1",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlinx",
       "artifactId": "binary-compatibility-validator",
-      "version": "0.10.0"
+      "version": "0.10.1"
     },
     {
       "ideaName": "Gradle: com.javiersc.gradle-plugins:kotlin-config:0.1.0-rc.43",

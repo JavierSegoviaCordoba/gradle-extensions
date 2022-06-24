@@ -36,9 +36,9 @@
       ]
     },
     {
-      "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.10.0",
+      "name": "Gradle: org.jetbrains.kotlinx:binary-compatibility-validator:0.10.1",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/binary-compatibility-validator/0.10.0/ccda5bf2aa3141f66b7f78b91afbf2e3678638fa/binary-compatibility-validator-0.10.0.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/binary-compatibility-validator/0.10.1/15e3b53bd0f19685e27b38a97793b94c739032b3/binary-compatibility-validator-0.10.1.jar!/"
       ]
     },
     {
@@ -1387,9 +1387,9 @@
       ]
     },
     {
-      "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.0",
+      "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.1",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.kotest/kotest-assertions-core-jvm/5.3.0/5ea1b8c1cc8cd7ee1fb4485a672f25332fc3c419/kotest-assertions-core-jvm-5.3.0.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.kotest/kotest-assertions-core-jvm/5.3.1/6702e8e497cac4660dfc64d566c078441942efe0/kotest-assertions-core-jvm-5.3.1.jar!/"
       ]
     },
     {
@@ -1405,9 +1405,9 @@
       ]
     },
     {
-      "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.3.0",
+      "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.3.1",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.kotest/kotest-assertions-shared-jvm/5.3.0/cbb3c9e0fef96f5c3f5be6b65dc2ca643ce8f23b/kotest-assertions-shared-jvm-5.3.0.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.kotest/kotest-assertions-shared-jvm/5.3.1/c48f7361ffe0307756130da8daecf9c520316a8d/kotest-assertions-shared-jvm-5.3.1.jar!/"
       ]
     },
     {
@@ -1429,9 +1429,9 @@
       ]
     },
     {
-      "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.3.0",
+      "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.3.1",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.kotest/kotest-assertions-api-jvm/5.3.0/2b1726b1bfcd6571aa518e8fd2924253ba52fbf7/kotest-assertions-api-jvm-5.3.0.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.kotest/kotest-assertions-api-jvm/5.3.1/643144eeec403106941e4a551e11af8050af0b50/kotest-assertions-api-jvm-5.3.1.jar!/"
       ]
     },
     {
@@ -1447,9 +1447,9 @@
       ]
     },
     {
-      "name": "Gradle: io.kotest:kotest-common-jvm:5.3.0",
+      "name": "Gradle: io.kotest:kotest-common-jvm:5.3.1",
       "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.kotest/kotest-common-jvm/5.3.0/f7ea30fd8893ced50e41570451994ec7099e7c0b/kotest-common-jvm-5.3.0.jar!/"
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/io.kotest/kotest-common-jvm/5.3.1/74d8d67296cb4cd9b955835817dc45b4f9744d2c/kotest-common-jvm-5.3.1.jar!/"
       ]
     },
     {
