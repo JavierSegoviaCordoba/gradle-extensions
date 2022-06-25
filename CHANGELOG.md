@@ -6,6 +6,8 @@
 
 ### Changed
 
+- `GradlewRunner.gradlewArgumentsFromTXT` function return type to `BuildResult`
+
 ### Deprecated
 
 ### Removed
