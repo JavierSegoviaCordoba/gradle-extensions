@@ -4,10 +4,6 @@
 
 ### Added
 
-- `Project.module` getter
-- `Project.library` getter
-- `GradlewRunner.gradlewArgumentsFromTXT` function
-
 ### Changed
 
 ### Deprecated
@@ -17,6 +13,14 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.15] - 2022-06-25
+
+### Added
+
+- `Project.module` getter
+- `Project.library` getter
+- `GradlewRunner.gradlewArgumentsFromTXT` function
 
 ## [1.0.0-alpha.14] - 2022-06-23
 
