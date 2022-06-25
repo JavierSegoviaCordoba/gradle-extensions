@@ -4,8 +4,6 @@
 
 ### Added
 
-- `expectTaskOutcome: TaskOutcome` parameter to `GradleRunner.testConfigurationCache`
-
 ### Changed
 
 ### Deprecated
@@ -15,6 +13,12 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.17] - 2022-06-25
+
+### Added
+
+- `expectTaskOutcome: TaskOutcome` parameter to `GradleRunner.testConfigurationCache`
 
 ## [1.0.0-alpha.16] - 2022-06-25
 
