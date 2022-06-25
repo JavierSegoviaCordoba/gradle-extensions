@@ -170,8 +170,8 @@
 
 <div>
   <ul>
-    <li>563 lines of code (loc)</li>
-    <li>441 source lines of code (sloc)</li>
+    <li>562 lines of code (loc)</li>
+    <li>440 source lines of code (sloc)</li>
     <li>316 logical lines of code (lloc)</li>
     <li>3 comment lines of code (cloc)</li>
     <li>79 cyclomatic complexity (mcc)</li>
@@ -254,11 +254,11 @@
       <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:85:12</span><span class="message">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span>
         <pre><code><span class="lineno">  82 </span>}
 <span class="lineno">  83 </span>
-<span class="lineno">  84 </span>public fun GradleRunner.gradlewArgumentFromTXT() {
+<span class="lineno">  84 </span>public fun GradleRunner.gradlewArgumentFromTXT(): BuildResult =
 <span class="lineno">  85 </span>    gradlew<span class="error">(*argumentsTxt.toTypedArray())</span>
-<span class="lineno">  86 </span>}
-<span class="lineno">  87 </span>
-<span class="lineno">  88 </span>public fun GradleRunner.gradlew(vararg arguments: String): BuildResult {
+<span class="lineno">  86 </span>
+<span class="lineno">  87 </span>public fun GradleRunner.gradlew(vararg arguments: String): BuildResult {
+<span class="lineno">  88 </span>    val previousArgs: List&lt;String&gt; = this.arguments.toList()
 </code></pre>
       </li>
     </ul>
@@ -292,84 +292,84 @@
   <details id="FunctionOnlyReturningConstant" open="open">
     <summary class="rule-container"><span class="rule">FunctionOnlyReturningConstant: 8 </span><span class="description">A function that only returns a constant is misleading. Consider declaring a constant instead.</span></summary>
     <ul>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:120:25</span><span class="message">info is returning a constant. Prefer declaring a constant instead.</span>
-        <pre><code><span class="lineno"> 117 </span>    withArguments(arguments + systemProperty(value))
-<span class="lineno"> 118 </span>}
-<span class="lineno"> 119 </span>
-<span class="lineno"> 120 </span>public fun GradleRunner.<span class="error">info</span>(): String = &quot;--info&quot;
-<span class="lineno"> 121 </span>
-<span class="lineno"> 122 </span>public fun GradleRunner.andWithInfo() {
-<span class="lineno"> 123 </span>    withArguments(arguments + info())
+      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:119:25</span><span class="message">info is returning a constant. Prefer declaring a constant instead.</span>
+        <pre><code><span class="lineno"> 116 </span>    withArguments(arguments + systemProperty(value))
+<span class="lineno"> 117 </span>}
+<span class="lineno"> 118 </span>
+<span class="lineno"> 119 </span>public fun GradleRunner.<span class="error">info</span>(): String = &quot;--info&quot;
+<span class="lineno"> 120 </span>
+<span class="lineno"> 121 </span>public fun GradleRunner.andWithInfo() {
+<span class="lineno"> 122 </span>    withArguments(arguments + info())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:126:25</span><span class="message">stacktrace is returning a constant. Prefer declaring a constant instead.</span>
-        <pre><code><span class="lineno"> 123 </span>    withArguments(arguments + info())
-<span class="lineno"> 124 </span>}
-<span class="lineno"> 125 </span>
-<span class="lineno"> 126 </span>public fun GradleRunner.<span class="error">stacktrace</span>(): String = &quot;--stacktrace&quot;
-<span class="lineno"> 127 </span>
-<span class="lineno"> 128 </span>public fun GradleRunner.andWithStacktrace() {
-<span class="lineno"> 129 </span>    withArguments(arguments + stacktrace())
+      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:125:25</span><span class="message">stacktrace is returning a constant. Prefer declaring a constant instead.</span>
+        <pre><code><span class="lineno"> 122 </span>    withArguments(arguments + info())
+<span class="lineno"> 123 </span>}
+<span class="lineno"> 124 </span>
+<span class="lineno"> 125 </span>public fun GradleRunner.<span class="error">stacktrace</span>(): String = &quot;--stacktrace&quot;
+<span class="lineno"> 126 </span>
+<span class="lineno"> 127 </span>public fun GradleRunner.andWithStacktrace() {
+<span class="lineno"> 128 </span>    withArguments(arguments + stacktrace())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:132:25</span><span class="message">scan is returning a constant. Prefer declaring a constant instead.</span>
-        <pre><code><span class="lineno"> 129 </span>    withArguments(arguments + stacktrace())
-<span class="lineno"> 130 </span>}
-<span class="lineno"> 131 </span>
-<span class="lineno"> 132 </span>public fun GradleRunner.<span class="error">scan</span>(): String = &quot;--scan&quot;
-<span class="lineno"> 133 </span>
-<span class="lineno"> 134 </span>public fun GradleRunner.andWithScan() {
-<span class="lineno"> 135 </span>    withArguments(arguments + scan())
+      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:131:25</span><span class="message">scan is returning a constant. Prefer declaring a constant instead.</span>
+        <pre><code><span class="lineno"> 128 </span>    withArguments(arguments + stacktrace())
+<span class="lineno"> 129 </span>}
+<span class="lineno"> 130 </span>
+<span class="lineno"> 131 </span>public fun GradleRunner.<span class="error">scan</span>(): String = &quot;--scan&quot;
+<span class="lineno"> 132 </span>
+<span class="lineno"> 133 </span>public fun GradleRunner.andWithScan() {
+<span class="lineno"> 134 </span>    withArguments(arguments + scan())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:138:25</span><span class="message">buildCache is returning a constant. Prefer declaring a constant instead.</span>
-        <pre><code><span class="lineno"> 135 </span>    withArguments(arguments + scan())
-<span class="lineno"> 136 </span>}
-<span class="lineno"> 137 </span>
-<span class="lineno"> 138 </span>public fun GradleRunner.<span class="error">buildCache</span>(): String = &quot;--build-cache&quot;
-<span class="lineno"> 139 </span>
-<span class="lineno"> 140 </span>public fun GradleRunner.andWithBuildCache() {
-<span class="lineno"> 141 </span>    withArguments(arguments + buildCache())
+      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:137:25</span><span class="message">buildCache is returning a constant. Prefer declaring a constant instead.</span>
+        <pre><code><span class="lineno"> 134 </span>    withArguments(arguments + scan())
+<span class="lineno"> 135 </span>}
+<span class="lineno"> 136 </span>
+<span class="lineno"> 137 </span>public fun GradleRunner.<span class="error">buildCache</span>(): String = &quot;--build-cache&quot;
+<span class="lineno"> 138 </span>
+<span class="lineno"> 139 </span>public fun GradleRunner.andWithBuildCache() {
+<span class="lineno"> 140 </span>    withArguments(arguments + buildCache())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:144:25</span><span class="message">noBuildCache is returning a constant. Prefer declaring a constant instead.</span>
-        <pre><code><span class="lineno"> 141 </span>    withArguments(arguments + buildCache())
-<span class="lineno"> 142 </span>}
-<span class="lineno"> 143 </span>
-<span class="lineno"> 144 </span>public fun GradleRunner.<span class="error">noBuildCache</span>(): String = &quot;--no-build-cache&quot;
-<span class="lineno"> 145 </span>
-<span class="lineno"> 146 </span>public fun GradleRunner.andWithNoBuildCache() {
-<span class="lineno"> 147 </span>    withArguments(arguments + noBuildCache())
+      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:143:25</span><span class="message">noBuildCache is returning a constant. Prefer declaring a constant instead.</span>
+        <pre><code><span class="lineno"> 140 </span>    withArguments(arguments + buildCache())
+<span class="lineno"> 141 </span>}
+<span class="lineno"> 142 </span>
+<span class="lineno"> 143 </span>public fun GradleRunner.<span class="error">noBuildCache</span>(): String = &quot;--no-build-cache&quot;
+<span class="lineno"> 144 </span>
+<span class="lineno"> 145 </span>public fun GradleRunner.andWithNoBuildCache() {
+<span class="lineno"> 146 </span>    withArguments(arguments + noBuildCache())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:150:25</span><span class="message">configurationCache is returning a constant. Prefer declaring a constant instead.</span>
-        <pre><code><span class="lineno"> 147 </span>    withArguments(arguments + noBuildCache())
-<span class="lineno"> 148 </span>}
-<span class="lineno"> 149 </span>
-<span class="lineno"> 150 </span>public fun GradleRunner.<span class="error">configurationCache</span>(): String = &quot;--configuration-cache&quot;
-<span class="lineno"> 151 </span>
-<span class="lineno"> 152 </span>public fun GradleRunner.andWithConfigurationCache() {
-<span class="lineno"> 153 </span>    withArguments(arguments + configurationCache())
+      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:149:25</span><span class="message">configurationCache is returning a constant. Prefer declaring a constant instead.</span>
+        <pre><code><span class="lineno"> 146 </span>    withArguments(arguments + noBuildCache())
+<span class="lineno"> 147 </span>}
+<span class="lineno"> 148 </span>
+<span class="lineno"> 149 </span>public fun GradleRunner.<span class="error">configurationCache</span>(): String = &quot;--configuration-cache&quot;
+<span class="lineno"> 150 </span>
+<span class="lineno"> 151 </span>public fun GradleRunner.andWithConfigurationCache() {
+<span class="lineno"> 152 </span>    withArguments(arguments + configurationCache())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:156:25</span><span class="message">noConfigurationCache is returning a constant. Prefer declaring a constant instead.</span>
-        <pre><code><span class="lineno"> 153 </span>    withArguments(arguments + configurationCache())
-<span class="lineno"> 154 </span>}
-<span class="lineno"> 155 </span>
-<span class="lineno"> 156 </span>public fun GradleRunner.<span class="error">noConfigurationCache</span>(): String = &quot;--no-configuration-cache&quot;
-<span class="lineno"> 157 </span>
-<span class="lineno"> 158 </span>public fun GradleRunner.andWithNoConfigurationCache() {
-<span class="lineno"> 159 </span>    withArguments(arguments + noConfigurationCache())
+      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:155:25</span><span class="message">noConfigurationCache is returning a constant. Prefer declaring a constant instead.</span>
+        <pre><code><span class="lineno"> 152 </span>    withArguments(arguments + configurationCache())
+<span class="lineno"> 153 </span>}
+<span class="lineno"> 154 </span>
+<span class="lineno"> 155 </span>public fun GradleRunner.<span class="error">noConfigurationCache</span>(): String = &quot;--no-configuration-cache&quot;
+<span class="lineno"> 156 </span>
+<span class="lineno"> 157 </span>public fun GradleRunner.andWithNoConfigurationCache() {
+<span class="lineno"> 158 </span>    withArguments(arguments + noConfigurationCache())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:162:25</span><span class="message">configurationCacheProblemsWarn is returning a constant. Prefer declaring a constant instead.</span>
-        <pre><code><span class="lineno"> 159 </span>    withArguments(arguments + noConfigurationCache())
-<span class="lineno"> 160 </span>}
-<span class="lineno"> 161 </span>
-<span class="lineno"> 162 </span>public fun GradleRunner.<span class="error">configurationCacheProblemsWarn</span>(): String =
-<span class="lineno"> 163 </span>    &quot;--configuration-cache-problems=warn&quot;
-<span class="lineno"> 164 </span>
-<span class="lineno"> 165 </span>public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
+      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:161:25</span><span class="message">configurationCacheProblemsWarn is returning a constant. Prefer declaring a constant instead.</span>
+        <pre><code><span class="lineno"> 158 </span>    withArguments(arguments + noConfigurationCache())
+<span class="lineno"> 159 </span>}
+<span class="lineno"> 160 </span>
+<span class="lineno"> 161 </span>public fun GradleRunner.<span class="error">configurationCacheProblemsWarn</span>(): String =
+<span class="lineno"> 162 </span>    &quot;--configuration-cache-problems=warn&quot;
+<span class="lineno"> 163 </span>
+<span class="lineno"> 164 </span>public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
 </code></pre>
       </li>
     </ul>
@@ -377,7 +377,7 @@
 </div>
 
 
-generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-06-25 00:29:12 UTC.
+generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-06-25 01:11:00 UTC.
 
 </body>
 </html>
