@@ -27,8 +27,8 @@ public final class com/javiersc/gradle/testkit/extensions/GradleTestKitExtension
 	public static final fun systemProperty (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;)Ljava/lang/String;
 	public static final fun testBuildCache (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
 	public static synthetic fun testBuildCache$default (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
-	public static final fun testConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;)V
-	public static synthetic fun testConfigurationCache$default (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;ILjava/lang/Object;)V
+	public static final fun testConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;Lorg/gradle/testkit/runner/TaskOutcome;Ljava/lang/String;)V
+	public static synthetic fun testConfigurationCache$default (Lorg/gradle/testkit/runner/GradleRunner;Lorg/gradle/testkit/runner/TaskOutcome;Ljava/lang/String;ILjava/lang/Object;)V
 	public static final fun withArgumentsFromTXT (Lorg/gradle/testkit/runner/GradleRunner;)V
 }
 

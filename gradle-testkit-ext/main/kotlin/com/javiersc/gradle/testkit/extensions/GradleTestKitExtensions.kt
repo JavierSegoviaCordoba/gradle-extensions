@@ -54,7 +54,10 @@ public fun GradleRunner.testBuildCache(
     check(outcome == expectOutcome) { "The outcome is $outcome and must be $expectOutcome" }
 }
 
-public fun GradleRunner.testConfigurationCache(resultingTask: String? = null) {
+public fun GradleRunner.testConfigurationCache(
+    expectTaskOutcome: TaskOutcome = TaskOutcome.UP_TO_DATE,
+    resultingTask: String? = null,
+) {
     val taskName =
         checkNotNull(resultingTask ?: arguments.firstOrNull()) {
             "There is not a task in the arguments to check if configuration cache works"
@@ -74,7 +77,7 @@ public fun GradleRunner.testConfigurationCache(resultingTask: String? = null) {
     val outcome =
         checkNotNull(result.task(task)) { "The outcome for the task $task is null" }.outcome
 
-    check(outcome == TaskOutcome.UP_TO_DATE) { "The outcome is $outcome and must be UP-TO-DATE" }
+    check(outcome == expectTaskOutcome) { "The outcome is $outcome and must be $expectTaskOutcome" }
 }
 
 public fun GradleRunner.withArgumentsFromTXT() {
