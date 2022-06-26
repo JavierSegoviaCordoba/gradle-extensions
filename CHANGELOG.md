@@ -4,6 +4,20 @@
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Updated
+
+## [1.0.0-alpha.18] - 2022-06-26
+
+### Added
+
 - `Project.isSnapshot: Boolean`
 - `Project.isNotSnapshot: Boolean`
 - `Project.getProperty(name: String): String`
@@ -15,16 +29,6 @@
 - `Project.getLongProperty(name: String): Long`
 - `Project.getLongPropertyOrNull(name: String): Long?`
 - `Project.getBooleanProperty(name: String): Boolean`
-
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Updated
 
 ## [1.0.0-alpha.17] - 2022-06-25
 
