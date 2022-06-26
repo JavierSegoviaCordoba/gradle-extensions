@@ -100,7 +100,13 @@
       "contentEntries": [
         {
           "path": "file://$PROJECT_DIR$/gradle-ext/test",
-          "sourceFolders": []
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/gradle-ext/test/kotlin",
+              "type": "TestSource",
+              "packagePrefix": ""
+            }
+          ]
         }
       ],
       "orderEntries": [
@@ -221,7 +227,15 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.21",
+          "type": "Library"
+        },
+        {
           "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.1",
           "type": "Library"
         },
         {
@@ -233,6 +247,10 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.21",
+          "type": "Library"
+        },
+        {
           "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.21",
           "type": "Library"
         },
@@ -241,7 +259,59 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.3.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apiguardian:apiguardian-api:1.1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.3.1",
+          "type": "Library"
+        },
+        {
           "name": "/data/project/gradle-ext/build/pluginUnderTestMetadata",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.3.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.java-diff-utils:java-diff-utils:4.11",
           "type": "Library"
         }
       ]
