@@ -4,6 +4,8 @@
 
 ### Added
 
+- `Project.isSnapshot: Boolean`
+- `Project.isNotSnapshot: Boolean`
 - `Project.getProperty(name: String): String`
 - `Project.getPropertyOrNull(name: String): String?`
 - `Project.getStringProperty(name: String): String`

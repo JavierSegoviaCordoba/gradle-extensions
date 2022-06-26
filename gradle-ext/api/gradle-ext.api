@@ -20,7 +20,9 @@ public final class com/javiersc/gradle/extensions/LoggingKt {
 public final class com/javiersc/gradle/extensions/ProjectKt {
 	public static final fun getLibrary (Lorg/gradle/api/Project;)Ljava/lang/String;
 	public static final fun getModule (Lorg/gradle/api/Project;)Ljava/lang/String;
+	public static final fun isNotSnapshot (Lorg/gradle/api/Project;)Z
 	public static final fun isRootProject (Lorg/gradle/api/Project;)Z
+	public static final fun isSnapshot (Lorg/gradle/api/Project;)Z
 }
 
 public final class com/javiersc/gradle/extensions/PropertiesKt {
