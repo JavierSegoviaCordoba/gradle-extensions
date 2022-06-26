@@ -10,8 +10,12 @@ kotlin {
 }
 
 dependencies {
+    api(libs.javiersc.kotlin.kotlinStdlib)
+
     implementation(gradleKotlinDsl())
     implementation(gradleTestKit())
 
-    api(libs.javiersc.kotlin.kotlinStdlib)
+
+    testImplementation(libs.jetbrains.kotlin.kotlinTest)
+    testImplementation(libs.kotest.kotestAssertionsCore)
 }

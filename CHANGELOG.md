@@ -4,6 +4,16 @@
 
 ### Added
 
+- `Project.getProperty(name: String): String`
+- `Project.getPropertyOrNull(name: String): String?`
+- `Project.getStringProperty(name: String): String`
+- `Project.getStringPropertyOrNull(name: String): String?`
+- `Project.getIntProperty(name: String): Int`
+- `Project.getIntPropertyOrNull(name: String): Int?`
+- `Project.getLongProperty(name: String): Long`
+- `Project.getLongPropertyOrNull(name: String): Long?`
+- `Project.getBooleanProperty(name: String): Boolean`
+
 ### Changed
 
 ### Deprecated
