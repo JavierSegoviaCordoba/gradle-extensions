@@ -4,19 +4,7 @@
 
 ### Added
 
-- Gradle Extensions artifact: `com.javiersc.gradle:gradle-logging-extensions`
-- Gradle Extensions artifact: `com.javiersc.gradle:gradle-miscellanea-extensions`
-- Gradle Extensions artifact: `com.javiersc.gradle:gradle-project-extensions`
-- Gradle Extensions artifact: `com.javiersc.gradle:gradle-properties-extensions`
-- Gradle Extensions artifact: `com.javiersc.gradle:gradle-tasks-extensions`
-- Gradle Extensions artifact: `com.javiersc.gradle:gradle-version-catalog-extensions`
-- Gradle Test Extensions artifact: `com.javiersc.gradle:gradle-testkit-test-extensions`
-
-  
 ### Changed
-
-- Gradle Extensions artifact: `com.javiersc.gradle:gradle-extensions`
-- Gradle Test Extensions artifact: `com.javiersc.gradle:gradle-test-extensions`
 
 ### Deprecated
 
@@ -25,6 +13,23 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.19] - 2022-06-27
+
+### Added
+
+- Gradle Extensions artifact: `com.javiersc.gradle:gradle-logging-extensions`
+- Gradle Extensions artifact: `com.javiersc.gradle:gradle-miscellanea-extensions`
+- Gradle Extensions artifact: `com.javiersc.gradle:gradle-project-extensions`
+- Gradle Extensions artifact: `com.javiersc.gradle:gradle-properties-extensions`
+- Gradle Extensions artifact: `com.javiersc.gradle:gradle-tasks-extensions`
+- Gradle Extensions artifact: `com.javiersc.gradle:gradle-version-catalog-extensions`
+- Gradle Test Extensions artifact: `com.javiersc.gradle:gradle-testkit-test-extensions`
+
+### Changed
+
+- Gradle Extensions artifact: `com.javiersc.gradle:gradle-extensions`
+- Gradle Test Extensions artifact: `com.javiersc.gradle:gradle-test-extensions`
 
 ## [1.0.0-alpha.18] - 2022-06-26
 
