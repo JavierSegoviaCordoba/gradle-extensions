@@ -26,4 +26,6 @@ dependencyResolutionManagement {
 
 include(":gradle-ext")
 include(":gradle-testkit-ext")
-include(":gradle-testkit-ext-integration-tests")
+include(":gradle-version-catalog-ext")
+
+include(":integration-tests")
