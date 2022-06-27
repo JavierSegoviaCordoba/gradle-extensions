@@ -1,0 +1,8 @@
+public final class com/javiersc/gradle/project/extensions/ProjectKt {
+	public static final fun getLibrary (Lorg/gradle/api/Project;)Ljava/lang/String;
+	public static final fun getModule (Lorg/gradle/api/Project;)Ljava/lang/String;
+	public static final fun isNotSnapshot (Lorg/gradle/api/Project;)Z
+	public static final fun isRootProject (Lorg/gradle/api/Project;)Z
+	public static final fun isSnapshot (Lorg/gradle/api/Project;)Z
+}
+

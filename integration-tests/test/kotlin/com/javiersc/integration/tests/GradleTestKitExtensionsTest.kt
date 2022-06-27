@@ -1,9 +1,9 @@
 package com.javiersc.integration.tests
 
-import com.javiersc.gradle.testkit.extensions.andWithInfo
-import com.javiersc.gradle.testkit.extensions.gradleTestKitTest
-import com.javiersc.gradle.testkit.extensions.resourceFile
-import com.javiersc.gradle.testkit.extensions.withArgumentsFromTXT
+import com.javiersc.gradle.testkit.test.extensions.andWithInfo
+import com.javiersc.gradle.testkit.test.extensions.gradleTestKitTest
+import com.javiersc.gradle.testkit.test.extensions.resourceFile
+import com.javiersc.gradle.testkit.test.extensions.withArgumentsFromTXT
 import io.kotest.matchers.shouldBe
 import kotlin.test.Test
 
