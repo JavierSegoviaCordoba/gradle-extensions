@@ -1,0 +1,11 @@
+[versions]
+coroutines = "1.6.3"
+javierscStdLib = "0.1.0-alpha.5"
+kotest = "5.0.1"
+
+[libraries]
+javiersc-kotlin-kotlinStdlib = { module = "com.javiersc.kotlin:kotlin-stdlib", version.ref = "javierscStdLib" }
+jetbrains-kotlin-kotlinTest = { module = "org.jetbrains.kotlin:kotlin-test" }
+jetbrains-kotlinx-kotlinxCoroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotest-kotestAssertionsCore = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-kotestProperty = { module = "io.kotest:kotest-property", version.ref = "kotest" }
