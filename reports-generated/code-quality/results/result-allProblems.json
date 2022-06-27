@@ -22,10 +22,10 @@
     }
   ],
   "attributes": {
-    "module": "gradle-extensions",
+    "module": "gradle-extensions-project",
     "inspectionName": "UnstableApiUsage"
   },
-  "hash": "08e784f97aa94ed84f6e33b8d9e536c893a48298d493ae1d3ea336c64e9dc833"
+  "hash": "2d45b6ccdce66c23dd256d3a12f0e58001131a76a6845aba94742dc2f9820afa"
 },{
   "tool": "Code Inspection",
   "category": "JVM languages",
@@ -50,10 +50,10 @@
     }
   ],
   "attributes": {
-    "module": "gradle-extensions",
+    "module": "gradle-extensions-project",
     "inspectionName": "UnstableApiUsage"
   },
-  "hash": "03ddbf2eaa76d87b578520a782d2ab0c480c8348f3ba9041d6e4d449de1757e4"
+  "hash": "ce028e028f7a4bd6c31a9518ace41930e0123c5e78a3884ecd783e24d7a45111"
 },{
   "tool": "Code Inspection",
   "category": "JVM languages",
@@ -78,10 +78,10 @@
     }
   ],
   "attributes": {
-    "module": "gradle-extensions",
+    "module": "gradle-extensions-project",
     "inspectionName": "UnstableApiUsage"
   },
-  "hash": "41c376aca1fb00d983cd797328e52356cfec8ed146bafba4f66d0ad76eaa8a01"
+  "hash": "ceac96032defeeef9f69038c0cf4bbc24751f30e5cfa24ef343cf525c9a8435a"
 },{
   "tool": "Code Inspection",
   "category": "JVM languages",
@@ -106,10 +106,10 @@
     }
   ],
   "attributes": {
-    "module": "gradle-extensions",
+    "module": "gradle-extensions-project",
     "inspectionName": "UnstableApiUsage"
   },
-  "hash": "6dace86b55ce930bdec52018bc1ad15e1db466405199cf69a344cbbe577499d3"
+  "hash": "c184204c716543235bc0174c4cebf7da5e86c818834f2d81c4b6c4b893e12a19"
 },{
   "tool": "Code Inspection",
   "category": "JVM languages",
@@ -129,13 +129,13 @@
         "startLine": 20,
         "length": 15,
         "offset": 11,
-        "surroundingCode": "    }\n\n    versionCatalogs {\n        create(\"pluginLibs\") { from(files(\"gradle/pluginLibs.versions.toml\")) }\n    }"
+        "surroundingCode": "    }\n\n    versionCatalogs { create(\"pluginLibs\") { from(files(\"gradle/pluginLibs.versions.toml\")) } }\n}\n"
       }
     }
   ],
   "attributes": {
-    "module": "gradle-extensions",
+    "module": "gradle-extensions-project",
     "inspectionName": "UnstableApiUsage"
   },
-  "hash": "1da7b05e4a1088587582cf1065ee91a75c877642d664151fe82d19a0721e737a"
+  "hash": "e016f5c315943bcb9d78ad20e1f1607f9931f4fcd8329bf1033967c9f9a5f2d5"
 }]}

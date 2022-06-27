@@ -12,24 +12,24 @@
   "sources": [
     {
       "type": "file",
-      "path": "gradle-testkit-ext-integration-tests/build.gradle.kts",
+      "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 22,
-      "offset": 19,
+      "line": 12,
+      "offset": 8,
       "length": 8,
       "code": {
-        "startLine": 20,
+        "startLine": 10,
         "length": 8,
-        "offset": 72,
-        "surroundingCode": "dependencies {\n    implementation(gradleKotlinDsl())\n    implementation(projects.gradleExt)\n\n    testImplementation(libs.jetbrains.kotlin.kotlinTest)"
+        "offset": 24,
+        "surroundingCode": "\ndependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)"
       }
     }
   ],
   "attributes": {
-    "module": "gradle-extensions.gradle-testkit-ext-integration-tests",
+    "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-7824990867109723314"
+  "hash": "-7038737813986624432"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -39,29 +39,29 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: gradleExt",
+  "comment": "Unresolved reference: gradleExtensions",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
-      "path": "gradle-testkit-ext-integration-tests/build.gradle.kts",
+      "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 22,
-      "offset": 28,
-      "length": 9,
+      "line": 12,
+      "offset": 17,
+      "length": 16,
       "code": {
-        "startLine": 20,
-        "length": 9,
-        "offset": 81,
-        "surroundingCode": "dependencies {\n    implementation(gradleKotlinDsl())\n    implementation(projects.gradleExt)\n\n    testImplementation(libs.jetbrains.kotlin.kotlinTest)"
+        "startLine": 10,
+        "length": 16,
+        "offset": 33,
+        "surroundingCode": "\ndependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)"
       }
     }
   ],
   "attributes": {
-    "module": "gradle-extensions.gradle-testkit-ext-integration-tests",
+    "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "3235343800955853610"
+  "hash": "-2401140537209116480"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -76,24 +76,24 @@
   "sources": [
     {
       "type": "file",
-      "path": "gradle-testkit-ext-integration-tests/build.gradle.kts",
+      "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 27,
-      "offset": 23,
+      "line": 13,
+      "offset": 8,
       "length": 8,
       "code": {
-        "startLine": 25,
+        "startLine": 11,
         "length": 8,
-        "offset": 81,
-        "surroundingCode": "    testImplementation(libs.kotest.kotestAssertionsCore)\n\n    testImplementation(projects.gradleTestkitExt)\n}"
+        "offset": 82,
+        "surroundingCode": "dependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)\n    api(projects.gradleExtensions.gradlePropertiesExtensions)"
       }
     }
   ],
   "attributes": {
-    "module": "gradle-extensions.gradle-testkit-ext-integration-tests",
+    "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-8120841309490049949"
+  "hash": "3835659389446529866"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -103,27 +103,219 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: gradleTestkitExt",
+  "comment": "Unresolved reference: gradleExtensions",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
-      "path": "gradle-testkit-ext-integration-tests/build.gradle.kts",
+      "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 27,
-      "offset": 32,
+      "line": 13,
+      "offset": 17,
       "length": 16,
       "code": {
-        "startLine": 25,
+        "startLine": 11,
         "length": 16,
-        "offset": 90,
-        "surroundingCode": "    testImplementation(libs.kotest.kotestAssertionsCore)\n\n    testImplementation(projects.gradleTestkitExt)\n}"
+        "offset": 91,
+        "surroundingCode": "dependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)\n    api(projects.gradleExtensions.gradlePropertiesExtensions)"
       }
     }
   ],
   "attributes": {
-    "module": "gradle-extensions.gradle-testkit-ext-integration-tests",
+    "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-4201549443494016357"
+  "hash": "-8096373215214925255"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "integration-tests/build.gradle.kts",
+      "language": "kotlin",
+      "line": 21,
+      "offset": 19,
+      "length": 8,
+      "code": {
+        "startLine": 19,
+        "length": 8,
+        "offset": 58,
+        "surroundingCode": "    implementation(gradleKotlinDsl())\n\n    implementation(projects.gradleExtensions)\n    implementation(projects.gradleTestExtensions)\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.integration-tests",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "2276765737739543939"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: gradleExtensions",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "integration-tests/build.gradle.kts",
+      "language": "kotlin",
+      "line": 21,
+      "offset": 28,
+      "length": 16,
+      "code": {
+        "startLine": 19,
+        "length": 16,
+        "offset": 67,
+        "surroundingCode": "    implementation(gradleKotlinDsl())\n\n    implementation(projects.gradleExtensions)\n    implementation(projects.gradleTestExtensions)\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.integration-tests",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "5090639667482812244"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "integration-tests/build.gradle.kts",
+      "language": "kotlin",
+      "line": 22,
+      "offset": 19,
+      "length": 8,
+      "code": {
+        "startLine": 20,
+        "length": 8,
+        "offset": 66,
+        "surroundingCode": "\n    implementation(projects.gradleExtensions)\n    implementation(projects.gradleTestExtensions)\n\n    testImplementation(libs.jetbrains.kotlin.kotlinTest)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.integration-tests",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "450879639047602087"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: gradleTestExtensions",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "integration-tests/build.gradle.kts",
+      "language": "kotlin",
+      "line": 22,
+      "offset": 28,
+      "length": 20,
+      "code": {
+        "startLine": 20,
+        "length": 20,
+        "offset": 75,
+        "surroundingCode": "\n    implementation(projects.gradleExtensions)\n    implementation(projects.gradleTestExtensions)\n\n    testImplementation(libs.jetbrains.kotlin.kotlinTest)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.integration-tests",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "1350803989582838691"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-test-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 8,
+      "length": 8,
+      "code": {
+        "startLine": 14,
+        "length": 8,
+        "offset": 76,
+        "surroundingCode": "    api(gradleTestKit())\n    api(libs.javiersc.kotlin.kotlinStdlib)\n    api(projects.gradleTestExtensions.gradleTestkitTestExtensions)\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-4070429805033913704"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: gradleTestExtensions",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-test-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 16,
+      "offset": 17,
+      "length": 20,
+      "code": {
+        "startLine": 14,
+        "length": 20,
+        "offset": 85,
+        "surroundingCode": "    api(gradleTestKit())\n    api(libs.javiersc.kotlin.kotlinStdlib)\n    api(projects.gradleTestExtensions.gradleTestkitTestExtensions)\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-522451621073682172"
 }]}

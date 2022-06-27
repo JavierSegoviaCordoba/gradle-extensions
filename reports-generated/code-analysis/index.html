@@ -157,11 +157,11 @@
 
 <div>
   <ul>
-    <li>59 number of properties</li>
-    <li>58 number of functions</li>
-    <li>3 number of classes</li>
-    <li>4 number of packages</li>
-    <li>17 number of kt files</li>
+    <li>62 number of properties</li>
+    <li>69 number of functions</li>
+    <li>6 number of classes</li>
+    <li>10 number of packages</li>
+    <li>28 number of kt files</li>
   </ul>
 </div>
 
@@ -170,27 +170,27 @@
 
 <div>
   <ul>
-    <li>700 lines of code (loc)</li>
-    <li>551 source lines of code (sloc)</li>
-    <li>412 logical lines of code (lloc)</li>
+    <li>961 lines of code (loc)</li>
+    <li>764 source lines of code (sloc)</li>
+    <li>574 logical lines of code (lloc)</li>
     <li>3 comment lines of code (cloc)</li>
-    <li>102 cyclomatic complexity (mcc)</li>
+    <li>113 cyclomatic complexity (mcc)</li>
     <li>28 cognitive complexity</li>
-    <li>15 number of total code smells</li>
+    <li>14 number of total code smells</li>
     <li>0% comment source ratio</li>
-    <li>247 mcc per 1,000 lloc</li>
-    <li>36 code smells per 1,000 lloc</li>
+    <li>196 mcc per 1,000 lloc</li>
+    <li>24 code smells per 1,000 lloc</li>
   </ul>
 </div>
 
 
 <h2>Findings</h2>
-<div>Total: 15
+<div>Total: 14
   <h3>complexity: 2</h3>
   <details id="LongParameterList" open="open">
     <summary class="rule-container"><span class="rule">LongParameterList: 1 </span><span class="description">The more parameters a function has the more complex it is. Long parameter lists are often used to control complex algorithms and violate the Single Responsibility Principle. Prefer functions with short parameter lists.</span></summary>
     <ul>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:9:29</span><span class="message">The function gradleTestKitTest(sandboxPath: String?, prefix: String, withDebug: Boolean, withPluginClasspath: Boolean, isolated: Boolean, test: GradleRunner.() -&gt; Unit) has too many parameters. The current threshold is set to 6.</span>
+      <li><span class="location">gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt:9:29</span><span class="message">The function gradleTestKitTest(sandboxPath: String?, prefix: String, withDebug: Boolean, withPluginClasspath: Boolean, isolated: Boolean, test: GradleRunner.() -&gt; Unit) has too many parameters. The current threshold is set to 6.</span>
         <pre><code><span class="lineno">   6 </span>import org.gradle.testkit.runner.GradleRunner
 <span class="lineno">   7 </span>import org.gradle.testkit.runner.TaskOutcome
 <span class="lineno">   8 </span>
@@ -205,13 +205,11 @@
   <details id="TooManyFunctions" open="open">
     <summary class="rule-container"><span class="rule">TooManyFunctions: 1 </span><span class="description">Too many functions inside a/an file/class/object/interface always indicate a violation of the single responsibility principle. Maybe the file/class/object/interface wants to manage too many things at once. Extract functionality which clearly belongs together.</span></summary>
     <ul>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:3:1</span><span class="message">File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt' with '29' functions detected. Defined threshold inside files is set to '11'</span>
-        <pre><code><span class="lineno">   1 </span>@file:Suppress(&quot;UnusedReceiverParameter&quot;)
+      <li><span class="location">gradle-extensions/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/Properties.kt:1:1</span><span class="message">File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/Properties.kt' with '12' functions detected. Defined threshold inside files is set to '11'</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.gradle.properties.extensions</span>
 <span class="lineno">   2 </span>
-<span class="lineno">   3 </span><span class="error">package com.javiersc.gradle.testkit.extensions</span>
-<span class="lineno">   4 </span>
-<span class="lineno">   5 </span>import org.gradle.testkit.runner.BuildResult
-<span class="lineno">   6 </span>import org.gradle.testkit.runner.GradleRunner
+<span class="lineno">   3 </span>import java.io.File
+<span class="lineno">   4 </span>import java.util.Properties
 </code></pre>
       </li>
     </ul>
@@ -220,7 +218,7 @@
   <details id="TooGenericExceptionCaught" open="open">
     <summary class="rule-container"><span class="rule">TooGenericExceptionCaught: 1 </span><span class="description">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span></summary>
     <ul>
-      <li><span class="location">gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt:17:18</span><span class="message">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span>
+      <li><span class="location">gradle-extensions/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt:17:18</span><span class="message">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span>
         <pre><code><span class="lineno">  14 </span>        try {
 <span class="lineno">  15 </span>            val method: Method = Provider::class.java.getMethod(&quot;forUseAtConfigurationTime&quot;)
 <span class="lineno">  16 </span>            method(provider) as Provider&lt;S&gt;
@@ -235,7 +233,7 @@
   <details id="TooGenericExceptionThrown" open="open">
     <summary class="rule-container"><span class="rule">TooGenericExceptionThrown: 1 </span><span class="description">The thrown exception is too generic. Prefer throwing project specific exceptions to handle error cases.</span></summary>
     <ul>
-      <li><span class="location">gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt:23:17</span><span class="message">RuntimeException is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case.</span>
+      <li><span class="location">gradle-extensions/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt:23:17</span><span class="message">RuntimeException is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case.</span>
         <pre><code><span class="lineno">  20 </span>                    e is IllegalAccessException ||
 <span class="lineno">  21 </span>                    e is InvocationTargetException
 <span class="lineno">  22 </span>            if (shouldThrowRuntimeException) {
@@ -243,22 +241,6 @@
 <span class="lineno">  24 </span>            } else {
 <span class="lineno">  25 </span>                throw e
 <span class="lineno">  26 </span>            }
-</code></pre>
-      </li>
-    </ul>
-  </details>
-  <h3>performance: 1</h3>
-  <details id="SpreadOperator" open="open">
-    <summary class="rule-container"><span class="rule">SpreadOperator: 1 </span><span class="description">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span></summary>
-    <ul>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:88:12</span><span class="message">In most cases using a spread operator causes a full copy of the array to be created before calling a method. This may result in a performance penalty.</span>
-        <pre><code><span class="lineno">  85 </span>}
-<span class="lineno">  86 </span>
-<span class="lineno">  87 </span>public fun GradleRunner.gradlewArgumentFromTXT(): BuildResult =
-<span class="lineno">  88 </span>    gradlew<span class="error">(*argumentsTxt.toTypedArray())</span>
-<span class="lineno">  89 </span>
-<span class="lineno">  90 </span>public fun GradleRunner.gradlew(vararg arguments: String): BuildResult {
-<span class="lineno">  91 </span>    val previousArgs: List&lt;String&gt; = this.arguments.toList()
 </code></pre>
       </li>
     </ul>
@@ -277,7 +259,7 @@
 <span class="lineno">  15 </span>    implementation(files(pluginLibs.javaClass.superclass.protectionDomain.codeSource.location))
 </code></pre>
       </li>
-      <li><span class="location">gradle-ext/main/kotlin/com/javiersc/gradle/extensions/ForUseAtConfigurationTime.kt:11:1</span><span class="message">This comment contains 'TODO:' that has been defined as forbidden in detekt.</span>
+      <li><span class="location">gradle-extensions/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt:11:1</span><span class="message">This comment contains 'TODO:' that has been defined as forbidden in detekt.</span>
         <pre><code><span class="lineno">   8 </span>import org.gradle.util.GradleVersion.current
 <span class="lineno">   9 </span>import org.gradle.util.GradleVersion.version
 <span class="lineno">  10 </span>
@@ -292,7 +274,7 @@
   <details id="FunctionOnlyReturningConstant" open="open">
     <summary class="rule-container"><span class="rule">FunctionOnlyReturningConstant: 8 </span><span class="description">A function that only returns a constant is misleading. Consider declaring a constant instead.</span></summary>
     <ul>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:122:25</span><span class="message">info is returning a constant. Prefer declaring a constant instead.</span>
+      <li><span class="location">gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt:122:25</span><span class="message">info is returning a constant. Prefer declaring a constant instead.</span>
         <pre><code><span class="lineno"> 119 </span>    withArguments(arguments + systemProperty(value))
 <span class="lineno"> 120 </span>}
 <span class="lineno"> 121 </span>
@@ -302,7 +284,7 @@
 <span class="lineno"> 125 </span>    withArguments(arguments + info())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:128:25</span><span class="message">stacktrace is returning a constant. Prefer declaring a constant instead.</span>
+      <li><span class="location">gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt:128:25</span><span class="message">stacktrace is returning a constant. Prefer declaring a constant instead.</span>
         <pre><code><span class="lineno"> 125 </span>    withArguments(arguments + info())
 <span class="lineno"> 126 </span>}
 <span class="lineno"> 127 </span>
@@ -312,7 +294,7 @@
 <span class="lineno"> 131 </span>    withArguments(arguments + stacktrace())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:134:25</span><span class="message">scan is returning a constant. Prefer declaring a constant instead.</span>
+      <li><span class="location">gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt:134:25</span><span class="message">scan is returning a constant. Prefer declaring a constant instead.</span>
         <pre><code><span class="lineno"> 131 </span>    withArguments(arguments + stacktrace())
 <span class="lineno"> 132 </span>}
 <span class="lineno"> 133 </span>
@@ -322,7 +304,7 @@
 <span class="lineno"> 137 </span>    withArguments(arguments + scan())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:140:25</span><span class="message">buildCache is returning a constant. Prefer declaring a constant instead.</span>
+      <li><span class="location">gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt:140:25</span><span class="message">buildCache is returning a constant. Prefer declaring a constant instead.</span>
         <pre><code><span class="lineno"> 137 </span>    withArguments(arguments + scan())
 <span class="lineno"> 138 </span>}
 <span class="lineno"> 139 </span>
@@ -332,7 +314,7 @@
 <span class="lineno"> 143 </span>    withArguments(arguments + buildCache())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:146:25</span><span class="message">noBuildCache is returning a constant. Prefer declaring a constant instead.</span>
+      <li><span class="location">gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt:146:25</span><span class="message">noBuildCache is returning a constant. Prefer declaring a constant instead.</span>
         <pre><code><span class="lineno"> 143 </span>    withArguments(arguments + buildCache())
 <span class="lineno"> 144 </span>}
 <span class="lineno"> 145 </span>
@@ -342,7 +324,7 @@
 <span class="lineno"> 149 </span>    withArguments(arguments + noBuildCache())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:152:25</span><span class="message">configurationCache is returning a constant. Prefer declaring a constant instead.</span>
+      <li><span class="location">gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt:152:25</span><span class="message">configurationCache is returning a constant. Prefer declaring a constant instead.</span>
         <pre><code><span class="lineno"> 149 </span>    withArguments(arguments + noBuildCache())
 <span class="lineno"> 150 </span>}
 <span class="lineno"> 151 </span>
@@ -352,7 +334,7 @@
 <span class="lineno"> 155 </span>    withArguments(arguments + configurationCache())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:158:25</span><span class="message">noConfigurationCache is returning a constant. Prefer declaring a constant instead.</span>
+      <li><span class="location">gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt:158:25</span><span class="message">noConfigurationCache is returning a constant. Prefer declaring a constant instead.</span>
         <pre><code><span class="lineno"> 155 </span>    withArguments(arguments + configurationCache())
 <span class="lineno"> 156 </span>}
 <span class="lineno"> 157 </span>
@@ -362,7 +344,7 @@
 <span class="lineno"> 161 </span>    withArguments(arguments + noConfigurationCache())
 </code></pre>
       </li>
-      <li><span class="location">gradle-testkit-ext/main/kotlin/com/javiersc/gradle/testkit/extensions/GradleTestKitExtensions.kt:164:25</span><span class="message">configurationCacheProblemsWarn is returning a constant. Prefer declaring a constant instead.</span>
+      <li><span class="location">gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt:164:25</span><span class="message">configurationCacheProblemsWarn is returning a constant. Prefer declaring a constant instead.</span>
         <pre><code><span class="lineno"> 161 </span>    withArguments(arguments + noConfigurationCache())
 <span class="lineno"> 162 </span>}
 <span class="lineno"> 163 </span>
@@ -377,7 +359,7 @@
 </div>
 
 
-generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-06-26 14:40:52 UTC.
+generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-06-27 12:34:38 UTC.
 
 </body>
 </html>
