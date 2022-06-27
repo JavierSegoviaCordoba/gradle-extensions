@@ -7,3 +7,4 @@ build
 **/build/**/*
 
 local.properties
+!**/resources/**/local.properties

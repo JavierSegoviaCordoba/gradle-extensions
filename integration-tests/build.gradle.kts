@@ -18,9 +18,8 @@ gradlePlugin {
 dependencies {
     implementation(gradleKotlinDsl())
 
-    implementation(projects.gradleExt)
-    implementation(projects.gradleTestkitExt)
-    implementation(projects.gradleVersionCatalogExt)
+    implementation(projects.gradleExtensions)
+    implementation(projects.gradleTestExtensions)
 
     testImplementation(libs.jetbrains.kotlin.kotlinTest)
     testImplementation(libs.kotest.kotestAssertionsCore)

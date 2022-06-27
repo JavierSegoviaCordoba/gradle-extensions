@@ -1,0 +1,15 @@
+public final class com/javiersc/gradle/properties/extensions/PropertiesKt {
+	public static final fun getBooleanProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Z
+	public static final fun getDoubleProperty (Lorg/gradle/api/Project;Ljava/lang/String;)D
+	public static final fun getDoublePropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/Double;
+	public static final fun getIntProperty (Lorg/gradle/api/Project;Ljava/lang/String;)I
+	public static final fun getIntPropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/Integer;
+	public static final fun getLocalProperties (Lorg/gradle/api/Project;)Ljava/util/Properties;
+	public static final fun getLongProperty (Lorg/gradle/api/Project;Ljava/lang/String;)J
+	public static final fun getLongPropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/Long;
+	public static final fun getProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/String;
+	public static final fun getPropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/String;
+	public static final fun getStringProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/String;
+	public static final fun getStringPropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/String;
+}
+

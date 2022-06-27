@@ -1,0 +1,4 @@
+public final class com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTimeKt {
+	public static final fun forUseAtConfigurationTime (Lorg/gradle/api/provider/Provider;)Lorg/gradle/api/provider/Provider;
+}
+
