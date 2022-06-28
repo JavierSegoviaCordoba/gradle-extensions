@@ -4713,7 +4713,13 @@
       "contentEntries": [
         {
           "path": "file://$PROJECT_DIR$/buildSrc/src/main",
-          "sourceFolders": []
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/buildSrc/src/main/kotlin",
+              "type": "Source",
+              "packagePrefix": ""
+            }
+          ]
         }
       ],
       "orderEntries": [

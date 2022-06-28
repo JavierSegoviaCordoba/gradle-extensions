@@ -14,11 +14,11 @@
       "type": "file",
       "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 12,
+      "line": 14,
       "offset": 8,
       "length": 8,
       "code": {
-        "startLine": 10,
+        "startLine": 12,
         "length": 8,
         "offset": 24,
         "surroundingCode": "\ndependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)"
@@ -29,7 +29,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-7038737813986624432"
+  "hash": "-7367379966090223670"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -46,11 +46,11 @@
       "type": "file",
       "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 12,
+      "line": 14,
       "offset": 17,
       "length": 16,
       "code": {
-        "startLine": 10,
+        "startLine": 12,
         "length": 16,
         "offset": 33,
         "surroundingCode": "\ndependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)"
@@ -61,7 +61,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-2401140537209116480"
+  "hash": "-3017532180789681227"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -78,11 +78,11 @@
       "type": "file",
       "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 13,
+      "line": 15,
       "offset": 8,
       "length": 8,
       "code": {
-        "startLine": 11,
+        "startLine": 13,
         "length": 8,
         "offset": 82,
         "surroundingCode": "dependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)\n    api(projects.gradleExtensions.gradlePropertiesExtensions)"
@@ -93,7 +93,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "3835659389446529866"
+  "hash": "3604579690431455708"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -110,11 +110,11 @@
       "type": "file",
       "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 13,
+      "line": 15,
       "offset": 17,
       "length": 16,
       "code": {
-        "startLine": 11,
+        "startLine": 13,
         "length": 16,
         "offset": 91,
         "surroundingCode": "dependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)\n    api(projects.gradleExtensions.gradlePropertiesExtensions)"
@@ -125,7 +125,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-8096373215214925255"
+  "hash": "1827202073636562792"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -270,11 +270,11 @@
       "type": "file",
       "path": "gradle-test-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 16,
+      "line": 18,
       "offset": 8,
       "length": 8,
       "code": {
-        "startLine": 14,
+        "startLine": 16,
         "length": 8,
         "offset": 76,
         "surroundingCode": "    api(gradleTestKit())\n    api(libs.javiersc.kotlin.kotlinStdlib)\n    api(projects.gradleTestExtensions.gradleTestkitTestExtensions)\n}"
@@ -285,7 +285,7 @@
     "module": "gradle-extensions-project.gradle-test-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-4070429805033913704"
+  "hash": "711517369164738835"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -302,11 +302,11 @@
       "type": "file",
       "path": "gradle-test-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 16,
+      "line": 18,
       "offset": 17,
       "length": 20,
       "code": {
-        "startLine": 14,
+        "startLine": 16,
         "length": 20,
         "offset": 85,
         "surroundingCode": "    api(gradleTestKit())\n    api(libs.javiersc.kotlin.kotlinStdlib)\n    api(projects.gradleTestExtensions.gradleTestkitTestExtensions)\n}"
@@ -317,5 +317,5 @@
     "module": "gradle-extensions-project.gradle-test-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-522451621073682172"
+  "hash": "7187983441199486821"
 }]}
