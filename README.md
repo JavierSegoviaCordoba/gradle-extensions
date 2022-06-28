@@ -3,6 +3,7 @@
 [![Snapshot](https://img.shields.io/nexus/s/com.javiersc.gradle/gradle-extensions?server=https%3A%2F%2Foss.sonatype.org%2F&label=Snapshot)](https://oss.sonatype.org/content/repositories/snapshots/com/javiersc/gradle/gradle-extensions/)
 
 [![Build](https://img.shields.io/github/workflow/status/JavierSegoviaCordoba/gradle-extensions/build-kotlin?label=Build&logo=GitHub)](https://github.com/JavierSegoviaCordoba/gradle-extensions/tree/main)
+[![Coverage](https://img.shields.io/sonar/coverage/com.javiersc.gradle:gradle-extensions?label=Coverage&logo=SonarCloud&logoColor=white&server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=com.javiersc.gradle:gradle-extensions)
 [![Quality](https://img.shields.io/sonar/quality_gate/com.javiersc.gradle:gradle-extensions?label=Quality&logo=SonarCloud&logoColor=white&server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=com.javiersc.gradle:gradle-extensions)
 [![Tech debt](https://img.shields.io/sonar/tech_debt/com.javiersc.gradle:gradle-extensions?label=Tech%20debt&logo=SonarCloud&logoColor=white&server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=com.javiersc.gradle:gradle-extensions)
 

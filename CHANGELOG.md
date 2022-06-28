@@ -6,8 +6,6 @@
 
 ### Changed
 
-`gradleTestKitTest` parameter `withDebug` value from `true` to `false`
-
 ### Deprecated
 
 ### Removed
@@ -15,6 +13,10 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.21] - 2022-06-28
+
+- No changes
 
 ## [1.0.0-alpha.20] - 2022-06-28
 
