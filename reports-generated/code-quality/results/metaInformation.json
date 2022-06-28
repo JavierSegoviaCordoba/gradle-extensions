@@ -4,13 +4,6 @@
     "Code Inspection": 5
   },
   "attributes": {
-    "vcs": {
-      "sarifIdea": {
-        "repositoryUri": "https://github.com/JavierSegoviaCordoba/gradle-extensions",
-        "revisionId": "275bbe32634195b5034aca3a0cab05256718a3d4",
-        "branch": "main"
-      }
-    },
     "deviceId": "200820300000000-50c8-1a29-af5a-6292a9c78008"
   }
 }
