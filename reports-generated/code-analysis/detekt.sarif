@@ -15,7 +15,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -36,7 +36,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-extensions/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/Properties.kt",
+                  "uri": "gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/Properties.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -47,7 +47,7 @@
             }
           ],
           "message": {
-            "text": "File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/Properties.kt' with '12' functions detected. Defined threshold inside files is set to '11'"
+            "text": "File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/Properties.kt' with '12' functions detected. Defined threshold inside files is set to '11'"
           },
           "ruleId": "detekt.complexity.TooManyFunctions"
         },
@@ -57,7 +57,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-extensions/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt",
+                  "uri": "gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -78,7 +78,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-extensions/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt",
+                  "uri": "gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -99,7 +99,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -120,7 +120,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -141,7 +141,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -162,7 +162,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -183,7 +183,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -204,7 +204,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -225,7 +225,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -246,7 +246,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTestKitExtensions.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -288,7 +288,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-extensions/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt",
+                  "uri": "gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {

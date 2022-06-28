@@ -21,7 +21,7 @@
         "startLine": 12,
         "length": 8,
         "offset": 24,
-        "surroundingCode": "\ndependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)"
+        "surroundingCode": "\ndependencies {\n    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)"
       }
     }
   ],
@@ -39,7 +39,7 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: gradleExtensions",
+  "comment": "Unresolved reference: gradleExtensionsSubprojects",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
@@ -48,12 +48,12 @@
       "language": "kotlin",
       "line": 14,
       "offset": 17,
-      "length": 16,
+      "length": 27,
       "code": {
         "startLine": 12,
-        "length": 16,
+        "length": 27,
         "offset": 33,
-        "surroundingCode": "\ndependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)"
+        "surroundingCode": "\ndependencies {\n    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)"
       }
     }
   ],
@@ -61,7 +61,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-3017532180789681227"
+  "hash": "2329007959296133322"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -84,8 +84,8 @@
       "code": {
         "startLine": 13,
         "length": 8,
-        "offset": 82,
-        "surroundingCode": "dependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)\n    api(projects.gradleExtensions.gradlePropertiesExtensions)"
+        "offset": 93,
+        "surroundingCode": "dependencies {\n    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)\n    api(projects.gradleExtensionsSubprojects.gradlePropertiesExtensions)"
       }
     }
   ],
@@ -93,7 +93,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "3604579690431455708"
+  "hash": "3051774248282144196"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -103,7 +103,7 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: gradleExtensions",
+  "comment": "Unresolved reference: gradleExtensionsSubprojects",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
@@ -112,12 +112,12 @@
       "language": "kotlin",
       "line": 15,
       "offset": 17,
-      "length": 16,
+      "length": 27,
       "code": {
         "startLine": 13,
-        "length": 16,
-        "offset": 91,
-        "surroundingCode": "dependencies {\n    api(projects.gradleExtensions.gradleLoggingExtensions)\n    api(projects.gradleExtensions.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensions.gradleProjectExtensions)\n    api(projects.gradleExtensions.gradlePropertiesExtensions)"
+        "length": 27,
+        "offset": 102,
+        "surroundingCode": "dependencies {\n    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)\n    api(projects.gradleExtensionsSubprojects.gradlePropertiesExtensions)"
       }
     }
   ],
@@ -125,7 +125,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "1827202073636562792"
+  "hash": "-3151171835328061446"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -268,6 +268,70 @@
   "sources": [
     {
       "type": "file",
+      "path": "build.gradle.kts",
+      "language": "kotlin",
+      "line": 18,
+      "offset": 21,
+      "length": 8,
+      "code": {
+        "startLine": 16,
+        "length": 8,
+        "offset": 58,
+        "surroundingCode": "readmeBadges { coverage.set(true) }\n\nremoveProjectFromDoc(projects.integrationTests)\n\nfun removeProjectFromDoc(vararg projects: ProjectDependency) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "6954793165356588079"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference: integrationTests",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "build.gradle.kts",
+      "language": "kotlin",
+      "line": 18,
+      "offset": 30,
+      "length": 16,
+      "code": {
+        "startLine": 16,
+        "length": 16,
+        "offset": 67,
+        "surroundingCode": "readmeBadges { coverage.set(true) }\n\nremoveProjectFromDoc(projects.integrationTests)\n\nfun removeProjectFromDoc(vararg projects: ProjectDependency) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-466914831849859816"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
       "path": "gradle-test-extensions/build.gradle.kts",
       "language": "kotlin",
       "line": 18,
@@ -277,7 +341,7 @@
         "startLine": 16,
         "length": 8,
         "offset": 76,
-        "surroundingCode": "    api(gradleTestKit())\n    api(libs.javiersc.kotlin.kotlinStdlib)\n    api(projects.gradleTestExtensions.gradleTestkitTestExtensions)\n}"
+        "surroundingCode": "    api(gradleTestKit())\n    api(libs.javiersc.kotlin.kotlinStdlib)\n    api(projects.gradleTestExtensionsSubprojects.gradleTestkitTestExtensions)\n}"
       }
     }
   ],
@@ -295,7 +359,7 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: gradleTestExtensions",
+  "comment": "Unresolved reference: gradleTestExtensionsSubprojects",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
@@ -304,12 +368,12 @@
       "language": "kotlin",
       "line": 18,
       "offset": 17,
-      "length": 20,
+      "length": 31,
       "code": {
         "startLine": 16,
-        "length": 20,
+        "length": 31,
         "offset": 85,
-        "surroundingCode": "    api(gradleTestKit())\n    api(libs.javiersc.kotlin.kotlinStdlib)\n    api(projects.gradleTestExtensions.gradleTestkitTestExtensions)\n}"
+        "surroundingCode": "    api(gradleTestKit())\n    api(libs.javiersc.kotlin.kotlinStdlib)\n    api(projects.gradleTestExtensionsSubprojects.gradleTestkitTestExtensions)\n}"
       }
     }
   ],
@@ -317,5 +381,5 @@
     "module": "gradle-extensions-project.gradle-test-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "7187983441199486821"
+  "hash": "-4502106756105953886"
 }]}

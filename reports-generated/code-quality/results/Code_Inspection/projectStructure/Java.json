@@ -1,6 +1,58 @@
 {
   "modules": [
     {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-properties-extensions",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-tasks-extensions",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-version-catalog-extensions",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions",
+      "languageLevel": 11
+    },
+    {
       "name": "gradle-extensions-project",
       "languageLevel": 11
     },
@@ -14,34 +66,6 @@
     },
     {
       "name": "gradle-extensions-project.integration-tests",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-logging-extensions",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-miscellanea-extensions",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-project-extensions",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-properties-extensions",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-tasks-extensions",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-version-catalog-extensions",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project.gradle-test-extensions.gradle-testkit-test-extensions",
       "languageLevel": 11
     },
     {
@@ -73,68 +97,52 @@
       "languageLevel": 11
     },
     {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-logging-extensions.test",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-logging-extensions.main",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-miscellanea-extensions.test",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-miscellanea-extensions.main",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-project-extensions.test",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-project-extensions.main",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-properties-extensions.test",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-properties-extensions.main",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-tasks-extensions.test",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-tasks-extensions.main",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-version-catalog-extensions.test",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions.gradle-version-catalog-extensions.main",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-test-extensions.gradle-testkit-test-extensions.test",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-test-extensions.gradle-testkit-test-extensions.main",
-      "languageLevel": 8
-    },
-    {
       "name": "gradle-extensions-project.buildSrc.test",
       "languageLevel": 11
     },
     {
       "name": "gradle-extensions-project.buildSrc.main",
       "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-properties-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-properties-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-tasks-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-tasks-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-version-catalog-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-version-catalog-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+      "languageLevel": 8
     }
   ]
 }

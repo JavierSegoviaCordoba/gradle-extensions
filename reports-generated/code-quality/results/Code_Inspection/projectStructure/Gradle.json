@@ -10,28 +10,12 @@
       "version": "1.6.21"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.21",
-      "gradleName": "org.jetbrains.kotlin:kotlin-test:1.6.21",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlin",
-      "artifactId": "kotlin-test",
-      "version": "1.6.21"
-    },
-    {
       "ideaName": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
       "gradleName": "com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.5",
       "unresolved": false,
       "groupId": "com.javiersc.kotlin",
       "artifactId": "kotlin-stdlib-jvm",
       "version": "0.1.0-alpha.5"
-    },
-    {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.1",
-      "gradleName": "io.kotest:kotest-assertions-core-jvm:5.3.1",
-      "unresolved": false,
-      "groupId": "io.kotest",
-      "artifactId": "kotest-assertions-core-jvm",
-      "version": "5.3.1"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
@@ -50,14 +34,6 @@
       "version": "1.6.21"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.21",
-      "gradleName": "org.jetbrains.kotlin:kotlin-test-junit5:1.6.21",
-      "unresolved": false,
-      "groupId": "org.jetbrains.kotlin",
-      "artifactId": "kotlin-test-junit5",
-      "version": "1.6.21"
-    },
-    {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.21",
       "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-common:1.6.21",
       "unresolved": false,
@@ -72,6 +48,30 @@
       "groupId": "org.jetbrains",
       "artifactId": "annotations",
       "version": "13.0"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.21",
+      "gradleName": "org.jetbrains.kotlin:kotlin-test:1.6.21",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-test",
+      "version": "1.6.21"
+    },
+    {
+      "ideaName": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.1",
+      "gradleName": "io.kotest:kotest-assertions-core-jvm:5.3.1",
+      "unresolved": false,
+      "groupId": "io.kotest",
+      "artifactId": "kotest-assertions-core-jvm",
+      "version": "5.3.1"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.21",
+      "gradleName": "org.jetbrains.kotlin:kotlin-test-junit5:1.6.21",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-test-junit5",
+      "version": "1.6.21"
     },
     {
       "ideaName": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
