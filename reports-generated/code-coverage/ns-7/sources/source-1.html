@@ -1,0 +1,300 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > GradleTestKitExtensionsKt</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.javiersc.gradle.testkit.test.extensions</a>
+</div>
+
+<h1>Coverage Summary for Class: GradleTestKitExtensionsKt (com.javiersc.gradle.testkit.test.extensions)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+<th class="coverageStat 
+">
+  Instruction, %
+</th>
+</tr>
+<tr>
+  <td class="name">GradleTestKitExtensionsKt</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    20.7%
+  </span>
+  <span class="absValue">
+    (6/29)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    11.9%
+  </span>
+  <span class="absValue">
+    (5/42)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    27.3%
+  </span>
+  <span class="absValue">
+    (21/77)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    18.9%
+  </span>
+  <span class="absValue">
+    (109/578)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;@file:Suppress(&quot;UnusedReceiverParameter&quot;)
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;package com.javiersc.gradle.testkit.test.extensions
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;import org.gradle.testkit.runner.BuildResult
+<i class="no-highlight">6</i>&nbsp;import org.gradle.testkit.runner.GradleRunner
+<i class="no-highlight">7</i>&nbsp;import org.gradle.testkit.runner.TaskOutcome
+<i class="no-highlight">8</i>&nbsp;
+<i class="no-highlight">9</i>&nbsp;public fun gradleTestKitTest(
+<b class="nc"><i class="no-highlight">10</i>&nbsp;    sandboxPath: String? = null,</b>
+<b class="pc"><i class="no-highlight">11</i>&nbsp;    prefix: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: &quot;&quot;,</b>
+<b class="fc"><i class="no-highlight">12</i>&nbsp;    withDebug: Boolean = false,</b>
+<b class="fc"><i class="no-highlight">13</i>&nbsp;    withPluginClasspath: Boolean = true,</b>
+<b class="fc"><i class="no-highlight">14</i>&nbsp;    isolated: Boolean = false,</b>
+<i class="no-highlight">15</i>&nbsp;    test: GradleRunner.() -&gt; Unit,
+<i class="no-highlight">16</i>&nbsp;) {
+<b class="fc"><i class="no-highlight">17</i>&nbsp;    val projectDir = createSandboxDirectory(prefix)</b>
+<i class="no-highlight">18</i>&nbsp;
+<b class="pc"><i class="no-highlight">19</i>&nbsp;    sandboxPath?.copyResourceTo(projectDir)</b>
+<i class="no-highlight">20</i>&nbsp;
+<b class="fc"><i class="no-highlight">21</i>&nbsp;    test(</b>
+<b class="fc"><i class="no-highlight">22</i>&nbsp;        GradleRunner.create().apply {</b>
+<b class="fc"><i class="no-highlight">23</i>&nbsp;            withDebug(withDebug)</b>
+<b class="pc"><i class="no-highlight">24</i>&nbsp;            if (withPluginClasspath) withPluginClasspath()</b>
+<b class="pc"><i class="no-highlight">25</i>&nbsp;            if (isolated) withTestKitDir(createSandboxIsolatedDirectory(prefix))</b>
+<b class="fc"><i class="no-highlight">26</i>&nbsp;            withProjectDir(projectDir)</b>
+<b class="fc"><i class="no-highlight">27</i>&nbsp;        }</b>
+<i class="no-highlight">28</i>&nbsp;    )
+<i class="no-highlight">29</i>&nbsp;}
+<i class="no-highlight">30</i>&nbsp;
+<i class="no-highlight">31</i>&nbsp;public fun GradleRunner.testBuildCache(
+<b class="nc"><i class="no-highlight">32</i>&nbsp;    resultingTask: String? = null,</b>
+<b class="nc"><i class="no-highlight">33</i>&nbsp;    invalidate: (GradleRunner.() -&gt; Unit)? = null,</b>
+<i class="no-highlight">34</i>&nbsp;) {
+<b class="nc"><i class="no-highlight">35</i>&nbsp;    val taskName =</b>
+<b class="nc"><i class="no-highlight">36</i>&nbsp;        checkNotNull(resultingTask ?: arguments.firstOrNull()) {</b>
+<b class="nc"><i class="no-highlight">37</i>&nbsp;            &quot;There is not a task in the arguments to check if build cache works&quot;</b>
+<i class="no-highlight">38</i>&nbsp;        }
+<b class="nc"><i class="no-highlight">39</i>&nbsp;    val task = &quot;:$taskName&quot;</b>
+<i class="no-highlight">40</i>&nbsp;
+<b class="nc"><i class="no-highlight">41</i>&nbsp;    andWithBuildCache()</b>
+<b class="nc"><i class="no-highlight">42</i>&nbsp;    build()</b>
+<i class="no-highlight">43</i>&nbsp;
+<b class="nc"><i class="no-highlight">44</i>&nbsp;    invalidate?.invoke(this)</b>
+<b class="nc"><i class="no-highlight">45</i>&nbsp;    cleanBuildDirectory()</b>
+<i class="no-highlight">46</i>&nbsp;
+<b class="nc"><i class="no-highlight">47</i>&nbsp;    val result = build()</b>
+<i class="no-highlight">48</i>&nbsp;
+<b class="nc"><i class="no-highlight">49</i>&nbsp;    val outcome =</b>
+<b class="nc"><i class="no-highlight">50</i>&nbsp;        checkNotNull(result.task(task)) { &quot;The outcome for the task $task is null&quot; }.outcome</b>
+<i class="no-highlight">51</i>&nbsp;
+<b class="nc"><i class="no-highlight">52</i>&nbsp;    val expectOutcome = if (invalidate == null) TaskOutcome.FROM_CACHE else TaskOutcome.SUCCESS</b>
+<i class="no-highlight">53</i>&nbsp;
+<b class="nc"><i class="no-highlight">54</i>&nbsp;    check(outcome == expectOutcome) { &quot;The outcome is $outcome and must be $expectOutcome&quot; }</b>
+<i class="no-highlight">55</i>&nbsp;}
+<i class="no-highlight">56</i>&nbsp;
+<i class="no-highlight">57</i>&nbsp;public fun GradleRunner.testConfigurationCache(
+<b class="nc"><i class="no-highlight">58</i>&nbsp;    expectTaskOutcome: TaskOutcome = TaskOutcome.UP_TO_DATE,</b>
+<b class="nc"><i class="no-highlight">59</i>&nbsp;    resultingTask: String? = null,</b>
+<i class="no-highlight">60</i>&nbsp;) {
+<b class="nc"><i class="no-highlight">61</i>&nbsp;    val taskName =</b>
+<b class="nc"><i class="no-highlight">62</i>&nbsp;        checkNotNull(resultingTask ?: arguments.firstOrNull()) {</b>
+<b class="nc"><i class="no-highlight">63</i>&nbsp;            &quot;There is not a task in the arguments to check if configuration cache works&quot;</b>
+<i class="no-highlight">64</i>&nbsp;        }
+<b class="nc"><i class="no-highlight">65</i>&nbsp;    val task = &quot;:$taskName&quot;</b>
+<i class="no-highlight">66</i>&nbsp;
+<b class="nc"><i class="no-highlight">67</i>&nbsp;    andWithConfigurationCache()</b>
+<b class="nc"><i class="no-highlight">68</i>&nbsp;    andWithNoBuildCache()</b>
+<b class="nc"><i class="no-highlight">69</i>&nbsp;    build()</b>
+<i class="no-highlight">70</i>&nbsp;
+<b class="nc"><i class="no-highlight">71</i>&nbsp;    val result = build()</b>
+<i class="no-highlight">72</i>&nbsp;
+<b class="nc"><i class="no-highlight">73</i>&nbsp;    check(result.output.contains(&quot;Reusing configuration cache&quot;)) {</b>
+<b class="nc"><i class="no-highlight">74</i>&nbsp;        &quot;Configuration cache is not working&quot;</b>
+<i class="no-highlight">75</i>&nbsp;    }
+<i class="no-highlight">76</i>&nbsp;
+<b class="nc"><i class="no-highlight">77</i>&nbsp;    val outcome =</b>
+<b class="nc"><i class="no-highlight">78</i>&nbsp;        checkNotNull(result.task(task)) { &quot;The outcome for the task $task is null&quot; }.outcome</b>
+<i class="no-highlight">79</i>&nbsp;
+<b class="nc"><i class="no-highlight">80</i>&nbsp;    check(outcome == expectTaskOutcome) { &quot;The outcome is $outcome and must be $expectTaskOutcome&quot; }</b>
+<i class="no-highlight">81</i>&nbsp;}
+<i class="no-highlight">82</i>&nbsp;
+<i class="no-highlight">83</i>&nbsp;public fun GradleRunner.withArgumentsFromTXT() {
+<b class="fc"><i class="no-highlight">84</i>&nbsp;    withArguments(argumentsTxt)</b>
+<i class="no-highlight">85</i>&nbsp;}
+<i class="no-highlight">86</i>&nbsp;
+<i class="no-highlight">87</i>&nbsp;public fun GradleRunner.gradlewArgumentFromTXT(): BuildResult =
+<b class="nc"><i class="no-highlight">88</i>&nbsp;    gradlew(*argumentsTxt.toTypedArray())</b>
+<i class="no-highlight">89</i>&nbsp;
+<i class="no-highlight">90</i>&nbsp;public fun GradleRunner.gradlew(vararg arguments: String): BuildResult {
+<b class="fc"><i class="no-highlight">91</i>&nbsp;    val previousArgs: List&lt;String&gt; = this.arguments.toList()</b>
+<b class="fc"><i class="no-highlight">92</i>&nbsp;    val result: BuildResult = withArguments(*arguments).build()</b>
+<b class="fc"><i class="no-highlight">93</i>&nbsp;    withArguments(previousArgs)</b>
+<b class="fc"><i class="no-highlight">94</i>&nbsp;    return result</b>
+<i class="no-highlight">95</i>&nbsp;}
+<i class="no-highlight">96</i>&nbsp;
+<i class="no-highlight">97</i>&nbsp;public fun GradleRunner.clean(): BuildResult {
+<b class="nc"><i class="no-highlight">98</i>&nbsp;    val previousArgs: List&lt;String&gt; = arguments.toList()</b>
+<b class="nc"><i class="no-highlight">99</i>&nbsp;    val result: BuildResult = withArguments(&quot;clean&quot;).build()</b>
+<b class="nc"><i class="no-highlight">100</i>&nbsp;    withArguments(previousArgs)</b>
+<b class="nc"><i class="no-highlight">101</i>&nbsp;    return result</b>
+<i class="no-highlight">102</i>&nbsp;}
+<i class="no-highlight">103</i>&nbsp;
+<i class="no-highlight">104</i>&nbsp;public fun GradleRunner.cleanBuildDirectory() {
+<b class="nc"><i class="no-highlight">105</i>&nbsp;    for (file in projectDir.walkTopDown()) {</b>
+<b class="nc"><i class="no-highlight">106</i>&nbsp;        if (file.isDirectory &amp;&amp; file.name == &quot;build&quot;) file.deleteRecursively()</b>
+<i class="no-highlight">107</i>&nbsp;    }
+<i class="no-highlight">108</i>&nbsp;}
+<i class="no-highlight">109</i>&nbsp;
+<b class="nc"><i class="no-highlight">110</i>&nbsp;public fun GradleRunner.projectProperty(value: String): String = &quot;-P$value&quot;</b>
+<i class="no-highlight">111</i>&nbsp;
+<i class="no-highlight">112</i>&nbsp;public fun GradleRunner.andWithProjectProperty(value: String) {
+<b class="nc"><i class="no-highlight">113</i>&nbsp;    withArguments(arguments + projectProperty(value))</b>
+<i class="no-highlight">114</i>&nbsp;}
+<i class="no-highlight">115</i>&nbsp;
+<b class="nc"><i class="no-highlight">116</i>&nbsp;public fun GradleRunner.systemProperty(value: String): String = &quot;-D$value&quot;</b>
+<i class="no-highlight">117</i>&nbsp;
+<i class="no-highlight">118</i>&nbsp;public fun GradleRunner.andWithSystemProperty(value: String) {
+<b class="nc"><i class="no-highlight">119</i>&nbsp;    withArguments(arguments + systemProperty(value))</b>
+<i class="no-highlight">120</i>&nbsp;}
+<i class="no-highlight">121</i>&nbsp;
+<b class="fc"><i class="no-highlight">122</i>&nbsp;public fun GradleRunner.info(): String = &quot;--info&quot;</b>
+<i class="no-highlight">123</i>&nbsp;
+<i class="no-highlight">124</i>&nbsp;public fun GradleRunner.andWithInfo() {
+<b class="fc"><i class="no-highlight">125</i>&nbsp;    withArguments(arguments + info())</b>
+<i class="no-highlight">126</i>&nbsp;}
+<i class="no-highlight">127</i>&nbsp;
+<b class="nc"><i class="no-highlight">128</i>&nbsp;public fun GradleRunner.stacktrace(): String = &quot;--stacktrace&quot;</b>
+<i class="no-highlight">129</i>&nbsp;
+<i class="no-highlight">130</i>&nbsp;public fun GradleRunner.andWithStacktrace() {
+<b class="nc"><i class="no-highlight">131</i>&nbsp;    withArguments(arguments + stacktrace())</b>
+<i class="no-highlight">132</i>&nbsp;}
+<i class="no-highlight">133</i>&nbsp;
+<b class="nc"><i class="no-highlight">134</i>&nbsp;public fun GradleRunner.scan(): String = &quot;--scan&quot;</b>
+<i class="no-highlight">135</i>&nbsp;
+<i class="no-highlight">136</i>&nbsp;public fun GradleRunner.andWithScan() {
+<b class="nc"><i class="no-highlight">137</i>&nbsp;    withArguments(arguments + scan())</b>
+<i class="no-highlight">138</i>&nbsp;}
+<i class="no-highlight">139</i>&nbsp;
+<b class="nc"><i class="no-highlight">140</i>&nbsp;public fun GradleRunner.buildCache(): String = &quot;--build-cache&quot;</b>
+<i class="no-highlight">141</i>&nbsp;
+<i class="no-highlight">142</i>&nbsp;public fun GradleRunner.andWithBuildCache() {
+<b class="nc"><i class="no-highlight">143</i>&nbsp;    withArguments(arguments + buildCache())</b>
+<i class="no-highlight">144</i>&nbsp;}
+<i class="no-highlight">145</i>&nbsp;
+<b class="nc"><i class="no-highlight">146</i>&nbsp;public fun GradleRunner.noBuildCache(): String = &quot;--no-build-cache&quot;</b>
+<i class="no-highlight">147</i>&nbsp;
+<i class="no-highlight">148</i>&nbsp;public fun GradleRunner.andWithNoBuildCache() {
+<b class="nc"><i class="no-highlight">149</i>&nbsp;    withArguments(arguments + noBuildCache())</b>
+<i class="no-highlight">150</i>&nbsp;}
+<i class="no-highlight">151</i>&nbsp;
+<b class="nc"><i class="no-highlight">152</i>&nbsp;public fun GradleRunner.configurationCache(): String = &quot;--configuration-cache&quot;</b>
+<i class="no-highlight">153</i>&nbsp;
+<i class="no-highlight">154</i>&nbsp;public fun GradleRunner.andWithConfigurationCache() {
+<b class="nc"><i class="no-highlight">155</i>&nbsp;    withArguments(arguments + configurationCache())</b>
+<i class="no-highlight">156</i>&nbsp;}
+<i class="no-highlight">157</i>&nbsp;
+<b class="nc"><i class="no-highlight">158</i>&nbsp;public fun GradleRunner.noConfigurationCache(): String = &quot;--no-configuration-cache&quot;</b>
+<i class="no-highlight">159</i>&nbsp;
+<i class="no-highlight">160</i>&nbsp;public fun GradleRunner.andWithNoConfigurationCache() {
+<b class="nc"><i class="no-highlight">161</i>&nbsp;    withArguments(arguments + noConfigurationCache())</b>
+<i class="no-highlight">162</i>&nbsp;}
+<i class="no-highlight">163</i>&nbsp;
+<i class="no-highlight">164</i>&nbsp;public fun GradleRunner.configurationCacheProblemsWarn(): String =
+<b class="nc"><i class="no-highlight">165</i>&nbsp;    &quot;--configuration-cache-problems=warn&quot;</b>
+<i class="no-highlight">166</i>&nbsp;
+<i class="no-highlight">167</i>&nbsp;public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
+<b class="nc"><i class="no-highlight">168</i>&nbsp;    withArguments(arguments + configurationCacheProblemsWarn())</b>
+<i class="no-highlight">169</i>&nbsp;}
+<i class="no-highlight">170</i>&nbsp;
+<b class="fc"><i class="no-highlight">171</i>&nbsp;private fun String.sanitizedSandboxPathPrefix(): String = replace(&quot;/&quot;, &quot;--&quot;).replace(&quot;\\&quot;, &quot;--&quot;)</b>
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-06-28 08:06</div>
+</div>
+</body>
+</html>
