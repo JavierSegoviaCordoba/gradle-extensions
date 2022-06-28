@@ -3,6 +3,7 @@ plugins {
     `javiersc-all-projects`
     `javiersc-changelog`
     `javiersc-code-analysis`
+    `javiersc-code-coverage`
     `javiersc-code-formatter`
     `javiersc-docs`
     `javiersc-nexus`
@@ -13,13 +14,13 @@ plugins {
 docs {
     navigation {
         reports {
-            codeCoverage.set(false)
+            codeCoverage.set(true)
         }
     }
 }
 
 readmeBadges {
-    coverage.set(false)
+    coverage.set(true)
 }
 
 removeProjectFromDoc(

@@ -9,7 +9,7 @@ import org.gradle.testkit.runner.TaskOutcome
 public fun gradleTestKitTest(
     sandboxPath: String? = null,
     prefix: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: "",
-    withDebug: Boolean = true,
+    withDebug: Boolean = false,
     withPluginClasspath: Boolean = true,
     isolated: Boolean = false,
     test: GradleRunner.() -> Unit,

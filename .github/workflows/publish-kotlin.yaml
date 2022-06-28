@@ -14,7 +14,7 @@ jobs:
       publish-jetbrains-marketplace: false
       publish-docs: true
       publish-github-release: true
-      code-coverage-report: false
+      code-coverage-report: true
     secrets:
       OSS_USER: '${{ secrets.OSS_USER }}'
       OSS_TOKEN: '${{ secrets.OSS_TOKEN }}'
