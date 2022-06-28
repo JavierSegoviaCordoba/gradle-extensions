@@ -6,10 +6,6 @@
 
 ### Changed
 
-- all projects `sourceCompatibility` to `1.8`
-- all projects `targetCompatibility` to `1.8`
-- all projects `jvmTarget` to `1.8`
-
 ### Deprecated
 
 ### Removed
@@ -17,6 +13,14 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.20] - 2022-06-28
+
+### Changed
+
+- all projects `sourceCompatibility` to `1.8`
+- all projects `targetCompatibility` to `1.8`
+- all projects `jvmTarget` to `1.8`
 
 ## [1.0.0-alpha.19] - 2022-06-27
 
