@@ -24,7 +24,9 @@ internal fun createSandboxDirectory(prefix: String): File =
     createTempDirectory(sandboxPath, if (prefix.isBlank()) prefix else "$prefix-").toFile()
 
 internal fun createSandboxIsolatedDirectory(prefix: String): File =
-    createTempDirectory(sandboxIsolatedPath, if (prefix.isBlank()) prefix else "$prefix-").toFile()
+    createTempDirectory(sandboxIsolatedPath, if (prefix.isBlank()) prefix else "$prefix-")
+        .toFile()
+        .absoluteFile
 
 internal val GradleRunner.argumentsTxt: List<String>
     get() {

@@ -12,6 +12,8 @@
 
 ### Fixed
 
+- Gradle TestKit test can't convert a file to be absolute file
+
 ### Updated
 
 ## [1.0.0-alpha.21] - 2022-06-28
