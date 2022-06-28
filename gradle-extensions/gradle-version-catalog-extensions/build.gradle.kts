@@ -4,7 +4,11 @@ plugins {
     `javiersc-publish`
 }
 
-kotlin { explicitApi() }
+kotlin {
+    explicitApi()
+}
+
+configureJvmTarget()
 
 dependencies {
     api(gradleKotlinDsl())

@@ -8,6 +8,8 @@ kotlin {
     explicitApi()
 }
 
+configureJvmTarget()
+
 dependencies {
     api(projects.gradleExtensions.gradleLoggingExtensions)
     api(projects.gradleExtensions.gradleMiscellaneaExtensions)

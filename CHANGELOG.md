@@ -6,6 +6,10 @@
 
 ### Changed
 
+- all projects `sourceCompatibility` to `1.8`
+- all projects `targetCompatibility` to `1.8`
+- all projects `jvmTarget` to `1.8`
+
 ### Deprecated
 
 ### Removed

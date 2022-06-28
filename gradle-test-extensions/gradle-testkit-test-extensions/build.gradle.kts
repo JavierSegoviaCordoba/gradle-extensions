@@ -9,6 +9,8 @@ kotlin {
     explicitApi()
 }
 
+configureJvmTarget()
+
 dependencies {
     api(gradleKotlinDsl())
     api(gradleTestKit())

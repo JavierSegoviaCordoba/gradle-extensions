@@ -8,6 +8,8 @@ kotlin {
     explicitApi()
 }
 
+configureJvmTarget()
+
 dependencies {
     api(gradleKotlinDsl())
     api(libs.javiersc.kotlin.kotlinStdlib)
