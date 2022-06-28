@@ -11,10 +11,10 @@ kotlin {
 configureJvmTarget()
 
 dependencies {
-    api(projects.gradleExtensions.gradleLoggingExtensions)
-    api(projects.gradleExtensions.gradleMiscellaneaExtensions)
-    api(projects.gradleExtensions.gradleProjectExtensions)
-    api(projects.gradleExtensions.gradlePropertiesExtensions)
-    api(projects.gradleExtensions.gradleTasksExtensions)
-    api(projects.gradleExtensions.gradleVersionCatalogExtensions)
+    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)
+    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)
+    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)
+    api(projects.gradleExtensionsSubprojects.gradlePropertiesExtensions)
+    api(projects.gradleExtensionsSubprojects.gradleTasksExtensions)
+    api(projects.gradleExtensionsSubprojects.gradleVersionCatalogExtensions)
 }

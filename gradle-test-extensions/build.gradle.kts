@@ -15,5 +15,5 @@ dependencies {
     api(gradleKotlinDsl())
     api(gradleTestKit())
     api(libs.javiersc.kotlin.kotlinStdlib)
-    api(projects.gradleTestExtensions.gradleTestkitTestExtensions)
+    api(projects.gradleTestExtensionsSubprojects.gradleTestkitTestExtensions)
 }

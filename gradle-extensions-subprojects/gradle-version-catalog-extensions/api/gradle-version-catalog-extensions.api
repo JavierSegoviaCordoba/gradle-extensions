@@ -2,7 +2,7 @@ public final class com/javiersc/gradle/extensions/version/catalogs/VersionCatalo
 	public static final fun getCatalogNamesWithLibsAtFirst (Lorg/gradle/api/artifacts/VersionCatalogsExtension;)Ljava/util/List;
 	public static final fun getLibraries (Lorg/gradle/api/artifacts/VersionCatalogsExtension;Ljava/lang/String;)Ljava/util/List;
 	public static final fun getLibraries (Lorg/gradle/api/artifacts/VersionCatalogsExtension;Lorg/gradle/api/artifacts/VersionCatalog;)Ljava/util/List;
-	public static final fun getLibraryByGroup (Lorg/gradle/api/artifacts/VersionCatalogsExtension;Ljava/lang/String;)Ljava/util/List;
+	public static final fun getLibrariesByGroup (Lorg/gradle/api/artifacts/VersionCatalogsExtension;Ljava/lang/String;)Ljava/util/List;
 	public static final fun getLibraryByModule (Lorg/gradle/api/artifacts/VersionCatalogsExtension;Ljava/lang/String;)Lorg/gradle/api/artifacts/MinimalExternalModuleDependency;
 	public static final fun getLibraryByModuleOrNull (Lorg/gradle/api/artifacts/VersionCatalogsExtension;Ljava/lang/String;)Lorg/gradle/api/artifacts/MinimalExternalModuleDependency;
 }

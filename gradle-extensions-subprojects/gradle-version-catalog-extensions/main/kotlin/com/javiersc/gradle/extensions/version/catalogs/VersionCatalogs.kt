@@ -6,7 +6,7 @@ import org.gradle.api.artifacts.MinimalExternalModuleDependency
 import org.gradle.api.artifacts.VersionCatalog
 import org.gradle.api.artifacts.VersionCatalogsExtension
 
-public fun VersionCatalogsExtension.getLibraryByGroup(
+public fun VersionCatalogsExtension.getLibrariesByGroup(
     group: String
 ): List<MinimalExternalModuleDependency> =
     catalogNamesWithLibsAtFirst.flatMap(::getLibraries).filter { library ->

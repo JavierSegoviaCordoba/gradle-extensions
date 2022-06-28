@@ -1,7 +1,6 @@
-
+import com.javiersc.gradle.extensions.version.catalogs.getLibrariesByGroup
 import com.javiersc.gradle.extensions.version.catalogs.getLibraryByModule
 import com.javiersc.gradle.extensions.version.catalogs.getLibraryByModuleOrNull
-import com.javiersc.gradle.extensions.version.catalogs.getLibraryByGroup
 import org.gradle.api.artifacts.VersionCatalogsExtension
 
 plugins {
@@ -18,7 +17,6 @@ val libraryByModuleNull =
 
 println("Null library by module: $libraryByModuleNull")
 
-val librariesByGroup =
-    the<VersionCatalogsExtension>().getLibraryByGroup("io.kotest")
+val librariesByGroup = the<VersionCatalogsExtension>().getLibrariesByGroup("io.kotest")
 
 println("Libraries by group: $librariesByGroup")

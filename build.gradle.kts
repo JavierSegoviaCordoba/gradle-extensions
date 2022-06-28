@@ -11,28 +11,12 @@ plugins {
     `kotlinx-binary-compatibility-validator`
 }
 
-docs {
-    navigation {
-        reports {
-            codeCoverage.set(true)
-        }
-    }
-}
+docs { navigation { reports { codeCoverage.set(true) } } }
 
-readmeBadges {
-    coverage.set(true)
-}
+readmeBadges { coverage.set(true) }
 
-removeProjectFromDoc(
-    ":gradle-testkit-ext-integration-tests",
-)
+removeProjectFromDoc(projects.integrationTests)
 
-fun removeProjectFromDoc(vararg paths: String) {
-    val projects = mutableListOf<Project>()
-
-    for (path in paths) {
-        if (findProject(path) != null) projects.add(project(path))
-    }
-
-    tasks { dokkaHtmlMultiModule { removeChildTasks(projects) } }
+fun removeProjectFromDoc(vararg projects: ProjectDependency) {
+    tasks { dokkaHtmlMultiModule { removeChildTasks(projects.map { it.dependencyProject }) } }
 }

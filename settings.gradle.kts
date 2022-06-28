@@ -24,17 +24,17 @@ dependencyResolutionManagement {
 
 include(":gradle-extensions")
 include(
-    ":gradle-extensions:gradle-logging-extensions",
-    ":gradle-extensions:gradle-miscellanea-extensions",
-    ":gradle-extensions:gradle-project-extensions",
-    ":gradle-extensions:gradle-properties-extensions",
-    ":gradle-extensions:gradle-tasks-extensions",
-    ":gradle-extensions:gradle-version-catalog-extensions",
+    ":gradle-extensions-subprojects:gradle-logging-extensions",
+    ":gradle-extensions-subprojects:gradle-miscellanea-extensions",
+    ":gradle-extensions-subprojects:gradle-project-extensions",
+    ":gradle-extensions-subprojects:gradle-properties-extensions",
+    ":gradle-extensions-subprojects:gradle-tasks-extensions",
+    ":gradle-extensions-subprojects:gradle-version-catalog-extensions",
 )
 
 include(":gradle-test-extensions")
 include(
-    ":gradle-test-extensions:gradle-testkit-test-extensions",
+    ":gradle-test-extensions-subprojects:gradle-testkit-test-extensions",
 )
 
 include(":integration-tests")
