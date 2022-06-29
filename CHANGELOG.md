@@ -14,6 +14,8 @@
 
 ### Updated
 
+- `com.javiersc.kotlin:kotlin-stdlib -> 0.1.0-alpha.6`
+
 ## [1.0.0-alpha.22] - 2022-06-29
 
 ### Added
