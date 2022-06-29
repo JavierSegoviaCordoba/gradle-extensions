@@ -168,4 +168,7 @@ public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
     withArguments(arguments + configurationCacheProblemsWarn())
 }
 
+public val BuildResult.outputTrimmed: String
+    get() = output.lines().joinToString("\n", transform = String::trim)
+
 private fun String.sanitizedSandboxPathPrefix(): String = replace("/", "--").replace("\\", "--")

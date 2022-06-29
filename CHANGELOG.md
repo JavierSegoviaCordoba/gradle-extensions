@@ -4,6 +4,8 @@
 
 ### Added
 
+- `BuildResult.outputTrimmed: String` function
+
 ### Changed
 
 ### Deprecated
