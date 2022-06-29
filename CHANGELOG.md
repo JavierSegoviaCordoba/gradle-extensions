@@ -4,8 +4,6 @@
 
 ### Added
 
-- `BuildResult.outputTrimmed: String` function
-
 ### Changed
 
 ### Deprecated
@@ -14,9 +12,17 @@
 
 ### Fixed
 
-- Gradle TestKit test can't convert a file to be absolute file
-
 ### Updated
+
+## [1.0.0-alpha.22] - 2022-06-29
+
+### Added
+
+- `BuildResult.outputTrimmed: String` function
+
+### Fixed
+
+- Gradle TestKit test can't convert a file to be absolute file
 
 ## [1.0.0-alpha.21] - 2022-06-28
 
