@@ -23,12 +23,9 @@ Current scope:     <a href="../../index.html">all classes</a>
 <h1>Coverage Summary for Class: GradleTestKitExtensionsKt (com.javiersc.gradle.testkit.test.extensions)</h1>
 
 <table class="coverageStats">
+
 <tr>
   <th class="name">Class</th>
-<th class="coverageStat 
-">
-  Class, %
-</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -50,18 +47,10 @@ Current scope:     <a href="../../index.html">all classes</a>
   <td class="name">GradleTestKitExtensionsKt</td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    20%
   </span>
   <span class="absValue">
-    (1/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    20.7%
-  </span>
-  <span class="absValue">
-    (6/29)
+    (6/30)
   </span>
 </td>
 <td class="coverageStat">
@@ -74,22 +63,84 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    27.3%
+    26.9%
   </span>
   <span class="absValue">
-    (21/77)
+    (21/78)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    18.9%
+    18.3%
   </span>
   <span class="absValue">
-    (109/578)
+    (109/597)
   </span>
 </td>
 </tr>
-
+  <tr>
+    <td class="name">GradleTestKitExtensionsKt$outputTrimmed$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    19.4%
+  </span>
+  <span class="absValue">
+    (6/31)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    11.9%
+  </span>
+  <span class="absValue">
+    (5/42)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    26.6%
+  </span>
+  <span class="absValue">
+    (21/79)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    18.1%
+  </span>
+  <span class="absValue">
+    (109/601)
+  </span>
+</td>
+</tr>
 </table>
 
 <br/>
@@ -267,7 +318,10 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="nc"><i class="no-highlight">168</i>&nbsp;    withArguments(arguments + configurationCacheProblemsWarn())</b>
 <i class="no-highlight">169</i>&nbsp;}
 <i class="no-highlight">170</i>&nbsp;
-<b class="fc"><i class="no-highlight">171</i>&nbsp;private fun String.sanitizedSandboxPathPrefix(): String = replace(&quot;/&quot;, &quot;--&quot;).replace(&quot;\\&quot;, &quot;--&quot;)</b>
+<i class="no-highlight">171</i>&nbsp;public val BuildResult.outputTrimmed: String
+<b class="nc"><i class="no-highlight">172</i>&nbsp;    get() = output.lines().joinToString(&quot;\n&quot;, transform = String::trim)</b>
+<i class="no-highlight">173</i>&nbsp;
+<b class="fc"><i class="no-highlight">174</i>&nbsp;private fun String.sanitizedSandboxPathPrefix(): String = replace(&quot;/&quot;, &quot;--&quot;).replace(&quot;\\&quot;, &quot;--&quot;)</b>
 </div>
 </pre>
 </div>
@@ -294,7 +348,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-06-28 14:42</div>
+    <div style="float:right;">generated on 2022-06-29 10:15</div>
 </div>
 </body>
 </html>
