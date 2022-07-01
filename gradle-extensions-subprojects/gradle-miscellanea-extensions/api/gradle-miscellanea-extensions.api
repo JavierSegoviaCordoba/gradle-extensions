@@ -2,3 +2,7 @@ public final class com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurat
 	public static final fun forUseAtConfigurationTime (Lorg/gradle/api/provider/Provider;)Lorg/gradle/api/provider/Provider;
 }
 
+public final class com/javiersc/gradle/miscellanea/extensions/PluginArtifactKt {
+	public static final fun getPluginLibrary (Lorg/gradle/api/provider/Provider;)Lorg/gradle/api/provider/Provider;
+}
+

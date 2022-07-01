@@ -4,6 +4,8 @@
 
 ### Added
 
+- `Provider<PluginDependency>.pluginLibrary: Provider<String>` function
+
 ### Changed
 
 ### Deprecated
