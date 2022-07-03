@@ -6,6 +6,7 @@
 
 - `Provider<PluginDependency>.pluginLibrary: Provider<String>` function
 - `Settings.localProperties: Properties?` function
+- `gradlewArgumentFromTXT` accepts additional arguments
 
 ### Changed
 

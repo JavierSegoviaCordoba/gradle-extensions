@@ -84,8 +84,8 @@ public fun GradleRunner.withArgumentsFromTXT() {
     withArguments(argumentsTxt)
 }
 
-public fun GradleRunner.gradlewArgumentFromTXT(): BuildResult =
-    gradlew(*argumentsTxt.toTypedArray())
+public fun GradleRunner.gradlewArgumentFromTXT(vararg additionalArgs: String): BuildResult =
+    gradlew(*argumentsTxt.toTypedArray() + additionalArgs)
 
 public fun GradleRunner.gradlew(vararg arguments: String): BuildResult {
     val previousArgs: List<String> = this.arguments.toList()
