@@ -157,11 +157,11 @@
 
 <div>
   <ul>
-    <li>66 number of properties</li>
-    <li>70 number of functions</li>
+    <li>68 number of properties</li>
+    <li>81 number of functions</li>
     <li>6 number of classes</li>
     <li>10 number of packages</li>
-    <li>30 number of kt files</li>
+    <li>32 number of kt files</li>
   </ul>
 </div>
 
@@ -170,23 +170,23 @@
 
 <div>
   <ul>
-    <li>1,009 lines of code (loc)</li>
-    <li>797 source lines of code (sloc)</li>
-    <li>605 logical lines of code (lloc)</li>
+    <li>1,063 lines of code (loc)</li>
+    <li>836 source lines of code (sloc)</li>
+    <li>639 logical lines of code (lloc)</li>
     <li>3 comment lines of code (cloc)</li>
-    <li>117 cyclomatic complexity (mcc)</li>
+    <li>134 cyclomatic complexity (mcc)</li>
     <li>25 cognitive complexity</li>
-    <li>14 number of total code smells</li>
+    <li>15 number of total code smells</li>
     <li>0% comment source ratio</li>
-    <li>193 mcc per 1,000 lloc</li>
+    <li>209 mcc per 1,000 lloc</li>
     <li>23 code smells per 1,000 lloc</li>
   </ul>
 </div>
 
 
 <h2>Findings</h2>
-<div>Total: 14
-  <h3>complexity: 2</h3>
+<div>Total: 15
+  <h3>complexity: 3</h3>
   <details id="LongParameterList" open="open">
     <summary class="rule-container"><span class="rule">LongParameterList: 1 </span><span class="description">The more parameters a function has the more complex it is. Long parameter lists are often used to control complex algorithms and violate the Single Responsibility Principle. Prefer functions with short parameter lists.</span></summary>
     <ul>
@@ -203,13 +203,20 @@
     </ul>
   </details>
   <details id="TooManyFunctions" open="open">
-    <summary class="rule-container"><span class="rule">TooManyFunctions: 1 </span><span class="description">Too many functions inside a/an file/class/object/interface always indicate a violation of the single responsibility principle. Maybe the file/class/object/interface wants to manage too many things at once. Extract functionality which clearly belongs together.</span></summary>
+    <summary class="rule-container"><span class="rule">TooManyFunctions: 2 </span><span class="description">Too many functions inside a/an file/class/object/interface always indicate a violation of the single responsibility principle. Maybe the file/class/object/interface wants to manage too many things at once. Extract functionality which clearly belongs together.</span></summary>
     <ul>
-      <li><span class="location">gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/Properties.kt:1:1</span><span class="message">File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/Properties.kt' with '12' functions detected. Defined threshold inside files is set to '11'</span>
+      <li><span class="location">gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt:1:1</span><span class="message">File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt' with '12' functions detected. Defined threshold inside files is set to '11'</span>
         <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.gradle.properties.extensions</span>
 <span class="lineno">   2 </span>
 <span class="lineno">   3 </span>import java.io.File
-<span class="lineno">   4 </span>import java.util.Properties
+<span class="lineno">   4 </span>import org.gradle.api.Project
+</code></pre>
+      </li>
+      <li><span class="location">gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt:1:1</span><span class="message">File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt' with '11' functions detected. Defined threshold inside files is set to '11'</span>
+        <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.gradle.properties.extensions</span>
+<span class="lineno">   2 </span>
+<span class="lineno">   3 </span>import java.io.File
+<span class="lineno">   4 </span>import org.gradle.api.initialization.Settings
 </code></pre>
       </li>
     </ul>
@@ -359,7 +366,7 @@
 </div>
 
 
-generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-07-03 14:40:53 UTC.
+generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-07-03 16:53:53 UTC.
 
 </body>
 </html>
