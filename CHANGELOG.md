@@ -4,6 +4,8 @@
 
 ### Added
 
+- all property functions for `Settings`
+
 ### Changed
 
 ### Deprecated
