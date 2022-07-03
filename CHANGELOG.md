@@ -4,8 +4,6 @@
 
 ### Added
 
-- all property functions for `Settings`
-
 ### Changed
 
 ### Deprecated
@@ -15,6 +13,12 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.24] - 2022-07-03
+
+### Added
+
+- all property functions for `Settings`
 
 ## [1.0.0-alpha.23] - 2022-07-03
 
