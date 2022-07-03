@@ -71,10 +71,10 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    18.3%
+    18.2%
   </span>
   <span class="absValue">
-    (109/597)
+    (109/599)
   </span>
 </td>
 </tr>
@@ -137,7 +137,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     18.1%
   </span>
   <span class="absValue">
-    (109/601)
+    (109/603)
   </span>
 </td>
 </tr>
@@ -234,8 +234,8 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc"><i class="no-highlight">84</i>&nbsp;    withArguments(argumentsTxt)</b>
 <i class="no-highlight">85</i>&nbsp;}
 <i class="no-highlight">86</i>&nbsp;
-<i class="no-highlight">87</i>&nbsp;public fun GradleRunner.gradlewArgumentFromTXT(): BuildResult =
-<b class="nc"><i class="no-highlight">88</i>&nbsp;    gradlew(*argumentsTxt.toTypedArray())</b>
+<i class="no-highlight">87</i>&nbsp;public fun GradleRunner.gradlewArgumentFromTXT(vararg additionalArgs: String): BuildResult =
+<b class="nc"><i class="no-highlight">88</i>&nbsp;    gradlew(*argumentsTxt.toTypedArray() + additionalArgs)</b>
 <i class="no-highlight">89</i>&nbsp;
 <i class="no-highlight">90</i>&nbsp;public fun GradleRunner.gradlew(vararg arguments: String): BuildResult {
 <b class="fc"><i class="no-highlight">91</i>&nbsp;    val previousArgs: List&lt;String&gt; = this.arguments.toList()</b>
@@ -348,7 +348,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-01 18:53</div>
+    <div style="float:right;">generated on 2022-07-03 14:39</div>
 </div>
 </body>
 </html>
