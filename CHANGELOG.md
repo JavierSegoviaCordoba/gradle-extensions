@@ -4,10 +4,6 @@
 
 ### Added
 
-- `Provider<PluginDependency>.pluginLibrary: Provider<String>` function
-- `Settings.localProperties: Properties?` function
-- `gradlewArgumentFromTXT` accepts additional arguments
-
 ### Changed
 
 ### Deprecated
@@ -17,6 +13,14 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.23] - 2022-07-03
+
+### Added
+
+- `Provider<PluginDependency>.pluginLibrary: Provider<String>` function
+- `Settings.localProperties: Properties?` function
+- `gradlewArgumentFromTXT` accepts additional arguments
 
 ## [1.0.0-alpha.22] - 2022-06-29
 
