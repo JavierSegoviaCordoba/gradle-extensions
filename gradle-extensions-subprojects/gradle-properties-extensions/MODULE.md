@@ -12,6 +12,7 @@ dependencies {
 
 ```kotlin
 project.localProperties // `Properties?` closest to the project
+settings.localProperties // `Properties?` closest to the settings project
 
 /**
  * Get a property in the next order of priority from

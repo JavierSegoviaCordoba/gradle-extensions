@@ -5,6 +5,7 @@
 ### Added
 
 - `Provider<PluginDependency>.pluginLibrary: Provider<String>` function
+- `Settings.localProperties: Properties?` function
 
 ### Changed
 
