@@ -4,6 +4,8 @@
 
 ### Added
 
+- debug message to `getProperty` functions
+
 ### Changed
 
 ### Deprecated

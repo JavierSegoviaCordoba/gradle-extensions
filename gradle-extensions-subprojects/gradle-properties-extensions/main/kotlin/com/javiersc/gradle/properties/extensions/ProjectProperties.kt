@@ -4,11 +4,20 @@ import java.io.File
 import org.gradle.api.Project
 
 public fun Project.getProperty(name: String): String =
-    localProperties?.getProperty(name)
-        ?: localProperties?.getProperty(name.toSnakeCase()) ?: System.getenv(name)
-            ?: System.getenv(name.toSnakeCase()) ?: providers.gradleProperty(name).orNull
+    localProperties?.getProperty(name)?.also {
+        logger.debug("Property $name found in the project `local.properties` file")
+    }
+        ?: localProperties?.getProperty(name.toSnakeCase())
+            ?: System.getenv(name)?.also {
+            logger.debug("Property $name found in the root `local.properties`file")
+        }
+            ?: System.getenv(name.toSnakeCase())
+            ?: providers.gradleProperty(name).orNull?.also {
+            logger.debug("Property $name found in the environment variables")
+        }
             ?: providers.gradleProperty(name.toSnakeCase()).orNull.run {
             checkNotNull(this) {
+                logger.debug("Property $name found in the `gradle.properties` file")
                 val project = this@getProperty
                 val userHomePath = System.getProperty("user.home")
                 """
