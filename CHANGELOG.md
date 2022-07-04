@@ -4,8 +4,6 @@
 
 ### Added
 
-- debug message to `getProperty` functions
-
 ### Changed
 
 ### Deprecated
@@ -15,6 +13,12 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.25] - 2022-07-04
+
+### Added
+
+- debug message to `getProperty` functions
 
 ## [1.0.0-alpha.24] - 2022-07-03
 
