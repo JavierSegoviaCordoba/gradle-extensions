@@ -1,11 +1,10 @@
 package com.javiersc.integration.tests.gradle.extensions
 
-import com.javiersc.gradle.testkit.test.extensions.gradleTestKitTest
-import com.javiersc.gradle.testkit.test.extensions.gradlew
+import com.javiersc.gradle.testkit.test.extensions.GradleTest
 import io.kotest.matchers.string.shouldContain
 import kotlin.test.Test
 
-internal class ProjectTest {
+internal class ProjectTest : GradleTest() {
 
     @Test
     fun `1`() {

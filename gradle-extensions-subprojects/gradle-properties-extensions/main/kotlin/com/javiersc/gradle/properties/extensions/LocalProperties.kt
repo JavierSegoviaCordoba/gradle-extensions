@@ -11,10 +11,10 @@ public val Project.localProperties: Properties?
         val rootProjectLocalProps: File = rootProject.file("local.properties")
         return when {
             projectLocalProps.exists() -> {
-                Properties().apply { load(projectLocalProps.inputStream()) }
+                Properties().apply { projectLocalProps.inputStream().use(::load) }
             }
             rootProjectLocalProps.exists() -> {
-                Properties().apply { load(rootProjectLocalProps.inputStream()) }
+                Properties().apply { rootProjectLocalProps.inputStream().use(::load) }
             }
             else -> null
         }

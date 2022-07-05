@@ -1,13 +1,11 @@
 package com.javiersc.integration.tests
 
-import com.javiersc.gradle.testkit.test.extensions.andWithInfo
-import com.javiersc.gradle.testkit.test.extensions.gradleTestKitTest
+import com.javiersc.gradle.testkit.test.extensions.GradleTest
 import com.javiersc.gradle.testkit.test.extensions.resourceFile
-import com.javiersc.gradle.testkit.test.extensions.withArgumentsFromTXT
 import io.kotest.matchers.shouldBe
 import kotlin.test.Test
 
-internal class GradleTestKitExtensionsTest {
+internal class GradleTestKitExtensionsTest : GradleTest() {
 
     @Test
     fun test() {

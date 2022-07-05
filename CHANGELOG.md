@@ -4,11 +4,15 @@
 
 ### Added
 
+- `GradleTest` abstract class which contains Gradle TestKit utils
+
 ### Changed
 
 ### Deprecated
 
 ### Removed
+
+- `GradleRunner` functions (moved to `GradleTest`)
 
 ### Fixed
 
