@@ -4,19 +4,25 @@
 
 ### Added
 
-- `GradleTest` abstract class which contains Gradle TestKit utils
-
 ### Changed
 
 ### Deprecated
 
 ### Removed
 
-- `GradleRunner` functions (moved to `GradleTest`)
-
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.26] - 2022-07-05
+
+### Added
+
+- `GradleTest` abstract class which contains Gradle TestKit utils
+
+### Removed
+
+- `GradleRunner` functions (moved to `GradleTest`)
 
 ## [1.0.0-alpha.25] - 2022-07-04
 
