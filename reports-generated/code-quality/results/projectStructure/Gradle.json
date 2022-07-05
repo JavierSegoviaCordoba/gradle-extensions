@@ -2,6 +2,22 @@
   "gradleJvm": "#JAVA_HOME",
   "libraries": [
     {
+      "ideaName": "Gradle: org.junit.jupiter:junit-jupiter-params:5.9.0-RC1",
+      "gradleName": "org.junit.jupiter:junit-jupiter-params:5.9.0-RC1",
+      "unresolved": false,
+      "groupId": "org.junit.jupiter",
+      "artifactId": "junit-jupiter-params",
+      "version": "5.9.0-RC1"
+    },
+    {
+      "ideaName": "Gradle: org.junit.jupiter:junit-jupiter-api:5.9.0-RC1",
+      "gradleName": "org.junit.jupiter:junit-jupiter-api:5.9.0-RC1",
+      "unresolved": false,
+      "groupId": "org.junit.jupiter",
+      "artifactId": "junit-jupiter-api",
+      "version": "5.9.0-RC1"
+    },
+    {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21",
       "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21",
       "unresolved": false,
@@ -16,6 +32,30 @@
       "groupId": "com.javiersc.kotlin",
       "artifactId": "kotlin-stdlib-jvm",
       "version": "0.1.0-alpha.5"
+    },
+    {
+      "ideaName": "Gradle: org.apiguardian:apiguardian-api:1.1.2",
+      "gradleName": "org.apiguardian:apiguardian-api:1.1.2",
+      "unresolved": false,
+      "groupId": "org.apiguardian",
+      "artifactId": "apiguardian-api",
+      "version": "1.1.2"
+    },
+    {
+      "ideaName": "Gradle: org.junit.platform:junit-platform-commons:1.9.0-RC1",
+      "gradleName": "org.junit.platform:junit-platform-commons:1.9.0-RC1",
+      "unresolved": false,
+      "groupId": "org.junit.platform",
+      "artifactId": "junit-platform-commons",
+      "version": "1.9.0-RC1"
+    },
+    {
+      "ideaName": "Gradle: org.opentest4j:opentest4j:1.2.0",
+      "gradleName": "org.opentest4j:opentest4j:1.2.0",
+      "unresolved": false,
+      "groupId": "org.opentest4j",
+      "artifactId": "opentest4j",
+      "version": "1.2.0"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
@@ -106,14 +146,6 @@
       "version": "1.1.0"
     },
     {
-      "ideaName": "Gradle: org.opentest4j:opentest4j:1.2.0",
-      "gradleName": "org.opentest4j:opentest4j:1.2.0",
-      "unresolved": false,
-      "groupId": "org.opentest4j",
-      "artifactId": "opentest4j",
-      "version": "1.2.0"
-    },
-    {
       "ideaName": "Gradle: io.kotest:kotest-assertions-api-jvm:5.3.1",
       "gradleName": "io.kotest:kotest-assertions-api-jvm:5.3.1",
       "unresolved": false,
@@ -176,6 +208,22 @@
       "groupId": "io.github.java-diff-utils",
       "artifactId": "java-diff-utils",
       "version": "4.11"
+    },
+    {
+      "ideaName": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.9.0-RC1",
+      "gradleName": "org.junit.jupiter:junit-jupiter-engine:5.9.0-RC1",
+      "unresolved": false,
+      "groupId": "org.junit.jupiter",
+      "artifactId": "junit-jupiter-engine",
+      "version": "5.9.0-RC1"
+    },
+    {
+      "ideaName": "Gradle: org.junit.platform:junit-platform-engine:1.9.0-RC1",
+      "gradleName": "org.junit.platform:junit-platform-engine:1.9.0-RC1",
+      "unresolved": false,
+      "groupId": "org.junit.platform",
+      "artifactId": "junit-platform-engine",
+      "version": "1.9.0-RC1"
     },
     {
       "ideaName": "Gradle: com.javiersc.gradle-plugins:all-plugins:0.1.0-rc.43",

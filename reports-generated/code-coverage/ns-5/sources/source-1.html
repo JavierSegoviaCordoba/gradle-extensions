@@ -85,7 +85,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/107)
+    (0/157)
   </span>
 </td>
 </tr>
@@ -110,10 +110,10 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="nc"><i class="no-highlight">11</i>&nbsp;        val rootProjectLocalProps: File = rootProject.file(&quot;local.properties&quot;)</b>
 <b class="nc"><i class="no-highlight">12</i>&nbsp;        return when {</b>
 <b class="nc"><i class="no-highlight">13</i>&nbsp;            projectLocalProps.exists() -&gt; {</b>
-<b class="nc"><i class="no-highlight">14</i>&nbsp;                Properties().apply { load(projectLocalProps.inputStream()) }</b>
+<b class="nc"><i class="no-highlight">14</i>&nbsp;                Properties().apply { projectLocalProps.inputStream().use(::load) }</b>
 <i class="no-highlight">15</i>&nbsp;            }
 <b class="nc"><i class="no-highlight">16</i>&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
-<b class="nc"><i class="no-highlight">17</i>&nbsp;                Properties().apply { load(rootProjectLocalProps.inputStream()) }</b>
+<b class="nc"><i class="no-highlight">17</i>&nbsp;                Properties().apply { rootProjectLocalProps.inputStream().use(::load) }</b>
 <i class="no-highlight">18</i>&nbsp;            }
 <b class="nc"><i class="no-highlight">19</i>&nbsp;            else -&gt; null</b>
 <i class="no-highlight">20</i>&nbsp;        }
@@ -159,7 +159,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-04 23:00</div>
+    <div style="float:right;">generated on 2022-07-05 10:11</div>
 </div>
 </body>
 </html>

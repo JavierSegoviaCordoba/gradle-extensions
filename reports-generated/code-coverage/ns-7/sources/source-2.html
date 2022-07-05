@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > SandboxKt</title>
+  <title>Coverage Report > GradleTestKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -20,7 +20,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">com.javiersc.gradle.testkit.test.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: SandboxKt (com.javiersc.gradle.testkit.test.extensions)</h1>
+<h1>Coverage Summary for Class: GradleTestKt (com.javiersc.gradle.testkit.test.extensions)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -47,7 +47,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">SandboxKt</td>
+  <td class="name">GradleTestKt</td>
 <td class="coverageStat">
   <span class="percent">
     100%
@@ -58,34 +58,27 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    77.8%
+    100%
   </span>
   <span class="absValue">
-    (7/9)
+    (1/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    75%
+    100%
   </span>
   <span class="absValue">
-    (27/36)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    85.7%
-  </span>
-  <span class="absValue">
-    (30/35)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    88.3%
-  </span>
-  <span class="absValue">
-    (250/283)
+    (13/13)
   </span>
 </td>
 </tr>
@@ -97,75 +90,193 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;@file:OptIn(ExperimentalStdlibApi::class)
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.gradle.testkit.test.extensions
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;package com.javiersc.gradle.testkit.test.extensions
-<i class="no-highlight">4</i>&nbsp;
-<i class="no-highlight">5</i>&nbsp;import java.io.File
-<i class="no-highlight">6</i>&nbsp;import java.nio.file.Files.createTempDirectory
-<i class="no-highlight">7</i>&nbsp;import java.nio.file.Path
-<i class="no-highlight">8</i>&nbsp;import java.nio.file.Paths
-<i class="no-highlight">9</i>&nbsp;import org.gradle.testkit.runner.GradleRunner
+<i class="no-highlight">3</i>&nbsp;import com.javiersc.gradle.testkit.test.extensions._internal.argumentsTxt
+<i class="no-highlight">4</i>&nbsp;import java.io.File
+<i class="no-highlight">5</i>&nbsp;import org.gradle.testkit.runner.BuildResult
+<i class="no-highlight">6</i>&nbsp;import org.gradle.testkit.runner.GradleRunner
+<i class="no-highlight">7</i>&nbsp;import org.gradle.testkit.runner.TaskOutcome
+<i class="no-highlight">8</i>&nbsp;import org.junit.jupiter.api.io.CleanupMode.ON_SUCCESS
+<i class="no-highlight">9</i>&nbsp;import org.junit.jupiter.api.io.TempDir
 <i class="no-highlight">10</i>&nbsp;
-<i class="no-highlight">11</i>&nbsp;public fun resourceFile(resource: String): File =
-<b class="pc"><i class="no-highlight">12</i>&nbsp;    File(Thread.currentThread().contextClassLoader?.getResource(resource)?.toURI()!!)</b>
-<i class="no-highlight">13</i>&nbsp;
-<b class="fc"><i class="no-highlight">14</i>&nbsp;internal val sandboxPath: Path = Paths.get(&quot;build/sandbox&quot;).apply { toFile().mkdirs() }</b>
-<i class="no-highlight">15</i>&nbsp;
-<b class="nc"><i class="no-highlight">16</i>&nbsp;internal val sandboxIsolatedPath: Path =</b>
-<b class="fc"><i class="no-highlight">17</i>&nbsp;    Paths.get(&quot;build/sandbox-isolated&quot;).apply { toFile().mkdirs() }</b>
-<i class="no-highlight">18</i>&nbsp;
-<i class="no-highlight">19</i>&nbsp;internal fun String.copyResourceTo(destination: File) {
-<b class="fc"><i class="no-highlight">20</i>&nbsp;    resourceFile(this).copyRecursively(destination)</b>
-<i class="no-highlight">21</i>&nbsp;}
-<i class="no-highlight">22</i>&nbsp;
-<i class="no-highlight">23</i>&nbsp;internal fun createSandboxDirectory(prefix: String): File =
-<b class="pc"><i class="no-highlight">24</i>&nbsp;    createTempDirectory(sandboxPath, if (prefix.isBlank()) prefix else &quot;$prefix-&quot;).toFile()</b>
-<i class="no-highlight">25</i>&nbsp;
-<i class="no-highlight">26</i>&nbsp;internal fun createSandboxIsolatedDirectory(prefix: String): File =
-<b class="nc"><i class="no-highlight">27</i>&nbsp;    createTempDirectory(sandboxIsolatedPath, if (prefix.isBlank()) prefix else &quot;$prefix-&quot;)</b>
-<b class="nc"><i class="no-highlight">28</i>&nbsp;        .toFile()</b>
-<b class="nc"><i class="no-highlight">29</i>&nbsp;        .absoluteFile</b>
-<i class="no-highlight">30</i>&nbsp;
-<i class="no-highlight">31</i>&nbsp;internal val GradleRunner.argumentsTxt: List&lt;String&gt;
-<i class="no-highlight">32</i>&nbsp;    get() {
-<b class="fc"><i class="no-highlight">33</i>&nbsp;        val argumentsFile = projectDir.resolve(&quot;ARGUMENTS.txt&quot;)</b>
-<b class="pc"><i class="no-highlight">34</i>&nbsp;        return if (argumentsFile.exists()) {</b>
-<b class="fc"><i class="no-highlight">35</i>&nbsp;            buildList {</b>
-<b class="fc"><i class="no-highlight">36</i>&nbsp;                val line = argumentsFile.readLines().first()</b>
-<b class="fc"><i class="no-highlight">37</i>&nbsp;                var (nextArgument, remaining) = line.nextArgument()</b>
-<b class="fc"><i class="no-highlight">38</i>&nbsp;                nextArgument?.let(::add)</b>
-<b class="pc"><i class="no-highlight">39</i>&nbsp;                while (nextArgument != null || remaining != null) {</b>
-<b class="fc"><i class="no-highlight">40</i>&nbsp;                    val (nextArgumentWhile, remainingWhile) =</b>
-<b class="pc"><i class="no-highlight">41</i>&nbsp;                        remaining?.nextArgument() ?: (null to null)</b>
-<b class="fc"><i class="no-highlight">42</i>&nbsp;                    nextArgument = nextArgumentWhile</b>
-<b class="fc"><i class="no-highlight">43</i>&nbsp;                    remaining = remainingWhile</b>
-<b class="fc"><i class="no-highlight">44</i>&nbsp;                    nextArgument?.let(::add)</b>
-<i class="no-highlight">45</i>&nbsp;                }
-<b class="fc"><i class="no-highlight">46</i>&nbsp;            }</b>
-<i class="no-highlight">47</i>&nbsp;        } else {
-<b class="nc"><i class="no-highlight">48</i>&nbsp;            emptyList()</b>
-<i class="no-highlight">49</i>&nbsp;        }
-<i class="no-highlight">50</i>&nbsp;    }
+<i class="no-highlight">11</i>&nbsp;public abstract class GradleTest {
+<i class="no-highlight">12</i>&nbsp;
+<i class="no-highlight">13</i>&nbsp;    @TempDir(cleanup = ON_SUCCESS) private lateinit var tempDir: File
+<i class="no-highlight">14</i>&nbsp;
+<i class="no-highlight">15</i>&nbsp;    @TempDir(cleanup = ON_SUCCESS) private lateinit var isolatedTempDir: File
+<i class="no-highlight">16</i>&nbsp;
+<i class="no-highlight">17</i>&nbsp;    public fun gradleTestKitTest(
+<i class="no-highlight">18</i>&nbsp;        sandboxPath: String? = null,
+<i class="no-highlight">19</i>&nbsp;        name: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: &quot;&quot;,
+<i class="no-highlight">20</i>&nbsp;        withDebug: Boolean = false,
+<i class="no-highlight">21</i>&nbsp;        withPluginClasspath: Boolean = true,
+<i class="no-highlight">22</i>&nbsp;        isolated: Boolean = false,
+<i class="no-highlight">23</i>&nbsp;        test: GradleRunner.() -&gt; Unit,
+<i class="no-highlight">24</i>&nbsp;    ) {
+<i class="no-highlight">25</i>&nbsp;        val projectDir = tempDir.resolve(name).apply(File::mkdirs)
+<i class="no-highlight">26</i>&nbsp;
+<i class="no-highlight">27</i>&nbsp;        if (sandboxPath != null) resourceFile(sandboxPath).copyRecursively(projectDir)
+<i class="no-highlight">28</i>&nbsp;
+<i class="no-highlight">29</i>&nbsp;        test(
+<i class="no-highlight">30</i>&nbsp;            GradleRunner.create().apply {
+<i class="no-highlight">31</i>&nbsp;                withDebug(withDebug)
+<i class="no-highlight">32</i>&nbsp;                if (withPluginClasspath) withPluginClasspath()
+<i class="no-highlight">33</i>&nbsp;                if (isolated) {
+<i class="no-highlight">34</i>&nbsp;                    val isolatedDir = isolatedTempDir.resolve(name).apply(File::mkdirs)
+<i class="no-highlight">35</i>&nbsp;                    withTestKitDir(isolatedDir)
+<i class="no-highlight">36</i>&nbsp;                }
+<i class="no-highlight">37</i>&nbsp;                withProjectDir(projectDir)
+<i class="no-highlight">38</i>&nbsp;            },
+<i class="no-highlight">39</i>&nbsp;        )
+<i class="no-highlight">40</i>&nbsp;    }
+<i class="no-highlight">41</i>&nbsp;
+<i class="no-highlight">42</i>&nbsp;    public fun GradleRunner.testBuildCache(
+<i class="no-highlight">43</i>&nbsp;        resultingTask: String? = null,
+<i class="no-highlight">44</i>&nbsp;        invalidate: (GradleRunner.() -&gt; Unit)? = null,
+<i class="no-highlight">45</i>&nbsp;    ) {
+<i class="no-highlight">46</i>&nbsp;        val taskName =
+<i class="no-highlight">47</i>&nbsp;            checkNotNull(resultingTask ?: arguments.firstOrNull()) {
+<i class="no-highlight">48</i>&nbsp;                &quot;There is not a task in the arguments to check if build cache works&quot;
+<i class="no-highlight">49</i>&nbsp;            }
+<i class="no-highlight">50</i>&nbsp;        val task = &quot;:$taskName&quot;
 <i class="no-highlight">51</i>&nbsp;
-<i class="no-highlight">52</i>&nbsp;private fun String.nextArgument(): Pair&lt;String?, String?&gt; {
-<b class="fc"><i class="no-highlight">53</i>&nbsp;    val line = dropWhile(Char::isWhitespace)</b>
-<b class="fc"><i class="no-highlight">54</i>&nbsp;    val (nextArgument, remaining) =</b>
-<b class="fc"><i class="no-highlight">55</i>&nbsp;        when {</b>
-<b class="fc"><i class="no-highlight">56</i>&nbsp;            line.isBlank() -&gt; null to null</b>
-<b class="fc"><i class="no-highlight">57</i>&nbsp;            line.startsWith(&quot;\&quot;&quot;) -&gt; {</b>
-<b class="fc"><i class="no-highlight">58</i>&nbsp;                val nextArgument = line.drop(1).takeWhile { it != &#39;&quot;&#39; }</b>
-<b class="fc"><i class="no-highlight">59</i>&nbsp;                val remaining = line.drop(1 + nextArgument.length + 1)</b>
-<b class="fc"><i class="no-highlight">60</i>&nbsp;                nextArgument to remaining</b>
-<i class="no-highlight">61</i>&nbsp;            }
-<i class="no-highlight">62</i>&nbsp;            else -&gt; {
-<b class="fc"><i class="no-highlight">63</i>&nbsp;                val nextArgument = line.takeWhile { !it.isWhitespace() }</b>
-<b class="fc"><i class="no-highlight">64</i>&nbsp;                val remaining = line.drop(nextArgument.length)</b>
-<b class="fc"><i class="no-highlight">65</i>&nbsp;                nextArgument to remaining</b>
-<i class="no-highlight">66</i>&nbsp;            }
-<i class="no-highlight">67</i>&nbsp;        }
-<b class="fc"><i class="no-highlight">68</i>&nbsp;    return nextArgument to remaining</b>
-<i class="no-highlight">69</i>&nbsp;}
+<i class="no-highlight">52</i>&nbsp;        andWithBuildCache()
+<i class="no-highlight">53</i>&nbsp;        build()
+<i class="no-highlight">54</i>&nbsp;
+<i class="no-highlight">55</i>&nbsp;        invalidate?.invoke(this)
+<i class="no-highlight">56</i>&nbsp;        cleanBuildDirectory()
+<i class="no-highlight">57</i>&nbsp;
+<i class="no-highlight">58</i>&nbsp;        val result = build()
+<i class="no-highlight">59</i>&nbsp;
+<i class="no-highlight">60</i>&nbsp;        val outcome =
+<i class="no-highlight">61</i>&nbsp;            checkNotNull(result.task(task)) { &quot;The outcome for the task $task is null&quot; }.outcome
+<i class="no-highlight">62</i>&nbsp;
+<i class="no-highlight">63</i>&nbsp;        val expectOutcome = if (invalidate == null) TaskOutcome.FROM_CACHE else TaskOutcome.SUCCESS
+<i class="no-highlight">64</i>&nbsp;
+<i class="no-highlight">65</i>&nbsp;        check(outcome == expectOutcome) { &quot;The outcome is $outcome and must be $expectOutcome&quot; }
+<i class="no-highlight">66</i>&nbsp;    }
+<i class="no-highlight">67</i>&nbsp;
+<i class="no-highlight">68</i>&nbsp;    public fun GradleRunner.testConfigurationCache(
+<i class="no-highlight">69</i>&nbsp;        expectTaskOutcome: TaskOutcome = TaskOutcome.UP_TO_DATE,
+<i class="no-highlight">70</i>&nbsp;        resultingTask: String? = null,
+<i class="no-highlight">71</i>&nbsp;    ) {
+<i class="no-highlight">72</i>&nbsp;        val taskName =
+<i class="no-highlight">73</i>&nbsp;            checkNotNull(resultingTask ?: arguments.firstOrNull()) {
+<i class="no-highlight">74</i>&nbsp;                &quot;There is not a task in the arguments to check if configuration cache works&quot;
+<i class="no-highlight">75</i>&nbsp;            }
+<i class="no-highlight">76</i>&nbsp;        val task = &quot;:$taskName&quot;
+<i class="no-highlight">77</i>&nbsp;
+<i class="no-highlight">78</i>&nbsp;        andWithConfigurationCache()
+<i class="no-highlight">79</i>&nbsp;        andWithNoBuildCache()
+<i class="no-highlight">80</i>&nbsp;        build()
+<i class="no-highlight">81</i>&nbsp;
+<i class="no-highlight">82</i>&nbsp;        val result = build()
+<i class="no-highlight">83</i>&nbsp;
+<i class="no-highlight">84</i>&nbsp;        check(result.output.contains(&quot;Reusing configuration cache&quot;)) {
+<i class="no-highlight">85</i>&nbsp;            &quot;Configuration cache is not working&quot;
+<i class="no-highlight">86</i>&nbsp;        }
+<i class="no-highlight">87</i>&nbsp;
+<i class="no-highlight">88</i>&nbsp;        val outcome =
+<i class="no-highlight">89</i>&nbsp;            checkNotNull(result.task(task)) { &quot;The outcome for the task $task is null&quot; }.outcome
+<i class="no-highlight">90</i>&nbsp;
+<i class="no-highlight">91</i>&nbsp;        check(outcome == expectTaskOutcome) {
+<i class="no-highlight">92</i>&nbsp;            &quot;The outcome is $outcome and must be $expectTaskOutcome&quot;
+<i class="no-highlight">93</i>&nbsp;        }
+<i class="no-highlight">94</i>&nbsp;    }
+<i class="no-highlight">95</i>&nbsp;
+<i class="no-highlight">96</i>&nbsp;    public fun GradleRunner.withArgumentsFromTXT() {
+<i class="no-highlight">97</i>&nbsp;        withArguments(argumentsTxt)
+<i class="no-highlight">98</i>&nbsp;    }
+<i class="no-highlight">99</i>&nbsp;
+<i class="no-highlight">100</i>&nbsp;    public fun GradleRunner.gradlewArgumentFromTXT(vararg additionalArgs: String): BuildResult =
+<i class="no-highlight">101</i>&nbsp;        gradlew(*argumentsTxt.toTypedArray() + additionalArgs)
+<i class="no-highlight">102</i>&nbsp;
+<i class="no-highlight">103</i>&nbsp;    public fun GradleRunner.gradlew(vararg arguments: String): BuildResult {
+<i class="no-highlight">104</i>&nbsp;        val previousArgs: List&lt;String&gt; = this.arguments.toList()
+<i class="no-highlight">105</i>&nbsp;        val result: BuildResult = withArguments(*arguments).build()
+<i class="no-highlight">106</i>&nbsp;        withArguments(previousArgs)
+<i class="no-highlight">107</i>&nbsp;        return result
+<i class="no-highlight">108</i>&nbsp;    }
+<i class="no-highlight">109</i>&nbsp;
+<i class="no-highlight">110</i>&nbsp;    public fun GradleRunner.clean(): BuildResult {
+<i class="no-highlight">111</i>&nbsp;        val previousArgs: List&lt;String&gt; = arguments.toList()
+<i class="no-highlight">112</i>&nbsp;        val result: BuildResult = withArguments(&quot;clean&quot;).build()
+<i class="no-highlight">113</i>&nbsp;        withArguments(previousArgs)
+<i class="no-highlight">114</i>&nbsp;        return result
+<i class="no-highlight">115</i>&nbsp;    }
+<i class="no-highlight">116</i>&nbsp;
+<i class="no-highlight">117</i>&nbsp;    public fun GradleRunner.cleanBuildDirectory() {
+<i class="no-highlight">118</i>&nbsp;        for (file in projectDir.walkTopDown()) {
+<i class="no-highlight">119</i>&nbsp;            if (file.isDirectory &amp;&amp; file.name == &quot;build&quot;) file.deleteRecursively()
+<i class="no-highlight">120</i>&nbsp;        }
+<i class="no-highlight">121</i>&nbsp;    }
+<i class="no-highlight">122</i>&nbsp;
+<i class="no-highlight">123</i>&nbsp;    public fun projectProperty(value: String): String = &quot;-P$value&quot;
+<i class="no-highlight">124</i>&nbsp;
+<i class="no-highlight">125</i>&nbsp;    public fun GradleRunner.andWithProjectProperty(value: String) {
+<i class="no-highlight">126</i>&nbsp;        withArguments(arguments + projectProperty(value))
+<i class="no-highlight">127</i>&nbsp;    }
+<i class="no-highlight">128</i>&nbsp;
+<i class="no-highlight">129</i>&nbsp;    public fun systemProperty(value: String): String = &quot;-D$value&quot;
+<i class="no-highlight">130</i>&nbsp;
+<i class="no-highlight">131</i>&nbsp;    public fun GradleRunner.andWithSystemProperty(value: String) {
+<i class="no-highlight">132</i>&nbsp;        withArguments(arguments + systemProperty(value))
+<i class="no-highlight">133</i>&nbsp;    }
+<i class="no-highlight">134</i>&nbsp;
+<i class="no-highlight">135</i>&nbsp;    public fun info(): String = &quot;--info&quot;
+<i class="no-highlight">136</i>&nbsp;
+<i class="no-highlight">137</i>&nbsp;    public fun GradleRunner.andWithInfo() {
+<i class="no-highlight">138</i>&nbsp;        withArguments(arguments + info())
+<i class="no-highlight">139</i>&nbsp;    }
+<i class="no-highlight">140</i>&nbsp;
+<i class="no-highlight">141</i>&nbsp;    public fun stacktrace(): String = &quot;--stacktrace&quot;
+<i class="no-highlight">142</i>&nbsp;
+<i class="no-highlight">143</i>&nbsp;    public fun GradleRunner.andWithStacktrace() {
+<i class="no-highlight">144</i>&nbsp;        withArguments(arguments + stacktrace())
+<i class="no-highlight">145</i>&nbsp;    }
+<i class="no-highlight">146</i>&nbsp;
+<i class="no-highlight">147</i>&nbsp;    public fun scan(): String = &quot;--scan&quot;
+<i class="no-highlight">148</i>&nbsp;
+<i class="no-highlight">149</i>&nbsp;    public fun GradleRunner.andWithScan() {
+<i class="no-highlight">150</i>&nbsp;        withArguments(arguments + scan())
+<i class="no-highlight">151</i>&nbsp;    }
+<i class="no-highlight">152</i>&nbsp;
+<i class="no-highlight">153</i>&nbsp;    public fun buildCache(): String = &quot;--build-cache&quot;
+<i class="no-highlight">154</i>&nbsp;
+<i class="no-highlight">155</i>&nbsp;    public fun GradleRunner.andWithBuildCache() {
+<i class="no-highlight">156</i>&nbsp;        withArguments(arguments + buildCache())
+<i class="no-highlight">157</i>&nbsp;    }
+<i class="no-highlight">158</i>&nbsp;
+<i class="no-highlight">159</i>&nbsp;    public fun noBuildCache(): String = &quot;--no-build-cache&quot;
+<i class="no-highlight">160</i>&nbsp;
+<i class="no-highlight">161</i>&nbsp;    public fun GradleRunner.andWithNoBuildCache() {
+<i class="no-highlight">162</i>&nbsp;        withArguments(arguments + noBuildCache())
+<i class="no-highlight">163</i>&nbsp;    }
+<i class="no-highlight">164</i>&nbsp;
+<i class="no-highlight">165</i>&nbsp;    public fun configurationCache(): String = &quot;--configuration-cache&quot;
+<i class="no-highlight">166</i>&nbsp;
+<i class="no-highlight">167</i>&nbsp;    public fun GradleRunner.andWithConfigurationCache() {
+<i class="no-highlight">168</i>&nbsp;        withArguments(arguments + configurationCache())
+<i class="no-highlight">169</i>&nbsp;    }
+<i class="no-highlight">170</i>&nbsp;
+<i class="no-highlight">171</i>&nbsp;    public fun noConfigurationCache(): String = &quot;--no-configuration-cache&quot;
+<i class="no-highlight">172</i>&nbsp;
+<i class="no-highlight">173</i>&nbsp;    public fun GradleRunner.andWithNoConfigurationCache() {
+<i class="no-highlight">174</i>&nbsp;        withArguments(arguments + noConfigurationCache())
+<i class="no-highlight">175</i>&nbsp;    }
+<i class="no-highlight">176</i>&nbsp;
+<i class="no-highlight">177</i>&nbsp;    public fun configurationCacheProblemsWarn(): String = &quot;--configuration-cache-problems=warn&quot;
+<i class="no-highlight">178</i>&nbsp;
+<i class="no-highlight">179</i>&nbsp;    public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
+<i class="no-highlight">180</i>&nbsp;        withArguments(arguments + configurationCacheProblemsWarn())
+<i class="no-highlight">181</i>&nbsp;    }
+<i class="no-highlight">182</i>&nbsp;
+<i class="no-highlight">183</i>&nbsp;    public val BuildResult.outputTrimmed: String
+<i class="no-highlight">184</i>&nbsp;        get() = output.lines().joinToString(&quot;\n&quot;, transform = String::trim)
+<i class="no-highlight">185</i>&nbsp;}
+<i class="no-highlight">186</i>&nbsp;
+<b class="fc"><i class="no-highlight">187</i>&nbsp;private fun String.sanitizedSandboxPathPrefix(): String = replace(&quot;/&quot;, &quot;--&quot;).replace(&quot;\\&quot;, &quot;--&quot;)</b>
 </div>
 </pre>
 </div>
@@ -192,7 +303,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-04 23:00</div>
+    <div style="float:right;">generated on 2022-07-05 10:11</div>
 </div>
 </body>
 </html>
