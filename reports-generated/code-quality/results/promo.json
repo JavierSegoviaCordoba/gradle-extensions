@@ -1,0 +1,435 @@
+{"version":"3","listProblem":[{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'projectProperty' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 123,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 121,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun projectProperty(value: String): String = \"-P$value\"\n\n    public fun GradleRunner.andWithProjectProperty(value: String) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-6410856418880093041"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'cleanBuildDirectory' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 117,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 115,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun GradleRunner.cleanBuildDirectory() {\n        for (file in projectDir.walkTopDown()) {\n            if (file.isDirectory && file.name == \"build\") file.deleteRecursively()"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-5392846654055718491"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'configurationCacheProblemsWarn' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 177,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 175,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun configurationCacheProblemsWarn(): String = \"--configuration-cache-problems=warn\"\n\n    public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-3266642227020831550"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'info' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 135,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 133,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun info(): String = \"--info\"\n\n    public fun GradleRunner.andWithInfo() {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-4126532881757742228"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'noConfigurationCache' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 171,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 169,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun noConfigurationCache(): String = \"--no-configuration-cache\"\n\n    public fun GradleRunner.andWithNoConfigurationCache() {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-2126096827686749537"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'andWithNoBuildCache' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 161,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 159,
+        "length": 6,
+        "offset": 64,
+        "surroundingCode": "    public fun noBuildCache(): String = \"--no-build-cache\"\n\n    public fun GradleRunner.andWithNoBuildCache() {\n        withArguments(arguments + noBuildCache())\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-5405766490613000412"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'stacktrace' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 141,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 139,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun stacktrace(): String = \"--stacktrace\"\n\n    public fun GradleRunner.andWithStacktrace() {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-5568175088507982869"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'scan' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 147,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 145,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun scan(): String = \"--scan\"\n\n    public fun GradleRunner.andWithScan() {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-7195779523650550811"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'systemProperty' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 129,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 127,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun systemProperty(value: String): String = \"-D$value\"\n\n    public fun GradleRunner.andWithSystemProperty(value: String) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-7732545321069267600"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'buildCache' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 153,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 151,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun buildCache(): String = \"--build-cache\"\n\n    public fun GradleRunner.andWithBuildCache() {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-8077571978992234178"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'configurationCache' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 165,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 163,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun configurationCache(): String = \"--configuration-cache\"\n\n    public fun GradleRunner.andWithConfigurationCache() {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-8901017124780186958"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'noBuildCache' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 159,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 157,
+        "length": 6,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    public fun noBuildCache(): String = \"--no-build-cache\"\n\n    public fun GradleRunner.andWithNoBuildCache() {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-95693276046555508"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'andWithConfigurationCache' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 167,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 165,
+        "length": 6,
+        "offset": 75,
+        "surroundingCode": "    public fun configurationCache(): String = \"--configuration-cache\"\n\n    public fun GradleRunner.andWithConfigurationCache() {\n        withArguments(arguments + configurationCache())\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "4515591019950358941"
+},{
+  "tool": "Code Inspection",
+  "category": "Style issues",
+  "type": "Class member can have 'private' visibility",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "Info",
+  "comment": "Function 'andWithBuildCache' could be private",
+  "detailsInfo": "Reports declarations that can be made `private` to follow the encapsulation principle.\n\n**Example:**\n\n\n    class Service(val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n\nAfter the quick-fix is applied (considering there are no usages of `url` outside of `Service` class):\n\n\n    class Service(private val url: String) {\n        fun connect(): URLConnection = URL(url).openConnection()\n    }\n",
+  "sources": [
+    {
+      "type": "method",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+      "language": "kotlin",
+      "line": 155,
+      "offset": 4,
+      "length": 6,
+      "code": {
+        "startLine": 153,
+        "length": 6,
+        "offset": 59,
+        "surroundingCode": "    public fun buildCache(): String = \"--build-cache\"\n\n    public fun GradleRunner.andWithBuildCache() {\n        withArguments(arguments + buildCache())\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions.main",
+    "inspectionName": "MemberVisibilityCanBePrivate"
+  },
+  "hash": "-5870195447784694639"
+}]}
