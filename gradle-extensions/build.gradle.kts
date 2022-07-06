@@ -1,20 +1,28 @@
 plugins {
-    `kotlin-jvm`
-    `javiersc-kotlin-config`
-    `javiersc-publish`
+    alias(libs.plugins.javiersc.hubdle)
 }
 
-kotlin {
-    explicitApi()
-}
-
-configureJvmTarget()
-
-dependencies {
-    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)
-    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)
-    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)
-    api(projects.gradleExtensionsSubprojects.gradlePropertiesExtensions)
-    api(projects.gradleExtensionsSubprojects.gradleTasksExtensions)
-    api(projects.gradleExtensionsSubprojects.gradleVersionCatalogExtensions)
+hubdle {
+    config {
+        explicitApi()
+        publishing()
+    }
+    kotlin {
+        jvm {
+            features {
+                extendedGradle(enabled = false)
+            }
+            main {
+                dependencies {
+                    api(javierscKotlinStdlib())
+                    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)
+                    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)
+                    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)
+                    api(projects.gradleExtensionsSubprojects.gradlePropertiesExtensions)
+                    api(projects.gradleExtensionsSubprojects.gradleTasksExtensions)
+                    api(projects.gradleExtensionsSubprojects.gradleVersionCatalogExtensions)
+                }
+            }
+        }
+    }
 }

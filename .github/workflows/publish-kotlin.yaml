@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish:
-    uses: JavierSegoviaCordoba/reusable-workflows/.github/workflows/publish-kotlin.yaml@main
+    uses: JavierSegoviaCordoba/reusable-workflows/.github/workflows/publish-kotlin.yaml@hubdle
     with:
       publish-maven-central: true
       publish-gradle-plugin-portal: false
@@ -15,12 +15,4 @@ jobs:
       publish-docs: true
       publish-github-release: true
       code-coverage-report: true
-    secrets:
-      OSS_USER: '${{ secrets.OSS_USER }}'
-      OSS_TOKEN: '${{ secrets.OSS_TOKEN }}'
-      OSS_STAGING_PROFILE_ID: '${{ secrets.OSS_STAGING_PROFILE_ID }}'
-      SIGNING_KEY_NAME: '${{ secrets.SIGNING_KEY_NAME }}'
-      SIGNING_KEY_ID: '${{ secrets.SIGNING_KEY_ID }}'
-      SIGNING_KEY_PASSPHRASE: '${{ secrets.SIGNING_KEY_PASSPHRASE }}'
-      SIGNING_KEY: '${{ secrets.SIGNING_KEY }}'
-      SONAR_TOKEN: '${{ secrets.SONAR_TOKEN }}'
+    secrets: inherit

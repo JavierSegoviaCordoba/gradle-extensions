@@ -39,7 +39,8 @@ internal class PropertiesTest : GradleTest() {
         gradleTestKitTest("gradle-extensions/properties/failed-1") {
             withArguments("fakeFile")
             buildAndFail()
-                .output.shouldContain(
+                .output
+                .shouldContain(
                     "The property `prop.double` is not available in any of the next sources:"
                 )
         }
