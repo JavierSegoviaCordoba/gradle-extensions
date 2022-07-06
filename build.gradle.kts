@@ -1,5 +1,3 @@
-import org.jetbrains.dokka.gradle.DokkaMultiModuleTask
-
 buildscript {
     dependencies {
         classpath(libs.jetbrains.kotlin.kotlinGradlePlugin)
@@ -20,17 +18,10 @@ hubdle {
             readme {
                 badges()
             }
-            site()
+            site {
+                excludes(projects.integrationTests)
+            }
         }
         nexus()
-    }
-}
-
-
-removeProjectFromDoc(projects.integrationTests)
-
-fun removeProjectFromDoc(vararg projects: ProjectDependency) {
-    tasks.withType<DokkaMultiModuleTask>().configureEach {
-        removeChildTasks(projects.map { it.dependencyProject })
     }
 }
