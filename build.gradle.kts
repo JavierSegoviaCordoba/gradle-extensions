@@ -1,22 +1,36 @@
-plugins {
-    `javiersc-versioning`
-    `javiersc-all-projects`
-    `javiersc-changelog`
-    `javiersc-code-analysis`
-    `javiersc-code-coverage`
-    `javiersc-code-formatter`
-    `javiersc-docs`
-    `javiersc-nexus`
-    `javiersc-readme-badges-generator`
-    `kotlinx-binary-compatibility-validator`
+import org.jetbrains.dokka.gradle.DokkaMultiModuleTask
+
+buildscript {
+    dependencies {
+        classpath(libs.jetbrains.kotlin.kotlinGradlePlugin)
+    }
 }
 
-docs { navigation { reports { codeCoverage.set(true) } } }
+plugins {
+    alias(libs.plugins.javiersc.hubdle)
+}
 
-readmeBadges { coverage.set(true) }
+hubdle {
+    config {
+        analysis()
+        binaryCompatibilityValidator()
+        coverage()
+        documentation {
+            changelog()
+            readme {
+                badges()
+            }
+            site()
+        }
+        nexus()
+    }
+}
+
 
 removeProjectFromDoc(projects.integrationTests)
 
 fun removeProjectFromDoc(vararg projects: ProjectDependency) {
-    tasks { dokkaHtmlMultiModule { removeChildTasks(projects.map { it.dependencyProject }) } }
+    tasks.withType<DokkaMultiModuleTask>().configureEach {
+        removeChildTasks(projects.map { it.dependencyProject })
+    }
 }

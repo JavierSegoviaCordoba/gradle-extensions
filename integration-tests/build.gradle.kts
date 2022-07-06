@@ -1,26 +1,39 @@
 plugins {
-    `java-gradle-plugin`
-    `kotlin-jvm`
-    `javiersc-kotlin-config`
+    alias(libs.plugins.javiersc.hubdle)
 }
 
-gradlePlugin {
-    plugins {
-        create("FakePlugin") {
-            id = "fake.plugin"
-            displayName = "Fake Plugin"
-            description = "Fake Plugin for testing purposes"
-            implementationClass = "com.javiersc.integration.tests.FakePlugin"
+hubdle {
+    config {
+        explicitApi()
+    }
+    kotlin {
+        gradle {
+            plugin {
+                features {
+                    extendedGradle(enabled = false)
+                }
+                main {
+                    dependencies {
+                        implementation(gradleKotlinDsl())
+
+                        implementation(projects.gradleExtensions)
+                        implementation(projects.gradleTestExtensions)
+                    }
+                }
+
+                rawConfig {
+                    gradlePlugin {
+                        plugins {
+                            create("FakePlugin") {
+                                id = "fake.plugin"
+                                displayName = "Fake Plugin"
+                                description = "Fake Plugin for testing purposes"
+                                implementationClass = "com.javiersc.integration.tests.FakePlugin"
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-}
-
-dependencies {
-    implementation(gradleKotlinDsl())
-
-    implementation(projects.gradleExtensions)
-    implementation(projects.gradleTestExtensions)
-
-    testImplementation(libs.jetbrains.kotlin.kotlinTest)
-    testImplementation(libs.kotest.kotestAssertionsCore)
 }

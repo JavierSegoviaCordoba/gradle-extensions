@@ -1,13 +1,12 @@
 [versions]
-coroutines = "1.6.3"
-javierscStdLib = "0.1.0-alpha.5"
+hubdle = "0.2.0-alpha.11"
 junit5 = "5.9.0-RC1"
-kotest = "5.3.1"
+kotlin = "1.7.0"
 
 [libraries]
-javiersc-kotlin-kotlinStdlib = { module = "com.javiersc.kotlin:kotlin-stdlib", version.ref = "javierscStdLib" }
-jetbrains-kotlin-kotlinTest = { module = "org.jetbrains.kotlin:kotlin-test" }
-jetbrains-kotlinx-kotlinxCoroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+jetbrains-kotlin-kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 junit-jupiter-junitJupiterApi = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
 junit-jupiter-junitJupiterParams = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
-kotest-kotestAssertionsCore = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+
+[plugins]
+javiersc-hubdle = { id = "com.javiersc.hubdle", version.ref = "hubdle" }
