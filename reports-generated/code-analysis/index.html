@@ -157,11 +157,11 @@
 
 <div>
   <ul>
-    <li>69 number of properties</li>
-    <li>78 number of functions</li>
+    <li>70 number of properties</li>
+    <li>77 number of functions</li>
     <li>7 number of classes</li>
     <li>11 number of packages</li>
-    <li>33 number of kt files</li>
+    <li>30 number of kt files</li>
   </ul>
 </div>
 
@@ -170,22 +170,22 @@
 
 <div>
   <ul>
-    <li>1,068 lines of code (loc)</li>
-    <li>843 source lines of code (sloc)</li>
-    <li>643 logical lines of code (lloc)</li>
-    <li>3 comment lines of code (cloc)</li>
-    <li>131 cyclomatic complexity (mcc)</li>
+    <li>1,076 lines of code (loc)</li>
+    <li>889 source lines of code (sloc)</li>
+    <li>635 logical lines of code (lloc)</li>
+    <li>1 comment lines of code (cloc)</li>
+    <li>130 cyclomatic complexity (mcc)</li>
     <li>24 cognitive complexity</li>
-    <li>17 number of total code smells</li>
+    <li>16 number of total code smells</li>
     <li>0% comment source ratio</li>
-    <li>203 mcc per 1,000 lloc</li>
-    <li>26 code smells per 1,000 lloc</li>
+    <li>204 mcc per 1,000 lloc</li>
+    <li>25 code smells per 1,000 lloc</li>
   </ul>
 </div>
 
 
 <h2>Findings</h2>
-<div>Total: 17
+<div>Total: 16
   <h3>complexity: 3</h3>
   <details id="LongParameterList" open="open">
     <summary class="rule-container"><span class="rule">LongParameterList: 1 </span><span class="description">The more parameters a function has the more complex it is. Long parameter lists are often used to control complex algorithms and violate the Single Responsibility Principle. Prefer functions with short parameter lists.</span></summary>
@@ -265,20 +265,10 @@
       </li>
     </ul>
   </details>
-  <h3>style: 11</h3>
+  <h3>style: 10</h3>
   <details id="ForbiddenComment" open="open">
-    <summary class="rule-container"><span class="rule">ForbiddenComment: 2 </span><span class="description">Flags a forbidden comment.</span></summary>
+    <summary class="rule-container"><span class="rule">ForbiddenComment: 1 </span><span class="description">Flags a forbidden comment.</span></summary>
     <ul>
-      <li><span class="location">buildSrc/build.gradle.kts:12:5</span><span class="message">This comment contains 'TODO:' that has been defined as forbidden in detekt.</span>
-        <pre><code><span class="lineno">   9 </span>}
-<span class="lineno">  10 </span>
-<span class="lineno">  11 </span>dependencies {
-<span class="lineno">  12 </span>    <span class="error">// TODO: remove when the next issue is fixed:</span>
-<span class="lineno">  13 </span>    //  https://github.com/gradle/gradle/issues/15383#issuecomment-779893192
-<span class="lineno">  14 </span>    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
-<span class="lineno">  15 </span>    implementation(files(pluginLibs.javaClass.superclass.protectionDomain.codeSource.location))
-</code></pre>
-      </li>
       <li><span class="location">gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt:11:1</span><span class="message">This comment contains 'TODO:' that has been defined as forbidden in detekt.</span>
         <pre><code><span class="lineno">   8 </span>import org.gradle.util.GradleVersion.current
 <span class="lineno">   9 </span>import org.gradle.util.GradleVersion.version
@@ -394,7 +384,7 @@
 </div>
 
 
-generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-07-05 10:26:18 UTC.
+generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-07-06 08:35:18 UTC.
 
 </body>
 </html>

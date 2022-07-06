@@ -7,21 +7,277 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-miscellanea-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "8898117773030408066"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-miscellanea-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-6324542782004603409"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Function invocation 'plugins(...)' expected",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-miscellanea-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-3767857538588772211"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-miscellanea-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "1728736626294361463"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-properties-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-properties-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-1334832456457336478"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-properties-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-properties-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "8289045172097800677"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Function invocation 'plugins(...)' expected",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-properties-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-properties-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-8885075627057542061"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-properties-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-properties-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-6148994989957983722"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 14,
-      "offset": 8,
-      "length": 8,
+      "line": 2,
+      "offset": 10,
+      "length": 4,
       "code": {
-        "startLine": 12,
-        "length": 8,
-        "offset": 24,
-        "surroundingCode": "\ndependencies {\n    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)"
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
       }
     }
   ],
@@ -29,7 +285,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-7367379966090223670"
+  "hash": "3969492747388449703"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -39,21 +295,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: gradleExtensionsSubprojects",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 14,
-      "offset": 17,
-      "length": 27,
+      "line": 2,
+      "offset": 10,
+      "length": 4,
       "code": {
-        "startLine": 12,
-        "length": 27,
-        "offset": 33,
-        "surroundingCode": "\ndependencies {\n    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)"
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
       }
     }
   ],
@@ -61,7 +317,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "2329007959296133322"
+  "hash": "268330744843559337"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -71,21 +327,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "comment": "Function invocation 'plugins(...)' expected",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 15,
-      "offset": 8,
-      "length": 8,
+      "line": 2,
+      "offset": 15,
+      "length": 7,
       "code": {
-        "startLine": 13,
-        "length": 8,
-        "offset": 93,
-        "surroundingCode": "dependencies {\n    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)\n    api(projects.gradleExtensionsSubprojects.gradlePropertiesExtensions)"
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
       }
     }
   ],
@@ -93,7 +349,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "3051774248282144196"
+  "hash": "3736700707694627973"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -103,21 +359,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: gradleExtensionsSubprojects",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "gradle-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 15,
-      "offset": 17,
-      "length": 27,
+      "line": 2,
+      "offset": 15,
+      "length": 7,
       "code": {
-        "startLine": 13,
-        "length": 27,
-        "offset": 102,
-        "surroundingCode": "dependencies {\n    api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)\n    api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)\n    api(projects.gradleExtensionsSubprojects.gradlePropertiesExtensions)"
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
       }
     }
   ],
@@ -125,7 +381,7 @@
     "module": "gradle-extensions-project.gradle-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-3151171835328061446"
+  "hash": "2098077684350887900"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -135,21 +391,149 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-tasks-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-tasks-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "5473724282354423842"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-tasks-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-tasks-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-1282122181566716051"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Function invocation 'plugins(...)' expected",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-tasks-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-tasks-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-1634305595876073628"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-tasks-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-tasks-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "5226541727745478978"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "integration-tests/build.gradle.kts",
       "language": "kotlin",
-      "line": 21,
-      "offset": 19,
-      "length": 8,
+      "line": 2,
+      "offset": 10,
+      "length": 4,
       "code": {
-        "startLine": 19,
-        "length": 8,
-        "offset": 58,
-        "surroundingCode": "    implementation(gradleKotlinDsl())\n\n    implementation(projects.gradleExtensions)\n    implementation(projects.gradleTestExtensions)\n"
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
       }
     }
   ],
@@ -157,7 +541,7 @@
     "module": "gradle-extensions-project.integration-tests",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "2276765737739543939"
+  "hash": "4481845218794001123"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -167,21 +551,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: gradleExtensions",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "integration-tests/build.gradle.kts",
       "language": "kotlin",
-      "line": 21,
-      "offset": 28,
-      "length": 16,
+      "line": 2,
+      "offset": 10,
+      "length": 4,
       "code": {
-        "startLine": 19,
-        "length": 16,
-        "offset": 67,
-        "surroundingCode": "    implementation(gradleKotlinDsl())\n\n    implementation(projects.gradleExtensions)\n    implementation(projects.gradleTestExtensions)\n"
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
       }
     }
   ],
@@ -189,7 +573,7 @@
     "module": "gradle-extensions-project.integration-tests",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "5090639667482812244"
+  "hash": "-3281058227035615048"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -199,21 +583,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "comment": "Function invocation 'plugins(...)' expected",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "integration-tests/build.gradle.kts",
       "language": "kotlin",
-      "line": 22,
-      "offset": 19,
-      "length": 8,
+      "line": 2,
+      "offset": 15,
+      "length": 7,
       "code": {
-        "startLine": 20,
-        "length": 8,
-        "offset": 66,
-        "surroundingCode": "\n    implementation(projects.gradleExtensions)\n    implementation(projects.gradleTestExtensions)\n\n    testImplementation(libs.jetbrains.kotlin.kotlinTest)"
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
       }
     }
   ],
@@ -221,7 +605,7 @@
     "module": "gradle-extensions-project.integration-tests",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "450879639047602087"
+  "hash": "-9139755574904502727"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -231,21 +615,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: gradleTestExtensions",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "integration-tests/build.gradle.kts",
       "language": "kotlin",
-      "line": 22,
-      "offset": 28,
-      "length": 20,
+      "line": 2,
+      "offset": 15,
+      "length": 7,
       "code": {
-        "startLine": 20,
-        "length": 20,
-        "offset": 75,
-        "surroundingCode": "\n    implementation(projects.gradleExtensions)\n    implementation(projects.gradleTestExtensions)\n\n    testImplementation(libs.jetbrains.kotlin.kotlinTest)"
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
       }
     }
   ],
@@ -253,7 +637,7 @@
     "module": "gradle-extensions-project.integration-tests",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "1350803989582838691"
+  "hash": "-2415084219522543903"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -263,21 +647,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "build.gradle.kts",
       "language": "kotlin",
-      "line": 18,
-      "offset": 21,
-      "length": 8,
+      "line": 5,
+      "offset": 18,
+      "length": 4,
       "code": {
-        "startLine": 16,
-        "length": 8,
-        "offset": 58,
-        "surroundingCode": "readmeBadges { coverage.set(true) }\n\nremoveProjectFromDoc(projects.integrationTests)\n\nfun removeProjectFromDoc(vararg projects: ProjectDependency) {"
+        "startLine": 3,
+        "length": 4,
+        "offset": 51,
+        "surroundingCode": "buildscript {\n    dependencies {\n        classpath(libs.jetbrains.kotlin.kotlinGradlePlugin)\n    }\n}"
       }
     }
   ],
@@ -285,7 +669,7 @@
     "module": "gradle-extensions-project",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "6954793165356588079"
+  "hash": "7536397816368392405"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -295,21 +679,21 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: integrationTests",
+  "comment": "Unresolved reference: jetbrains",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "build.gradle.kts",
       "language": "kotlin",
-      "line": 18,
-      "offset": 30,
-      "length": 16,
+      "line": 5,
+      "offset": 23,
+      "length": 9,
       "code": {
-        "startLine": 16,
-        "length": 16,
-        "offset": 67,
-        "surroundingCode": "readmeBadges { coverage.set(true) }\n\nremoveProjectFromDoc(projects.integrationTests)\n\nfun removeProjectFromDoc(vararg projects: ProjectDependency) {"
+        "startLine": 3,
+        "length": 9,
+        "offset": 56,
+        "surroundingCode": "buildscript {\n    dependencies {\n        classpath(libs.jetbrains.kotlin.kotlinGradlePlugin)\n    }\n}"
       }
     }
   ],
@@ -317,7 +701,7 @@
     "module": "gradle-extensions-project",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-466914831849859816"
+  "hash": "-7505503253729068353"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -327,29 +711,29 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Cannot access class 'org.gradle.accessors.dm.RootProjectAccessor'. Check your module classpath for missing or conflicting dependencies",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
-      "path": "gradle-test-extensions/build.gradle.kts",
+      "path": "build.gradle.kts",
       "language": "kotlin",
-      "line": 18,
-      "offset": 8,
-      "length": 8,
+      "line": 10,
+      "offset": 10,
+      "length": 4,
       "code": {
-        "startLine": 16,
-        "length": 8,
-        "offset": 76,
-        "surroundingCode": "    api(gradleTestKit())\n    api(libs.javiersc.kotlin.kotlinStdlib)\n    api(projects.gradleTestExtensionsSubprojects.gradleTestkitTestExtensions)\n}"
+        "startLine": 8,
+        "length": 4,
+        "offset": 21,
+        "surroundingCode": "\nplugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
       }
     }
   ],
   "attributes": {
-    "module": "gradle-extensions-project.gradle-test-extensions",
+    "module": "gradle-extensions-project",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "711517369164738835"
+  "hash": "3641086638850865743"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -359,21 +743,437 @@
     "Sanity"
   ],
   "severity": "Critical",
-  "comment": "Unresolved reference: gradleTestExtensionsSubprojects",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "build.gradle.kts",
+      "language": "kotlin",
+      "line": 10,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 8,
+        "length": 4,
+        "offset": 21,
+        "surroundingCode": "\nplugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-7346527748191888361"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-project-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "6419381664820056549"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-project-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "174828162745840077"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Function invocation 'plugins(...)' expected",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-project-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "2925556420422132354"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-project-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "2972236909341398662"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-version-catalog-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-version-catalog-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-4192714374585764979"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-version-catalog-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-version-catalog-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "7683444091020990478"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Function invocation 'plugins(...)' expected",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-version-catalog-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-version-catalog-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "5128672436904558499"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-version-catalog-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-version-catalog-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "8032862816820246952"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-logging-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "7631273242673467561"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-logging-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "3930511402699880285"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Function invocation 'plugins(...)' expected",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-logging-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "584808316343432932"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-logging-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-4038951353548373499"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
   "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
   "sources": [
     {
       "type": "file",
       "path": "gradle-test-extensions/build.gradle.kts",
       "language": "kotlin",
-      "line": 18,
-      "offset": 17,
-      "length": 31,
+      "line": 2,
+      "offset": 10,
+      "length": 4,
       "code": {
-        "startLine": 16,
-        "length": 31,
-        "offset": 85,
-        "surroundingCode": "    api(gradleTestKit())\n    api(libs.javiersc.kotlin.kotlinStdlib)\n    api(projects.gradleTestExtensionsSubprojects.gradleTestkitTestExtensions)\n}"
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
       }
     }
   ],
@@ -381,5 +1181,229 @@
     "module": "gradle-extensions-project.gradle-test-extensions",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "-4502106756105953886"
+  "hash": "7011108602665822467"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-test-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-9126083470524643385"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Function invocation 'plugins(...)' expected",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-test-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "5054780640563724587"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-test-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-1937897981816596419"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "575566316556959042"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Cannot access class 'org.gradle.accessors.dm.LibrariesForLibs'. Check your module classpath for missing or conflicting dependencies",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 10,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-2522478850338447289"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Function invocation 'plugins(...)' expected",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "-3919525954282275045"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "kotlin",
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: \npublic fun Project.plugins(block: PluginDependenciesSpec.() -> Unit): Nothing defined in org.gradle.kotlin.dsl",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 15,
+      "length": 7,
+      "code": {
+        "startLine": 1,
+        "length": 7,
+        "offset": 25,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "9195425576095642152"
 }]}
