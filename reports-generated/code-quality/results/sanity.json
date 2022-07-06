@@ -633,11 +633,11 @@
       "type": "file",
       "path": "build.gradle.kts",
       "language": "kotlin",
-      "line": 5,
+      "line": 3,
       "offset": 19,
       "length": 4,
       "code": {
-        "startLine": 3,
+        "startLine": 1,
         "length": 4,
         "offset": 51,
         "surroundingCode": "buildscript {\n    dependencies {\n        classpath(libs.jetbrains.kotlin.kotlinGradlePlugin)\n    }\n}"
@@ -648,7 +648,7 @@
     "module": "gradle-extensions-project",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "be5dce80c2eb819a1e53939c7912f428b5a1cc0dba7f12daa80c42d05c67fdf5"
+  "hash": "4a4b4bcc6a783c24466e29c0945ce13a92eb07e3a2041794993d9d50031aefef"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -664,11 +664,11 @@
       "type": "file",
       "path": "build.gradle.kts",
       "language": "kotlin",
-      "line": 5,
+      "line": 3,
       "offset": 24,
       "length": 9,
       "code": {
-        "startLine": 3,
+        "startLine": 1,
         "length": 9,
         "offset": 56,
         "surroundingCode": "buildscript {\n    dependencies {\n        classpath(libs.jetbrains.kotlin.kotlinGradlePlugin)\n    }\n}"
@@ -679,7 +679,7 @@
     "module": "gradle-extensions-project",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "49dd0180fa94d23379ef1bb8d48abd97c765f4e7997559d18302c06c75d1b378"
+  "hash": "d81aac9667dfb728e8dd700f867fa132a08de2140f53d4daad895e3f627181d5"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -695,11 +695,11 @@
       "type": "file",
       "path": "build.gradle.kts",
       "language": "kotlin",
-      "line": 10,
+      "line": 8,
       "offset": 11,
       "length": 4,
       "code": {
-        "startLine": 8,
+        "startLine": 6,
         "length": 4,
         "offset": 21,
         "surroundingCode": "\nplugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
@@ -710,7 +710,7 @@
     "module": "gradle-extensions-project",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "c8d6d15474f04d8b976e31df9423e4023f3a8cd4918b976348430b476b6abed7"
+  "hash": "1dfedc0e2af96eac9b85c71a6f631b962d65f538f5551c875115eb56c1938ec5"
 },{
   "tool": "Code Inspection",
   "category": "General",
@@ -726,11 +726,11 @@
       "type": "file",
       "path": "build.gradle.kts",
       "language": "kotlin",
-      "line": 10,
+      "line": 8,
       "offset": 11,
       "length": 4,
       "code": {
-        "startLine": 8,
+        "startLine": 6,
         "length": 4,
         "offset": 21,
         "surroundingCode": "\nplugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
@@ -741,7 +741,7 @@
     "module": "gradle-extensions-project",
     "inspectionName": "KotlinAnnotator"
   },
-  "hash": "5684988023e0103dda476428b2f81bcc4e73aa6ba0b21bc643f1a1d241bed29f"
+  "hash": "5acfb9ad844fbaf0be0505a6445372a98d32b316b8d25e788921eb56826708e6"
 },{
   "tool": "Code Inspection",
   "category": "General",
