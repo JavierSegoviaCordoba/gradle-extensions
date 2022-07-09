@@ -141,6 +141,27 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
+                  "uri": "gradle-extensions-subprojects/gradle-delegated-properties-extensions/main/kotlin/com/javiersc/gradle/delegated/properties/extensions/DelegatedProperties.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 8
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "The file name 'DelegatedProperties' does not match the name of the single top-level declaration 'DelegatedProperty'."
+          },
+          "ruleId": "detekt.naming.MatchingDeclarationName"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
                   "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
                   "uriBaseId": "%SRCROOT%"
                 },

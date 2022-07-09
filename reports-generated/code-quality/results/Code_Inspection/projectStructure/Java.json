@@ -93,6 +93,18 @@
       "languageLevel": 8
     },
     {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-delegated-properties-extensions",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-delegated-properties-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-delegated-properties-extensions.main",
+      "languageLevel": 8
+    },
+    {
       "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions.test",
       "languageLevel": 8
     },

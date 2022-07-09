@@ -26,4 +26,7 @@
 <file name="gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/_internal/argumentsTxt.kt">
 	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
+<file name="gradle-extensions-subprojects/gradle-delegated-properties-extensions/main/kotlin/com/javiersc/gradle/delegated/properties/extensions/DelegatedProperties.kt">
+	<error line="8" column="1" severity="warning" message="The file name &apos;DelegatedProperties&apos; does not match the name of the single top-level declaration &apos;DelegatedProperty&apos;." source="detekt.MatchingDeclarationName" />
+</file>
 </checkstyle>

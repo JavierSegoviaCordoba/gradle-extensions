@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > VersionCatalogsKt</title>
+  <title>Coverage Report > DelegatedPropertiesKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -17,10 +17,10 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.gradle.extensions.version.catalogs</a>
+    <a href="../index.html">com.javiersc.gradle.delegated.properties.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: VersionCatalogsKt (com.javiersc.gradle.extensions.version.catalogs)</h1>
+<h1>Coverage Summary for Class: DelegatedPropertiesKt (com.javiersc.gradle.delegated.properties.extensions)</h1>
 
 <table class="coverageStats">
 
@@ -44,7 +44,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">VersionCatalogsKt</td>
+  <td class="name">DelegatedPropertiesKt</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -53,12 +53,13 @@ Current scope:     <a href="../../index.html">all classes</a>
     (0/6)
   </span>
 </td>
+    <td class="coverageStat"/>
 <td class="coverageStat">
   <span class="percent">
     0%
   </span>
   <span class="absValue">
-    (0/10)
+    (0/8)
   </span>
 </td>
 <td class="coverageStat">
@@ -66,20 +67,12 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/10)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/144)
+    (0/39)
   </span>
 </td>
 </tr>
   <tr>
-    <td class="name">VersionCatalogsKt$special$$inlined$sortedByDescending$1</td>
+    <td class="name">DelegatedPropertiesKt$delegatedProperty$$inlined$delegatedProperty$1</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -90,6 +83,74 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
     <td class="coverageStat"/>
   </tr>
+  <tr>
+    <td class="name">DelegatedPropertiesKt$delegatedProperty$$inlined$delegatedProperty$2</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+  </tr>
+  <tr>
+    <td class="name">DelegatedPropertiesKt$delegatedProperty$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/17)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">DelegatedPropertiesKt$delegatedProperty$2</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/19)
+  </span>
+</td>
+  </tr>
 <tr>
   <td class="name"><strong>Total</strong></td>
 <td class="coverageStat">
@@ -97,23 +158,16 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/7)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
     (0/10)
   </span>
 </td>
+    <td class="coverageStat"/>
 <td class="coverageStat">
   <span class="percent">
     0%
   </span>
   <span class="absValue">
-    (0/10)
+    (0/12)
   </span>
 </td>
 <td class="coverageStat">
@@ -121,7 +175,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/144)
+    (0/75)
   </span>
 </td>
 </tr>
@@ -132,47 +186,44 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;@file:Suppress(&quot;UnusedReceiverParameter&quot;)
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.gradle.delegated.properties.extensions
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;package com.javiersc.gradle.extensions.version.catalogs
-<i class="no-highlight">4</i>&nbsp;
-<i class="no-highlight">5</i>&nbsp;import org.gradle.api.artifacts.MinimalExternalModuleDependency
-<i class="no-highlight">6</i>&nbsp;import org.gradle.api.artifacts.VersionCatalog
-<i class="no-highlight">7</i>&nbsp;import org.gradle.api.artifacts.VersionCatalogsExtension
-<i class="no-highlight">8</i>&nbsp;
-<i class="no-highlight">9</i>&nbsp;public fun VersionCatalogsExtension.getLibrariesByGroup(
-<i class="no-highlight">10</i>&nbsp;    group: String
-<i class="no-highlight">11</i>&nbsp;): List&lt;MinimalExternalModuleDependency&gt; =
-<b class="nc"><i class="no-highlight">12</i>&nbsp;    catalogNamesWithLibsAtFirst.flatMap(::getLibraries).filter { library -&gt;</b>
-<b class="nc"><i class="no-highlight">13</i>&nbsp;        library.module.group == group</b>
-<i class="no-highlight">14</i>&nbsp;    }
+<i class="no-highlight">3</i>&nbsp;import kotlin.reflect.KProperty
+<i class="no-highlight">4</i>&nbsp;import org.gradle.api.Project
+<i class="no-highlight">5</i>&nbsp;import org.gradle.api.model.ObjectFactory
+<i class="no-highlight">6</i>&nbsp;import org.gradle.api.provider.Property
+<i class="no-highlight">7</i>&nbsp;
+<i class="no-highlight">8</i>&nbsp;public abstract class DelegatedProperty&lt;T&gt; {
+<i class="no-highlight">9</i>&nbsp;
+<i class="no-highlight">10</i>&nbsp;    internal abstract val property: Property&lt;T&gt;
+<i class="no-highlight">11</i>&nbsp;}
+<i class="no-highlight">12</i>&nbsp;
+<i class="no-highlight">13</i>&nbsp;public operator fun &lt;T&gt; DelegatedProperty&lt;T&gt;.getValue(thisRef: Any?, property: KProperty&lt;*&gt;): T =
+<b class="nc"><i class="no-highlight">14</i>&nbsp;    this.property.get()</b>
 <i class="no-highlight">15</i>&nbsp;
-<i class="no-highlight">16</i>&nbsp;public fun VersionCatalogsExtension.getLibraryByModule(
-<i class="no-highlight">17</i>&nbsp;    module: String
-<i class="no-highlight">18</i>&nbsp;): MinimalExternalModuleDependency =
-<b class="nc"><i class="no-highlight">19</i>&nbsp;    catalogNamesWithLibsAtFirst.flatMap(::getLibraries).first { library -&gt;</b>
-<b class="nc"><i class="no-highlight">20</i>&nbsp;        &quot;${library.module}&quot; == module</b>
-<i class="no-highlight">21</i>&nbsp;    }
-<i class="no-highlight">22</i>&nbsp;
-<i class="no-highlight">23</i>&nbsp;public fun VersionCatalogsExtension.getLibraryByModuleOrNull(
-<i class="no-highlight">24</i>&nbsp;    libraryModule: String
-<b class="nc"><i class="no-highlight">25</i>&nbsp;): MinimalExternalModuleDependency? = runCatching { getLibraryByModule(libraryModule) }.getOrNull()</b>
-<i class="no-highlight">26</i>&nbsp;
-<i class="no-highlight">27</i>&nbsp;public fun VersionCatalogsExtension.getLibraries(
-<i class="no-highlight">28</i>&nbsp;    catalog: VersionCatalog
-<i class="no-highlight">29</i>&nbsp;): List&lt;MinimalExternalModuleDependency&gt; =
-<b class="nc"><i class="no-highlight">30</i>&nbsp;    catalog.libraryAliases.toList().mapNotNull { catalog.findLibrary(it).get().orNull }</b>
+<i class="no-highlight">16</i>&nbsp;public operator fun &lt;T&gt; DelegatedProperty&lt;T&gt;.setValue(
+<i class="no-highlight">17</i>&nbsp;    thisRef: Any?,
+<i class="no-highlight">18</i>&nbsp;    property: KProperty&lt;*&gt;,
+<i class="no-highlight">19</i>&nbsp;    value: T
+<i class="no-highlight">20</i>&nbsp;) {
+<b class="nc"><i class="no-highlight">21</i>&nbsp;    this.property.convention(value)</b>
+<i class="no-highlight">22</i>&nbsp;}
+<i class="no-highlight">23</i>&nbsp;
+<i class="no-highlight">24</i>&nbsp;public inline fun &lt;reified T&gt; ObjectFactory.delegatedProperty(): DelegatedProperty&lt;T&gt; =
+<b class="nc"><i class="no-highlight">25</i>&nbsp;    object : DelegatedProperty&lt;T&gt;() {</b>
+<b class="nc"><i class="no-highlight">26</i>&nbsp;        override val property: Property&lt;T&gt; = property(T::class.java)</b>
+<b class="nc"><i class="no-highlight">27</i>&nbsp;    }</b>
+<i class="no-highlight">28</i>&nbsp;
+<i class="no-highlight">29</i>&nbsp;public inline fun &lt;reified T&gt; Project.delegatedProperty(): DelegatedProperty&lt;T&gt; =
+<b class="nc"><i class="no-highlight">30</i>&nbsp;    objects.delegatedProperty()</b>
 <i class="no-highlight">31</i>&nbsp;
-<i class="no-highlight">32</i>&nbsp;public fun VersionCatalogsExtension.getLibraries(
-<i class="no-highlight">33</i>&nbsp;    catalogName: String
-<i class="no-highlight">34</i>&nbsp;): List&lt;MinimalExternalModuleDependency&gt; {
-<b class="nc"><i class="no-highlight">35</i>&nbsp;    val catalog: VersionCatalog = named(catalogName)</b>
-<b class="nc"><i class="no-highlight">36</i>&nbsp;    val aliases: List&lt;String&gt; = catalog.libraryAliases.toList()</b>
-<b class="nc"><i class="no-highlight">37</i>&nbsp;    return aliases.mapNotNull { catalog.findLibrary(it).get().orNull }</b>
-<i class="no-highlight">38</i>&nbsp;}
-<i class="no-highlight">39</i>&nbsp;
-<i class="no-highlight">40</i>&nbsp;public val VersionCatalogsExtension.catalogNamesWithLibsAtFirst: List&lt;String&gt;
-<b class="nc"><i class="no-highlight">41</i>&nbsp;    get() = catalogNames.sorted().sortedByDescending { it == &quot;libs&quot; }</b>
+<i class="no-highlight">32</i>&nbsp;public inline fun &lt;reified T&gt; ObjectFactory.delegatedProperty(initial: T): DelegatedProperty&lt;T&gt; =
+<b class="nc"><i class="no-highlight">33</i>&nbsp;    object : DelegatedProperty&lt;T&gt;() {</b>
+<b class="nc"><i class="no-highlight">34</i>&nbsp;        override val property: Property&lt;T&gt; = property(T::class.java).convention(initial)</b>
+<b class="nc"><i class="no-highlight">35</i>&nbsp;    }</b>
+<i class="no-highlight">36</i>&nbsp;
+<i class="no-highlight">37</i>&nbsp;public inline fun &lt;reified T&gt; Project.delegatedProperty(initial: T): DelegatedProperty&lt;T&gt; =
+<b class="nc"><i class="no-highlight">38</i>&nbsp;    objects.delegatedProperty(initial)</b>
 </div>
 </pre>
 </div>
@@ -199,7 +250,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-08 08:52</div>
+    <div style="float:right;">generated on 2022-07-09 03:09</div>
 </div>
 </body>
 </html>
