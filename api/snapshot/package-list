@@ -1,6 +1,8 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
 
+module:gradle-delegated-properties-extensions
+com.javiersc.gradle.delegated.properties.extensions
 module:gradle-logging-extensions
 com.javiersc.gradle.logging.extensions
 module:gradle-miscellanea-extensions
