@@ -1,0 +1,9 @@
+public final class com/javiersc/gradle/delegated/properties/extensions/DelegatedPropertiesKt {
+	public static final fun getValue (Lcom/javiersc/gradle/delegated/properties/extensions/DelegatedProperty;Ljava/lang/Object;Lkotlin/reflect/KProperty;)Ljava/lang/Object;
+	public static final fun setValue (Lcom/javiersc/gradle/delegated/properties/extensions/DelegatedProperty;Ljava/lang/Object;Lkotlin/reflect/KProperty;Ljava/lang/Object;)V
+}
+
+public abstract class com/javiersc/gradle/delegated/properties/extensions/DelegatedProperty {
+	public fun <init> ()V
+}
+

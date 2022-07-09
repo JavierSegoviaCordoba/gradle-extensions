@@ -15,6 +15,7 @@ hubdle {
             main {
                 dependencies {
                     api(javierscKotlinStdlib())
+                    api(projects.gradleExtensionsSubprojects.gradleDelegatedPropertiesExtensions)
                     api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)
                     api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)
                     api(projects.gradleExtensionsSubprojects.gradleProjectExtensions)

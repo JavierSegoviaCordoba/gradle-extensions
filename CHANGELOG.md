@@ -4,6 +4,8 @@
 
 ### Added
 
+- `DelegatedProperty` and multiple `delegatedProperty` functions
+
 ### Changed
 
 ### Deprecated
