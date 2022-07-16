@@ -15,27 +15,6 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startColumn": 33,
-                  "startLine": 17
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "The function gradleTestKitTest(sandboxPath: String?, name: String, withDebug: Boolean, withPluginClasspath: Boolean, isolated: Boolean, test: GradleRunner.() -> Unit) has too many parameters. The current threshold is set to 6."
-          },
-          "ruleId": "detekt.complexity.LongParameterList"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
                   "uri": "gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
@@ -71,6 +50,27 @@
             "text": "File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt' with '11' functions detected. Defined threshold inside files is set to '11'"
           },
           "ruleId": "detekt.complexity.TooManyFunctions"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 33,
+                  "startLine": 17
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "The function gradleTestKitTest(sandboxPath: String?, name: String, withDebug: Boolean, withPluginClasspath: Boolean, isolated: Boolean, test: GradleRunner.() -> Unit) has too many parameters. The current threshold is set to 6."
+          },
+          "ruleId": "detekt.complexity.LongParameterList"
         },
         {
           "level": "warning",
@@ -120,6 +120,27 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
+                  "uri": "gradle-extensions-subprojects/gradle-delegated-properties-extensions/main/kotlin/com/javiersc/gradle/delegated/properties/extensions/DelegatedProperties.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 8
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "The file name 'DelegatedProperties' does not match the name of the single top-level declaration 'DelegatedProperty'."
+          },
+          "ruleId": "detekt.naming.MatchingDeclarationName"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
                   "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/_internal/argumentsTxt.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
@@ -141,20 +162,20 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-extensions-subprojects/gradle-delegated-properties-extensions/main/kotlin/com/javiersc/gradle/delegated/properties/extensions/DelegatedProperties.kt",
+                  "uri": "gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
                   "startColumn": 1,
-                  "startLine": 8
+                  "startLine": 11
                 }
               }
             }
           ],
           "message": {
-            "text": "The file name 'DelegatedProperties' does not match the name of the single top-level declaration 'DelegatedProperty'."
+            "text": "This comment contains 'TODO:' that has been defined as forbidden in detekt."
           },
-          "ruleId": "detekt.naming.MatchingDeclarationName"
+          "ruleId": "detekt.style.ForbiddenComment"
         },
         {
           "level": "warning",
@@ -344,27 +365,6 @@
             "text": "An abstract class without an abstract member can be refactored to a concrete class."
           },
           "ruleId": "detekt.style.UnnecessaryAbstractClass"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startColumn": 1,
-                  "startLine": 11
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "This comment contains 'TODO:' that has been defined as forbidden in detekt."
-          },
-          "ruleId": "detekt.style.ForbiddenComment"
         }
       ],
       "tool": {
