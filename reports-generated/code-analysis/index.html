@@ -176,19 +176,20 @@
     <li>1 comment lines of code (cloc)</li>
     <li>136 cyclomatic complexity (mcc)</li>
     <li>24 cognitive complexity</li>
-    <li>17 number of total code smells</li>
+    <li>20 number of total code smells</li>
     <li>0% comment source ratio</li>
     <li>200 mcc per 1,000 lloc</li>
-    <li>25 code smells per 1,000 lloc</li>
+    <li>29 code smells per 1,000 lloc</li>
   </ul>
 </div>
 
 
 <h2>Findings</h2>
-<div>Total: 17
+<div>Total: 20
   <h3>complexity: 3</h3>
   <details id="LongParameterList" open="open">
     <summary class="rule-container"><span class="rule">LongParameterList: 1 </span><span class="description">The more parameters a function has the more complex it is. Long parameter lists are often used to control complex algorithms and violate the Single Responsibility Principle. Prefer functions with short parameter lists.</span></summary>
+<a href="https://detekt.dev/docs/rules/complexity#longparameterlist">Documentation</a>
     <ul>
       <li><span class="location">gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:17:33</span><span class="message">The function gradleTestKitTest(sandboxPath: String?, name: String, withDebug: Boolean, withPluginClasspath: Boolean, isolated: Boolean, test: GradleRunner.() -&gt; Unit) has too many parameters. The current threshold is set to 6.</span>
         <pre><code><span class="lineno">  14 </span>
@@ -204,6 +205,7 @@
   </details>
   <details id="TooManyFunctions" open="open">
     <summary class="rule-container"><span class="rule">TooManyFunctions: 2 </span><span class="description">Too many functions inside a/an file/class/object/interface always indicate a violation of the single responsibility principle. Maybe the file/class/object/interface wants to manage too many things at once. Extract functionality which clearly belongs together.</span></summary>
+<a href="https://detekt.dev/docs/rules/complexity#toomanyfunctions">Documentation</a>
     <ul>
       <li><span class="location">gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt:1:1</span><span class="message">File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt' with '12' functions detected. Defined threshold inside files is set to '11'</span>
         <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.gradle.properties.extensions</span>
@@ -221,9 +223,46 @@
       </li>
     </ul>
   </details>
-  <h3>exceptions: 2</h3>
+  <h3>exceptions: 5</h3>
+  <details id="InstanceOfCheckForException" open="open">
+    <summary class="rule-container"><span class="rule">InstanceOfCheckForException: 3 </span><span class="description">Instead of catching for a general exception type and checking for a specific exception type, use multiple catch blocks.</span></summary>
+<a href="https://detekt.dev/docs/rules/exceptions#instanceofcheckforexception">Documentation</a>
+    <ul>
+      <li><span class="location">gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt:19:17</span><span class="message">Instead of catching for a general exception type and checking for a specific exception type, use multiple catch blocks.</span>
+        <pre><code><span class="lineno">  16 </span>            method(provider) as Provider&lt;S&gt;
+<span class="lineno">  17 </span>        } catch (e: Exception) {
+<span class="lineno">  18 </span>            val shouldThrowRuntimeException =
+<span class="lineno">  19 </span>                <span class="error">e is NoSuchMethodException</span> ||
+<span class="lineno">  20 </span>                    e is IllegalAccessException ||
+<span class="lineno">  21 </span>                    e is InvocationTargetException
+<span class="lineno">  22 </span>            if (shouldThrowRuntimeException) {
+</code></pre>
+      </li>
+      <li><span class="location">gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt:20:21</span><span class="message">Instead of catching for a general exception type and checking for a specific exception type, use multiple catch blocks.</span>
+        <pre><code><span class="lineno">  17 </span>        } catch (e: Exception) {
+<span class="lineno">  18 </span>            val shouldThrowRuntimeException =
+<span class="lineno">  19 </span>                e is NoSuchMethodException ||
+<span class="lineno">  20 </span>                    <span class="error">e is IllegalAccessException</span> ||
+<span class="lineno">  21 </span>                    e is InvocationTargetException
+<span class="lineno">  22 </span>            if (shouldThrowRuntimeException) {
+<span class="lineno">  23 </span>                throw RuntimeException(&quot;Could not mark provider usage for configuration time.&quot;, e)
+</code></pre>
+      </li>
+      <li><span class="location">gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt:21:21</span><span class="message">Instead of catching for a general exception type and checking for a specific exception type, use multiple catch blocks.</span>
+        <pre><code><span class="lineno">  18 </span>            val shouldThrowRuntimeException =
+<span class="lineno">  19 </span>                e is NoSuchMethodException ||
+<span class="lineno">  20 </span>                    e is IllegalAccessException ||
+<span class="lineno">  21 </span>                    <span class="error">e is InvocationTargetException</span>
+<span class="lineno">  22 </span>            if (shouldThrowRuntimeException) {
+<span class="lineno">  23 </span>                throw RuntimeException(&quot;Could not mark provider usage for configuration time.&quot;, e)
+<span class="lineno">  24 </span>            } else {
+</code></pre>
+      </li>
+    </ul>
+  </details>
   <details id="TooGenericExceptionCaught" open="open">
     <summary class="rule-container"><span class="rule">TooGenericExceptionCaught: 1 </span><span class="description">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span></summary>
+<a href="https://detekt.dev/docs/rules/exceptions#toogenericexceptioncaught">Documentation</a>
     <ul>
       <li><span class="location">gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt:17:18</span><span class="message">The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled.</span>
         <pre><code><span class="lineno">  14 </span>        try {
@@ -239,6 +278,7 @@
   </details>
   <details id="TooGenericExceptionThrown" open="open">
     <summary class="rule-container"><span class="rule">TooGenericExceptionThrown: 1 </span><span class="description">The thrown exception is too generic. Prefer throwing project specific exceptions to handle error cases.</span></summary>
+<a href="https://detekt.dev/docs/rules/exceptions#toogenericexceptionthrown">Documentation</a>
     <ul>
       <li><span class="location">gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt:23:17</span><span class="message">RuntimeException is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case.</span>
         <pre><code><span class="lineno">  20 </span>                    e is IllegalAccessException ||
@@ -255,21 +295,23 @@
   <h3>naming: 2</h3>
   <details id="MatchingDeclarationName" open="open">
     <summary class="rule-container"><span class="rule">MatchingDeclarationName: 1 </span><span class="description">If a source file contains only a single non-private top-level class or object, the file name should reflect the case-sensitive name plus the .kt extension.</span></summary>
+<a href="https://detekt.dev/docs/rules/naming#matchingdeclarationname">Documentation</a>
     <ul>
-      <li><span class="location">gradle-extensions-subprojects/gradle-delegated-properties-extensions/main/kotlin/com/javiersc/gradle/delegated/properties/extensions/DelegatedProperties.kt:8:1</span><span class="message">The file name 'DelegatedProperties' does not match the name of the single top-level declaration 'DelegatedProperty'.</span>
+      <li><span class="location">gradle-extensions-subprojects/gradle-delegated-properties-extensions/main/kotlin/com/javiersc/gradle/delegated/properties/extensions/DelegatedProperties.kt:8:23</span><span class="message">The file name 'DelegatedProperties' does not match the name of the single top-level declaration 'DelegatedProperty'.</span>
         <pre><code><span class="lineno">   5 </span>import org.gradle.api.model.ObjectFactory
 <span class="lineno">   6 </span>import org.gradle.api.provider.Property
 <span class="lineno">   7 </span>
-<span class="lineno">   8 </span><span class="error">public abstract class DelegatedProperty&lt;T&gt; {</span>
-<span class="lineno">   9 </span><span class="error"></span>
-<span class="lineno">  10 </span><span class="error">    internal abstract val property: Property&lt;T&gt;</span>
-<span class="lineno">  11 </span><span class="error">}</span>
+<span class="lineno">   8 </span>public abstract class <span class="error">DelegatedProperty</span>&lt;T&gt; {
+<span class="lineno">   9 </span>
+<span class="lineno">  10 </span>    internal abstract val property: Property&lt;T&gt;
+<span class="lineno">  11 </span>}
 </code></pre>
       </li>
     </ul>
   </details>
   <details id="PackageNaming" open="open">
     <summary class="rule-container"><span class="rule">PackageNaming: 1 </span><span class="description">Package names should match the naming convention set in the configuration.</span></summary>
+<a href="https://detekt.dev/docs/rules/naming#packagenaming">Documentation</a>
     <ul>
       <li><span class="location">gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/_internal/argumentsTxt.kt:1:1</span><span class="message">Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*</span>
         <pre><code><span class="lineno">   1 </span><span class="error">package com.javiersc.gradle.testkit.test.extensions._internal</span>
@@ -283,6 +325,7 @@
   <h3>style: 10</h3>
   <details id="ForbiddenComment" open="open">
     <summary class="rule-container"><span class="rule">ForbiddenComment: 1 </span><span class="description">Flags a forbidden comment.</span></summary>
+<a href="https://detekt.dev/docs/rules/style#forbiddencomment">Documentation</a>
     <ul>
       <li><span class="location">gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt:11:1</span><span class="message">This comment contains 'TODO:' that has been defined as forbidden in detekt.</span>
         <pre><code><span class="lineno">   8 </span>import org.gradle.util.GradleVersion.current
@@ -298,6 +341,7 @@
   </details>
   <details id="FunctionOnlyReturningConstant" open="open">
     <summary class="rule-container"><span class="rule">FunctionOnlyReturningConstant: 8 </span><span class="description">A function that only returns a constant is misleading. Consider declaring a constant instead.</span></summary>
+<a href="https://detekt.dev/docs/rules/style#functiononlyreturningconstant">Documentation</a>
     <ul>
       <li><span class="location">gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:135:16</span><span class="message">info is returning a constant. Prefer declaring a constant instead.</span>
         <pre><code><span class="lineno"> 132 </span>        withArguments(arguments + systemProperty(value))
@@ -383,15 +427,16 @@
   </details>
   <details id="UnnecessaryAbstractClass" open="open">
     <summary class="rule-container"><span class="rule">UnnecessaryAbstractClass: 1 </span><span class="description">An abstract class is unnecessary and can be refactored. An abstract class should have both abstract and concrete properties or functions. An abstract class without a concrete member can be refactored to an interface. An abstract class without an abstract member can be refactored to a concrete class.</span></summary>
+<a href="https://detekt.dev/docs/rules/style#unnecessaryabstractclass">Documentation</a>
     <ul>
-      <li><span class="location">gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:11:1</span><span class="message">An abstract class without an abstract member can be refactored to a concrete class.</span>
+      <li><span class="location">gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:11:23</span><span class="message">An abstract class without an abstract member can be refactored to a concrete class.</span>
         <pre><code><span class="lineno">   8 </span>import org.junit.jupiter.api.io.CleanupMode.ON_SUCCESS
 <span class="lineno">   9 </span>import org.junit.jupiter.api.io.TempDir
 <span class="lineno">  10 </span>
-<span class="lineno">  11 </span><span class="error">public abstract class GradleTest {</span>
-<span class="lineno">  12 </span><span class="error"></span>
-<span class="lineno">  13 </span><span class="error">    @TempDir(cleanup = ON_SUCCESS) private lateinit var tempDir: File</span>
-<span class="lineno">  14 </span><span class="error"></span>
+<span class="lineno">  11 </span>public abstract class <span class="error">GradleTest</span> {
+<span class="lineno">  12 </span>
+<span class="lineno">  13 </span>    @TempDir(cleanup = ON_SUCCESS) private lateinit var tempDir: File
+<span class="lineno">  14 </span>
 </code></pre>
       </li>
     </ul>
@@ -399,7 +444,7 @@
 </div>
 
 
-generated with <a href="https://detekt.dev/">detekt version 1.20.0</a> on 2022-07-16 13:47:26 UTC.
+generated with <a href="https://detekt.dev/">detekt version 1.21.0</a> on 2022-07-17 19:38:48 UTC.
 
 </body>
 </html>
