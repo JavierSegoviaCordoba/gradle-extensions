@@ -1,5 +1,5 @@
 [versions]
-hubdle = "0.2.0-alpha.26"
+hubdle = "0.2.0-alpha.27"
 junit5 = "5.9.0-RC1"
 kotlin = "1.7.10"
 
