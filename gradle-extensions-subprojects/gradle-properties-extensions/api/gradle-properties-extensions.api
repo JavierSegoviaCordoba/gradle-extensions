@@ -5,6 +5,7 @@ public final class com/javiersc/gradle/properties/extensions/LocalPropertiesKt {
 
 public final class com/javiersc/gradle/properties/extensions/ProjectPropertiesKt {
 	public static final fun getBooleanProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Z
+	public static final fun getBooleanPropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/Boolean;
 	public static final fun getDoubleProperty (Lorg/gradle/api/Project;Ljava/lang/String;)D
 	public static final fun getDoublePropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/Double;
 	public static final fun getIntProperty (Lorg/gradle/api/Project;Ljava/lang/String;)I
