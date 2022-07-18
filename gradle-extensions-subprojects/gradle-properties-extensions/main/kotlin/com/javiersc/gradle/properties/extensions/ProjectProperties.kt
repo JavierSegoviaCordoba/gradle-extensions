@@ -52,6 +52,8 @@ public fun Project.getLongPropertyOrNull(name: String): Long? =
 
 public fun Project.getBooleanProperty(name: String): Boolean = getPropertyOrNull(name).toBoolean()
 
+public fun Project.getBooleanPropertyOrNull(name: String): Boolean? = getPropertyOrNull(name)?.toBoolean()
+
 public fun Project.getStringProperty(name: String): String = getProperty(name)
 
 public fun Project.getStringPropertyOrNull(name: String): String? = getPropertyOrNull(name)

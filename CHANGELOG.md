@@ -4,6 +4,7 @@
 
 ### Added
 
+- `Project.getBooleanPropertyOrNull` function
 - `DelegatedProperty` and multiple `delegatedProperty` functions
 
 ### Changed
