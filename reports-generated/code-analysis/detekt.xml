@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="4.3">
 <file name="gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt">
-	<error line="1" column="1" severity="warning" message="File &apos;/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt&apos; with &apos;12&apos; functions detected. Defined threshold inside files is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+	<error line="1" column="1" severity="warning" message="File &apos;/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt&apos; with &apos;13&apos; functions detected. Defined threshold inside files is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
 </file>
 <file name="gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt">
 	<error line="1" column="1" severity="warning" message="File &apos;/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt&apos; with &apos;11&apos; functions detected. Defined threshold inside files is set to &apos;11&apos;" source="detekt.TooManyFunctions" />

@@ -4,7 +4,7 @@
 
 * 73 number of properties
 
-* 83 number of functions
+* 84 number of functions
 
 * 9 number of classes
 
@@ -14,15 +14,15 @@
 
 ## Complexity Report
 
-* 1,154 lines of code (loc)
+* 1,157 lines of code (loc)
 
-* 955 source lines of code (sloc)
+* 957 source lines of code (sloc)
 
-* 678 logical lines of code (lloc)
+* 680 logical lines of code (lloc)
 
 * 1 comment lines of code (cloc)
 
-* 136 cyclomatic complexity (mcc)
+* 137 cyclomatic complexity (mcc)
 
 * 24 cognitive complexity
 
@@ -30,7 +30,7 @@
 
 * 0% comment source ratio
 
-* 200 mcc per 1,000 lloc
+* 201 mcc per 1,000 lloc
 
 * 29 code smells per 1,000 lloc
 
@@ -66,7 +66,7 @@ Too many functions inside a/an file/class/object/interface always indicate a vio
 
 * gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt:1:1
 ```
-File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt' with '12' functions detected. Defined threshold inside files is set to '11'
+File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt' with '13' functions detected. Defined threshold inside files is set to '11'
 ```
 ```kotlin
 1 package com.javiersc.gradle.properties.extensions
@@ -407,4 +407,4 @@ An abstract class without an abstract member can be refactored to a concrete cla
 
 ```
 
-generated with [detekt version 1.21.0](https://detekt.dev/) on 2022-07-17 19:38:48 UTC
+generated with [detekt version 1.21.0](https://detekt.dev/) on 2022-07-19 08:13:19 UTC
