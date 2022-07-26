@@ -1,6 +1,6 @@
 [versions]
 hubdle = "0.2.0-alpha.29"
-junit5 = "5.9.0-RC1"
+junit5 = "5.9.0"
 kotlin = "1.7.10"
 
 [libraries]
