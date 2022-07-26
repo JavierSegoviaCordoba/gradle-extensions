@@ -17,6 +17,8 @@
 
 ### Updated
 
+- `org.junit.jupiter:junit-jupiter-params -> 5.9.0`
+- `org.junit.jupiter:junit-jupiter-api -> 5.9.0`
 - `com.javiersc.hubdle:com.javiersc.hubdle.gradle.plugin -> 0.2.0-alpha.29`
 - `gradle -> 7.5`
 - `org.jetbrains.kotlin:kotlin-gradle-plugin -> 1.7.10`
