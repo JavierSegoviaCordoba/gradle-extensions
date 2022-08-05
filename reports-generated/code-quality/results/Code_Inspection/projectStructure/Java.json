@@ -1,36 +1,44 @@
 {
   "modules": [
     {
+      "name": "gradle-extensions-project",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions",
+      "languageLevel": 11
+    },
+    {
       "name": "gradle-extensions-project.gradle-extensions-subprojects",
       "languageLevel": 11
     },
     {
-      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions.test",
-      "languageLevel": 8
+      "name": "gradle-extensions-project.gradle-test-extensions",
+      "languageLevel": 11
     },
     {
       "name": "gradle-extensions-project.gradle-test-extensions-subprojects",
       "languageLevel": 11
     },
     {
-      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions.main",
-      "languageLevel": 8
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions",
+      "name": "gradle-extensions-project.integration-tests",
       "languageLevel": 11
     },
     {
-      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions.main",
-      "languageLevel": 8
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-delegated-properties-extensions",
+      "languageLevel": 11
     },
     {
       "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions",
       "languageLevel": 11
     },
     {
-      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions.test",
-      "languageLevel": 8
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions",
+      "languageLevel": 11
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions",
+      "languageLevel": 11
     },
     {
       "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-properties-extensions",
@@ -41,31 +49,11 @@
       "languageLevel": 11
     },
     {
-      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions",
-      "languageLevel": 11
-    },
-    {
       "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-version-catalog-extensions",
       "languageLevel": 11
     },
     {
-      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project.gradle-extensions",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project.gradle-test-extensions",
-      "languageLevel": 11
-    },
-    {
-      "name": "gradle-extensions-project.integration-tests",
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions",
       "languageLevel": 11
     },
     {
@@ -93,15 +81,27 @@
       "languageLevel": 8
     },
     {
-      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-delegated-properties-extensions",
-      "languageLevel": 11
-    },
-    {
       "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-delegated-properties-extensions.test",
       "languageLevel": 8
     },
     {
       "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-delegated-properties-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-logging-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions.main",
       "languageLevel": 8
     },
     {
