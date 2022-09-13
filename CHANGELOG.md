@@ -4,10 +4,6 @@
 
 ### Added
 
-- plugin extension artifact which add `interface Plugin<T : Any>` to write Gradle plugins in a Kotlin way
-- `Project.getBooleanPropertyOrNull` function
-- `DelegatedProperty` and multiple `delegatedProperty` functions
-
 ### Changed
 
 ### Deprecated
@@ -15,6 +11,16 @@
 ### Removed
 
 ### Fixed
+
+### Updated
+
+## [1.0.0-alpha.27] - 2022-09-13
+
+### Added
+
+- plugin extension artifact which add `interface Plugin<T : Any>` to write Gradle plugins in a Kotlin way
+- `Project.getBooleanPropertyOrNull` function
+- `DelegatedProperty` and multiple `delegatedProperty` functions
 
 ### Updated
 
