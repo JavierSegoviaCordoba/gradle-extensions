@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > FakePlugin</title>
+  <title>Coverage Report > ArgumentsTxtKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -17,15 +17,18 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.integration.tests</a>
+    <a href="../index.html">com.javiersc.gradle.testkit.test.extensions._internal</a>
 </div>
 
-<h1>Coverage Summary for Class: FakePlugin (com.javiersc.integration.tests)</h1>
+<h1>Coverage Summary for Class: ArgumentsTxtKt (com.javiersc.gradle.testkit.test.extensions._internal)</h1>
 
 <table class="coverageStats">
-
 <tr>
   <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -44,89 +47,49 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">FakePlugin</td>
+  <td class="name">ArgumentsTxtKt</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/2)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/2)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/12)
-  </span>
-</td>
-</tr>
-  <tr>
-    <td class="name">FakePlugin$apply$1</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
+    (2/2)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    85.7%
   </span>
   <span class="absValue">
-    (0/5)
-  </span>
-</td>
-  </tr>
-<tr>
-  <td class="name"><strong>Total</strong></td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/3)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/3)
+    (24/28)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    96.2%
   </span>
   <span class="absValue">
-    (0/17)
+    (25/26)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    97.1%
+  </span>
+  <span class="absValue">
+    (166/171)
   </span>
 </td>
 </tr>
+
 </table>
 
 <br/>
@@ -134,17 +97,49 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.integration.tests
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.gradle.testkit.test.extensions._internal
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import org.gradle.api.Plugin
-<i class="no-highlight">4</i>&nbsp;import org.gradle.api.Project
-<i class="no-highlight">5</i>&nbsp;
-<b class="nc"><i class="no-highlight">6</i>&nbsp;internal abstract class FakePlugin : Plugin&lt;Project&gt; {</b>
-<i class="no-highlight">7</i>&nbsp;
-<i class="no-highlight">8</i>&nbsp;    override fun apply(target: Project) {
-<b class="nc"><i class="no-highlight">9</i>&nbsp;        target.tasks.register(&quot;fakeFile&quot;) { target.logger.lifecycle(&quot;Fake File&quot;) }</b>
-<i class="no-highlight">10</i>&nbsp;    }
-<i class="no-highlight">11</i>&nbsp;}
+<i class="no-highlight">3</i>&nbsp;import org.gradle.testkit.runner.GradleRunner
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;internal val GradleRunner.argumentsTxt: List&lt;String&gt;
+<i class="no-highlight">6</i>&nbsp;    get() {
+<b class="fc"><i class="no-highlight">7</i>&nbsp;        val argumentsFile = projectDir.resolve(&quot;ARGUMENTS.txt&quot;)</b>
+<b class="pc"><i class="no-highlight">8</i>&nbsp;        return if (argumentsFile.exists()) {</b>
+<b class="fc"><i class="no-highlight">9</i>&nbsp;            buildList {</b>
+<b class="fc"><i class="no-highlight">10</i>&nbsp;                val line = argumentsFile.readLines().first()</b>
+<b class="fc"><i class="no-highlight">11</i>&nbsp;                var (nextArgument, remaining) = line.nextArgument()</b>
+<b class="fc"><i class="no-highlight">12</i>&nbsp;                nextArgument?.let(::add)</b>
+<b class="pc"><i class="no-highlight">13</i>&nbsp;                while (nextArgument != null || remaining != null) {</b>
+<b class="fc"><i class="no-highlight">14</i>&nbsp;                    val (nextArgumentWhile, remainingWhile) =</b>
+<b class="pc"><i class="no-highlight">15</i>&nbsp;                        remaining?.nextArgument() ?: (null to null)</b>
+<b class="fc"><i class="no-highlight">16</i>&nbsp;                    nextArgument = nextArgumentWhile</b>
+<b class="fc"><i class="no-highlight">17</i>&nbsp;                    remaining = remainingWhile</b>
+<b class="fc"><i class="no-highlight">18</i>&nbsp;                    nextArgument?.let(::add)</b>
+<i class="no-highlight">19</i>&nbsp;                }
+<b class="fc"><i class="no-highlight">20</i>&nbsp;            }</b>
+<i class="no-highlight">21</i>&nbsp;        } else {
+<b class="nc"><i class="no-highlight">22</i>&nbsp;            emptyList()</b>
+<i class="no-highlight">23</i>&nbsp;        }
+<i class="no-highlight">24</i>&nbsp;    }
+<i class="no-highlight">25</i>&nbsp;
+<i class="no-highlight">26</i>&nbsp;private fun String.nextArgument(): Pair&lt;String?, String?&gt; {
+<b class="fc"><i class="no-highlight">27</i>&nbsp;    val line = dropWhile(Char::isWhitespace)</b>
+<b class="fc"><i class="no-highlight">28</i>&nbsp;    val (nextArgument, remaining) =</b>
+<b class="fc"><i class="no-highlight">29</i>&nbsp;        when {</b>
+<b class="fc"><i class="no-highlight">30</i>&nbsp;            line.isBlank() -&gt; null to null</b>
+<b class="fc"><i class="no-highlight">31</i>&nbsp;            line.startsWith(&quot;\&quot;&quot;) -&gt; {</b>
+<b class="fc"><i class="no-highlight">32</i>&nbsp;                val nextArgument = line.drop(1).takeWhile { it != &#39;&quot;&#39; }</b>
+<b class="fc"><i class="no-highlight">33</i>&nbsp;                val remaining = line.drop(1 + nextArgument.length + 1)</b>
+<b class="fc"><i class="no-highlight">34</i>&nbsp;                nextArgument to remaining</b>
+<i class="no-highlight">35</i>&nbsp;            }
+<i class="no-highlight">36</i>&nbsp;            else -&gt; {
+<b class="fc"><i class="no-highlight">37</i>&nbsp;                val nextArgument = line.takeWhile { !it.isWhitespace() }</b>
+<b class="fc"><i class="no-highlight">38</i>&nbsp;                val remaining = line.drop(nextArgument.length)</b>
+<b class="fc"><i class="no-highlight">39</i>&nbsp;                nextArgument to remaining</b>
+<i class="no-highlight">40</i>&nbsp;            }
+<i class="no-highlight">41</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">42</i>&nbsp;    return nextArgument to remaining</b>
+<i class="no-highlight">43</i>&nbsp;}
 </div>
 </pre>
 </div>
@@ -171,7 +166,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-08-05 23:12</div>
+    <div style="float:right;">generated on 2022-09-13 11:43</div>
 </div>
 </body>
 </html>

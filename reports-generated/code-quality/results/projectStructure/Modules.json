@@ -172,6 +172,25 @@
       ]
     },
     {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/gradle-extensions-subprojects/gradle-plugin-extensions",
+          "sourceFolders": []
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        }
+      ]
+    },
+    {
       "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions",
       "contentEntries": [
         {
@@ -393,6 +412,10 @@
         },
         {
           "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions.main",
+          "type": "Module"
+        },
+        {
+          "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions.main",
           "type": "Module"
         },
         {
@@ -624,6 +647,10 @@
         },
         {
           "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions.main",
+          "type": "Module"
+        },
+        {
+          "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions.main",
           "type": "Module"
         },
         {
@@ -1227,6 +1254,10 @@
           "type": "Module"
         },
         {
+          "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions.main",
+          "type": "Module"
+        },
+        {
           "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions.main",
           "type": "Module"
         },
@@ -1481,6 +1512,10 @@
         },
         {
           "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions.main",
+          "type": "Module"
+        },
+        {
+          "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions.main",
           "type": "Module"
         },
         {
@@ -2464,6 +2499,358 @@
           "sourceFolders": [
             {
               "path": "file://$PROJECT_DIR$/gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin",
+              "type": "Source",
+              "packagePrefix": ""
+            }
+          ]
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "/data/cache/gradle/caches/7.5.1/generated-gradle-jars/gradle-api-7.5.1.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-ant-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-astbuilder-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-console-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-datetime-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-dateutil-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-groovydoc-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-json-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-nio-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-sql-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-templates-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-test-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-xml-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/javaparser-core-3.17.0.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/kotlin-stdlib-1.6.21.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/kotlin-stdlib-common-1.6.21.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/kotlin-stdlib-jdk7-1.6.21.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/kotlin-stdlib-jdk8-1.6.21.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/kotlin-reflect-1.6.21.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/gradle-installation-beacon-7.5.1.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/caches/7.5.1/generated-gradle-jars/gradle-kotlin-dsl-extensions-7.5.1.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/gradle-kotlin-dsl-7.5.1.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/gradle-kotlin-dsl-tooling-models-7.5.1.jar",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.11",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions.test",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/gradle-extensions-subprojects/gradle-plugin-extensions/test",
+          "sourceFolders": []
+        }
+      ],
+      "orderEntries": [
+        {
+          "name": "jbr-11",
+          "type": "SDK"
+        },
+        {
+          "name": "<Module source>",
+          "type": "Own sources"
+        },
+        {
+          "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions.main",
+          "type": "Module"
+        },
+        {
+          "name": "/data/cache/gradle/caches/7.5.1/generated-gradle-jars/gradle-api-7.5.1.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-ant-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-astbuilder-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-console-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-datetime-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-dateutil-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-groovydoc-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-json-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-nio-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-sql-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-templates-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-test-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/groovy-xml-3.0.10.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/javaparser-core-3.17.0.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/kotlin-stdlib-1.6.21.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/kotlin-stdlib-common-1.6.21.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/kotlin-stdlib-jdk7-1.6.21.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/kotlin-stdlib-jdk8-1.6.21.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/kotlin-reflect-1.6.21.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/gradle-installation-beacon-7.5.1.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/caches/7.5.1/generated-gradle-jars/gradle-kotlin-dsl-extensions-7.5.1.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/gradle-kotlin-dsl-7.5.1.jar",
+          "type": "Library"
+        },
+        {
+          "name": "/data/cache/gradle/wrapper/dists/gradle-7.5.1-bin/7jzzequgds1hbszbhq3npc5ng/gradle-7.5.1/lib/gradle-kotlin-dsl-tooling-models-7.5.1.jar",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.11",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.3.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains:annotations:13.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.3.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.apiguardian:apiguardian-api:1.1.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.opentest4j:opentest4j:1.2.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.3.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.3.2",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: io.github.java-diff-utils:java-diff-utils:4.11",
+          "type": "Library"
+        }
+      ]
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions.main",
+      "contentEntries": [
+        {
+          "path": "file://$PROJECT_DIR$/gradle-extensions-subprojects/gradle-plugin-extensions/main",
+          "sourceFolders": [
+            {
+              "path": "file://$PROJECT_DIR$/gradle-extensions-subprojects/gradle-plugin-extensions/main/kotlin",
               "type": "Source",
               "packagePrefix": ""
             }

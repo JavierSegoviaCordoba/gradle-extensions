@@ -37,6 +37,10 @@
       "languageLevel": 11
     },
     {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions",
+      "languageLevel": 11
+    },
+    {
       "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-project-extensions",
       "languageLevel": 11
     },
@@ -102,6 +106,14 @@
     },
     {
       "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-plugin-extensions.main",
       "languageLevel": 8
     },
     {

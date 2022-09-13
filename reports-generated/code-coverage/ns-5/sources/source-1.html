@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > ProjectKt</title>
+  <title>Coverage Report > Plugin</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/highlight-idea.css";
@@ -17,18 +17,15 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.gradle.project.extensions</a>
+    <a href="../index.html">com.javiersc.gradle.plugin.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: ProjectKt (com.javiersc.gradle.project.extensions)</h1>
+<h1>Coverage Summary for Class: Plugin (com.javiersc.gradle.plugin.extensions)</h1>
 
 <table class="coverageStats">
+
 <tr>
   <th class="name">Class</th>
-<th class="coverageStat 
-">
-  Class, %
-</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -46,8 +43,17 @@ Current scope:     <a href="../../index.html">all classes</a>
   Instruction, %
 </th>
 </tr>
-<tr>
-  <td class="name">ProjectKt</td>
+  <tr>
+    <td class="name">Plugin$DefaultImpls</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -61,7 +67,27 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/5)
+    (0/3)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
   </span>
 </td>
 <td class="coverageStat">
@@ -69,27 +95,10 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/4)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/5)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/47)
+    (0/3)
   </span>
 </td>
 </tr>
-
 </table>
 
 <br/>
@@ -97,24 +106,17 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.gradle.project.extensions
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.gradle.plugin.extensions
 <i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import org.gradle.api.Project
+<i class="no-highlight">3</i>&nbsp;import org.gradle.api.Plugin as GradlePlugin
 <i class="no-highlight">4</i>&nbsp;
-<i class="no-highlight">5</i>&nbsp;public val Project.isRootProject: Boolean
-<b class="nc"><i class="no-highlight">6</i>&nbsp;    get() = parent == null</b>
+<i class="no-highlight">5</i>&nbsp;@Suppress(&quot;INAPPLICABLE_JVM_NAME&quot;)
+<i class="no-highlight">6</i>&nbsp;public interface Plugin&lt;T : Any&gt; : GradlePlugin&lt;T&gt; {
 <i class="no-highlight">7</i>&nbsp;
-<i class="no-highlight">8</i>&nbsp;public val Project.module: String
-<b class="nc"><i class="no-highlight">9</i>&nbsp;    get() = &quot;$group:$name&quot;</b>
-<i class="no-highlight">10</i>&nbsp;
-<i class="no-highlight">11</i>&nbsp;public val Project.library: String
-<b class="nc"><i class="no-highlight">12</i>&nbsp;    get() = &quot;$group:$name:$version&quot;</b>
-<i class="no-highlight">13</i>&nbsp;
-<i class="no-highlight">14</i>&nbsp;public val Project.isSnapshot: Boolean
-<b class="nc"><i class="no-highlight">15</i>&nbsp;    get() = version.toString().endsWith(&quot;-SNAPSHOT&quot;, ignoreCase = true)</b>
-<i class="no-highlight">16</i>&nbsp;
-<i class="no-highlight">17</i>&nbsp;public val Project.isNotSnapshot: Boolean
-<b class="nc"><i class="no-highlight">18</i>&nbsp;    get() = !isSnapshot</b>
+<i class="no-highlight">8</i>&nbsp;    @JvmName(&quot;kotlinApply&quot;) public fun T.apply()
+<i class="no-highlight">9</i>&nbsp;
+<b class="nc"><i class="no-highlight">10</i>&nbsp;    @JvmName(&quot;javaApply&quot;) override fun apply(target: T): Unit = target.apply()</b>
+<i class="no-highlight">11</i>&nbsp;}
 </div>
 </pre>
 </div>
@@ -141,7 +143,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-08-05 23:12</div>
+    <div style="float:right;">generated on 2022-09-13 11:43</div>
 </div>
 </body>
 </html>
