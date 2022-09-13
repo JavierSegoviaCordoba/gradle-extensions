@@ -7,6 +7,8 @@ module:gradle-logging-extensions
 com.javiersc.gradle.logging.extensions
 module:gradle-miscellanea-extensions
 com.javiersc.gradle.miscellanea.extensions
+module:gradle-plugin-extensions
+com.javiersc.gradle.plugin.extensions
 module:gradle-project-extensions
 com.javiersc.gradle.project.extensions
 module:gradle-properties-extensions
