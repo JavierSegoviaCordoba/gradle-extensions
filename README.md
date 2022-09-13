@@ -17,6 +17,7 @@ dependencies {
     // or any subproject
     implementation("com.javiersc.gradle:gradle-logging-extensions:$version")
     implementation("com.javiersc.gradle:gradle-miscellanea-extensions:$version")
+    implementation("com.javiersc.gradle:gradle-plugin-extensions:$version")
     implementation("com.javiersc.gradle:gradle-project-extensions:$version")
     implementation("com.javiersc.gradle:gradle-properties-extensions:$version")
     implementation("com.javiersc.gradle:gradle-tasks-extensions:$version")
