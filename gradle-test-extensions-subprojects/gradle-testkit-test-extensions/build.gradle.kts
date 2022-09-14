@@ -18,8 +18,8 @@ hubdle {
                         api(gradleKotlinDsl())
                         api(gradleTestKit())
                         api(javierscKotlinStdlib())
-                        api(libs.junit.jupiter.junitJupiterApi)
-                        api(libs.junit.jupiter.junitJupiterParams)
+                        api(junitJupiterApi())
+                        api(junitJupiterParams())
                     }
                 }
             }

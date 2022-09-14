@@ -1,12 +1,9 @@
 [versions]
-hubdle = "0.2.0-alpha.29"
-junit5 = "5.9.0-RC1"
+hubdle = "0.2.0-alpha.35"
 kotlin = "1.7.10"
 
 [libraries]
 jetbrains-kotlin-kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-junit-jupiter-junitJupiterApi = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
-junit-jupiter-junitJupiterParams = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
 
 [plugins]
 javiersc-hubdle = { id = "com.javiersc.hubdle", version.ref = "hubdle" }
