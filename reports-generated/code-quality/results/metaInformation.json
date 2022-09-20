@@ -1,0 +1,18 @@
+{
+  "total": 2,
+  "tools inspection": {
+    "Code Inspection": 2
+  },
+  "attributes": {
+    "vcs": {
+      "sarifIdea": {
+        "repositoryUri": "https://github.com/JavierSegoviaCordoba/gradle-extensions",
+        "revisionId": "58764d76b96695eb3661ff3380358a3020668f80",
+        "branch": "main"
+      }
+    },
+    "deviceId": "200820300000000-50c8-1a29-af5a-6292a9c78008",
+    "jobUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions/actions/runs/3092104797",
+    "repoUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions"
+  }
+}

@@ -7,9 +7,10 @@
   <title>Coverage Report > SettingsPropertiesKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -97,55 +98,55 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.gradle.properties.extensions
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import java.io.File
-<i class="no-highlight">4</i>&nbsp;import org.gradle.api.initialization.Settings
-<i class="no-highlight">5</i>&nbsp;
-<i class="no-highlight">6</i>&nbsp;public fun Settings.getProperty(name: String): String =
-<b class="nc"><i class="no-highlight">7</i>&nbsp;    localProperties?.getProperty(name)</b>
-<b class="nc"><i class="no-highlight">8</i>&nbsp;        ?: localProperties?.getProperty(name.toSnakeCase()) ?: System.getenv(name)</b>
-<b class="nc"><i class="no-highlight">9</i>&nbsp;            ?: System.getenv(name.toSnakeCase()) ?: providers.gradleProperty(name).orNull</b>
-<b class="nc"><i class="no-highlight">10</i>&nbsp;            ?: providers.gradleProperty(name.toSnakeCase()).orNull.run {</b>
-<b class="nc"><i class="no-highlight">11</i>&nbsp;            checkNotNull(this) {</b>
-<b class="nc"><i class="no-highlight">12</i>&nbsp;                val settings = this@getProperty</b>
-<b class="nc"><i class="no-highlight">13</i>&nbsp;                val userHomePath = System.getProperty(&quot;user.home&quot;)</b>
-<b class="nc"><i class="no-highlight">14</i>&nbsp;                &quot;&quot;&quot;</b>
-<b class="nc"><i class="no-highlight">15</i>&nbsp;                    |The property `$name` is not available in any of the next sources:</b>
-<b class="nc"><i class="no-highlight">16</i>&nbsp;                    |  - ${settings.settingsDir}${File.separator}local.properties</b>
-<b class="nc"><i class="no-highlight">17</i>&nbsp;                    |  - ${settings.rootDir}${File.separator}local.properties</b>
-<i class="no-highlight">18</i>&nbsp;                    |  - Environment variable
-<b class="nc"><i class="no-highlight">19</i>&nbsp;                    |  - ${settings.settingsDir}${File.separator}gradle.properties</b>
-<b class="nc"><i class="no-highlight">20</i>&nbsp;                    |  - $userHomePath${File.separator}.gradle${File.separator}gradle.properties</b>
-<i class="no-highlight">21</i>&nbsp;                    |  
-<b class="nc"><i class="no-highlight">22</i>&nbsp;                &quot;&quot;&quot;.trimMargin()</b>
-<i class="no-highlight">23</i>&nbsp;            }
-<i class="no-highlight">24</i>&nbsp;        }
-<i class="no-highlight">25</i>&nbsp;
-<i class="no-highlight">26</i>&nbsp;public fun Settings.getPropertyOrNull(name: String): String? =
-<b class="nc"><i class="no-highlight">27</i>&nbsp;    runCatching { getProperty(name) }.getOrNull()</b>
-<i class="no-highlight">28</i>&nbsp;
-<b class="nc"><i class="no-highlight">29</i>&nbsp;public fun Settings.getDoubleProperty(name: String): Double = getProperty(name).toDouble()</b>
-<i class="no-highlight">30</i>&nbsp;
-<i class="no-highlight">31</i>&nbsp;public fun Settings.getDoublePropertyOrNull(name: String): Double? =
-<b class="nc"><i class="no-highlight">32</i>&nbsp;    getPropertyOrNull(name)?.toDoubleOrNull()</b>
-<i class="no-highlight">33</i>&nbsp;
-<b class="nc"><i class="no-highlight">34</i>&nbsp;public fun Settings.getIntProperty(name: String): Int = getProperty(name).toInt()</b>
-<i class="no-highlight">35</i>&nbsp;
-<i class="no-highlight">36</i>&nbsp;public fun Settings.getIntPropertyOrNull(name: String): Int? =
-<b class="nc"><i class="no-highlight">37</i>&nbsp;    getPropertyOrNull(name)?.toIntOrNull()</b>
-<i class="no-highlight">38</i>&nbsp;
-<b class="nc"><i class="no-highlight">39</i>&nbsp;public fun Settings.getLongProperty(name: String): Long = getProperty(name).toLong()</b>
-<i class="no-highlight">40</i>&nbsp;
-<i class="no-highlight">41</i>&nbsp;public fun Settings.getLongPropertyOrNull(name: String): Long? =
-<b class="nc"><i class="no-highlight">42</i>&nbsp;    getPropertyOrNull(name)?.toLongOrNull()</b>
-<i class="no-highlight">43</i>&nbsp;
-<b class="nc"><i class="no-highlight">44</i>&nbsp;public fun Settings.getBooleanProperty(name: String): Boolean = getPropertyOrNull(name).toBoolean()</b>
-<i class="no-highlight">45</i>&nbsp;
-<b class="nc"><i class="no-highlight">46</i>&nbsp;public fun Settings.getStringProperty(name: String): String = getProperty(name)</b>
-<i class="no-highlight">47</i>&nbsp;
-<b class="nc"><i class="no-highlight">48</i>&nbsp;public fun Settings.getStringPropertyOrNull(name: String): String? = getPropertyOrNull(name)</b>
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.properties.extensions
+&nbsp;
+&nbsp;import java.io.File
+&nbsp;import org.gradle.api.initialization.Settings
+&nbsp;
+&nbsp;public fun Settings.getProperty(name: String): String =
+<b class="nc">&nbsp;    localProperties?.getProperty(name)</b>
+<b class="nc">&nbsp;        ?: localProperties?.getProperty(name.toSnakeCase()) ?: System.getenv(name)</b>
+<b class="nc">&nbsp;            ?: System.getenv(name.toSnakeCase()) ?: providers.gradleProperty(name).orNull</b>
+<b class="nc">&nbsp;            ?: providers.gradleProperty(name.toSnakeCase()).orNull.run {</b>
+<b class="nc">&nbsp;            checkNotNull(this) {</b>
+<b class="nc">&nbsp;                val settings = this@getProperty</b>
+<b class="nc">&nbsp;                val userHomePath = System.getProperty(&quot;user.home&quot;)</b>
+<b class="nc">&nbsp;                &quot;&quot;&quot;</b>
+<b class="nc">&nbsp;                    |The property `$name` is not available in any of the next sources:</b>
+<b class="nc">&nbsp;                    |  - ${settings.settingsDir}${File.separator}local.properties</b>
+<b class="nc">&nbsp;                    |  - ${settings.rootDir}${File.separator}local.properties</b>
+&nbsp;                    |  - Environment variable
+<b class="nc">&nbsp;                    |  - ${settings.settingsDir}${File.separator}gradle.properties</b>
+<b class="nc">&nbsp;                    |  - $userHomePath${File.separator}.gradle${File.separator}gradle.properties</b>
+&nbsp;                    |  
+<b class="nc">&nbsp;                &quot;&quot;&quot;.trimMargin()</b>
+&nbsp;            }
+&nbsp;        }
+&nbsp;
+&nbsp;public fun Settings.getPropertyOrNull(name: String): String? =
+<b class="nc">&nbsp;    runCatching { getProperty(name) }.getOrNull()</b>
+&nbsp;
+<b class="nc">&nbsp;public fun Settings.getDoubleProperty(name: String): Double = getProperty(name).toDouble()</b>
+&nbsp;
+&nbsp;public fun Settings.getDoublePropertyOrNull(name: String): Double? =
+<b class="nc">&nbsp;    getPropertyOrNull(name)?.toDoubleOrNull()</b>
+&nbsp;
+<b class="nc">&nbsp;public fun Settings.getIntProperty(name: String): Int = getProperty(name).toInt()</b>
+&nbsp;
+&nbsp;public fun Settings.getIntPropertyOrNull(name: String): Int? =
+<b class="nc">&nbsp;    getPropertyOrNull(name)?.toIntOrNull()</b>
+&nbsp;
+<b class="nc">&nbsp;public fun Settings.getLongProperty(name: String): Long = getProperty(name).toLong()</b>
+&nbsp;
+&nbsp;public fun Settings.getLongPropertyOrNull(name: String): Long? =
+<b class="nc">&nbsp;    getPropertyOrNull(name)?.toLongOrNull()</b>
+&nbsp;
+<b class="nc">&nbsp;public fun Settings.getBooleanProperty(name: String): Boolean = getPropertyOrNull(name).toBoolean()</b>
+&nbsp;
+<b class="nc">&nbsp;public fun Settings.getStringProperty(name: String): String = getProperty(name)</b>
+&nbsp;
+<b class="nc">&nbsp;public fun Settings.getStringPropertyOrNull(name: String): String? = getPropertyOrNull(name)</b>
+</code>
 </pre>
 </div>
 
@@ -160,18 +161,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-09-13 11:43</div>
+    <div style="float:right;">generated on 2022-09-20 17:22</div>
 </div>
 </body>
 </html>

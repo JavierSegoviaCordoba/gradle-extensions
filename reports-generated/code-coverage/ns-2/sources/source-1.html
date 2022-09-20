@@ -7,9 +7,10 @@
   <title>Coverage Report > VersionCatalogsKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -132,48 +133,48 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;@file:Suppress(&quot;UnusedReceiverParameter&quot;)
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;package com.javiersc.gradle.extensions.version.catalogs
-<i class="no-highlight">4</i>&nbsp;
-<i class="no-highlight">5</i>&nbsp;import org.gradle.api.artifacts.MinimalExternalModuleDependency
-<i class="no-highlight">6</i>&nbsp;import org.gradle.api.artifacts.VersionCatalog
-<i class="no-highlight">7</i>&nbsp;import org.gradle.api.artifacts.VersionCatalogsExtension
-<i class="no-highlight">8</i>&nbsp;
-<i class="no-highlight">9</i>&nbsp;public fun VersionCatalogsExtension.getLibrariesByGroup(
-<i class="no-highlight">10</i>&nbsp;    group: String
-<i class="no-highlight">11</i>&nbsp;): List&lt;MinimalExternalModuleDependency&gt; =
-<b class="nc"><i class="no-highlight">12</i>&nbsp;    catalogNamesWithLibsAtFirst.flatMap(::getLibraries).filter { library -&gt;</b>
-<b class="nc"><i class="no-highlight">13</i>&nbsp;        library.module.group == group</b>
-<i class="no-highlight">14</i>&nbsp;    }
-<i class="no-highlight">15</i>&nbsp;
-<i class="no-highlight">16</i>&nbsp;public fun VersionCatalogsExtension.getLibraryByModule(
-<i class="no-highlight">17</i>&nbsp;    module: String
-<i class="no-highlight">18</i>&nbsp;): MinimalExternalModuleDependency =
-<b class="nc"><i class="no-highlight">19</i>&nbsp;    catalogNamesWithLibsAtFirst.flatMap(::getLibraries).first { library -&gt;</b>
-<b class="nc"><i class="no-highlight">20</i>&nbsp;        &quot;${library.module}&quot; == module</b>
-<i class="no-highlight">21</i>&nbsp;    }
-<i class="no-highlight">22</i>&nbsp;
-<i class="no-highlight">23</i>&nbsp;public fun VersionCatalogsExtension.getLibraryByModuleOrNull(
-<i class="no-highlight">24</i>&nbsp;    libraryModule: String
-<b class="nc"><i class="no-highlight">25</i>&nbsp;): MinimalExternalModuleDependency? = runCatching { getLibraryByModule(libraryModule) }.getOrNull()</b>
-<i class="no-highlight">26</i>&nbsp;
-<i class="no-highlight">27</i>&nbsp;public fun VersionCatalogsExtension.getLibraries(
-<i class="no-highlight">28</i>&nbsp;    catalog: VersionCatalog
-<i class="no-highlight">29</i>&nbsp;): List&lt;MinimalExternalModuleDependency&gt; =
-<b class="nc"><i class="no-highlight">30</i>&nbsp;    catalog.libraryAliases.toList().mapNotNull { catalog.findLibrary(it).get().orNull }</b>
-<i class="no-highlight">31</i>&nbsp;
-<i class="no-highlight">32</i>&nbsp;public fun VersionCatalogsExtension.getLibraries(
-<i class="no-highlight">33</i>&nbsp;    catalogName: String
-<i class="no-highlight">34</i>&nbsp;): List&lt;MinimalExternalModuleDependency&gt; {
-<b class="nc"><i class="no-highlight">35</i>&nbsp;    val catalog: VersionCatalog = named(catalogName)</b>
-<b class="nc"><i class="no-highlight">36</i>&nbsp;    val aliases: List&lt;String&gt; = catalog.libraryAliases.toList()</b>
-<b class="nc"><i class="no-highlight">37</i>&nbsp;    return aliases.mapNotNull { catalog.findLibrary(it).get().orNull }</b>
-<i class="no-highlight">38</i>&nbsp;}
-<i class="no-highlight">39</i>&nbsp;
-<i class="no-highlight">40</i>&nbsp;public val VersionCatalogsExtension.catalogNamesWithLibsAtFirst: List&lt;String&gt;
-<b class="nc"><i class="no-highlight">41</i>&nbsp;    get() = catalogNames.sorted().sortedByDescending { it == &quot;libs&quot; }</b>
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;@file:Suppress(&quot;UnusedReceiverParameter&quot;)
+&nbsp;
+&nbsp;package com.javiersc.gradle.extensions.version.catalogs
+&nbsp;
+&nbsp;import org.gradle.api.artifacts.MinimalExternalModuleDependency
+&nbsp;import org.gradle.api.artifacts.VersionCatalog
+&nbsp;import org.gradle.api.artifacts.VersionCatalogsExtension
+&nbsp;
+&nbsp;public fun VersionCatalogsExtension.getLibrariesByGroup(
+&nbsp;    group: String
+&nbsp;): List&lt;MinimalExternalModuleDependency&gt; =
+<b class="nc">&nbsp;    catalogNamesWithLibsAtFirst.flatMap(::getLibraries).filter { library -&gt;</b>
+<b class="nc">&nbsp;        library.module.group == group</b>
+&nbsp;    }
+&nbsp;
+&nbsp;public fun VersionCatalogsExtension.getLibraryByModule(
+&nbsp;    module: String
+&nbsp;): MinimalExternalModuleDependency =
+<b class="nc">&nbsp;    catalogNamesWithLibsAtFirst.flatMap(::getLibraries).first { library -&gt;</b>
+<b class="nc">&nbsp;        &quot;${library.module}&quot; == module</b>
+&nbsp;    }
+&nbsp;
+&nbsp;public fun VersionCatalogsExtension.getLibraryByModuleOrNull(
+&nbsp;    libraryModule: String
+<b class="nc">&nbsp;): MinimalExternalModuleDependency? = runCatching { getLibraryByModule(libraryModule) }.getOrNull()</b>
+&nbsp;
+&nbsp;public fun VersionCatalogsExtension.getLibraries(
+&nbsp;    catalog: VersionCatalog
+&nbsp;): List&lt;MinimalExternalModuleDependency&gt; =
+<b class="nc">&nbsp;    catalog.libraryAliases.toList().mapNotNull { catalog.findLibrary(it).get().orNull }</b>
+&nbsp;
+&nbsp;public fun VersionCatalogsExtension.getLibraries(
+&nbsp;    catalogName: String
+&nbsp;): List&lt;MinimalExternalModuleDependency&gt; {
+<b class="nc">&nbsp;    val catalog: VersionCatalog = named(catalogName)</b>
+<b class="nc">&nbsp;    val aliases: List&lt;String&gt; = catalog.libraryAliases.toList()</b>
+<b class="nc">&nbsp;    return aliases.mapNotNull { catalog.findLibrary(it).get().orNull }</b>
+&nbsp;}
+&nbsp;
+&nbsp;public val VersionCatalogsExtension.catalogNamesWithLibsAtFirst: List&lt;String&gt;
+<b class="nc">&nbsp;    get() = catalogNames.sorted().sortedByDescending { it == &quot;libs&quot; }</b>
+</code>
 </pre>
 </div>
 
@@ -188,18 +189,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-09-13 11:43</div>
+    <div style="float:right;">generated on 2022-09-20 17:22</div>
 </div>
 </body>
 </html>

@@ -7,9 +7,10 @@
   <title>Coverage Report > LocalPropertiesKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -97,43 +98,43 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.gradle.properties.extensions
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import java.io.File
-<i class="no-highlight">4</i>&nbsp;import java.util.Properties
-<i class="no-highlight">5</i>&nbsp;import org.gradle.api.Project
-<i class="no-highlight">6</i>&nbsp;import org.gradle.api.initialization.Settings
-<i class="no-highlight">7</i>&nbsp;
-<i class="no-highlight">8</i>&nbsp;public val Project.localProperties: Properties?
-<i class="no-highlight">9</i>&nbsp;    get() {
-<b class="nc"><i class="no-highlight">10</i>&nbsp;        val projectLocalProps: File = file(&quot;local.properties&quot;)</b>
-<b class="nc"><i class="no-highlight">11</i>&nbsp;        val rootProjectLocalProps: File = rootProject.file(&quot;local.properties&quot;)</b>
-<b class="nc"><i class="no-highlight">12</i>&nbsp;        return when {</b>
-<b class="nc"><i class="no-highlight">13</i>&nbsp;            projectLocalProps.exists() -&gt; {</b>
-<b class="nc"><i class="no-highlight">14</i>&nbsp;                Properties().apply { projectLocalProps.inputStream().use(::load) }</b>
-<i class="no-highlight">15</i>&nbsp;            }
-<b class="nc"><i class="no-highlight">16</i>&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
-<b class="nc"><i class="no-highlight">17</i>&nbsp;                Properties().apply { rootProjectLocalProps.inputStream().use(::load) }</b>
-<i class="no-highlight">18</i>&nbsp;            }
-<b class="nc"><i class="no-highlight">19</i>&nbsp;            else -&gt; null</b>
-<i class="no-highlight">20</i>&nbsp;        }
-<i class="no-highlight">21</i>&nbsp;    }
-<i class="no-highlight">22</i>&nbsp;
-<i class="no-highlight">23</i>&nbsp;public val Settings.localProperties: Properties?
-<i class="no-highlight">24</i>&nbsp;    get() {
-<b class="nc"><i class="no-highlight">25</i>&nbsp;        val settingsLocalProps: File = settingsDir.resolve(&quot;local.properties&quot;)</b>
-<b class="nc"><i class="no-highlight">26</i>&nbsp;        val rootProjectLocalProps: File = rootDir.resolve(&quot;local.properties&quot;)</b>
-<b class="nc"><i class="no-highlight">27</i>&nbsp;        return when {</b>
-<b class="nc"><i class="no-highlight">28</i>&nbsp;            settingsLocalProps.exists() -&gt; {</b>
-<b class="nc"><i class="no-highlight">29</i>&nbsp;                Properties().apply { load(settingsLocalProps.inputStream()) }</b>
-<i class="no-highlight">30</i>&nbsp;            }
-<b class="nc"><i class="no-highlight">31</i>&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
-<b class="nc"><i class="no-highlight">32</i>&nbsp;                Properties().apply { load(rootProjectLocalProps.inputStream()) }</b>
-<i class="no-highlight">33</i>&nbsp;            }
-<b class="nc"><i class="no-highlight">34</i>&nbsp;            else -&gt; null</b>
-<i class="no-highlight">35</i>&nbsp;        }
-<i class="no-highlight">36</i>&nbsp;    }
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.properties.extensions
+&nbsp;
+&nbsp;import java.io.File
+&nbsp;import java.util.Properties
+&nbsp;import org.gradle.api.Project
+&nbsp;import org.gradle.api.initialization.Settings
+&nbsp;
+&nbsp;public val Project.localProperties: Properties?
+&nbsp;    get() {
+<b class="nc">&nbsp;        val projectLocalProps: File = file(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        val rootProjectLocalProps: File = rootProject.file(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        return when {</b>
+<b class="nc">&nbsp;            projectLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { projectLocalProps.inputStream().use(::load) }</b>
+&nbsp;            }
+<b class="nc">&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { rootProjectLocalProps.inputStream().use(::load) }</b>
+&nbsp;            }
+<b class="nc">&nbsp;            else -&gt; null</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;public val Settings.localProperties: Properties?
+&nbsp;    get() {
+<b class="nc">&nbsp;        val settingsLocalProps: File = settingsDir.resolve(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        val rootProjectLocalProps: File = rootDir.resolve(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        return when {</b>
+<b class="nc">&nbsp;            settingsLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { load(settingsLocalProps.inputStream()) }</b>
+&nbsp;            }
+<b class="nc">&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { load(rootProjectLocalProps.inputStream()) }</b>
+&nbsp;            }
+<b class="nc">&nbsp;            else -&gt; null</b>
+&nbsp;        }
+&nbsp;    }
+</code>
 </pre>
 </div>
 
@@ -148,18 +149,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-09-13 11:43</div>
+    <div style="float:right;">generated on 2022-09-20 17:22</div>
 </div>
 </body>
 </html>

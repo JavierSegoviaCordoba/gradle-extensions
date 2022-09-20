@@ -7,9 +7,10 @@
   <title>Coverage Report > DelegatedProperty</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -90,45 +91,45 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.gradle.delegated.properties.extensions
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import kotlin.reflect.KProperty
-<i class="no-highlight">4</i>&nbsp;import org.gradle.api.Project
-<i class="no-highlight">5</i>&nbsp;import org.gradle.api.model.ObjectFactory
-<i class="no-highlight">6</i>&nbsp;import org.gradle.api.provider.Property
-<i class="no-highlight">7</i>&nbsp;
-<b class="nc"><i class="no-highlight">8</i>&nbsp;public abstract class DelegatedProperty&lt;T&gt; {</b>
-<i class="no-highlight">9</i>&nbsp;
-<i class="no-highlight">10</i>&nbsp;    internal abstract val property: Property&lt;T&gt;
-<i class="no-highlight">11</i>&nbsp;}
-<i class="no-highlight">12</i>&nbsp;
-<i class="no-highlight">13</i>&nbsp;public operator fun &lt;T&gt; DelegatedProperty&lt;T&gt;.getValue(thisRef: Any?, property: KProperty&lt;*&gt;): T =
-<i class="no-highlight">14</i>&nbsp;    this.property.get()
-<i class="no-highlight">15</i>&nbsp;
-<i class="no-highlight">16</i>&nbsp;public operator fun &lt;T&gt; DelegatedProperty&lt;T&gt;.setValue(
-<i class="no-highlight">17</i>&nbsp;    thisRef: Any?,
-<i class="no-highlight">18</i>&nbsp;    property: KProperty&lt;*&gt;,
-<i class="no-highlight">19</i>&nbsp;    value: T
-<i class="no-highlight">20</i>&nbsp;) {
-<i class="no-highlight">21</i>&nbsp;    this.property.convention(value)
-<i class="no-highlight">22</i>&nbsp;}
-<i class="no-highlight">23</i>&nbsp;
-<i class="no-highlight">24</i>&nbsp;public inline fun &lt;reified T&gt; ObjectFactory.delegatedProperty(): DelegatedProperty&lt;T&gt; =
-<i class="no-highlight">25</i>&nbsp;    object : DelegatedProperty&lt;T&gt;() {
-<i class="no-highlight">26</i>&nbsp;        override val property: Property&lt;T&gt; = property(T::class.java)
-<i class="no-highlight">27</i>&nbsp;    }
-<i class="no-highlight">28</i>&nbsp;
-<i class="no-highlight">29</i>&nbsp;public inline fun &lt;reified T&gt; Project.delegatedProperty(): DelegatedProperty&lt;T&gt; =
-<i class="no-highlight">30</i>&nbsp;    objects.delegatedProperty()
-<i class="no-highlight">31</i>&nbsp;
-<i class="no-highlight">32</i>&nbsp;public inline fun &lt;reified T&gt; ObjectFactory.delegatedProperty(initial: T): DelegatedProperty&lt;T&gt; =
-<i class="no-highlight">33</i>&nbsp;    object : DelegatedProperty&lt;T&gt;() {
-<i class="no-highlight">34</i>&nbsp;        override val property: Property&lt;T&gt; = property(T::class.java).convention(initial)
-<i class="no-highlight">35</i>&nbsp;    }
-<i class="no-highlight">36</i>&nbsp;
-<i class="no-highlight">37</i>&nbsp;public inline fun &lt;reified T&gt; Project.delegatedProperty(initial: T): DelegatedProperty&lt;T&gt; =
-<i class="no-highlight">38</i>&nbsp;    objects.delegatedProperty(initial)
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.delegated.properties.extensions
+&nbsp;
+&nbsp;import kotlin.reflect.KProperty
+&nbsp;import org.gradle.api.Project
+&nbsp;import org.gradle.api.model.ObjectFactory
+&nbsp;import org.gradle.api.provider.Property
+&nbsp;
+<b class="nc">&nbsp;public abstract class DelegatedProperty&lt;T&gt; {</b>
+&nbsp;
+&nbsp;    internal abstract val property: Property&lt;T&gt;
+&nbsp;}
+&nbsp;
+&nbsp;public operator fun &lt;T&gt; DelegatedProperty&lt;T&gt;.getValue(thisRef: Any?, property: KProperty&lt;*&gt;): T =
+&nbsp;    this.property.get()
+&nbsp;
+&nbsp;public operator fun &lt;T&gt; DelegatedProperty&lt;T&gt;.setValue(
+&nbsp;    thisRef: Any?,
+&nbsp;    property: KProperty&lt;*&gt;,
+&nbsp;    value: T
+&nbsp;) {
+&nbsp;    this.property.convention(value)
+&nbsp;}
+&nbsp;
+&nbsp;public inline fun &lt;reified T&gt; ObjectFactory.delegatedProperty(): DelegatedProperty&lt;T&gt; =
+&nbsp;    object : DelegatedProperty&lt;T&gt;() {
+&nbsp;        override val property: Property&lt;T&gt; = property(T::class.java)
+&nbsp;    }
+&nbsp;
+&nbsp;public inline fun &lt;reified T&gt; Project.delegatedProperty(): DelegatedProperty&lt;T&gt; =
+&nbsp;    objects.delegatedProperty()
+&nbsp;
+&nbsp;public inline fun &lt;reified T&gt; ObjectFactory.delegatedProperty(initial: T): DelegatedProperty&lt;T&gt; =
+&nbsp;    object : DelegatedProperty&lt;T&gt;() {
+&nbsp;        override val property: Property&lt;T&gt; = property(T::class.java).convention(initial)
+&nbsp;    }
+&nbsp;
+&nbsp;public inline fun &lt;reified T&gt; Project.delegatedProperty(initial: T): DelegatedProperty&lt;T&gt; =
+&nbsp;    objects.delegatedProperty(initial)
+</code>
 </pre>
 </div>
 
@@ -143,18 +144,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-09-13 11:43</div>
+    <div style="float:right;">generated on 2022-09-20 17:22</div>
 </div>
 </body>
 </html>

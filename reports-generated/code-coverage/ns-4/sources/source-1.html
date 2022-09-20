@@ -7,9 +7,10 @@
   <title>Coverage Report > ForUseAtConfigurationTimeKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -97,36 +98,36 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;@file:Suppress(&quot;UNCHECKED_CAST&quot;)
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;package com.javiersc.gradle.miscellanea.extensions
-<i class="no-highlight">4</i>&nbsp;
-<i class="no-highlight">5</i>&nbsp;import java.lang.reflect.InvocationTargetException
-<i class="no-highlight">6</i>&nbsp;import java.lang.reflect.Method
-<i class="no-highlight">7</i>&nbsp;import org.gradle.api.provider.Provider
-<i class="no-highlight">8</i>&nbsp;import org.gradle.util.GradleVersion.current
-<i class="no-highlight">9</i>&nbsp;import org.gradle.util.GradleVersion.version
-<i class="no-highlight">10</i>&nbsp;
-<i class="no-highlight">11</i>&nbsp;// TODO: Remove it when Gradle 7.0 adoption is very high
-<i class="no-highlight">12</i>&nbsp;public fun &lt;S&gt; forUseAtConfigurationTime(provider: Provider&lt;S&gt;): Provider&lt;S&gt; {
-<b class="nc"><i class="no-highlight">13</i>&nbsp;    return if (current() &gt;= version(&quot;6.5&quot;) &amp;&amp; current() &lt; version(&quot;7.0&quot;)) {</b>
-<b class="nc"><i class="no-highlight">14</i>&nbsp;        try {</b>
-<b class="nc"><i class="no-highlight">15</i>&nbsp;            val method: Method = Provider::class.java.getMethod(&quot;forUseAtConfigurationTime&quot;)</b>
-<b class="nc"><i class="no-highlight">16</i>&nbsp;            method(provider) as Provider&lt;S&gt;</b>
-<b class="nc"><i class="no-highlight">17</i>&nbsp;        } catch (e: Exception) {</b>
-<b class="nc"><i class="no-highlight">18</i>&nbsp;            val shouldThrowRuntimeException =</b>
-<b class="nc"><i class="no-highlight">19</i>&nbsp;                e is NoSuchMethodException ||</b>
-<b class="nc"><i class="no-highlight">20</i>&nbsp;                    e is IllegalAccessException ||</b>
-<b class="nc"><i class="no-highlight">21</i>&nbsp;                    e is InvocationTargetException</b>
-<b class="nc"><i class="no-highlight">22</i>&nbsp;            if (shouldThrowRuntimeException) {</b>
-<b class="nc"><i class="no-highlight">23</i>&nbsp;                throw RuntimeException(&quot;Could not mark provider usage for configuration time.&quot;, e)</b>
-<i class="no-highlight">24</i>&nbsp;            } else {
-<b class="nc"><i class="no-highlight">25</i>&nbsp;                throw e</b>
-<i class="no-highlight">26</i>&nbsp;            }
-<i class="no-highlight">27</i>&nbsp;        }
-<b class="nc"><i class="no-highlight">28</i>&nbsp;    } else provider</b>
-<i class="no-highlight">29</i>&nbsp;}
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;@file:Suppress(&quot;UNCHECKED_CAST&quot;)
+&nbsp;
+&nbsp;package com.javiersc.gradle.miscellanea.extensions
+&nbsp;
+&nbsp;import java.lang.reflect.InvocationTargetException
+&nbsp;import java.lang.reflect.Method
+&nbsp;import org.gradle.api.provider.Provider
+&nbsp;import org.gradle.util.GradleVersion.current
+&nbsp;import org.gradle.util.GradleVersion.version
+&nbsp;
+&nbsp;// TODO: Remove it when Gradle 7.0 adoption is very high
+&nbsp;public fun &lt;S&gt; forUseAtConfigurationTime(provider: Provider&lt;S&gt;): Provider&lt;S&gt; {
+<b class="nc">&nbsp;    return if (current() &gt;= version(&quot;6.5&quot;) &amp;&amp; current() &lt; version(&quot;7.0&quot;)) {</b>
+<b class="nc">&nbsp;        try {</b>
+<b class="nc">&nbsp;            val method: Method = Provider::class.java.getMethod(&quot;forUseAtConfigurationTime&quot;)</b>
+<b class="nc">&nbsp;            method(provider) as Provider&lt;S&gt;</b>
+<b class="nc">&nbsp;        } catch (e: Exception) {</b>
+<b class="nc">&nbsp;            val shouldThrowRuntimeException =</b>
+<b class="nc">&nbsp;                e is NoSuchMethodException ||</b>
+<b class="nc">&nbsp;                    e is IllegalAccessException ||</b>
+<b class="nc">&nbsp;                    e is InvocationTargetException</b>
+<b class="nc">&nbsp;            if (shouldThrowRuntimeException) {</b>
+<b class="nc">&nbsp;                throw RuntimeException(&quot;Could not mark provider usage for configuration time.&quot;, e)</b>
+&nbsp;            } else {
+<b class="nc">&nbsp;                throw e</b>
+&nbsp;            }
+&nbsp;        }
+<b class="nc">&nbsp;    } else provider</b>
+&nbsp;}
+</code>
 </pre>
 </div>
 
@@ -141,18 +142,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-09-13 11:43</div>
+    <div style="float:right;">generated on 2022-09-20 17:22</div>
 </div>
 </body>
 </html>

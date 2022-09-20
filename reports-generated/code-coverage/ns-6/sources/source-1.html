@@ -7,9 +7,10 @@
   <title>Coverage Report > ProjectKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -97,25 +98,25 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.gradle.project.extensions
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import org.gradle.api.Project
-<i class="no-highlight">4</i>&nbsp;
-<i class="no-highlight">5</i>&nbsp;public val Project.isRootProject: Boolean
-<b class="nc"><i class="no-highlight">6</i>&nbsp;    get() = parent == null</b>
-<i class="no-highlight">7</i>&nbsp;
-<i class="no-highlight">8</i>&nbsp;public val Project.module: String
-<b class="nc"><i class="no-highlight">9</i>&nbsp;    get() = &quot;$group:$name&quot;</b>
-<i class="no-highlight">10</i>&nbsp;
-<i class="no-highlight">11</i>&nbsp;public val Project.library: String
-<b class="nc"><i class="no-highlight">12</i>&nbsp;    get() = &quot;$group:$name:$version&quot;</b>
-<i class="no-highlight">13</i>&nbsp;
-<i class="no-highlight">14</i>&nbsp;public val Project.isSnapshot: Boolean
-<b class="nc"><i class="no-highlight">15</i>&nbsp;    get() = version.toString().endsWith(&quot;-SNAPSHOT&quot;, ignoreCase = true)</b>
-<i class="no-highlight">16</i>&nbsp;
-<i class="no-highlight">17</i>&nbsp;public val Project.isNotSnapshot: Boolean
-<b class="nc"><i class="no-highlight">18</i>&nbsp;    get() = !isSnapshot</b>
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.project.extensions
+&nbsp;
+&nbsp;import org.gradle.api.Project
+&nbsp;
+&nbsp;public val Project.isRootProject: Boolean
+<b class="nc">&nbsp;    get() = parent == null</b>
+&nbsp;
+&nbsp;public val Project.module: String
+<b class="nc">&nbsp;    get() = &quot;$group:$name&quot;</b>
+&nbsp;
+&nbsp;public val Project.library: String
+<b class="nc">&nbsp;    get() = &quot;$group:$name:$version&quot;</b>
+&nbsp;
+&nbsp;public val Project.isSnapshot: Boolean
+<b class="nc">&nbsp;    get() = version.toString().endsWith(&quot;-SNAPSHOT&quot;, ignoreCase = true)</b>
+&nbsp;
+&nbsp;public val Project.isNotSnapshot: Boolean
+<b class="nc">&nbsp;    get() = !isSnapshot</b>
+</code>
 </pre>
 </div>
 
@@ -130,18 +131,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-09-13 11:43</div>
+    <div style="float:right;">generated on 2022-09-20 17:22</div>
 </div>
 </body>
 </html>

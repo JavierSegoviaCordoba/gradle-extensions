@@ -7,9 +7,10 @@
   <title>Coverage Report > ArgumentsTxtKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
-    @import "../../css/highlight-idea.css";
+    @import "../../css/idea.min.css";
   </style>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
 </head>
 
 <body>
@@ -97,50 +98,50 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.javiersc.gradle.testkit.test.extensions._internal
-<i class="no-highlight">2</i>&nbsp;
-<i class="no-highlight">3</i>&nbsp;import org.gradle.testkit.runner.GradleRunner
-<i class="no-highlight">4</i>&nbsp;
-<i class="no-highlight">5</i>&nbsp;internal val GradleRunner.argumentsTxt: List&lt;String&gt;
-<i class="no-highlight">6</i>&nbsp;    get() {
-<b class="fc"><i class="no-highlight">7</i>&nbsp;        val argumentsFile = projectDir.resolve(&quot;ARGUMENTS.txt&quot;)</b>
-<b class="pc"><i class="no-highlight">8</i>&nbsp;        return if (argumentsFile.exists()) {</b>
-<b class="fc"><i class="no-highlight">9</i>&nbsp;            buildList {</b>
-<b class="fc"><i class="no-highlight">10</i>&nbsp;                val line = argumentsFile.readLines().first()</b>
-<b class="fc"><i class="no-highlight">11</i>&nbsp;                var (nextArgument, remaining) = line.nextArgument()</b>
-<b class="fc"><i class="no-highlight">12</i>&nbsp;                nextArgument?.let(::add)</b>
-<b class="pc"><i class="no-highlight">13</i>&nbsp;                while (nextArgument != null || remaining != null) {</b>
-<b class="fc"><i class="no-highlight">14</i>&nbsp;                    val (nextArgumentWhile, remainingWhile) =</b>
-<b class="pc"><i class="no-highlight">15</i>&nbsp;                        remaining?.nextArgument() ?: (null to null)</b>
-<b class="fc"><i class="no-highlight">16</i>&nbsp;                    nextArgument = nextArgumentWhile</b>
-<b class="fc"><i class="no-highlight">17</i>&nbsp;                    remaining = remainingWhile</b>
-<b class="fc"><i class="no-highlight">18</i>&nbsp;                    nextArgument?.let(::add)</b>
-<i class="no-highlight">19</i>&nbsp;                }
-<b class="fc"><i class="no-highlight">20</i>&nbsp;            }</b>
-<i class="no-highlight">21</i>&nbsp;        } else {
-<b class="nc"><i class="no-highlight">22</i>&nbsp;            emptyList()</b>
-<i class="no-highlight">23</i>&nbsp;        }
-<i class="no-highlight">24</i>&nbsp;    }
-<i class="no-highlight">25</i>&nbsp;
-<i class="no-highlight">26</i>&nbsp;private fun String.nextArgument(): Pair&lt;String?, String?&gt; {
-<b class="fc"><i class="no-highlight">27</i>&nbsp;    val line = dropWhile(Char::isWhitespace)</b>
-<b class="fc"><i class="no-highlight">28</i>&nbsp;    val (nextArgument, remaining) =</b>
-<b class="fc"><i class="no-highlight">29</i>&nbsp;        when {</b>
-<b class="fc"><i class="no-highlight">30</i>&nbsp;            line.isBlank() -&gt; null to null</b>
-<b class="fc"><i class="no-highlight">31</i>&nbsp;            line.startsWith(&quot;\&quot;&quot;) -&gt; {</b>
-<b class="fc"><i class="no-highlight">32</i>&nbsp;                val nextArgument = line.drop(1).takeWhile { it != &#39;&quot;&#39; }</b>
-<b class="fc"><i class="no-highlight">33</i>&nbsp;                val remaining = line.drop(1 + nextArgument.length + 1)</b>
-<b class="fc"><i class="no-highlight">34</i>&nbsp;                nextArgument to remaining</b>
-<i class="no-highlight">35</i>&nbsp;            }
-<i class="no-highlight">36</i>&nbsp;            else -&gt; {
-<b class="fc"><i class="no-highlight">37</i>&nbsp;                val nextArgument = line.takeWhile { !it.isWhitespace() }</b>
-<b class="fc"><i class="no-highlight">38</i>&nbsp;                val remaining = line.drop(nextArgument.length)</b>
-<b class="fc"><i class="no-highlight">39</i>&nbsp;                nextArgument to remaining</b>
-<i class="no-highlight">40</i>&nbsp;            }
-<i class="no-highlight">41</i>&nbsp;        }
-<b class="fc"><i class="no-highlight">42</i>&nbsp;    return nextArgument to remaining</b>
-<i class="no-highlight">43</i>&nbsp;}
-</div>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.testkit.test.extensions._internal
+&nbsp;
+&nbsp;import org.gradle.testkit.runner.GradleRunner
+&nbsp;
+&nbsp;internal val GradleRunner.argumentsTxt: List&lt;String&gt;
+&nbsp;    get() {
+<b class="fc">&nbsp;        val argumentsFile = projectDir.resolve(&quot;ARGUMENTS.txt&quot;)</b>
+<b class="pc">&nbsp;        return if (argumentsFile.exists()) {</b>
+<b class="fc">&nbsp;            buildList {</b>
+<b class="fc">&nbsp;                val line = argumentsFile.readLines().first()</b>
+<b class="fc">&nbsp;                var (nextArgument, remaining) = line.nextArgument()</b>
+<b class="fc">&nbsp;                nextArgument?.let(::add)</b>
+<b class="pc">&nbsp;                while (nextArgument != null || remaining != null) {</b>
+<b class="fc">&nbsp;                    val (nextArgumentWhile, remainingWhile) =</b>
+<b class="pc">&nbsp;                        remaining?.nextArgument() ?: (null to null)</b>
+<b class="fc">&nbsp;                    nextArgument = nextArgumentWhile</b>
+<b class="fc">&nbsp;                    remaining = remainingWhile</b>
+<b class="fc">&nbsp;                    nextArgument?.let(::add)</b>
+&nbsp;                }
+<b class="fc">&nbsp;            }</b>
+&nbsp;        } else {
+<b class="nc">&nbsp;            emptyList()</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;private fun String.nextArgument(): Pair&lt;String?, String?&gt; {
+<b class="fc">&nbsp;    val line = dropWhile(Char::isWhitespace)</b>
+<b class="fc">&nbsp;    val (nextArgument, remaining) =</b>
+<b class="fc">&nbsp;        when {</b>
+<b class="fc">&nbsp;            line.isBlank() -&gt; null to null</b>
+<b class="fc">&nbsp;            line.startsWith(&quot;\&quot;&quot;) -&gt; {</b>
+<b class="fc">&nbsp;                val nextArgument = line.drop(1).takeWhile { it != &#39;&quot;&#39; }</b>
+<b class="fc">&nbsp;                val remaining = line.drop(1 + nextArgument.length + 1)</b>
+<b class="fc">&nbsp;                nextArgument to remaining</b>
+&nbsp;            }
+&nbsp;            else -&gt; {
+<b class="fc">&nbsp;                val nextArgument = line.takeWhile { !it.isWhitespace() }</b>
+<b class="fc">&nbsp;                val remaining = line.drop(nextArgument.length)</b>
+<b class="fc">&nbsp;                nextArgument to remaining</b>
+&nbsp;            }
+&nbsp;        }
+<b class="fc">&nbsp;    return nextArgument to remaining</b>
+&nbsp;}
+</code>
 </pre>
 </div>
 
@@ -155,18 +156,15 @@ Current scope:     <a href="../../index.html">all classes</a>
     @*/
 
     if (!msie || msie && msie9) {
-        var codeBlock = document.getElementById('sourceCode');
-
-        if (codeBlock) {
-            hljs.highlightBlock(codeBlock);
-        }
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
     }
 })();
 </script>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-09-13 11:43</div>
+    <div style="float:right;">generated on 2022-09-20 17:22</div>
 </div>
 </body>
 </html>
