@@ -29,7 +29,8 @@ public fun Project.getProperty(name: String): String =
                     |  - ${project.rootDir}${File.separator}gradle.properties
                     |  - $userHomePath${File.separator}.gradle${File.separator}gradle.properties
                     |  
-                """.trimMargin()
+                """
+                    .trimMargin()
             }
         }
 

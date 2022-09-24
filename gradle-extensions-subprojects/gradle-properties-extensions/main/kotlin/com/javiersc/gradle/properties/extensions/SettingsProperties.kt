@@ -19,7 +19,8 @@ public fun Settings.getProperty(name: String): String =
                     |  - ${settings.settingsDir}${File.separator}gradle.properties
                     |  - $userHomePath${File.separator}.gradle${File.separator}gradle.properties
                     |  
-                """.trimMargin()
+                """
+                    .trimMargin()
             }
         }
 
