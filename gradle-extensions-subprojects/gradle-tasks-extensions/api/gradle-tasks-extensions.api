@@ -1,0 +1,5 @@
+public final class com/javiersc/gradle/tasks/extensions/TasksKt$sam$i$org_gradle_api_specs_Spec$0 : org/gradle/api/specs/Spec {
+	public fun <init> (Lkotlin/jvm/functions/Function1;)V
+	public final synthetic fun isSatisfiedBy (Ljava/lang/Object;)Z
+}
+
