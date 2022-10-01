@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="4.3">
+<file name="gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt">
+	<error line="1" column="1" severity="warning" message="File &apos;/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt&apos; with &apos;13&apos; functions detected. Defined threshold inside files is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+</file>
+<file name="gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt">
+	<error line="1" column="1" severity="warning" message="File &apos;/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt&apos; with &apos;11&apos; functions detected. Defined threshold inside files is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
+</file>
 <file name="gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt">
 	<error line="17" column="33" severity="warning" message="The function gradleTestKitTest(sandboxPath: String?, name: String, withDebug: Boolean, withPluginClasspath: Boolean, isolated: Boolean, test: GradleRunner.() -&gt; Unit) has too many parameters. The current threshold is set to 6." source="detekt.LongParameterList" />
 	<error line="135" column="16" severity="warning" message="info is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
@@ -12,12 +18,6 @@
 	<error line="177" column="16" severity="warning" message="configurationCacheProblemsWarn is returning a constant. Prefer declaring a constant instead." source="detekt.FunctionOnlyReturningConstant" />
 	<error line="11" column="23" severity="warning" message="An abstract class without an abstract member can be refactored to a concrete class." source="detekt.UnnecessaryAbstractClass" />
 </file>
-<file name="gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt">
-	<error line="1" column="1" severity="warning" message="File &apos;/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt&apos; with &apos;13&apos; functions detected. Defined threshold inside files is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
-</file>
-<file name="gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt">
-	<error line="1" column="1" severity="warning" message="File &apos;/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt&apos; with &apos;11&apos; functions detected. Defined threshold inside files is set to &apos;11&apos;" source="detekt.TooManyFunctions" />
-</file>
 <file name="gradle-extensions-subprojects/gradle-miscellanea-extensions/main/kotlin/com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTime.kt">
 	<error line="17" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
 	<error line="23" column="17" severity="warning" message="RuntimeException is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
@@ -26,10 +26,10 @@
 	<error line="21" column="21" severity="warning" message="Instead of catching for a general exception type and checking for a specific exception type, use multiple catch blocks." source="detekt.InstanceOfCheckForException" />
 	<error line="11" column="1" severity="warning" message="This comment contains &apos;TODO:&apos; that has been defined as forbidden in detekt." source="detekt.ForbiddenComment" />
 </file>
-<file name="gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/_internal/argumentsTxt.kt">
-	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
-</file>
 <file name="gradle-extensions-subprojects/gradle-delegated-properties-extensions/main/kotlin/com/javiersc/gradle/delegated/properties/extensions/DelegatedProperties.kt">
 	<error line="8" column="23" severity="warning" message="The file name &apos;DelegatedProperties&apos; does not match the name of the single top-level declaration &apos;DelegatedProperty&apos;." source="detekt.MatchingDeclarationName" />
+</file>
+<file name="gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/_internal/argumentsTxt.kt">
+	<error line="1" column="1" severity="warning" message="Package name should match the pattern: [a-z]+(\.[a-z][A-Za-z0-9]*)*" source="detekt.PackageNaming" />
 </file>
 </checkstyle>

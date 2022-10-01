@@ -2,20 +2,20 @@
   "gradleJvm": "#JAVA_HOME",
   "libraries": [
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-stdlib-jdk8",
-      "version": "1.7.10"
+      "version": "1.7.20"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.10",
-      "gradleName": "org.jetbrains.kotlin:kotlin-test:1.7.10",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
+      "gradleName": "org.jetbrains.kotlin:kotlin-test:1.7.20",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-test",
-      "version": "1.7.10"
+      "version": "1.7.20"
     },
     {
       "ideaName": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.11",
@@ -34,36 +34,36 @@
       "version": "5.4.2"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-stdlib-jdk7",
-      "version": "1.7.10"
+      "version": "1.7.20"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.10",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib:1.7.10",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-stdlib",
-      "version": "1.7.10"
+      "version": "1.7.20"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.10",
-      "gradleName": "org.jetbrains.kotlin:kotlin-test-junit5:1.7.10",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
+      "gradleName": "org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-test-junit5",
-      "version": "1.7.10"
+      "version": "1.7.20"
     },
     {
-      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10",
-      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.20",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-common:1.7.20",
       "unresolved": false,
       "groupId": "org.jetbrains.kotlin",
       "artifactId": "kotlin-stdlib-common",
-      "version": "1.7.10"
+      "version": "1.7.20"
     },
     {
       "ideaName": "Gradle: org.jetbrains:annotations:13.0",
@@ -178,20 +178,20 @@
       "version": "4.12"
     },
     {
-      "ideaName": "Gradle: org.junit.jupiter:junit-jupiter-params:5.9.0",
-      "gradleName": "org.junit.jupiter:junit-jupiter-params:5.9.0",
+      "ideaName": "Gradle: org.junit.jupiter:junit-jupiter-params:5.9.1",
+      "gradleName": "org.junit.jupiter:junit-jupiter-params:5.9.1",
       "unresolved": false,
       "groupId": "org.junit.jupiter",
       "artifactId": "junit-jupiter-params",
-      "version": "5.9.0"
+      "version": "5.9.1"
     },
     {
-      "ideaName": "Gradle: org.junit.jupiter:junit-jupiter-api:5.9.0",
-      "gradleName": "org.junit.jupiter:junit-jupiter-api:5.9.0",
+      "ideaName": "Gradle: org.junit.jupiter:junit-jupiter-api:5.9.1",
+      "gradleName": "org.junit.jupiter:junit-jupiter-api:5.9.1",
       "unresolved": false,
       "groupId": "org.junit.jupiter",
       "artifactId": "junit-jupiter-api",
-      "version": "5.9.0"
+      "version": "5.9.1"
     },
     {
       "ideaName": "Gradle: org.apiguardian:apiguardian-api:1.1.2",
@@ -202,28 +202,28 @@
       "version": "1.1.2"
     },
     {
-      "ideaName": "Gradle: org.junit.platform:junit-platform-commons:1.9.0",
-      "gradleName": "org.junit.platform:junit-platform-commons:1.9.0",
+      "ideaName": "Gradle: org.junit.platform:junit-platform-commons:1.9.1",
+      "gradleName": "org.junit.platform:junit-platform-commons:1.9.1",
       "unresolved": false,
       "groupId": "org.junit.platform",
       "artifactId": "junit-platform-commons",
-      "version": "1.9.0"
+      "version": "1.9.1"
     },
     {
-      "ideaName": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.9.0",
-      "gradleName": "org.junit.jupiter:junit-jupiter-engine:5.9.0",
+      "ideaName": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.9.1",
+      "gradleName": "org.junit.jupiter:junit-jupiter-engine:5.9.1",
       "unresolved": false,
       "groupId": "org.junit.jupiter",
       "artifactId": "junit-jupiter-engine",
-      "version": "5.9.0"
+      "version": "5.9.1"
     },
     {
-      "ideaName": "Gradle: org.junit.platform:junit-platform-engine:1.9.0",
-      "gradleName": "org.junit.platform:junit-platform-engine:1.9.0",
+      "ideaName": "Gradle: org.junit.platform:junit-platform-engine:1.9.1",
+      "gradleName": "org.junit.platform:junit-platform-engine:1.9.1",
       "unresolved": false,
       "groupId": "org.junit.platform",
       "artifactId": "junit-platform-engine",
-      "version": "1.9.0"
+      "version": "1.9.1"
     }
   ]
 }

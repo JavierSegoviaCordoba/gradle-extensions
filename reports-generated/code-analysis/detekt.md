@@ -14,11 +14,11 @@
 
 ## Complexity Report
 
-* 1,198 lines of code (loc)
+* 1,192 lines of code (loc)
 
-* 991 source lines of code (sloc)
+* 986 source lines of code (sloc)
 
-* 703 logical lines of code (lloc)
+* 700 logical lines of code (lloc)
 
 * 1 comment lines of code (cloc)
 
@@ -30,7 +30,7 @@
 
 * 0% comment source ratio
 
-* 197 mcc per 1,000 lloc
+* 198 mcc per 1,000 lloc
 
 * 28 code smells per 1,000 lloc
 
@@ -407,4 +407,4 @@ An abstract class without an abstract member can be refactored to a concrete cla
 
 ```
 
-generated with [detekt version 1.21.0](https://detekt.dev/) on 2022-09-24 22:59:03 UTC
+generated with [detekt version 1.21.0](https://detekt.dev/) on 2022-10-01 15:04:15 UTC
