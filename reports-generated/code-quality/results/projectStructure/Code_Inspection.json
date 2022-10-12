@@ -447,7 +447,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -475,7 +475,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -491,7 +491,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -507,7 +507,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -841,7 +841,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -877,11 +877,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -901,7 +901,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -1270,7 +1270,7 @@
           "type": "Module"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -1318,11 +1318,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -1342,7 +1342,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -1702,7 +1702,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -1730,7 +1730,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -1746,7 +1746,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -1762,7 +1762,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2054,7 +2054,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2082,7 +2082,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2098,7 +2098,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2114,7 +2114,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2406,7 +2406,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2434,7 +2434,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2450,7 +2450,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2466,7 +2466,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2758,7 +2758,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2786,7 +2786,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2802,7 +2802,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -2818,7 +2818,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3110,7 +3110,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3138,7 +3138,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3154,7 +3154,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3170,7 +3170,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3468,7 +3468,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3496,7 +3496,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3512,7 +3512,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3528,7 +3528,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3820,7 +3820,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3848,7 +3848,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3864,7 +3864,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -3880,7 +3880,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -4172,7 +4172,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -4200,7 +4200,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -4216,7 +4216,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -4232,7 +4232,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -4556,7 +4556,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -4572,11 +4572,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
           "type": "Library"
         },
         {
@@ -4600,7 +4600,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: io.kotest:kotest-common-jvm:5.4.2",
+          "name": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
           "type": "Library"
         },
         {
