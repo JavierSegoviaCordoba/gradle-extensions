@@ -18,20 +18,20 @@
       "version": "1.7.20"
     },
     {
-      "ideaName": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.11",
-      "gradleName": "com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.11",
+      "ideaName": "Gradle: com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
+      "gradleName": "com.javiersc.kotlin:kotlin-stdlib-jvm:0.1.0-alpha.12",
       "unresolved": false,
       "groupId": "com.javiersc.kotlin",
       "artifactId": "kotlin-stdlib-jvm",
-      "version": "0.1.0-alpha.11"
+      "version": "0.1.0-alpha.12"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.1",
-      "gradleName": "io.kotest:kotest-assertions-core-jvm:5.5.1",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-core-jvm:5.5.4",
+      "gradleName": "io.kotest:kotest-assertions-core-jvm:5.5.4",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-core-jvm",
-      "version": "5.5.1"
+      "version": "5.5.4"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
@@ -82,12 +82,12 @@
       "version": "5.6.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.1",
-      "gradleName": "io.kotest:kotest-assertions-shared-jvm:5.5.1",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-shared-jvm:5.5.4",
+      "gradleName": "io.kotest:kotest-assertions-shared-jvm:5.5.4",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-shared-jvm",
-      "version": "5.5.1"
+      "version": "5.5.4"
     },
     {
       "ideaName": "Gradle: org.junit.platform:junit-platform-commons:1.6.0",
@@ -114,12 +114,12 @@
       "version": "1.2.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.1",
-      "gradleName": "io.kotest:kotest-assertions-api-jvm:5.5.1",
+      "ideaName": "Gradle: io.kotest:kotest-assertions-api-jvm:5.5.4",
+      "gradleName": "io.kotest:kotest-assertions-api-jvm:5.5.4",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-assertions-api-jvm",
-      "version": "5.5.1"
+      "version": "5.5.4"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.4",
@@ -146,12 +146,12 @@
       "version": "5.6.0"
     },
     {
-      "ideaName": "Gradle: io.kotest:kotest-common-jvm:5.5.1",
-      "gradleName": "io.kotest:kotest-common-jvm:5.5.1",
+      "ideaName": "Gradle: io.kotest:kotest-common-jvm:5.5.4",
+      "gradleName": "io.kotest:kotest-common-jvm:5.5.4",
       "unresolved": false,
       "groupId": "io.kotest",
       "artifactId": "kotest-common-jvm",
-      "version": "5.5.1"
+      "version": "5.5.4"
     },
     {
       "ideaName": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
