@@ -24,7 +24,7 @@
 
 * 139 cyclomatic complexity (mcc)
 
-* 24 cognitive complexity
+* 29 cognitive complexity
 
 * 20 number of total code smells
 
@@ -387,7 +387,7 @@ configurationCacheProblemsWarn is returning a constant. Prefer declaring a const
 
 ### style, UnnecessaryAbstractClass (1)
 
-An abstract class is unnecessary and can be refactored. An abstract class should have both abstract and concrete properties or functions. An abstract class without a concrete member can be refactored to an interface. An abstract class without an abstract member can be refactored to a concrete class.
+An abstract class is unnecessary. May be refactored to an interface or to a concrete class.
 
 [Documentation](https://detekt.dev/docs/rules/style#unnecessaryabstractclass)
 
@@ -407,4 +407,4 @@ An abstract class without an abstract member can be refactored to a concrete cla
 
 ```
 
-generated with [detekt version 1.21.0](https://detekt.dev/) on 2022-11-25 15:37:45 UTC
+generated with [detekt version 1.22.0](https://detekt.dev/) on 2022-11-28 10:29:45 UTC
