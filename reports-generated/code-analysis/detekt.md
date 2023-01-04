@@ -2,7 +2,7 @@
 
 ## Metrics
 
-* 73 number of properties
+* 81 number of properties
 
 * 86 number of functions
 
@@ -10,15 +10,15 @@
 
 * 13 number of packages
 
-* 35 number of kt files
+* 36 number of kt files
 
 ## Complexity Report
 
-* 1,192 lines of code (loc)
+* 1,233 lines of code (loc)
 
-* 986 source lines of code (sloc)
+* 1,016 source lines of code (sloc)
 
-* 700 logical lines of code (lloc)
+* 717 logical lines of code (lloc)
 
 * 1 comment lines of code (cloc)
 
@@ -30,9 +30,9 @@
 
 * 0% comment source ratio
 
-* 198 mcc per 1,000 lloc
+* 193 mcc per 1,000 lloc
 
-* 28 code smells per 1,000 lloc
+* 27 code smells per 1,000 lloc
 
 ## Findings (20)
 
@@ -407,4 +407,4 @@ An abstract class without an abstract member can be refactored to a concrete cla
 
 ```
 
-generated with [detekt version 1.22.0](https://detekt.dev/) on 2022-11-28 10:29:45 UTC
+generated with [detekt version 1.22.0](https://detekt.dev/) on 2023-01-04 18:39:12 UTC

@@ -73,15 +73,15 @@
       ]
     },
     {
-      "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
-      "roots": [
-        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test/1.7.20/1cfae9a58285c1bafb4ad0bd1b27406d97a2623c/kotlin-test-1.7.20.jar!/"
-      ]
-    },
-    {
       "name": "Gradle: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20",
       "roots": [
         "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-junit5/1.7.20/262797b12ea731ca9a58a5a992d5deb8a55e0834/kotlin-test-junit5-1.7.20.jar!/"
+      ]
+    },
+    {
+      "name": "Gradle: org.jetbrains.kotlin:kotlin-test:1.7.20",
+      "roots": [
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test/1.7.20/1cfae9a58285c1bafb4ad0bd1b27406d97a2623c/kotlin-test-1.7.20.jar!/"
       ]
     },
     {
@@ -172,6 +172,12 @@
       "name": "Gradle: org.junit.platform:junit-platform-engine:1.6.0",
       "roots": [
         "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.6.0/a3a6ec96c010875444b3ca31828108093758ec00/junit-platform-engine-1.6.0.jar!/"
+      ]
+    },
+    {
+      "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+      "roots": [
+        "jar://$PROJECT_DIR$/../cache/gradle/caches/modules-2/files-2.1/com.javiersc.semver/semver-core-jvm/0.1.0-beta.12/6e127449706f896ab73eeea1fec283467a35ac9c/semver-core-jvm-0.1.0-beta.12.jar!/"
       ]
     }
   ]

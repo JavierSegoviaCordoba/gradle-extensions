@@ -224,6 +224,14 @@
       "groupId": "org.junit.platform",
       "artifactId": "junit-platform-engine",
       "version": "1.9.1"
+    },
+    {
+      "ideaName": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+      "gradleName": "com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+      "unresolved": false,
+      "groupId": "com.javiersc.semver",
+      "artifactId": "semver-core-jvm",
+      "version": "0.1.0-beta.12"
     }
   ]
 }
