@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > SettingsPropertiesKt</title>
+  <title>Coverage Report > ProjectPropertiesKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -21,7 +21,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">com.javiersc.gradle.properties.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: SettingsPropertiesKt (com.javiersc.gradle.properties.extensions)</h1>
+<h1>Coverage Summary for Class: ProjectPropertiesKt (com.javiersc.gradle.properties.extensions)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -48,45 +48,45 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">SettingsPropertiesKt</td>
+  <td class="name">ProjectPropertiesKt</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    7.7%
   </span>
   <span class="absValue">
-    (0/11)
+    (1/13)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    6.2%
   </span>
   <span class="absValue">
-    (0/24)
+    (2/32)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    7.9%
   </span>
   <span class="absValue">
-    (0/24)
+    (3/38)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    11.6%
   </span>
   <span class="absValue">
-    (0/197)
+    (39/337)
   </span>
 </td>
 </tr>
@@ -101,22 +101,32 @@ Current scope:     <a href="../../index.html">all classes</a>
 <code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.properties.extensions
 &nbsp;
 &nbsp;import java.io.File
-&nbsp;import org.gradle.api.initialization.Settings
+&nbsp;import org.gradle.api.Project
 &nbsp;
-&nbsp;public fun Settings.getProperty(name: String): String =
-<b class="nc">&nbsp;    localProperties?.getProperty(name)</b>
-<b class="nc">&nbsp;        ?: localProperties?.getProperty(name.toSnakeCase()) ?: System.getenv(name)</b>
-<b class="nc">&nbsp;            ?: System.getenv(name.toSnakeCase()) ?: providers.gradleProperty(name).orNull</b>
+&nbsp;public fun Project.getProperty(name: String): String =
+<b class="nc">&nbsp;    localProperties?.getProperty(name)?.also {</b>
+<b class="nc">&nbsp;        logger.debug(&quot;Property $name found in the project `local.properties` file&quot;)</b>
+<b class="nc">&nbsp;    }</b>
+<b class="nc">&nbsp;        ?: localProperties?.getProperty(name.toSnakeCase())</b>
+<b class="nc">&nbsp;            ?: System.getenv(name)?.also {</b>
+<b class="nc">&nbsp;            logger.debug(&quot;Property $name found in the root `local.properties`file&quot;)</b>
+<b class="nc">&nbsp;        }</b>
+<b class="nc">&nbsp;            ?: System.getenv(name.toSnakeCase())</b>
+<b class="nc">&nbsp;            ?: providers.gradleProperty(name).orNull?.also {</b>
+<b class="nc">&nbsp;            logger.debug(&quot;Property $name found in the environment variables&quot;)</b>
+<b class="nc">&nbsp;        }</b>
 <b class="nc">&nbsp;            ?: providers.gradleProperty(name.toSnakeCase()).orNull.run {</b>
 <b class="nc">&nbsp;            checkNotNull(this) {</b>
-<b class="nc">&nbsp;                val settings = this@getProperty</b>
+<b class="nc">&nbsp;                logger.debug(&quot;Property $name found in the `gradle.properties` file&quot;)</b>
+<b class="nc">&nbsp;                val project = this@getProperty</b>
 <b class="nc">&nbsp;                val userHomePath = System.getProperty(&quot;user.home&quot;)</b>
 <b class="nc">&nbsp;                &quot;&quot;&quot;</b>
 <b class="nc">&nbsp;                    |The property `$name` is not available in any of the next sources:</b>
-<b class="nc">&nbsp;                    |  - ${settings.settingsDir}${File.separator}local.properties</b>
-<b class="nc">&nbsp;                    |  - ${settings.rootDir}${File.separator}local.properties</b>
+<b class="nc">&nbsp;                    |  - ${project.projectDir}${File.separator}local.properties</b>
+<b class="nc">&nbsp;                    |  - ${project.rootDir}${File.separator}local.properties</b>
 &nbsp;                    |  - Environment variable
-<b class="nc">&nbsp;                    |  - ${settings.settingsDir}${File.separator}gradle.properties</b>
+<b class="nc">&nbsp;                    |  - ${project.projectDir}${File.separator}gradle.properties</b>
+<b class="nc">&nbsp;                    |  - ${project.rootDir}${File.separator}gradle.properties</b>
 <b class="nc">&nbsp;                    |  - $userHomePath${File.separator}.gradle${File.separator}gradle.properties</b>
 &nbsp;                    |  
 &nbsp;                &quot;&quot;&quot;
@@ -124,29 +134,36 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;            }
 &nbsp;        }
 &nbsp;
-&nbsp;public fun Settings.getPropertyOrNull(name: String): String? =
+&nbsp;public fun Project.getPropertyOrNull(name: String): String? =
 <b class="nc">&nbsp;    runCatching { getProperty(name) }.getOrNull()</b>
 &nbsp;
-<b class="nc">&nbsp;public fun Settings.getDoubleProperty(name: String): Double = getProperty(name).toDouble()</b>
+<b class="nc">&nbsp;public fun Project.getDoubleProperty(name: String): Double = getProperty(name).toDouble()</b>
 &nbsp;
-&nbsp;public fun Settings.getDoublePropertyOrNull(name: String): Double? =
+&nbsp;public fun Project.getDoublePropertyOrNull(name: String): Double? =
 <b class="nc">&nbsp;    getPropertyOrNull(name)?.toDoubleOrNull()</b>
 &nbsp;
-<b class="nc">&nbsp;public fun Settings.getIntProperty(name: String): Int = getProperty(name).toInt()</b>
+<b class="nc">&nbsp;public fun Project.getIntProperty(name: String): Int = getProperty(name).toInt()</b>
 &nbsp;
-&nbsp;public fun Settings.getIntPropertyOrNull(name: String): Int? =
-<b class="nc">&nbsp;    getPropertyOrNull(name)?.toIntOrNull()</b>
+<b class="nc">&nbsp;public fun Project.getIntPropertyOrNull(name: String): Int? = getPropertyOrNull(name)?.toIntOrNull()</b>
 &nbsp;
-<b class="nc">&nbsp;public fun Settings.getLongProperty(name: String): Long = getProperty(name).toLong()</b>
+<b class="nc">&nbsp;public fun Project.getLongProperty(name: String): Long = getProperty(name).toLong()</b>
 &nbsp;
-&nbsp;public fun Settings.getLongPropertyOrNull(name: String): Long? =
+&nbsp;public fun Project.getLongPropertyOrNull(name: String): Long? =
 <b class="nc">&nbsp;    getPropertyOrNull(name)?.toLongOrNull()</b>
 &nbsp;
-<b class="nc">&nbsp;public fun Settings.getBooleanProperty(name: String): Boolean = getPropertyOrNull(name).toBoolean()</b>
+<b class="nc">&nbsp;public fun Project.getBooleanProperty(name: String): Boolean = getPropertyOrNull(name).toBoolean()</b>
 &nbsp;
-<b class="nc">&nbsp;public fun Settings.getStringProperty(name: String): String = getProperty(name)</b>
+&nbsp;public fun Project.getBooleanPropertyOrNull(name: String): Boolean? =
+<b class="nc">&nbsp;    getPropertyOrNull(name)?.toBoolean()</b>
 &nbsp;
-<b class="nc">&nbsp;public fun Settings.getStringPropertyOrNull(name: String): String? = getPropertyOrNull(name)</b>
+<b class="nc">&nbsp;public fun Project.getStringProperty(name: String): String = getProperty(name)</b>
+&nbsp;
+<b class="nc">&nbsp;public fun Project.getStringPropertyOrNull(name: String): String? = getPropertyOrNull(name)</b>
+&nbsp;
+&nbsp;internal fun String.toSnakeCase(): String =
+<b class="fc">&nbsp;    map { char -&gt; if (char.isUpperCase()) &quot;_$char&quot; else char.uppercaseChar() }</b>
+<b class="fc">&nbsp;        .joinToString(&quot;&quot;)</b>
+<b class="fc">&nbsp;        .replace(&quot;.&quot;, &quot;_&quot;)</b>
 </code>
 </pre>
 </div>
@@ -170,7 +187,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-01-04 19:23</div>
+    <div style="float:right;">generated on 2023-01-04 20:32</div>
 </div>
 </body>
 </html>

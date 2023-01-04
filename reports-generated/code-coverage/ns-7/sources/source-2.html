@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > ProjectPropertiesKt</title>
+  <title>Coverage Report > LocalPropertiesKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -21,7 +21,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">com.javiersc.gradle.properties.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: ProjectPropertiesKt (com.javiersc.gradle.properties.extensions)</h1>
+<h1>Coverage Summary for Class: LocalPropertiesKt (com.javiersc.gradle.properties.extensions)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -48,45 +48,45 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">ProjectPropertiesKt</td>
+  <td class="name">LocalPropertiesKt</td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    0%
   </span>
   <span class="absValue">
-    (1/1)
+    (0/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    7.7%
+    0%
   </span>
   <span class="absValue">
-    (1/13)
+    (0/2)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    6.2%
+    0%
   </span>
   <span class="absValue">
-    (2/32)
+    (0/8)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    7.9%
+    0%
   </span>
   <span class="absValue">
-    (3/38)
+    (0/16)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    11.6%
+    0%
   </span>
   <span class="absValue">
-    (39/337)
+    (0/155)
   </span>
 </td>
 </tr>
@@ -101,69 +101,39 @@ Current scope:     <a href="../../index.html">all classes</a>
 <code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.properties.extensions
 &nbsp;
 &nbsp;import java.io.File
+&nbsp;import java.util.Properties
 &nbsp;import org.gradle.api.Project
+&nbsp;import org.gradle.api.initialization.Settings
 &nbsp;
-&nbsp;public fun Project.getProperty(name: String): String =
-<b class="nc">&nbsp;    localProperties?.getProperty(name)?.also {</b>
-<b class="nc">&nbsp;        logger.debug(&quot;Property $name found in the project `local.properties` file&quot;)</b>
-<b class="nc">&nbsp;    }</b>
-<b class="nc">&nbsp;        ?: localProperties?.getProperty(name.toSnakeCase())</b>
-<b class="nc">&nbsp;            ?: System.getenv(name)?.also {</b>
-<b class="nc">&nbsp;            logger.debug(&quot;Property $name found in the root `local.properties`file&quot;)</b>
-<b class="nc">&nbsp;        }</b>
-<b class="nc">&nbsp;            ?: System.getenv(name.toSnakeCase())</b>
-<b class="nc">&nbsp;            ?: providers.gradleProperty(name).orNull?.also {</b>
-<b class="nc">&nbsp;            logger.debug(&quot;Property $name found in the environment variables&quot;)</b>
-<b class="nc">&nbsp;        }</b>
-<b class="nc">&nbsp;            ?: providers.gradleProperty(name.toSnakeCase()).orNull.run {</b>
-<b class="nc">&nbsp;            checkNotNull(this) {</b>
-<b class="nc">&nbsp;                logger.debug(&quot;Property $name found in the `gradle.properties` file&quot;)</b>
-<b class="nc">&nbsp;                val project = this@getProperty</b>
-<b class="nc">&nbsp;                val userHomePath = System.getProperty(&quot;user.home&quot;)</b>
-<b class="nc">&nbsp;                &quot;&quot;&quot;</b>
-<b class="nc">&nbsp;                    |The property `$name` is not available in any of the next sources:</b>
-<b class="nc">&nbsp;                    |  - ${project.projectDir}${File.separator}local.properties</b>
-<b class="nc">&nbsp;                    |  - ${project.rootDir}${File.separator}local.properties</b>
-&nbsp;                    |  - Environment variable
-<b class="nc">&nbsp;                    |  - ${project.projectDir}${File.separator}gradle.properties</b>
-<b class="nc">&nbsp;                    |  - ${project.rootDir}${File.separator}gradle.properties</b>
-<b class="nc">&nbsp;                    |  - $userHomePath${File.separator}.gradle${File.separator}gradle.properties</b>
-&nbsp;                    |  
-&nbsp;                &quot;&quot;&quot;
-<b class="nc">&nbsp;                    .trimMargin()</b>
+&nbsp;public val Project.localProperties: Properties?
+&nbsp;    get() {
+<b class="nc">&nbsp;        val projectLocalProps: File = file(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        val rootProjectLocalProps: File = rootProject.file(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        return when {</b>
+<b class="nc">&nbsp;            projectLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { projectLocalProps.inputStream().use(::load) }</b>
 &nbsp;            }
+<b class="nc">&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { rootProjectLocalProps.inputStream().use(::load) }</b>
+&nbsp;            }
+<b class="nc">&nbsp;            else -&gt; null</b>
 &nbsp;        }
+&nbsp;    }
 &nbsp;
-&nbsp;public fun Project.getPropertyOrNull(name: String): String? =
-<b class="nc">&nbsp;    runCatching { getProperty(name) }.getOrNull()</b>
-&nbsp;
-<b class="nc">&nbsp;public fun Project.getDoubleProperty(name: String): Double = getProperty(name).toDouble()</b>
-&nbsp;
-&nbsp;public fun Project.getDoublePropertyOrNull(name: String): Double? =
-<b class="nc">&nbsp;    getPropertyOrNull(name)?.toDoubleOrNull()</b>
-&nbsp;
-<b class="nc">&nbsp;public fun Project.getIntProperty(name: String): Int = getProperty(name).toInt()</b>
-&nbsp;
-<b class="nc">&nbsp;public fun Project.getIntPropertyOrNull(name: String): Int? = getPropertyOrNull(name)?.toIntOrNull()</b>
-&nbsp;
-<b class="nc">&nbsp;public fun Project.getLongProperty(name: String): Long = getProperty(name).toLong()</b>
-&nbsp;
-&nbsp;public fun Project.getLongPropertyOrNull(name: String): Long? =
-<b class="nc">&nbsp;    getPropertyOrNull(name)?.toLongOrNull()</b>
-&nbsp;
-<b class="nc">&nbsp;public fun Project.getBooleanProperty(name: String): Boolean = getPropertyOrNull(name).toBoolean()</b>
-&nbsp;
-&nbsp;public fun Project.getBooleanPropertyOrNull(name: String): Boolean? =
-<b class="nc">&nbsp;    getPropertyOrNull(name)?.toBoolean()</b>
-&nbsp;
-<b class="nc">&nbsp;public fun Project.getStringProperty(name: String): String = getProperty(name)</b>
-&nbsp;
-<b class="nc">&nbsp;public fun Project.getStringPropertyOrNull(name: String): String? = getPropertyOrNull(name)</b>
-&nbsp;
-&nbsp;internal fun String.toSnakeCase(): String =
-<b class="fc">&nbsp;    map { char -&gt; if (char.isUpperCase()) &quot;_$char&quot; else char.uppercaseChar() }</b>
-<b class="fc">&nbsp;        .joinToString(&quot;&quot;)</b>
-<b class="fc">&nbsp;        .replace(&quot;.&quot;, &quot;_&quot;)</b>
+&nbsp;public val Settings.localProperties: Properties?
+&nbsp;    get() {
+<b class="nc">&nbsp;        val settingsLocalProps: File = settingsDir.resolve(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        val rootProjectLocalProps: File = rootDir.resolve(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        return when {</b>
+<b class="nc">&nbsp;            settingsLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { load(settingsLocalProps.inputStream()) }</b>
+&nbsp;            }
+<b class="nc">&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { load(rootProjectLocalProps.inputStream()) }</b>
+&nbsp;            }
+<b class="nc">&nbsp;            else -&gt; null</b>
+&nbsp;        }
+&nbsp;    }
 </code>
 </pre>
 </div>
@@ -187,7 +157,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-01-04 19:23</div>
+    <div style="float:right;">generated on 2023-01-04 20:32</div>
 </div>
 </body>
 </html>
