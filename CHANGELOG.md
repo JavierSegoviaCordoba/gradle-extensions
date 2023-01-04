@@ -4,16 +4,17 @@
 
 ### Added
 
-`Project.isAlpha: Provider<Boolean>` extension
-`Project.isNotAlpha: Provider<Boolean>` extension
-`Project.isBeta: Provider<Boolean>` extension
-`Project.isNotBeta: Provider<Boolean>` extension
-`Project.isDev: Provider<Boolean>` extension
-`Project.isNotDev: Provider<Boolean>` extension
-`Project.isRC: Provider<Boolean>` extension
-`Project.isNotRC: Provider<Boolean>` extension
-`Project.isSnapshot: Provider<Boolean>` extension
-`Project.isNotSnapshot: Provider<Boolean>` extension
+- `Project.isAlpha: Provider<Boolean>` extension
+- `Project.isNotAlpha: Provider<Boolean>` extension
+- `Project.isBeta: Provider<Boolean>` extension
+- `Project.isNotBeta: Provider<Boolean>` extension
+- `Project.isDev: Provider<Boolean>` extension
+- `Project.isNotDev: Provider<Boolean>` extension
+- `Project.isRC: Provider<Boolean>` extension
+- `Project.isNotRC: Provider<Boolean>` extension
+- `Project.isSnapshot: Provider<Boolean>` extension
+- `Project.isNotSnapshot: Provider<Boolean>` extension
+- `Project.property(crossinline block: Project.() -> T): Property<T>` extension
 
 ### Changed
 
