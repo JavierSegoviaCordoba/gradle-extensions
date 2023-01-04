@@ -16,6 +16,8 @@ hubdle {
                 dependencies {
                     api(gradleKotlinDsl())
                     api(javierscKotlinStdlib())
+
+                    implementation(libs.javiersc.semver.core)
                 }
             }
         }

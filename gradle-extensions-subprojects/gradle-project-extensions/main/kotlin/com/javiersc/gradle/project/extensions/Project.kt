@@ -10,9 +10,3 @@ public val Project.module: String
 
 public val Project.library: String
     get() = "$group:$name:$version"
-
-public val Project.isSnapshot: Boolean
-    get() = version.toString().endsWith("-SNAPSHOT", ignoreCase = true)
-
-public val Project.isNotSnapshot: Boolean
-    get() = !isSnapshot

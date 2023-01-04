@@ -16,12 +16,12 @@ println("root - module: $module")
 
 println("root - library: $library")
 
-println("root(${project.version}) - isSnapshot: $isSnapshot")
+println("root(${project.version}) - isSnapshot: ${isSnapshot.get()}")
 
-println("root(${project.version}) - isSnapshot: $isNotSnapshot")
+println("root(${project.version}) - isSnapshot: ${isNotSnapshot.get()}")
 
 version = "1.0.0-SNAPSHOT"
 
-println("root(${project.version}) - isSnapshot: $isSnapshot")
+println("root(${project.version}) - isSnapshot: ${isSnapshot.get()}")
 
-println("root(${project.version}) - isSnapshot: $isNotSnapshot")
+println("root(${project.version}) - isSnapshot: ${isNotSnapshot.get()}")
