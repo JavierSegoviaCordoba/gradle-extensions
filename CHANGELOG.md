@@ -16,6 +16,7 @@
 - `Project.isNotSnapshot: Provider<Boolean>` extension
 - `Project.property(crossinline block: Project.() -> T): Property<T>` extension
 - `Project.listProperty(crossinline block: Project.() -> List<T>): ListProperty<T>` extension
+- `Project.setProperty(crossinline block: Project.() -> Set<T>): SetProperty<T>` extension
 
 ### Changed
 
