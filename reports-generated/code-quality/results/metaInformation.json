@@ -7,12 +7,12 @@
     "vcs": {
       "sarifIdea": {
         "repositoryUri": "https://github.com/JavierSegoviaCordoba/gradle-extensions",
-        "revisionId": "465f2a96fc9fe416c24f6068bb4533a33b537684",
+        "revisionId": "0fb9942c54e0684c498c9302051160879f830a23",
         "branch": "main"
       }
     },
     "deviceId": "200820300000000-50c8-1a29-af5a-6292a9c78008",
-    "jobUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions/actions/runs/3841385714",
+    "jobUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions/actions/runs/3848862666",
     "repoUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions"
   }
 }
