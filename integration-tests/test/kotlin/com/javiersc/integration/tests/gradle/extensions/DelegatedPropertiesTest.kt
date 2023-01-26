@@ -1,10 +1,10 @@
 package com.javiersc.integration.tests.gradle.extensions
 
-import com.javiersc.gradle.testkit.test.extensions.GradleTest
+import com.javiersc.gradle.testkit.test.extensions.GradleTestKitTest
 import io.kotest.matchers.string.shouldContain
 import kotlin.test.Test
 
-class DelegatedPropertiesTest : GradleTest() {
+class DelegatedPropertiesTest : GradleTestKitTest() {
 
     @Test
     fun `1`() {

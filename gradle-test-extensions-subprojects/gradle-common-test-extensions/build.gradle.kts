@@ -16,11 +16,9 @@ hubdle {
                 main {
                     dependencies {
                         api(gradleKotlinDsl())
-                        api(gradleTestKit())
                         api(javierscKotlinStdlib())
                         api(junitJupiterApi())
                         api(junitJupiterParams())
-                        api(projects.gradleTestExtensionsSubprojects.gradleCommonTestExtensions)
                     }
                 }
             }

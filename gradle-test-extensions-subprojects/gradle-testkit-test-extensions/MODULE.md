@@ -10,12 +10,16 @@ dependencies {
 
 ### Usage
 
+### Usage
+
 ```kotlin
-gradleTestKitTest {
-    gradlew("someTask")
-    
-    withArguments("someTaskOther")
-    testBuildCache()
-    testConfigurationCache()
+class FooTest : GradleTestKitTest() {
+
+    @Test
+    fun test() {
+        gradleTestKitTest {
+            // Do tests
+        }
+    }
 }
 ```

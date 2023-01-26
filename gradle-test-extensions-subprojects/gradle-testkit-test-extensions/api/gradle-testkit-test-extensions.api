@@ -1,42 +1,95 @@
-public abstract class com/javiersc/gradle/testkit/test/extensions/GradleTest {
+public class com/javiersc/gradle/testkit/test/extensions/GradleTestKitTest : com/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi {
 	public fun <init> ()V
-	public final fun andWithBuildCache (Lorg/gradle/testkit/runner/GradleRunner;)V
-	public final fun andWithConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;)V
-	public final fun andWithConfigurationCacheProblemsWarn (Lorg/gradle/testkit/runner/GradleRunner;)V
-	public final fun andWithInfo (Lorg/gradle/testkit/runner/GradleRunner;)V
-	public final fun andWithNoBuildCache (Lorg/gradle/testkit/runner/GradleRunner;)V
-	public final fun andWithNoConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;)V
-	public final fun andWithProjectProperty (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;)V
-	public final fun andWithScan (Lorg/gradle/testkit/runner/GradleRunner;)V
-	public final fun andWithStacktrace (Lorg/gradle/testkit/runner/GradleRunner;)V
-	public final fun andWithSystemProperty (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;)V
-	public final fun buildCache ()Ljava/lang/String;
-	public final fun clean (Lorg/gradle/testkit/runner/GradleRunner;)Lorg/gradle/testkit/runner/BuildResult;
-	public final fun cleanBuildDirectory (Lorg/gradle/testkit/runner/GradleRunner;)V
-	public final fun configurationCache ()Ljava/lang/String;
-	public final fun configurationCacheProblemsWarn ()Ljava/lang/String;
-	public final fun getOutputTrimmed (Lorg/gradle/testkit/runner/BuildResult;)Ljava/lang/String;
-	public final fun gradleTest (Ljava/lang/String;Ljava/lang/String;Lorg/gradle/api/Project;Ljava/io/File;Lkotlin/jvm/functions/Function1;)V
-	public static synthetic fun gradleTest$default (Lcom/javiersc/gradle/testkit/test/extensions/GradleTest;Ljava/lang/String;Ljava/lang/String;Lorg/gradle/api/Project;Ljava/io/File;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
-	public final fun gradleTestKitTest (Ljava/lang/String;Ljava/lang/String;ZZZLkotlin/jvm/functions/Function1;)V
-	public static synthetic fun gradleTestKitTest$default (Lcom/javiersc/gradle/testkit/test/extensions/GradleTest;Ljava/lang/String;Ljava/lang/String;ZZZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
-	public final fun gradlew (Lorg/gradle/testkit/runner/GradleRunner;[Ljava/lang/String;)Lorg/gradle/testkit/runner/BuildResult;
-	public final fun gradlewArgumentFromTXT (Lorg/gradle/testkit/runner/GradleRunner;[Ljava/lang/String;)Lorg/gradle/testkit/runner/BuildResult;
-	public final fun info ()Ljava/lang/String;
-	public final fun noBuildCache ()Ljava/lang/String;
-	public final fun noConfigurationCache ()Ljava/lang/String;
-	public final fun projectProperty (Ljava/lang/String;)Ljava/lang/String;
-	public final fun scan ()Ljava/lang/String;
-	public final fun stacktrace ()Ljava/lang/String;
-	public final fun systemProperty (Ljava/lang/String;)Ljava/lang/String;
-	public final fun testBuildCache (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
-	public static synthetic fun testBuildCache$default (Lcom/javiersc/gradle/testkit/test/extensions/GradleTest;Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
-	public final fun testConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;Lorg/gradle/testkit/runner/TaskOutcome;Ljava/lang/String;)V
-	public static synthetic fun testConfigurationCache$default (Lcom/javiersc/gradle/testkit/test/extensions/GradleTest;Lorg/gradle/testkit/runner/GradleRunner;Lorg/gradle/testkit/runner/TaskOutcome;Ljava/lang/String;ILjava/lang/Object;)V
-	public final fun withArgumentsFromTXT (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public fun andWithBuildCache (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public fun andWithConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public fun andWithConfigurationCacheProblemsWarn (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public fun andWithInfo (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public fun andWithNoBuildCache (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public fun andWithNoConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public fun andWithProjectProperty (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;)V
+	public fun andWithScan (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public fun andWithStacktrace (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public fun andWithSystemProperty (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;)V
+	public fun buildCache ()Ljava/lang/String;
+	public fun buildValidPathName (Ljava/lang/String;)Ljava/lang/String;
+	public fun clean (Lorg/gradle/testkit/runner/GradleRunner;)Lorg/gradle/testkit/runner/BuildResult;
+	public fun cleanBuildDirectory (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public fun configurationCache ()Ljava/lang/String;
+	public fun configurationCacheProblemsWarn ()Ljava/lang/String;
+	public fun getOutputTrimmed (Lorg/gradle/testkit/runner/BuildResult;)Ljava/lang/String;
+	public fun gradleTestKitTest (Ljava/lang/String;Ljava/lang/String;ZZZLcom/javiersc/gradle/testkit/test/extensions/TestKitTest;)V
+	public fun gradlew (Lorg/gradle/testkit/runner/GradleRunner;[Ljava/lang/String;)Lorg/gradle/testkit/runner/BuildResult;
+	public fun gradlewArgumentFromTXT (Lorg/gradle/testkit/runner/GradleRunner;[Ljava/lang/String;)Lorg/gradle/testkit/runner/BuildResult;
+	public fun info ()Ljava/lang/String;
+	public fun noBuildCache ()Ljava/lang/String;
+	public fun noConfigurationCache ()Ljava/lang/String;
+	public fun projectProperty (Ljava/lang/String;)Ljava/lang/String;
+	public fun resourceFile (Ljava/lang/String;)Ljava/io/File;
+	public fun scan ()Ljava/lang/String;
+	public fun stacktrace ()Ljava/lang/String;
+	public fun systemProperty (Ljava/lang/String;)Ljava/lang/String;
+	public fun testBuildCache (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;Lcom/javiersc/gradle/testkit/test/extensions/TestKitTest;)V
+	public fun testConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;Lorg/gradle/testkit/runner/TaskOutcome;Ljava/lang/String;)V
+	public fun withArgumentsFromTXT (Lorg/gradle/testkit/runner/GradleRunner;)V
 }
 
-public final class com/javiersc/gradle/testkit/test/extensions/ResourceFileKt {
-	public static final fun resourceFile (Ljava/lang/String;)Ljava/io/File;
+public abstract interface class com/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi : com/javiersc/gradle/common/test/extensions/GradleCommonTestApi {
+	public abstract fun andWithBuildCache (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public abstract fun andWithConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public abstract fun andWithConfigurationCacheProblemsWarn (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public abstract fun andWithInfo (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public abstract fun andWithNoBuildCache (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public abstract fun andWithNoConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public abstract fun andWithProjectProperty (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;)V
+	public abstract fun andWithScan (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public abstract fun andWithStacktrace (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public abstract fun andWithSystemProperty (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;)V
+	public abstract fun clean (Lorg/gradle/testkit/runner/GradleRunner;)Lorg/gradle/testkit/runner/BuildResult;
+	public abstract fun cleanBuildDirectory (Lorg/gradle/testkit/runner/GradleRunner;)V
+	public abstract fun getOutputTrimmed (Lorg/gradle/testkit/runner/BuildResult;)Ljava/lang/String;
+	public abstract fun gradleTestKitTest (Ljava/lang/String;Ljava/lang/String;ZZZLcom/javiersc/gradle/testkit/test/extensions/TestKitTest;)V
+	public abstract fun gradlew (Lorg/gradle/testkit/runner/GradleRunner;[Ljava/lang/String;)Lorg/gradle/testkit/runner/BuildResult;
+	public abstract fun gradlewArgumentFromTXT (Lorg/gradle/testkit/runner/GradleRunner;[Ljava/lang/String;)Lorg/gradle/testkit/runner/BuildResult;
+	public abstract fun testBuildCache (Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;Lcom/javiersc/gradle/testkit/test/extensions/TestKitTest;)V
+	public abstract fun testConfigurationCache (Lorg/gradle/testkit/runner/GradleRunner;Lorg/gradle/testkit/runner/TaskOutcome;Ljava/lang/String;)V
+	public abstract fun withArgumentsFromTXT (Lorg/gradle/testkit/runner/GradleRunner;)V
+}
+
+public final class com/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi$DefaultImpls {
+	public static fun andWithBuildCache (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)V
+	public static fun andWithConfigurationCache (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)V
+	public static fun andWithConfigurationCacheProblemsWarn (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)V
+	public static fun andWithInfo (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)V
+	public static fun andWithNoBuildCache (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)V
+	public static fun andWithNoConfigurationCache (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)V
+	public static fun andWithProjectProperty (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;)V
+	public static fun andWithScan (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)V
+	public static fun andWithStacktrace (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)V
+	public static fun andWithSystemProperty (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;)V
+	public static fun buildCache (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;)Ljava/lang/String;
+	public static fun buildValidPathName (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Ljava/lang/String;)Ljava/lang/String;
+	public static fun clean (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)Lorg/gradle/testkit/runner/BuildResult;
+	public static fun cleanBuildDirectory (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)V
+	public static fun configurationCache (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;)Ljava/lang/String;
+	public static fun configurationCacheProblemsWarn (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;)Ljava/lang/String;
+	public static fun getOutputTrimmed (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/BuildResult;)Ljava/lang/String;
+	public static synthetic fun gradleTestKitTest$default (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Ljava/lang/String;Ljava/lang/String;ZZZLcom/javiersc/gradle/testkit/test/extensions/TestKitTest;ILjava/lang/Object;)V
+	public static fun gradlew (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;[Ljava/lang/String;)Lorg/gradle/testkit/runner/BuildResult;
+	public static fun gradlewArgumentFromTXT (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;[Ljava/lang/String;)Lorg/gradle/testkit/runner/BuildResult;
+	public static fun info (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;)Ljava/lang/String;
+	public static fun noBuildCache (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;)Ljava/lang/String;
+	public static fun noConfigurationCache (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;)Ljava/lang/String;
+	public static fun projectProperty (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Ljava/lang/String;)Ljava/lang/String;
+	public static fun resourceFile (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Ljava/lang/String;)Ljava/io/File;
+	public static fun scan (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;)Ljava/lang/String;
+	public static fun stacktrace (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;)Ljava/lang/String;
+	public static fun systemProperty (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Ljava/lang/String;)Ljava/lang/String;
+	public static synthetic fun testBuildCache$default (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;Ljava/lang/String;Lcom/javiersc/gradle/testkit/test/extensions/TestKitTest;ILjava/lang/Object;)V
+	public static synthetic fun testConfigurationCache$default (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;Lorg/gradle/testkit/runner/TaskOutcome;Ljava/lang/String;ILjava/lang/Object;)V
+	public static fun withArgumentsFromTXT (Lcom/javiersc/gradle/testkit/test/extensions/GradleTestKitTestApi;Lorg/gradle/testkit/runner/GradleRunner;)V
+}
+
+public abstract interface class com/javiersc/gradle/testkit/test/extensions/TestKitTest {
+	public abstract fun execute (Lorg/gradle/testkit/runner/GradleRunner;)V
 }
 

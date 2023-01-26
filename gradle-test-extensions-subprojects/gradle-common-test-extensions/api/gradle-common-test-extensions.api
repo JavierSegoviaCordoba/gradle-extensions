@@ -1,0 +1,30 @@
+public abstract interface class com/javiersc/gradle/common/test/extensions/GradleCommonTestApi {
+	public abstract fun buildCache ()Ljava/lang/String;
+	public abstract fun buildValidPathName (Ljava/lang/String;)Ljava/lang/String;
+	public abstract fun configurationCache ()Ljava/lang/String;
+	public abstract fun configurationCacheProblemsWarn ()Ljava/lang/String;
+	public abstract fun info ()Ljava/lang/String;
+	public abstract fun noBuildCache ()Ljava/lang/String;
+	public abstract fun noConfigurationCache ()Ljava/lang/String;
+	public abstract fun projectProperty (Ljava/lang/String;)Ljava/lang/String;
+	public abstract fun resourceFile (Ljava/lang/String;)Ljava/io/File;
+	public abstract fun scan ()Ljava/lang/String;
+	public abstract fun stacktrace ()Ljava/lang/String;
+	public abstract fun systemProperty (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class com/javiersc/gradle/common/test/extensions/GradleCommonTestApi$DefaultImpls {
+	public static fun buildCache (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;)Ljava/lang/String;
+	public static fun buildValidPathName (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;Ljava/lang/String;)Ljava/lang/String;
+	public static fun configurationCache (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;)Ljava/lang/String;
+	public static fun configurationCacheProblemsWarn (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;)Ljava/lang/String;
+	public static fun info (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;)Ljava/lang/String;
+	public static fun noBuildCache (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;)Ljava/lang/String;
+	public static fun noConfigurationCache (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;)Ljava/lang/String;
+	public static fun projectProperty (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;Ljava/lang/String;)Ljava/lang/String;
+	public static fun resourceFile (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;Ljava/lang/String;)Ljava/io/File;
+	public static fun scan (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;)Ljava/lang/String;
+	public static fun stacktrace (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;)Ljava/lang/String;
+	public static fun systemProperty (Lcom/javiersc/gradle/common/test/extensions/GradleCommonTestApi;Ljava/lang/String;)Ljava/lang/String;
+}
+

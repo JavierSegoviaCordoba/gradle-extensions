@@ -25,6 +25,8 @@ dependencies {
     
     testImplementation("com.javiersc.gradle:gradle-test-extensions:$version")
     // or any subproject
+    testImplementation("com.javiersc.gradle:gradle-common-test-extensions:$version")
+    testImplementation("com.javiersc.gradle:gradle-project-test-extensions:$version")
     testImplementation("com.javiersc.gradle:gradle-testkit-test-extensions:$version")
 }
 ```

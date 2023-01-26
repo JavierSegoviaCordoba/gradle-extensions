@@ -4,7 +4,11 @@
 
 ### Added
 
+- `gradle-project-test-extensions` to do integration tests
+
 ### Changed
+
+- `gradle-testkit-test-extensions` only for functional tests
 
 ### Deprecated
 

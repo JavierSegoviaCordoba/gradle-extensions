@@ -1,0 +1,41 @@
+public class com/javiersc/gradle/project/test/extensions/GradleProjectTest : com/javiersc/gradle/project/test/extensions/GradleProjectTestApi {
+	public fun <init> ()V
+	public fun buildCache ()Ljava/lang/String;
+	public fun buildValidPathName (Ljava/lang/String;)Ljava/lang/String;
+	public fun configurationCache ()Ljava/lang/String;
+	public fun configurationCacheProblemsWarn ()Ljava/lang/String;
+	public fun gradleProjectTest (Ljava/lang/String;Ljava/lang/String;Lorg/gradle/api/Project;Ljava/io/File;Lcom/javiersc/gradle/project/test/extensions/ProjectTest;)V
+	public fun info ()Ljava/lang/String;
+	public fun noBuildCache ()Ljava/lang/String;
+	public fun noConfigurationCache ()Ljava/lang/String;
+	public fun projectProperty (Ljava/lang/String;)Ljava/lang/String;
+	public fun resourceFile (Ljava/lang/String;)Ljava/io/File;
+	public fun scan ()Ljava/lang/String;
+	public fun stacktrace ()Ljava/lang/String;
+	public fun systemProperty (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public abstract interface class com/javiersc/gradle/project/test/extensions/GradleProjectTestApi : com/javiersc/gradle/common/test/extensions/GradleCommonTestApi {
+	public abstract fun gradleProjectTest (Ljava/lang/String;Ljava/lang/String;Lorg/gradle/api/Project;Ljava/io/File;Lcom/javiersc/gradle/project/test/extensions/ProjectTest;)V
+}
+
+public final class com/javiersc/gradle/project/test/extensions/GradleProjectTestApi$DefaultImpls {
+	public static fun buildCache (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;)Ljava/lang/String;
+	public static fun buildValidPathName (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;Ljava/lang/String;)Ljava/lang/String;
+	public static fun configurationCache (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;)Ljava/lang/String;
+	public static fun configurationCacheProblemsWarn (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;)Ljava/lang/String;
+	public static synthetic fun gradleProjectTest$default (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;Ljava/lang/String;Ljava/lang/String;Lorg/gradle/api/Project;Ljava/io/File;Lcom/javiersc/gradle/project/test/extensions/ProjectTest;ILjava/lang/Object;)V
+	public static fun info (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;)Ljava/lang/String;
+	public static fun noBuildCache (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;)Ljava/lang/String;
+	public static fun noConfigurationCache (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;)Ljava/lang/String;
+	public static fun projectProperty (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;Ljava/lang/String;)Ljava/lang/String;
+	public static fun resourceFile (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;Ljava/lang/String;)Ljava/io/File;
+	public static fun scan (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;)Ljava/lang/String;
+	public static fun stacktrace (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;)Ljava/lang/String;
+	public static fun systemProperty (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;Ljava/lang/String;)Ljava/lang/String;
+}
+
+public abstract interface class com/javiersc/gradle/project/test/extensions/ProjectTest {
+	public abstract fun execute (Lorg/gradle/api/Project;)V
+}
+
