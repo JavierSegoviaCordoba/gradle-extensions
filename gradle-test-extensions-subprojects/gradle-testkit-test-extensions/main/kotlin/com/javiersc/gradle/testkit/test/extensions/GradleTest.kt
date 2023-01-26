@@ -2,6 +2,8 @@ package com.javiersc.gradle.testkit.test.extensions
 
 import com.javiersc.gradle.testkit.test.extensions._internal.argumentsTxt
 import java.io.File
+import org.gradle.api.Project
+import org.gradle.testfixtures.ProjectBuilder
 import org.gradle.testkit.runner.BuildResult
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
@@ -13,6 +15,28 @@ public abstract class GradleTest {
     @TempDir(cleanup = ON_SUCCESS) private lateinit var tempDir: File
 
     @TempDir(cleanup = ON_SUCCESS) private lateinit var isolatedTempDir: File
+
+    public fun gradleTest(
+        sandboxPath: String? = null,
+        name: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: "",
+        parent: Project? = null,
+        gradleUserHomeDir: File? = null,
+        test: Project.() -> Unit,
+    ) {
+        val projectDir = tempDir.resolve(name).apply(File::mkdirs)
+
+        if (sandboxPath != null) resourceFile(sandboxPath).copyRecursively(projectDir)
+
+        val project: Project =
+            ProjectBuilder.builder()
+                .withName(name)
+                .withParent(parent)
+                .withProjectDir(projectDir)
+                .withGradleUserHomeDir(gradleUserHomeDir)
+                .build()
+
+        test(project)
+    }
 
     public fun gradleTestKitTest(
         sandboxPath: String? = null,

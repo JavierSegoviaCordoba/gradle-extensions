@@ -4,6 +4,7 @@
 
 ### Added
 
+- `GradleTest.gradleTest` for integration tests without TestKit
 - `Project.isAlpha: Provider<Boolean>` extension
 - `Project.isNotAlpha: Provider<Boolean>` extension
 - `Project.isBeta: Provider<Boolean>` extension

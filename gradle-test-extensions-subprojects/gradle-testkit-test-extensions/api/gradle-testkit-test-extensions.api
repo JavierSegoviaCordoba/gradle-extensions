@@ -16,6 +16,8 @@ public abstract class com/javiersc/gradle/testkit/test/extensions/GradleTest {
 	public final fun configurationCache ()Ljava/lang/String;
 	public final fun configurationCacheProblemsWarn ()Ljava/lang/String;
 	public final fun getOutputTrimmed (Lorg/gradle/testkit/runner/BuildResult;)Ljava/lang/String;
+	public final fun gradleTest (Ljava/lang/String;Ljava/lang/String;Lorg/gradle/api/Project;Ljava/io/File;Lkotlin/jvm/functions/Function1;)V
+	public static synthetic fun gradleTest$default (Lcom/javiersc/gradle/testkit/test/extensions/GradleTest;Ljava/lang/String;Ljava/lang/String;Lorg/gradle/api/Project;Ljava/io/File;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
 	public final fun gradleTestKitTest (Ljava/lang/String;Ljava/lang/String;ZZZLkotlin/jvm/functions/Function1;)V
 	public static synthetic fun gradleTestKitTest$default (Lcom/javiersc/gradle/testkit/test/extensions/GradleTest;Ljava/lang/String;Ljava/lang/String;ZZZLkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
 	public final fun gradlew (Lorg/gradle/testkit/runner/GradleRunner;[Ljava/lang/String;)Lorg/gradle/testkit/runner/BuildResult;
