@@ -41,8 +41,8 @@ public abstract class GradleTest {
     public fun gradleTestKitTest(
         sandboxPath: String? = null,
         name: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: "",
-        withDebug: Boolean = false,
-        withPluginClasspath: Boolean = true,
+        debug: Boolean = false,
+        pluginClasspath: Boolean = true,
         isolated: Boolean = false,
         test: GradleRunner.() -> Unit,
     ) {
@@ -52,8 +52,8 @@ public abstract class GradleTest {
 
         test(
             GradleRunner.create().apply {
-                withDebug(withDebug)
-                if (withPluginClasspath) withPluginClasspath()
+                withDebug(debug)
+                if (pluginClasspath) withPluginClasspath()
                 if (isolated) {
                     val isolatedDir = isolatedTempDir.resolve(name).apply(File::mkdirs)
                     withTestKitDir(isolatedDir)

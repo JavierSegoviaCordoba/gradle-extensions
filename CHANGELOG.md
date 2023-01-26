@@ -21,6 +21,8 @@
 
 ### Changed
 
+- `GradleTest.gradleTestKitTest` parameters to `debug` and `pluginClasspath`
+
 ### Deprecated
 
 ### Removed
