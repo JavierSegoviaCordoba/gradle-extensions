@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > LazyPropertiesKt</title>
+  <title>Coverage Report > ProjectKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -18,15 +18,18 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.gradle.properties.extensions</a>
+    <a href="../index.html">com.javiersc.gradle.project.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: LazyPropertiesKt (com.javiersc.gradle.properties.extensions)</h1>
+<h1>Coverage Summary for Class: ProjectKt (com.javiersc.gradle.project.extensions)</h1>
 
 <table class="coverageStats">
-
 <tr>
   <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -45,7 +48,15 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">LazyPropertiesKt</td>
+  <td class="name">ProjectKt</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -54,7 +65,14 @@ Current scope:     <a href="../../index.html">all classes</a>
     (0/3)
   </span>
 </td>
-    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -68,122 +86,11 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/68)
+    (0/35)
   </span>
 </td>
 </tr>
-  <tr>
-    <td class="name">LazyPropertiesKt$listProperty$1</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/6)
-  </span>
-</td>
-  </tr>
-  <tr>
-    <td class="name">LazyPropertiesKt$property$1</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/5)
-  </span>
-</td>
-  </tr>
-  <tr>
-    <td class="name">LazyPropertiesKt$setProperty$1</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/6)
-  </span>
-</td>
-  </tr>
-<tr>
-  <td class="name"><strong>Total</strong></td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/6)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/6)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/85)
-  </span>
-</td>
-</tr>
+
 </table>
 
 <br/>
@@ -191,26 +98,18 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.properties.extensions
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.project.extensions
 &nbsp;
 &nbsp;import org.gradle.api.Project
-&nbsp;import org.gradle.api.provider.ListProperty
-&nbsp;import org.gradle.api.provider.Property
-&nbsp;import org.gradle.api.provider.SetProperty
-&nbsp;import org.gradle.kotlin.dsl.listProperty
-&nbsp;import org.gradle.kotlin.dsl.property
-&nbsp;import org.gradle.kotlin.dsl.setProperty
 &nbsp;
-&nbsp;public inline fun &lt;reified T&gt; Project.property(crossinline block: Project.() -&gt; T): Property&lt;T&gt; =
-<b class="nc">&nbsp;    objects.property&lt;T&gt;().convention(provider { block(this) })</b>
+&nbsp;public val Project.isRootProject: Boolean
+<b class="nc">&nbsp;    get() = parent == null</b>
 &nbsp;
-&nbsp;public inline fun &lt;reified T&gt; Project.listProperty(
-&nbsp;    crossinline block: Project.() -&gt; List&lt;T&gt;
-<b class="nc">&nbsp;): ListProperty&lt;T&gt; = objects.listProperty&lt;T&gt;().convention(project.provider { block(this) })</b>
+&nbsp;public val Project.module: String
+<b class="nc">&nbsp;    get() = &quot;$group:$name&quot;</b>
 &nbsp;
-&nbsp;public inline fun &lt;reified T&gt; Project.setProperty(
-&nbsp;    crossinline block: Project.() -&gt; Set&lt;T&gt;
-<b class="nc">&nbsp;): SetProperty&lt;T&gt; = objects.setProperty&lt;T&gt;().convention(project.provider { block(this) })</b>
+&nbsp;public val Project.library: String
+<b class="nc">&nbsp;    get() = &quot;$group:$name:$version&quot;</b>
 </code>
 </pre>
 </div>
@@ -234,7 +133,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-01-26 10:35</div>
+    <div style="float:right;">generated on 2023-01-26 13:19</div>
 </div>
 </body>
 </html>

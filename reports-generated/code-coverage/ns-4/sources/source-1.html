@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > ForUseAtConfigurationTimeKt</title>
+  <title>Coverage Report > LoggingKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -18,18 +18,15 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.gradle.miscellanea.extensions</a>
+    <a href="../index.html">com.javiersc.gradle.logging.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: ForUseAtConfigurationTimeKt (com.javiersc.gradle.miscellanea.extensions)</h1>
+<h1>Coverage Summary for Class: LoggingKt (com.javiersc.gradle.logging.extensions)</h1>
 
 <table class="coverageStats">
+
 <tr>
   <th class="name">Class</th>
-<th class="coverageStat 
-">
-  Class, %
-</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -48,23 +45,16 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">ForUseAtConfigurationTimeKt</td>
+  <td class="name">LoggingKt</td>
 <td class="coverageStat">
   <span class="percent">
     0%
   </span>
   <span class="absValue">
-    (0/1)
+    (0/6)
   </span>
 </td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
+    <td class="coverageStat"/>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -78,7 +68,51 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/13)
+    (0/112)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">LoggingKt$debugColored$$inlined$ansiColor$1</td>
+    <td class="coverageStat"/>
+  </tr>
+  <tr>
+    <td class="name">LoggingKt$errorColored$$inlined$ansiColor$1</td>
+    <td class="coverageStat"/>
+  </tr>
+  <tr>
+    <td class="name">LoggingKt$infoColored$$inlined$ansiColor$1</td>
+    <td class="coverageStat"/>
+  </tr>
+  <tr>
+    <td class="name">LoggingKt$lifecycleColored$$inlined$ansiColor$1</td>
+    <td class="coverageStat"/>
+  </tr>
+  <tr>
+    <td class="name">LoggingKt$traceColored$$inlined$ansiColor$1</td>
+    <td class="coverageStat"/>
+  </tr>
+  <tr>
+    <td class="name">LoggingKt$warnColored$$inlined$ansiColor$1</td>
+    <td class="coverageStat"/>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/6)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/12)
   </span>
 </td>
 <td class="coverageStat">
@@ -86,11 +120,10 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/59)
+    (0/112)
   </span>
 </td>
 </tr>
-
 </table>
 
 <br/>
@@ -98,34 +131,36 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<code class="sourceCode" id="sourceCode">&nbsp;@file:Suppress(&quot;UNCHECKED_CAST&quot;)
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.logging.extensions
 &nbsp;
-&nbsp;package com.javiersc.gradle.miscellanea.extensions
+&nbsp;import com.javiersc.kotlin.stdlib.AnsiColor
+&nbsp;import com.javiersc.kotlin.stdlib.AnsiColor.Foreground
+&nbsp;import com.javiersc.kotlin.stdlib.AnsiColor.Reset
+&nbsp;import com.javiersc.kotlin.stdlib.ansiColor
+&nbsp;import org.gradle.api.logging.Logger
 &nbsp;
-&nbsp;import java.lang.reflect.InvocationTargetException
-&nbsp;import java.lang.reflect.Method
-&nbsp;import org.gradle.api.provider.Provider
-&nbsp;import org.gradle.util.GradleVersion.current
-&nbsp;import org.gradle.util.GradleVersion.version
+<b class="nc">&nbsp;public fun Logger.lifecycleColored(color: AnsiColor = Reset, message: () -&gt; String) {</b>
+<b class="nc">&nbsp;    lifecycle(message().ansiColor(color))</b>
+&nbsp;}
 &nbsp;
-&nbsp;// TODO: Remove it when Gradle 7.0 adoption is very high
-&nbsp;public fun &lt;S&gt; forUseAtConfigurationTime(provider: Provider&lt;S&gt;): Provider&lt;S&gt; {
-<b class="nc">&nbsp;    return if (current() &gt;= version(&quot;6.5&quot;) &amp;&amp; current() &lt; version(&quot;7.0&quot;)) {</b>
-<b class="nc">&nbsp;        try {</b>
-<b class="nc">&nbsp;            val method: Method = Provider::class.java.getMethod(&quot;forUseAtConfigurationTime&quot;)</b>
-<b class="nc">&nbsp;            method(provider) as Provider&lt;S&gt;</b>
-<b class="nc">&nbsp;        } catch (e: Exception) {</b>
-<b class="nc">&nbsp;            val shouldThrowRuntimeException =</b>
-<b class="nc">&nbsp;                e is NoSuchMethodException ||</b>
-<b class="nc">&nbsp;                    e is IllegalAccessException ||</b>
-<b class="nc">&nbsp;                    e is InvocationTargetException</b>
-<b class="nc">&nbsp;            if (shouldThrowRuntimeException) {</b>
-<b class="nc">&nbsp;                throw RuntimeException(&quot;Could not mark provider usage for configuration time.&quot;, e)</b>
-&nbsp;            } else {
-<b class="nc">&nbsp;                throw e</b>
-&nbsp;            }
-&nbsp;        }
-<b class="nc">&nbsp;    } else provider</b>
+<b class="nc">&nbsp;public fun Logger.traceColored(color: AnsiColor = Foreground.Purple, message: () -&gt; String) {</b>
+<b class="nc">&nbsp;    trace(message().ansiColor(color))</b>
+&nbsp;}
+&nbsp;
+<b class="nc">&nbsp;public fun Logger.debugColored(color: AnsiColor = Foreground.Cyan, message: () -&gt; String) {</b>
+<b class="nc">&nbsp;    debug(message().ansiColor(color))</b>
+&nbsp;}
+&nbsp;
+<b class="nc">&nbsp;public fun Logger.infoColored(color: AnsiColor = Foreground.Blue, message: () -&gt; String) {</b>
+<b class="nc">&nbsp;    info(message().ansiColor(color))</b>
+&nbsp;}
+&nbsp;
+<b class="nc">&nbsp;public fun Logger.warnColored(color: AnsiColor = Foreground.Yellow, message: () -&gt; String) {</b>
+<b class="nc">&nbsp;    warn(message().ansiColor(color))</b>
+&nbsp;}
+&nbsp;
+<b class="nc">&nbsp;public fun Logger.errorColored(message: String, color: AnsiColor = Foreground.Red) {</b>
+<b class="nc">&nbsp;    warn(message.ansiColor(color))</b>
 &nbsp;}
 </code>
 </pre>
@@ -150,7 +185,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-01-26 10:35</div>
+    <div style="float:right;">generated on 2023-01-26 13:19</div>
 </div>
 </body>
 </html>

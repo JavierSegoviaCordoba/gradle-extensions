@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > LocalPropertiesKt</title>
+  <title>Coverage Report > ProjectVersionKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -18,10 +18,10 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.gradle.properties.extensions</a>
+    <a href="../index.html">com.javiersc.gradle.project.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: LocalPropertiesKt (com.javiersc.gradle.properties.extensions)</h1>
+<h1>Coverage Summary for Class: ProjectVersionKt (com.javiersc.gradle.project.extensions)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -48,7 +48,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">LocalPropertiesKt</td>
+  <td class="name">ProjectVersionKt</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -62,7 +62,16 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/2)
+    (0/10)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/10)
   </span>
 </td>
 <td class="coverageStat">
@@ -70,23 +79,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/8)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/16)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/155)
+    (0/120)
   </span>
 </td>
 </tr>
@@ -98,42 +91,50 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.properties.extensions
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.project.extensions
 &nbsp;
-&nbsp;import java.io.File
-&nbsp;import java.util.Properties
+&nbsp;import com.javiersc.semver.isAlpha
+&nbsp;import com.javiersc.semver.isBeta
+&nbsp;import com.javiersc.semver.isDev
+&nbsp;import com.javiersc.semver.isNotAlpha
+&nbsp;import com.javiersc.semver.isNotBeta
+&nbsp;import com.javiersc.semver.isNotDev
+&nbsp;import com.javiersc.semver.isNotRC
+&nbsp;import com.javiersc.semver.isNotSnapshot
+&nbsp;import com.javiersc.semver.isRC
+&nbsp;import com.javiersc.semver.isSnapshot
 &nbsp;import org.gradle.api.Project
-&nbsp;import org.gradle.api.initialization.Settings
+&nbsp;import org.gradle.api.provider.Provider
 &nbsp;
-&nbsp;public val Project.localProperties: Properties?
-&nbsp;    get() {
-<b class="nc">&nbsp;        val projectLocalProps: File = file(&quot;local.properties&quot;)</b>
-<b class="nc">&nbsp;        val rootProjectLocalProps: File = rootProject.file(&quot;local.properties&quot;)</b>
-<b class="nc">&nbsp;        return when {</b>
-<b class="nc">&nbsp;            projectLocalProps.exists() -&gt; {</b>
-<b class="nc">&nbsp;                Properties().apply { projectLocalProps.inputStream().use(::load) }</b>
-&nbsp;            }
-<b class="nc">&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
-<b class="nc">&nbsp;                Properties().apply { rootProjectLocalProps.inputStream().use(::load) }</b>
-&nbsp;            }
-<b class="nc">&nbsp;            else -&gt; null</b>
-&nbsp;        }
-&nbsp;    }
+&nbsp;public val Project.isAlpha: Provider&lt;Boolean&gt;
+<b class="nc">&nbsp;    get() = provider { version.toString().isAlpha }</b>
 &nbsp;
-&nbsp;public val Settings.localProperties: Properties?
-&nbsp;    get() {
-<b class="nc">&nbsp;        val settingsLocalProps: File = settingsDir.resolve(&quot;local.properties&quot;)</b>
-<b class="nc">&nbsp;        val rootProjectLocalProps: File = rootDir.resolve(&quot;local.properties&quot;)</b>
-<b class="nc">&nbsp;        return when {</b>
-<b class="nc">&nbsp;            settingsLocalProps.exists() -&gt; {</b>
-<b class="nc">&nbsp;                Properties().apply { load(settingsLocalProps.inputStream()) }</b>
-&nbsp;            }
-<b class="nc">&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
-<b class="nc">&nbsp;                Properties().apply { load(rootProjectLocalProps.inputStream()) }</b>
-&nbsp;            }
-<b class="nc">&nbsp;            else -&gt; null</b>
-&nbsp;        }
-&nbsp;    }
+&nbsp;public val Project.isNotAlpha: Provider&lt;Boolean&gt;
+<b class="nc">&nbsp;    get() = provider { version.toString().isNotAlpha }</b>
+&nbsp;
+&nbsp;public val Project.isBeta: Provider&lt;Boolean&gt;
+<b class="nc">&nbsp;    get() = provider { version.toString().isBeta }</b>
+&nbsp;
+&nbsp;public val Project.isNotBeta: Provider&lt;Boolean&gt;
+<b class="nc">&nbsp;    get() = provider { version.toString().isNotBeta }</b>
+&nbsp;
+&nbsp;public val Project.isDev: Provider&lt;Boolean&gt;
+<b class="nc">&nbsp;    get() = provider { version.toString().isDev }</b>
+&nbsp;
+&nbsp;public val Project.isNotDev: Provider&lt;Boolean&gt;
+<b class="nc">&nbsp;    get() = provider { version.toString().isNotDev }</b>
+&nbsp;
+&nbsp;public val Project.isRC: Provider&lt;Boolean&gt;
+<b class="nc">&nbsp;    get() = provider { version.toString().isRC }</b>
+&nbsp;
+&nbsp;public val Project.isNotRC: Provider&lt;Boolean&gt;
+<b class="nc">&nbsp;    get() = provider { version.toString().isNotRC }</b>
+&nbsp;
+&nbsp;public val Project.isSnapshot: Provider&lt;Boolean&gt;
+<b class="nc">&nbsp;    get() = provider { version.toString().isSnapshot }</b>
+&nbsp;
+&nbsp;public val Project.isNotSnapshot: Provider&lt;Boolean&gt;
+<b class="nc">&nbsp;    get() = provider { version.toString().isNotSnapshot }</b>
 </code>
 </pre>
 </div>
@@ -157,7 +158,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-01-26 10:35</div>
+    <div style="float:right;">generated on 2023-01-26 13:19</div>
 </div>
 </body>
 </html>

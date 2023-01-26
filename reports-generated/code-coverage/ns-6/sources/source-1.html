@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > ProjectKt</title>
+  <title>Coverage Report > Plugin</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -18,18 +18,15 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.gradle.project.extensions</a>
+    <a href="../index.html">com.javiersc.gradle.plugin.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: ProjectKt (com.javiersc.gradle.project.extensions)</h1>
+<h1>Coverage Summary for Class: Plugin (com.javiersc.gradle.plugin.extensions)</h1>
 
 <table class="coverageStats">
+
 <tr>
   <th class="name">Class</th>
-<th class="coverageStat 
-">
-  Class, %
-</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -47,8 +44,17 @@ Current scope:     <a href="../../index.html">all classes</a>
   Instruction, %
 </th>
 </tr>
-<tr>
-  <td class="name">ProjectKt</td>
+  <tr>
+    <td class="name">Plugin$DefaultImpls</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -65,12 +71,24 @@ Current scope:     <a href="../../index.html">all classes</a>
     (0/3)
   </span>
 </td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
 <td class="coverageStat">
   <span class="percent">
     0%
   </span>
   <span class="absValue">
-    (0/2)
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
   </span>
 </td>
 <td class="coverageStat">
@@ -81,16 +99,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     (0/3)
   </span>
 </td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/35)
-  </span>
-</td>
 </tr>
-
 </table>
 
 <br/>
@@ -98,18 +107,17 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.project.extensions
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.plugin.extensions
 &nbsp;
-&nbsp;import org.gradle.api.Project
+&nbsp;import org.gradle.api.Plugin as GradlePlugin
 &nbsp;
-&nbsp;public val Project.isRootProject: Boolean
-<b class="nc">&nbsp;    get() = parent == null</b>
+&nbsp;@Suppress(&quot;INAPPLICABLE_JVM_NAME&quot;)
+&nbsp;public interface Plugin&lt;T : Any&gt; : GradlePlugin&lt;T&gt; {
 &nbsp;
-&nbsp;public val Project.module: String
-<b class="nc">&nbsp;    get() = &quot;$group:$name&quot;</b>
+&nbsp;    @JvmName(&quot;kotlinApply&quot;) public fun T.apply()
 &nbsp;
-&nbsp;public val Project.library: String
-<b class="nc">&nbsp;    get() = &quot;$group:$name:$version&quot;</b>
+<b class="nc">&nbsp;    @JvmName(&quot;javaApply&quot;) override fun apply(target: T): Unit = target.apply()</b>
+&nbsp;}
 </code>
 </pre>
 </div>
@@ -133,7 +141,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-01-26 10:35</div>
+    <div style="float:right;">generated on 2023-01-26 13:19</div>
 </div>
 </body>
 </html>

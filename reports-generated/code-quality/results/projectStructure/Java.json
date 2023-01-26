@@ -57,6 +57,14 @@
       "languageLevel": 17
     },
     {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-common-test-extensions",
+      "languageLevel": 17
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-project-test-extensions",
+      "languageLevel": 17
+    },
+    {
       "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-testkit-test-extensions",
       "languageLevel": 17
     },
@@ -170,6 +178,46 @@
     },
     {
       "name": "gradle-extensions-project.gradle-extensions-subprojects.gradle-version-catalog-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-common-test-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-common-test-extensions.testFixtures",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-common-test-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-common-test-extensions.functionalTest",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-common-test-extensions.integrationTest",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-project-test-extensions.test",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-project-test-extensions.testFixtures",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-project-test-extensions.main",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-project-test-extensions.functionalTest",
+      "languageLevel": 8
+    },
+    {
+      "name": "gradle-extensions-project.gradle-test-extensions-subprojects.gradle-project-test-extensions.integrationTest",
       "languageLevel": 8
     },
     {

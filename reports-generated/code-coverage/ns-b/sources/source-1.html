@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > FakePlugin</title>
+  <title>Coverage Report > GradleTestKitTest</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -18,15 +18,18 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.integration.tests</a>
+    <a href="../index.html">com.javiersc.gradle.testkit.test.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: FakePlugin (com.javiersc.integration.tests)</h1>
+<h1>Coverage Summary for Class: GradleTestKitTest (com.javiersc.gradle.testkit.test.extensions)</h1>
 
 <table class="coverageStats">
-
 <tr>
   <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -45,89 +48,49 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">FakePlugin</td>
+  <td class="name">GradleTestKitTest</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/2)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/2)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    50%
   </span>
   <span class="absValue">
-    (0/17)
-  </span>
-</td>
-</tr>
-  <tr>
-    <td class="name">FakePlugin$apply$1</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
+    (2/4)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    9.4%
   </span>
   <span class="absValue">
-    (0/5)
-  </span>
-</td>
-  </tr>
-<tr>
-  <td class="name"><strong>Total</strong></td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/3)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/3)
+    (3/32)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    27.5%
   </span>
   <span class="absValue">
-    (0/22)
+    (11/40)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    36.1%
+  </span>
+  <span class="absValue">
+    (145/402)
   </span>
 </td>
 </tr>
+
 </table>
 
 <br/>
@@ -135,16 +98,100 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.integration.tests
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.testkit.test.extensions
 &nbsp;
-&nbsp;import org.gradle.api.Plugin
-&nbsp;import org.gradle.api.Project
+&nbsp;import java.io.File
+&nbsp;import org.gradle.testkit.runner.GradleRunner
+&nbsp;import org.gradle.testkit.runner.TaskOutcome
+&nbsp;import org.junit.jupiter.api.io.CleanupMode.ON_SUCCESS
+&nbsp;import org.junit.jupiter.api.io.TempDir
 &nbsp;
-<b class="nc">&nbsp;internal abstract class FakePlugin : Plugin&lt;Project&gt; {</b>
+<b class="fc">&nbsp;public open class GradleTestKitTest : GradleTestKitTestApi {</b>
 &nbsp;
-&nbsp;    override fun apply(target: Project) {
-<b class="nc">&nbsp;        target.tasks.register(&quot;fakeFile&quot;) { target.logger.lifecycle(&quot;Fake File&quot;) }</b>
+&nbsp;    @TempDir(cleanup = ON_SUCCESS) private lateinit var projectDir: File
+&nbsp;
+&nbsp;    @TempDir(cleanup = ON_SUCCESS) private lateinit var isolatedDir: File
+&nbsp;
+&nbsp;    override fun gradleTestKitTest(
+&nbsp;        sandboxPath: String?,
+&nbsp;        name: String,
+&nbsp;        debug: Boolean,
+&nbsp;        pluginClasspath: Boolean,
+&nbsp;        isolated: Boolean,
+&nbsp;        test: TestKitTest
+&nbsp;    ) {
+<b class="fc">&nbsp;        val projectDir = projectDir.resolve(name).apply(File::mkdirs)</b>
+&nbsp;
+<b class="pc">&nbsp;        if (sandboxPath != null) resourceFile(sandboxPath).copyRecursively(projectDir)</b>
+&nbsp;
+<b class="fc">&nbsp;        val runner =</b>
+<b class="fc">&nbsp;            GradleRunner.create().apply {</b>
+<b class="fc">&nbsp;                withDebug(debug)</b>
+<b class="pc">&nbsp;                if (pluginClasspath) withPluginClasspath()</b>
+<b class="pc">&nbsp;                if (isolated) {</b>
+<b class="nc">&nbsp;                    val isolatedDir = isolatedDir.resolve(name).apply(File::mkdirs)</b>
+<b class="nc">&nbsp;                    withTestKitDir(isolatedDir)</b>
+&nbsp;                }
+<b class="fc">&nbsp;                withProjectDir(projectDir)</b>
+<b class="fc">&nbsp;            }</b>
+&nbsp;
+<b class="fc">&nbsp;        test.run { runner.execute() }</b>
 &nbsp;    }
+&nbsp;
+&nbsp;    override fun GradleRunner.testBuildCache(resultingTask: String?, invalidate: TestKitTest?) {
+<b class="nc">&nbsp;        val taskName =</b>
+<b class="nc">&nbsp;            checkNotNull(resultingTask ?: arguments.firstOrNull()) {</b>
+<b class="nc">&nbsp;                &quot;There is not a task in the arguments to check if build cache works&quot;</b>
+&nbsp;            }
+<b class="nc">&nbsp;        val task = &quot;:$taskName&quot;</b>
+&nbsp;
+<b class="nc">&nbsp;        andWithBuildCache()</b>
+<b class="nc">&nbsp;        build()</b>
+&nbsp;
+<b class="nc">&nbsp;        invalidate?.run { execute() }</b>
+<b class="nc">&nbsp;        cleanBuildDirectory()</b>
+&nbsp;
+<b class="nc">&nbsp;        val result = build()</b>
+&nbsp;
+<b class="nc">&nbsp;        val outcome =</b>
+<b class="nc">&nbsp;            checkNotNull(result.task(task)) { &quot;The outcome for the task $task is null&quot; }.outcome</b>
+&nbsp;
+<b class="nc">&nbsp;        val expectOutcome = if (invalidate == null) TaskOutcome.FROM_CACHE else TaskOutcome.SUCCESS</b>
+&nbsp;
+<b class="nc">&nbsp;        check(outcome == expectOutcome) { &quot;The outcome is $outcome and must be $expectOutcome&quot; }</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    override fun GradleRunner.testConfigurationCache(
+&nbsp;        expectTaskOutcome: TaskOutcome,
+&nbsp;        resultingTask: String?
+&nbsp;    ) {
+<b class="nc">&nbsp;        val taskName =</b>
+<b class="nc">&nbsp;            checkNotNull(resultingTask ?: arguments.firstOrNull()) {</b>
+<b class="nc">&nbsp;                &quot;There is not a task in the arguments to check if configuration cache works&quot;</b>
+&nbsp;            }
+<b class="nc">&nbsp;        val task = &quot;:$taskName&quot;</b>
+&nbsp;
+<b class="nc">&nbsp;        andWithConfigurationCache()</b>
+<b class="nc">&nbsp;        andWithNoBuildCache()</b>
+<b class="nc">&nbsp;        build()</b>
+&nbsp;
+<b class="nc">&nbsp;        val result = build()</b>
+&nbsp;
+<b class="nc">&nbsp;        check(result.output.contains(&quot;Reusing configuration cache&quot;)) {</b>
+<b class="nc">&nbsp;            &quot;Configuration cache is not working&quot;</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        val outcome =</b>
+<b class="nc">&nbsp;            checkNotNull(result.task(task)) { &quot;The outcome for the task $task is null&quot; }.outcome</b>
+&nbsp;
+<b class="nc">&nbsp;        check(outcome == expectTaskOutcome) {</b>
+<b class="nc">&nbsp;            &quot;The outcome is $outcome and must be $expectTaskOutcome&quot;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;public fun interface TestKitTest {
+&nbsp;    public fun GradleRunner.execute()
 &nbsp;}
 </code>
 </pre>
@@ -169,7 +216,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-01-26 10:35</div>
+    <div style="float:right;">generated on 2023-01-26 13:19</div>
 </div>
 </body>
 </html>

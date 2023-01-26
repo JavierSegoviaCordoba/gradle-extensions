@@ -1,0 +1,167 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > TestKitTest</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.javiersc.gradle.testkit.test.extensions</a>
+</div>
+
+<h1>Coverage Summary for Class: TestKitTest (com.javiersc.gradle.testkit.test.extensions)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+</tr>
+<tr>
+  <td class="name">TestKitTest</td>
+    <td class="coverageStat"/>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.testkit.test.extensions
+&nbsp;
+&nbsp;import java.io.File
+&nbsp;import org.gradle.testkit.runner.GradleRunner
+&nbsp;import org.gradle.testkit.runner.TaskOutcome
+&nbsp;import org.junit.jupiter.api.io.CleanupMode.ON_SUCCESS
+&nbsp;import org.junit.jupiter.api.io.TempDir
+&nbsp;
+&nbsp;public open class GradleTestKitTest : GradleTestKitTestApi {
+&nbsp;
+&nbsp;    @TempDir(cleanup = ON_SUCCESS) private lateinit var projectDir: File
+&nbsp;
+&nbsp;    @TempDir(cleanup = ON_SUCCESS) private lateinit var isolatedDir: File
+&nbsp;
+&nbsp;    override fun gradleTestKitTest(
+&nbsp;        sandboxPath: String?,
+&nbsp;        name: String,
+&nbsp;        debug: Boolean,
+&nbsp;        pluginClasspath: Boolean,
+&nbsp;        isolated: Boolean,
+&nbsp;        test: TestKitTest
+&nbsp;    ) {
+&nbsp;        val projectDir = projectDir.resolve(name).apply(File::mkdirs)
+&nbsp;
+&nbsp;        if (sandboxPath != null) resourceFile(sandboxPath).copyRecursively(projectDir)
+&nbsp;
+&nbsp;        val runner =
+&nbsp;            GradleRunner.create().apply {
+&nbsp;                withDebug(debug)
+&nbsp;                if (pluginClasspath) withPluginClasspath()
+&nbsp;                if (isolated) {
+&nbsp;                    val isolatedDir = isolatedDir.resolve(name).apply(File::mkdirs)
+&nbsp;                    withTestKitDir(isolatedDir)
+&nbsp;                }
+&nbsp;                withProjectDir(projectDir)
+&nbsp;            }
+&nbsp;
+&nbsp;        test.run { runner.execute() }
+&nbsp;    }
+&nbsp;
+&nbsp;    override fun GradleRunner.testBuildCache(resultingTask: String?, invalidate: TestKitTest?) {
+&nbsp;        val taskName =
+&nbsp;            checkNotNull(resultingTask ?: arguments.firstOrNull()) {
+&nbsp;                &quot;There is not a task in the arguments to check if build cache works&quot;
+&nbsp;            }
+&nbsp;        val task = &quot;:$taskName&quot;
+&nbsp;
+&nbsp;        andWithBuildCache()
+&nbsp;        build()
+&nbsp;
+&nbsp;        invalidate?.run { execute() }
+&nbsp;        cleanBuildDirectory()
+&nbsp;
+&nbsp;        val result = build()
+&nbsp;
+&nbsp;        val outcome =
+&nbsp;            checkNotNull(result.task(task)) { &quot;The outcome for the task $task is null&quot; }.outcome
+&nbsp;
+&nbsp;        val expectOutcome = if (invalidate == null) TaskOutcome.FROM_CACHE else TaskOutcome.SUCCESS
+&nbsp;
+&nbsp;        check(outcome == expectOutcome) { &quot;The outcome is $outcome and must be $expectOutcome&quot; }
+&nbsp;    }
+&nbsp;
+&nbsp;    override fun GradleRunner.testConfigurationCache(
+&nbsp;        expectTaskOutcome: TaskOutcome,
+&nbsp;        resultingTask: String?
+&nbsp;    ) {
+&nbsp;        val taskName =
+&nbsp;            checkNotNull(resultingTask ?: arguments.firstOrNull()) {
+&nbsp;                &quot;There is not a task in the arguments to check if configuration cache works&quot;
+&nbsp;            }
+&nbsp;        val task = &quot;:$taskName&quot;
+&nbsp;
+&nbsp;        andWithConfigurationCache()
+&nbsp;        andWithNoBuildCache()
+&nbsp;        build()
+&nbsp;
+&nbsp;        val result = build()
+&nbsp;
+&nbsp;        check(result.output.contains(&quot;Reusing configuration cache&quot;)) {
+&nbsp;            &quot;Configuration cache is not working&quot;
+&nbsp;        }
+&nbsp;
+&nbsp;        val outcome =
+&nbsp;            checkNotNull(result.task(task)) { &quot;The outcome for the task $task is null&quot; }.outcome
+&nbsp;
+&nbsp;        check(outcome == expectTaskOutcome) {
+&nbsp;            &quot;The outcome is $outcome and must be $expectTaskOutcome&quot;
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;public fun interface TestKitTest {
+&nbsp;    public fun GradleRunner.execute()
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-01-26 13:19</div>
+</div>
+</body>
+</html>

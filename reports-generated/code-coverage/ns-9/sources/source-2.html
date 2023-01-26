@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html id="htmlId">
 <head>
-  <title>Coverage Report > GradleTestKt</title>
+  <title>Coverage Report > LocalPropertiesKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -18,10 +18,10 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.javiersc.gradle.testkit.test.extensions</a>
+    <a href="../index.html">com.javiersc.gradle.properties.extensions</a>
 </div>
 
-<h1>Coverage Summary for Class: GradleTestKt (com.javiersc.gradle.testkit.test.extensions)</h1>
+<h1>Coverage Summary for Class: LocalPropertiesKt (com.javiersc.gradle.properties.extensions)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -48,38 +48,45 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">GradleTestKt</td>
+  <td class="name">LocalPropertiesKt</td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    0%
   </span>
   <span class="absValue">
-    (1/1)
+    (0/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    0%
   </span>
   <span class="absValue">
-    (1/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    100%
-  </span>
-  <span class="absValue">
-    (1/1)
+    (0/2)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    0%
   </span>
   <span class="absValue">
-    (13/13)
+    (0/8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/155)
   </span>
 </td>
 </tr>
@@ -91,217 +98,42 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.testkit.test.extensions
+<code class="sourceCode" id="sourceCode">&nbsp;package com.javiersc.gradle.properties.extensions
 &nbsp;
-&nbsp;import com.javiersc.gradle.testkit.test.extensions._internal.argumentsTxt
 &nbsp;import java.io.File
+&nbsp;import java.util.Properties
 &nbsp;import org.gradle.api.Project
-&nbsp;import org.gradle.testfixtures.ProjectBuilder
-&nbsp;import org.gradle.testkit.runner.BuildResult
-&nbsp;import org.gradle.testkit.runner.GradleRunner
-&nbsp;import org.gradle.testkit.runner.TaskOutcome
-&nbsp;import org.junit.jupiter.api.io.CleanupMode.ON_SUCCESS
-&nbsp;import org.junit.jupiter.api.io.TempDir
+&nbsp;import org.gradle.api.initialization.Settings
 &nbsp;
-&nbsp;public abstract class GradleTest {
-&nbsp;
-&nbsp;    @TempDir(cleanup = ON_SUCCESS) private lateinit var tempDir: File
-&nbsp;
-&nbsp;    @TempDir(cleanup = ON_SUCCESS) private lateinit var isolatedTempDir: File
-&nbsp;
-&nbsp;    public fun gradleTest(
-&nbsp;        sandboxPath: String? = null,
-&nbsp;        name: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: &quot;&quot;,
-&nbsp;        parent: Project? = null,
-&nbsp;        gradleUserHomeDir: File? = null,
-&nbsp;        test: Project.() -&gt; Unit,
-&nbsp;    ) {
-&nbsp;        val projectDir = tempDir.resolve(name).apply(File::mkdirs)
-&nbsp;
-&nbsp;        if (sandboxPath != null) resourceFile(sandboxPath).copyRecursively(projectDir)
-&nbsp;
-&nbsp;        val project: Project =
-&nbsp;            ProjectBuilder.builder()
-&nbsp;                .withName(name)
-&nbsp;                .withParent(parent)
-&nbsp;                .withProjectDir(projectDir)
-&nbsp;                .withGradleUserHomeDir(gradleUserHomeDir)
-&nbsp;                .build()
-&nbsp;
-&nbsp;        test(project)
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun gradleTestKitTest(
-&nbsp;        sandboxPath: String? = null,
-&nbsp;        name: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: &quot;&quot;,
-&nbsp;        debug: Boolean = false,
-&nbsp;        pluginClasspath: Boolean = true,
-&nbsp;        isolated: Boolean = false,
-&nbsp;        test: GradleRunner.() -&gt; Unit,
-&nbsp;    ) {
-&nbsp;        val projectDir = tempDir.resolve(name).apply(File::mkdirs)
-&nbsp;
-&nbsp;        if (sandboxPath != null) resourceFile(sandboxPath).copyRecursively(projectDir)
-&nbsp;
-&nbsp;        test(
-&nbsp;            GradleRunner.create().apply {
-&nbsp;                withDebug(debug)
-&nbsp;                if (pluginClasspath) withPluginClasspath()
-&nbsp;                if (isolated) {
-&nbsp;                    val isolatedDir = isolatedTempDir.resolve(name).apply(File::mkdirs)
-&nbsp;                    withTestKitDir(isolatedDir)
-&nbsp;                }
-&nbsp;                withProjectDir(projectDir)
-&nbsp;            },
-&nbsp;        )
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun GradleRunner.testBuildCache(
-&nbsp;        resultingTask: String? = null,
-&nbsp;        invalidate: (GradleRunner.() -&gt; Unit)? = null,
-&nbsp;    ) {
-&nbsp;        val taskName =
-&nbsp;            checkNotNull(resultingTask ?: arguments.firstOrNull()) {
-&nbsp;                &quot;There is not a task in the arguments to check if build cache works&quot;
+&nbsp;public val Project.localProperties: Properties?
+&nbsp;    get() {
+<b class="nc">&nbsp;        val projectLocalProps: File = file(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        val rootProjectLocalProps: File = rootProject.file(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        return when {</b>
+<b class="nc">&nbsp;            projectLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { projectLocalProps.inputStream().use(::load) }</b>
 &nbsp;            }
-&nbsp;        val task = &quot;:$taskName&quot;
-&nbsp;
-&nbsp;        andWithBuildCache()
-&nbsp;        build()
-&nbsp;
-&nbsp;        invalidate?.invoke(this)
-&nbsp;        cleanBuildDirectory()
-&nbsp;
-&nbsp;        val result = build()
-&nbsp;
-&nbsp;        val outcome =
-&nbsp;            checkNotNull(result.task(task)) { &quot;The outcome for the task $task is null&quot; }.outcome
-&nbsp;
-&nbsp;        val expectOutcome = if (invalidate == null) TaskOutcome.FROM_CACHE else TaskOutcome.SUCCESS
-&nbsp;
-&nbsp;        check(outcome == expectOutcome) { &quot;The outcome is $outcome and must be $expectOutcome&quot; }
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun GradleRunner.testConfigurationCache(
-&nbsp;        expectTaskOutcome: TaskOutcome = TaskOutcome.UP_TO_DATE,
-&nbsp;        resultingTask: String? = null,
-&nbsp;    ) {
-&nbsp;        val taskName =
-&nbsp;            checkNotNull(resultingTask ?: arguments.firstOrNull()) {
-&nbsp;                &quot;There is not a task in the arguments to check if configuration cache works&quot;
+<b class="nc">&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { rootProjectLocalProps.inputStream().use(::load) }</b>
 &nbsp;            }
-&nbsp;        val task = &quot;:$taskName&quot;
-&nbsp;
-&nbsp;        andWithConfigurationCache()
-&nbsp;        andWithNoBuildCache()
-&nbsp;        build()
-&nbsp;
-&nbsp;        val result = build()
-&nbsp;
-&nbsp;        check(result.output.contains(&quot;Reusing configuration cache&quot;)) {
-&nbsp;            &quot;Configuration cache is not working&quot;
-&nbsp;        }
-&nbsp;
-&nbsp;        val outcome =
-&nbsp;            checkNotNull(result.task(task)) { &quot;The outcome for the task $task is null&quot; }.outcome
-&nbsp;
-&nbsp;        check(outcome == expectTaskOutcome) {
-&nbsp;            &quot;The outcome is $outcome and must be $expectTaskOutcome&quot;
+<b class="nc">&nbsp;            else -&gt; null</b>
 &nbsp;        }
 &nbsp;    }
 &nbsp;
-&nbsp;    public fun GradleRunner.withArgumentsFromTXT() {
-&nbsp;        withArguments(argumentsTxt)
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun GradleRunner.gradlewArgumentFromTXT(vararg additionalArgs: String): BuildResult =
-&nbsp;        gradlew(*argumentsTxt.toTypedArray() + additionalArgs)
-&nbsp;
-&nbsp;    public fun GradleRunner.gradlew(vararg arguments: String): BuildResult {
-&nbsp;        val previousArgs: List&lt;String&gt; = this.arguments.toList()
-&nbsp;        val result: BuildResult = withArguments(*arguments).build()
-&nbsp;        withArguments(previousArgs)
-&nbsp;        return result
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun GradleRunner.clean(): BuildResult {
-&nbsp;        val previousArgs: List&lt;String&gt; = arguments.toList()
-&nbsp;        val result: BuildResult = withArguments(&quot;clean&quot;).build()
-&nbsp;        withArguments(previousArgs)
-&nbsp;        return result
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun GradleRunner.cleanBuildDirectory() {
-&nbsp;        for (file in projectDir.walkTopDown()) {
-&nbsp;            if (file.isDirectory &amp;&amp; file.name == &quot;build&quot;) file.deleteRecursively()
+&nbsp;public val Settings.localProperties: Properties?
+&nbsp;    get() {
+<b class="nc">&nbsp;        val settingsLocalProps: File = settingsDir.resolve(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        val rootProjectLocalProps: File = rootDir.resolve(&quot;local.properties&quot;)</b>
+<b class="nc">&nbsp;        return when {</b>
+<b class="nc">&nbsp;            settingsLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { load(settingsLocalProps.inputStream()) }</b>
+&nbsp;            }
+<b class="nc">&nbsp;            rootProjectLocalProps.exists() -&gt; {</b>
+<b class="nc">&nbsp;                Properties().apply { load(rootProjectLocalProps.inputStream()) }</b>
+&nbsp;            }
+<b class="nc">&nbsp;            else -&gt; null</b>
 &nbsp;        }
 &nbsp;    }
-&nbsp;
-&nbsp;    public fun projectProperty(value: String): String = &quot;-P$value&quot;
-&nbsp;
-&nbsp;    public fun GradleRunner.andWithProjectProperty(value: String) {
-&nbsp;        withArguments(arguments + projectProperty(value))
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun systemProperty(value: String): String = &quot;-D$value&quot;
-&nbsp;
-&nbsp;    public fun GradleRunner.andWithSystemProperty(value: String) {
-&nbsp;        withArguments(arguments + systemProperty(value))
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun info(): String = &quot;--info&quot;
-&nbsp;
-&nbsp;    public fun GradleRunner.andWithInfo() {
-&nbsp;        withArguments(arguments + info())
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun stacktrace(): String = &quot;--stacktrace&quot;
-&nbsp;
-&nbsp;    public fun GradleRunner.andWithStacktrace() {
-&nbsp;        withArguments(arguments + stacktrace())
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun scan(): String = &quot;--scan&quot;
-&nbsp;
-&nbsp;    public fun GradleRunner.andWithScan() {
-&nbsp;        withArguments(arguments + scan())
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun buildCache(): String = &quot;--build-cache&quot;
-&nbsp;
-&nbsp;    public fun GradleRunner.andWithBuildCache() {
-&nbsp;        withArguments(arguments + buildCache())
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun noBuildCache(): String = &quot;--no-build-cache&quot;
-&nbsp;
-&nbsp;    public fun GradleRunner.andWithNoBuildCache() {
-&nbsp;        withArguments(arguments + noBuildCache())
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun configurationCache(): String = &quot;--configuration-cache&quot;
-&nbsp;
-&nbsp;    public fun GradleRunner.andWithConfigurationCache() {
-&nbsp;        withArguments(arguments + configurationCache())
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun noConfigurationCache(): String = &quot;--no-configuration-cache&quot;
-&nbsp;
-&nbsp;    public fun GradleRunner.andWithNoConfigurationCache() {
-&nbsp;        withArguments(arguments + noConfigurationCache())
-&nbsp;    }
-&nbsp;
-&nbsp;    public fun configurationCacheProblemsWarn(): String = &quot;--configuration-cache-problems=warn&quot;
-&nbsp;
-&nbsp;    public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
-&nbsp;        withArguments(arguments + configurationCacheProblemsWarn())
-&nbsp;    }
-&nbsp;
-&nbsp;    public val BuildResult.outputTrimmed: String
-&nbsp;        get() = output.lines().joinToString(&quot;\n&quot;, transform = String::trim)
-&nbsp;}
-&nbsp;
-<b class="fc">&nbsp;private fun String.sanitizedSandboxPathPrefix(): String = replace(&quot;/&quot;, &quot;--&quot;).replace(&quot;\\&quot;, &quot;--&quot;)</b>
 </code>
 </pre>
 </div>
@@ -325,7 +157,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-01-26 10:35</div>
+    <div style="float:right;">generated on 2023-01-26 13:19</div>
 </div>
 </body>
 </html>
