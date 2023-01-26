@@ -4,11 +4,7 @@
 
 ### Added
 
-- `gradle-project-test-extensions` to do integration tests
-
 ### Changed
-
-- `gradle-testkit-test-extensions` only for functional tests
 
 ### Deprecated
 
@@ -17,6 +13,16 @@
 ### Fixed
 
 ### Updated
+
+## [1.0.0-alpha.29] - 2023-01-26
+
+### Added
+
+- `gradle-project-test-extensions` to do integration tests
+
+### Changed
+
+- `gradle-testkit-test-extensions` only for functional tests
 
 ## [1.0.0-alpha.28] - 2023-01-26
 
@@ -296,7 +302,9 @@
 - `gradle-ext` project
 - `gradle-testkit-ext` project
 
-[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.28...HEAD
+[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.29...HEAD
+
+[1.0.0-alpha.29]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.28...1.0.0-alpha.29
 
 [1.0.0-alpha.28]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.27...1.0.0-alpha.28
 
