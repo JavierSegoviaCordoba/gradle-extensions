@@ -228,37 +228,6 @@
   "sources": [
     {
       "type": "file",
-      "path": "gradle-extensions-subprojects/gradle-miscellanea-extensions/build.gradle.kts",
-      "language": "kotlin",
-      "line": 2,
-      "offset": 11,
-      "length": 4,
-      "code": {
-        "startLine": 1,
-        "length": 4,
-        "offset": 20,
-        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
-      }
-    }
-  ],
-  "attributes": {
-    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions",
-    "inspectionName": "KotlinAnnotator"
-  },
-  "hash": "46e810901434f890dee41a9798aa699a7b1ea73ea79348fa11d7f86fc31486aa"
-},{
-  "tool": "Code Inspection",
-  "category": "General",
-  "type": "Kotlin annotator",
-  "tags": [
-    "Sanity"
-  ],
-  "severity": "Critical",
-  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
-  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
-  "sources": [
-    {
-      "type": "file",
       "path": "gradle-extensions-subprojects/gradle-tasks-extensions/build.gradle.kts",
       "language": "kotlin",
       "line": 2,
@@ -277,6 +246,37 @@
     "inspectionName": "KotlinAnnotator"
   },
   "hash": "0c5f86cd0bc684e898363cccf8af91c5e1a60f8816ddecf744c6ce4823fbae5b"
+},{
+  "tool": "Code Inspection",
+  "category": "General",
+  "type": "Kotlin annotator",
+  "tags": [
+    "Sanity"
+  ],
+  "severity": "Critical",
+  "comment": "'val Project.libs: LibrariesForLibs' can't be called in this context by implicit receiver. Use the explicit one if necessary",
+  "detailsInfo": "Allows viewing the problems reported by the Kotlin annotator: compilation problems, references unresolved by the IDE, and so on.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "gradle-extensions-subprojects/gradle-miscellanea-extensions/build.gradle.kts",
+      "language": "kotlin",
+      "line": 2,
+      "offset": 11,
+      "length": 4,
+      "code": {
+        "startLine": 1,
+        "length": 4,
+        "offset": 20,
+        "surroundingCode": "plugins {\n    alias(libs.plugins.javiersc.hubdle)\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "gradle-extensions-project.gradle-extensions-subprojects.gradle-miscellanea-extensions",
+    "inspectionName": "KotlinAnnotator"
+  },
+  "hash": "46e810901434f890dee41a9798aa699a7b1ea73ea79348fa11d7f86fc31486aa"
 },{
   "tool": "Code Inspection",
   "category": "General",
