@@ -4,6 +4,20 @@
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Updated
+
+## [1.0.0-alpha.28] - 2023-01-26
+
+### Added
+
 - `GradleTest.gradleTest` for integration tests without TestKit
 - `Project.isAlpha: Provider<Boolean>` extension
 - `Project.isNotAlpha: Provider<Boolean>` extension
@@ -22,12 +36,6 @@
 ### Changed
 
 - `GradleTest.gradleTestKitTest` parameters to `debug` and `pluginClasspath`
-
-### Deprecated
-
-### Removed
-
-### Fixed
 
 ### Updated
 
@@ -260,7 +268,6 @@
 - `andWithScan` function
 - `andWithConfigurationCache` function
 - `andWithNoBuildCache` function
-- `andWithConfigurationCache` function
 - `andWithNoConfigurationCache` function
 - `andWithConfigurationCacheProblemsWarn` function
 - `withArgumentsFromTXT` function
@@ -284,3 +291,61 @@
 
 - `gradle-ext` project
 - `gradle-testkit-ext` project
+
+[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.28...HEAD
+
+[1.0.0-alpha.28]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.27...1.0.0-alpha.28
+
+[1.0.0-alpha.27]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.26...1.0.0-alpha.27
+
+[1.0.0-alpha.26]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.25...1.0.0-alpha.26
+
+[1.0.0-alpha.25]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.24...1.0.0-alpha.25
+
+[1.0.0-alpha.24]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.23...1.0.0-alpha.24
+
+[1.0.0-alpha.23]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.22...1.0.0-alpha.23
+
+[1.0.0-alpha.22]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.21...1.0.0-alpha.22
+
+[1.0.0-alpha.21]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.20...1.0.0-alpha.21
+
+[1.0.0-alpha.20]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.19...1.0.0-alpha.20
+
+[1.0.0-alpha.19]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.18...1.0.0-alpha.19
+
+[1.0.0-alpha.18]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.17...1.0.0-alpha.18
+
+[1.0.0-alpha.17]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.16...1.0.0-alpha.17
+
+[1.0.0-alpha.16]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.15...1.0.0-alpha.16
+
+[1.0.0-alpha.15]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.14...1.0.0-alpha.15
+
+[1.0.0-alpha.14]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.13...1.0.0-alpha.14
+
+[1.0.0-alpha.13]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.12...1.0.0-alpha.13
+
+[1.0.0-alpha.12]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.11...1.0.0-alpha.12
+
+[1.0.0-alpha.11]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.10...1.0.0-alpha.11
+
+[1.0.0-alpha.10]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.9...1.0.0-alpha.10
+
+[1.0.0-alpha.9]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.8...1.0.0-alpha.9
+
+[1.0.0-alpha.8]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.7...1.0.0-alpha.8
+
+[1.0.0-alpha.7]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.6...1.0.0-alpha.7
+
+[1.0.0-alpha.6]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.5...1.0.0-alpha.6
+
+[1.0.0-alpha.5]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.4...1.0.0-alpha.5
+
+[1.0.0-alpha.4]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.3...1.0.0-alpha.4
+
+[1.0.0-alpha.3]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.2...1.0.0-alpha.3
+
+[1.0.0-alpha.2]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.1...1.0.0-alpha.2
+
+[1.0.0-alpha.1]: https://github.com/JavierSegoviaCordoba/gradle-extensions/commits/1.0.0-alpha.1
