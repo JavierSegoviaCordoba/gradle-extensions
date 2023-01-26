@@ -17,5 +17,9 @@ module:gradle-tasks-extensions
 com.javiersc.gradle.tasks.extensions
 module:gradle-version-catalog-extensions
 com.javiersc.gradle.extensions.version.catalogs
+module:gradle-common-test-extensions
+com.javiersc.gradle.common.test.extensions
+module:gradle-project-test-extensions
+com.javiersc.gradle.project.test.extensions
 module:gradle-testkit-test-extensions
 com.javiersc.gradle.testkit.test.extensions
