@@ -2,39 +2,39 @@
 
 ## Metrics
 
-* 81 number of properties
+* 83 number of properties
 
-* 89 number of functions
+* 92 number of functions
 
-* 10 number of classes
+* 11 number of classes
 
 * 13 number of packages
 
-* 37 number of kt files
+* 38 number of kt files
 
 ## Complexity Report
 
-* 1,254 lines of code (loc)
+* 1,297 lines of code (loc)
 
-* 1,032 source lines of code (sloc)
+* 1,066 source lines of code (sloc)
 
-* 725 logical lines of code (lloc)
+* 749 logical lines of code (lloc)
 
 * 1 comment lines of code (cloc)
 
-* 142 cyclomatic complexity (mcc)
+* 147 cyclomatic complexity (mcc)
 
-* 29 cognitive complexity
+* 30 cognitive complexity
 
-* 20 number of total code smells
+* 21 number of total code smells
 
 * 0% comment source ratio
 
-* 195 mcc per 1,000 lloc
+* 196 mcc per 1,000 lloc
 
-* 27 code smells per 1,000 lloc
+* 28 code smells per 1,000 lloc
 
-## Findings (20)
+## Findings (21)
 
 ### complexity, LongParameterList (1)
 
@@ -42,19 +42,19 @@ The more parameters a function has the more complex it is. Long parameter lists 
 
 [Documentation](https://detekt.dev/docs/rules/complexity#longparameterlist)
 
-* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:17:33
+* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:41:33
 ```
-The function gradleTestKitTest(sandboxPath: String?, name: String, withDebug: Boolean, withPluginClasspath: Boolean, isolated: Boolean, test: GradleRunner.() -> Unit) has too many parameters. The current threshold is set to 6.
+The function gradleTestKitTest(sandboxPath: String?, name: String, debug: Boolean, pluginClasspath: Boolean, isolated: Boolean, test: GradleRunner.() -> Unit) has too many parameters. The current threshold is set to 6.
 ```
 ```kotlin
-14 
-15     @TempDir(cleanup = ON_SUCCESS) private lateinit var isolatedTempDir: File
-16 
-17     public fun gradleTestKitTest(
+38         test(project)
+39     }
+40 
+41     public fun gradleTestKitTest(
 !!                                 ^ error
-18         sandboxPath: String? = null,
-19         name: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: "",
-20         withDebug: Boolean = false,
+42         sandboxPath: String? = null,
+43         name: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: "",
+44         debug: Boolean = false,
 
 ```
 
@@ -210,6 +210,28 @@ The file name 'DelegatedProperties' does not match the name of the single top-le
 
 ```
 
+### naming, MemberNameEqualsClassName (1)
+
+A member should not be given the same name as its parent class or object.
+
+[Documentation](https://detekt.dev/docs/rules/naming#membernameequalsclassname)
+
+* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:19:5
+```
+A member is named after the class. This might result in confusion. Either rename the member or change it to a constructor.
+```
+```kotlin
+16 
+17     @TempDir(cleanup = ON_SUCCESS) private lateinit var isolatedTempDir: File
+18 
+19     public fun gradleTest(
+!!     ^ error
+20         sandboxPath: String? = null,
+21         name: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: "",
+22         parent: Project? = null,
+
+```
+
 ### naming, PackageNaming (1)
 
 Package names should match the naming convention set in the configuration.
@@ -257,131 +279,131 @@ A function that only returns a constant is misleading. Consider declaring a cons
 
 [Documentation](https://detekt.dev/docs/rules/style#functiononlyreturningconstant)
 
-* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:135:16
+* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:159:16
 ```
 info is returning a constant. Prefer declaring a constant instead.
 ```
 ```kotlin
-132         withArguments(arguments + systemProperty(value))
-133     }
-134 
-135     public fun info(): String = "--info"
-!!!                ^ error
-136 
-137     public fun GradleRunner.andWithInfo() {
-138         withArguments(arguments + info())
-
-```
-
-* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:141:16
-```
-stacktrace is returning a constant. Prefer declaring a constant instead.
-```
-```kotlin
-138         withArguments(arguments + info())
-139     }
-140 
-141     public fun stacktrace(): String = "--stacktrace"
-!!!                ^ error
-142 
-143     public fun GradleRunner.andWithStacktrace() {
-144         withArguments(arguments + stacktrace())
-
-```
-
-* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:147:16
-```
-scan is returning a constant. Prefer declaring a constant instead.
-```
-```kotlin
-144         withArguments(arguments + stacktrace())
-145     }
-146 
-147     public fun scan(): String = "--scan"
-!!!                ^ error
-148 
-149     public fun GradleRunner.andWithScan() {
-150         withArguments(arguments + scan())
-
-```
-
-* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:153:16
-```
-buildCache is returning a constant. Prefer declaring a constant instead.
-```
-```kotlin
-150         withArguments(arguments + scan())
-151     }
-152 
-153     public fun buildCache(): String = "--build-cache"
-!!!                ^ error
-154 
-155     public fun GradleRunner.andWithBuildCache() {
-156         withArguments(arguments + buildCache())
-
-```
-
-* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:159:16
-```
-noBuildCache is returning a constant. Prefer declaring a constant instead.
-```
-```kotlin
-156         withArguments(arguments + buildCache())
+156         withArguments(arguments + systemProperty(value))
 157     }
 158 
-159     public fun noBuildCache(): String = "--no-build-cache"
+159     public fun info(): String = "--info"
 !!!                ^ error
 160 
-161     public fun GradleRunner.andWithNoBuildCache() {
-162         withArguments(arguments + noBuildCache())
+161     public fun GradleRunner.andWithInfo() {
+162         withArguments(arguments + info())
 
 ```
 
 * gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:165:16
 ```
-configurationCache is returning a constant. Prefer declaring a constant instead.
+stacktrace is returning a constant. Prefer declaring a constant instead.
 ```
 ```kotlin
-162         withArguments(arguments + noBuildCache())
+162         withArguments(arguments + info())
 163     }
 164 
-165     public fun configurationCache(): String = "--configuration-cache"
+165     public fun stacktrace(): String = "--stacktrace"
 !!!                ^ error
 166 
-167     public fun GradleRunner.andWithConfigurationCache() {
-168         withArguments(arguments + configurationCache())
+167     public fun GradleRunner.andWithStacktrace() {
+168         withArguments(arguments + stacktrace())
 
 ```
 
 * gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:171:16
 ```
-noConfigurationCache is returning a constant. Prefer declaring a constant instead.
+scan is returning a constant. Prefer declaring a constant instead.
 ```
 ```kotlin
-168         withArguments(arguments + configurationCache())
+168         withArguments(arguments + stacktrace())
 169     }
 170 
-171     public fun noConfigurationCache(): String = "--no-configuration-cache"
+171     public fun scan(): String = "--scan"
 !!!                ^ error
 172 
-173     public fun GradleRunner.andWithNoConfigurationCache() {
-174         withArguments(arguments + noConfigurationCache())
+173     public fun GradleRunner.andWithScan() {
+174         withArguments(arguments + scan())
 
 ```
 
 * gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:177:16
 ```
+buildCache is returning a constant. Prefer declaring a constant instead.
+```
+```kotlin
+174         withArguments(arguments + scan())
+175     }
+176 
+177     public fun buildCache(): String = "--build-cache"
+!!!                ^ error
+178 
+179     public fun GradleRunner.andWithBuildCache() {
+180         withArguments(arguments + buildCache())
+
+```
+
+* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:183:16
+```
+noBuildCache is returning a constant. Prefer declaring a constant instead.
+```
+```kotlin
+180         withArguments(arguments + buildCache())
+181     }
+182 
+183     public fun noBuildCache(): String = "--no-build-cache"
+!!!                ^ error
+184 
+185     public fun GradleRunner.andWithNoBuildCache() {
+186         withArguments(arguments + noBuildCache())
+
+```
+
+* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:189:16
+```
+configurationCache is returning a constant. Prefer declaring a constant instead.
+```
+```kotlin
+186         withArguments(arguments + noBuildCache())
+187     }
+188 
+189     public fun configurationCache(): String = "--configuration-cache"
+!!!                ^ error
+190 
+191     public fun GradleRunner.andWithConfigurationCache() {
+192         withArguments(arguments + configurationCache())
+
+```
+
+* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:195:16
+```
+noConfigurationCache is returning a constant. Prefer declaring a constant instead.
+```
+```kotlin
+192         withArguments(arguments + configurationCache())
+193     }
+194 
+195     public fun noConfigurationCache(): String = "--no-configuration-cache"
+!!!                ^ error
+196 
+197     public fun GradleRunner.andWithNoConfigurationCache() {
+198         withArguments(arguments + noConfigurationCache())
+
+```
+
+* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:201:16
+```
 configurationCacheProblemsWarn is returning a constant. Prefer declaring a constant instead.
 ```
 ```kotlin
-174         withArguments(arguments + noConfigurationCache())
-175     }
-176 
-177     public fun configurationCacheProblemsWarn(): String = "--configuration-cache-problems=warn"
+198         withArguments(arguments + noConfigurationCache())
+199     }
+200 
+201     public fun configurationCacheProblemsWarn(): String = "--configuration-cache-problems=warn"
 !!!                ^ error
-178 
-179     public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
-180         withArguments(arguments + configurationCacheProblemsWarn())
+202 
+203     public fun GradleRunner.andWithConfigurationCacheProblemsWarn() {
+204         withArguments(arguments + configurationCacheProblemsWarn())
 
 ```
 
@@ -391,20 +413,20 @@ An abstract class is unnecessary. May be refactored to an interface or to a conc
 
 [Documentation](https://detekt.dev/docs/rules/style#unnecessaryabstractclass)
 
-* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:11:23
+* gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt:13:23
 ```
 An abstract class without an abstract member can be refactored to a concrete class.
 ```
 ```kotlin
-8  import org.junit.jupiter.api.io.CleanupMode.ON_SUCCESS
-9  import org.junit.jupiter.api.io.TempDir
-10 
-11 public abstract class GradleTest {
-!!                       ^ error
+10 import org.junit.jupiter.api.io.CleanupMode.ON_SUCCESS
+11 import org.junit.jupiter.api.io.TempDir
 12 
-13     @TempDir(cleanup = ON_SUCCESS) private lateinit var tempDir: File
+13 public abstract class GradleTest {
+!!                       ^ error
 14 
+15     @TempDir(cleanup = ON_SUCCESS) private lateinit var tempDir: File
+16 
 
 ```
 
-generated with [detekt version 1.22.0](https://detekt.dev/) on 2023-01-05 17:15:57 UTC
+generated with [detekt version 1.22.0](https://detekt.dev/) on 2023-01-26 10:34:09 UTC

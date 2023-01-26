@@ -495,7 +495,23 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
           "type": "Library"
         },
         {
@@ -698,7 +714,23 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
           "type": "Library"
         },
         {
@@ -2015,6 +2047,18 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
+          "type": "Library"
+        },
+        {
           "name": "Gradle: org.junit.jupiter:junit-jupiter-engine:5.9.1",
           "type": "Library"
         },
@@ -2027,11 +2071,15 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
+          "type": "Library"
+        },
+        {
           "name": "Gradle: org.junit.platform:junit-platform-engine:1.9.1",
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
           "type": "Library"
         },
         {
@@ -2226,12 +2274,24 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+          "type": "Library"
+        },
+        {
           "name": "gradle-extensions-project.gradle-extensions.main",
           "type": "Module"
         },
         {
           "name": "gradle-extensions-project.gradle-test-extensions.main",
           "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
+          "type": "Library"
         },
         {
           "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.9.1",
@@ -2286,6 +2346,10 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
+          "type": "Library"
+        },
+        {
           "name": "Gradle: org.junit.platform:junit-platform-commons:1.9.1",
           "type": "Library"
         },
@@ -2310,7 +2374,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
           "type": "Library"
         },
         {
@@ -2531,7 +2595,23 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
           "type": "Library"
         },
         {
@@ -2722,12 +2802,24 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+          "type": "Library"
+        },
+        {
           "name": "gradle-extensions-project.gradle-extensions.main",
           "type": "Module"
         },
         {
           "name": "gradle-extensions-project.gradle-test-extensions.main",
           "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
+          "type": "Library"
         },
         {
           "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.9.1",
@@ -2782,6 +2874,10 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
+          "type": "Library"
+        },
+        {
           "name": "Gradle: org.junit.platform:junit-platform-commons:1.9.1",
           "type": "Library"
         },
@@ -2806,7 +2902,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
           "type": "Library"
         },
         {
@@ -2997,12 +3093,24 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+          "type": "Library"
+        },
+        {
           "name": "gradle-extensions-project.gradle-extensions.main",
           "type": "Module"
         },
         {
           "name": "gradle-extensions-project.gradle-test-extensions.main",
           "type": "Module"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+          "type": "Library"
+        },
+        {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
+          "type": "Library"
         },
         {
           "name": "Gradle: org.junit.jupiter:junit-jupiter-api:5.9.1",
@@ -3057,6 +3165,10 @@
           "type": "Library"
         },
         {
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
+          "type": "Library"
+        },
+        {
           "name": "Gradle: org.junit.platform:junit-platform-commons:1.9.1",
           "type": "Library"
         },
@@ -3081,7 +3193,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
           "type": "Library"
         },
         {
@@ -4616,7 +4728,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
           "type": "Library"
         },
         {
@@ -4628,7 +4740,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
           "type": "Library"
         },
         {
@@ -4636,11 +4748,11 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
           "type": "Library"
         },
         {
@@ -4648,7 +4760,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.20",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
           "type": "Library"
         },
         {
@@ -4829,7 +4941,7 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
           "type": "Library"
         },
         {
@@ -4837,19 +4949,19 @@
           "type": "Library"
         },
         {
-          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+          "name": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.20",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
           "type": "Library"
         },
         {
-          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.20",
+          "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
           "type": "Library"
         },
         {

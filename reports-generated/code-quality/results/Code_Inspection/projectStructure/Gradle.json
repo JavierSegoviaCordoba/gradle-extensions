@@ -226,12 +226,44 @@
       "version": "1.9.1"
     },
     {
-      "ideaName": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
-      "gradleName": "com.javiersc.semver:semver-core-jvm:0.1.0-beta.12",
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib-jdk8",
+      "version": "1.8.0"
+    },
+    {
+      "ideaName": "Gradle: com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
+      "gradleName": "com.javiersc.semver:semver-core-jvm:0.1.0-beta.13",
       "unresolved": false,
       "groupId": "com.javiersc.semver",
       "artifactId": "semver-core-jvm",
-      "version": "0.1.0-beta.12"
+      "version": "0.1.0-beta.13"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib-jdk7",
+      "version": "1.8.0"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib:1.8.0",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib",
+      "version": "1.8.0"
+    },
+    {
+      "ideaName": "Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
+      "gradleName": "org.jetbrains.kotlin:kotlin-stdlib-common:1.8.0",
+      "unresolved": false,
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib-common",
+      "version": "1.8.0"
     }
   ]
 }

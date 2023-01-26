@@ -95,6 +95,8 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;import com.javiersc.gradle.testkit.test.extensions._internal.argumentsTxt
 &nbsp;import java.io.File
+&nbsp;import org.gradle.api.Project
+&nbsp;import org.gradle.testfixtures.ProjectBuilder
 &nbsp;import org.gradle.testkit.runner.BuildResult
 &nbsp;import org.gradle.testkit.runner.GradleRunner
 &nbsp;import org.gradle.testkit.runner.TaskOutcome
@@ -107,11 +109,33 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;    @TempDir(cleanup = ON_SUCCESS) private lateinit var isolatedTempDir: File
 &nbsp;
+&nbsp;    public fun gradleTest(
+&nbsp;        sandboxPath: String? = null,
+&nbsp;        name: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: &quot;&quot;,
+&nbsp;        parent: Project? = null,
+&nbsp;        gradleUserHomeDir: File? = null,
+&nbsp;        test: Project.() -&gt; Unit,
+&nbsp;    ) {
+&nbsp;        val projectDir = tempDir.resolve(name).apply(File::mkdirs)
+&nbsp;
+&nbsp;        if (sandboxPath != null) resourceFile(sandboxPath).copyRecursively(projectDir)
+&nbsp;
+&nbsp;        val project: Project =
+&nbsp;            ProjectBuilder.builder()
+&nbsp;                .withName(name)
+&nbsp;                .withParent(parent)
+&nbsp;                .withProjectDir(projectDir)
+&nbsp;                .withGradleUserHomeDir(gradleUserHomeDir)
+&nbsp;                .build()
+&nbsp;
+&nbsp;        test(project)
+&nbsp;    }
+&nbsp;
 &nbsp;    public fun gradleTestKitTest(
 &nbsp;        sandboxPath: String? = null,
 &nbsp;        name: String = sandboxPath?.sanitizedSandboxPathPrefix() ?: &quot;&quot;,
-&nbsp;        withDebug: Boolean = false,
-&nbsp;        withPluginClasspath: Boolean = true,
+&nbsp;        debug: Boolean = false,
+&nbsp;        pluginClasspath: Boolean = true,
 &nbsp;        isolated: Boolean = false,
 &nbsp;        test: GradleRunner.() -&gt; Unit,
 &nbsp;    ) {
@@ -121,8 +145,8 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;        test(
 &nbsp;            GradleRunner.create().apply {
-&nbsp;                withDebug(withDebug)
-&nbsp;                if (withPluginClasspath) withPluginClasspath()
+&nbsp;                withDebug(debug)
+&nbsp;                if (pluginClasspath) withPluginClasspath()
 &nbsp;                if (isolated) {
 &nbsp;                    val isolatedDir = isolatedTempDir.resolve(name).apply(File::mkdirs)
 &nbsp;                    withTestKitDir(isolatedDir)
@@ -301,7 +325,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-01-05 17:16</div>
+    <div style="float:right;">generated on 2023-01-26 10:35</div>
 </div>
 </body>
 </html>

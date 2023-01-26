@@ -15,29 +15,6 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "endColumn": 50,
-                  "endLine": 1,
-                  "startColumn": 1,
-                  "startLine": 1
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt' with '11' functions detected. Defined threshold inside files is set to '11'"
-          },
-          "ruleId": "detekt.complexity.TooManyFunctions"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
                   "uri": "gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/ProjectProperties.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
@@ -61,20 +38,43 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+                  "uri": "gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "endColumn": 6,
-                  "endLine": 24,
-                  "startColumn": 33,
-                  "startLine": 17
+                  "endColumn": 50,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
                 }
               }
             }
           ],
           "message": {
-            "text": "The function gradleTestKitTest(sandboxPath: String?, name: String, withDebug: Boolean, withPluginClasspath: Boolean, isolated: Boolean, test: GradleRunner.() -> Unit) has too many parameters. The current threshold is set to 6."
+            "text": "File '/home/runner/work/gradle-extensions/gradle-extensions/gradle-extensions-subprojects/gradle-properties-extensions/main/kotlin/com/javiersc/gradle/properties/extensions/SettingsProperties.kt' with '11' functions detected. Defined threshold inside files is set to '11'"
+          },
+          "ruleId": "detekt.complexity.TooManyFunctions"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 48,
+                  "startColumn": 33,
+                  "startLine": 41
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "The function gradleTestKitTest(sandboxPath: String?, name: String, debug: Boolean, pluginClasspath: Boolean, isolated: Boolean, test: GradleRunner.() -> Unit) has too many parameters. The current threshold is set to 6."
           },
           "ruleId": "detekt.complexity.LongParameterList"
         },
@@ -222,6 +222,29 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
+                  "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/GradleTest.kt",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "endLine": 39,
+                  "startColumn": 5,
+                  "startLine": 19
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "A member is named after the class. This might result in confusion. Either rename the member or change it to a constructor."
+          },
+          "ruleId": "detekt.naming.MemberNameEqualsClassName"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
                   "uri": "gradle-test-extensions-subprojects/gradle-testkit-test-extensions/main/kotlin/com/javiersc/gradle/testkit/test/extensions/_internal/argumentsTxt.kt",
                   "uriBaseId": "%SRCROOT%"
                 },
@@ -273,9 +296,9 @@
                 },
                 "region": {
                   "endColumn": 20,
-                  "endLine": 135,
+                  "endLine": 159,
                   "startColumn": 16,
-                  "startLine": 135
+                  "startLine": 159
                 }
               }
             }
@@ -296,9 +319,9 @@
                 },
                 "region": {
                   "endColumn": 26,
-                  "endLine": 141,
+                  "endLine": 165,
                   "startColumn": 16,
-                  "startLine": 141
+                  "startLine": 165
                 }
               }
             }
@@ -319,9 +342,9 @@
                 },
                 "region": {
                   "endColumn": 20,
-                  "endLine": 147,
+                  "endLine": 171,
                   "startColumn": 16,
-                  "startLine": 147
+                  "startLine": 171
                 }
               }
             }
@@ -342,9 +365,9 @@
                 },
                 "region": {
                   "endColumn": 26,
-                  "endLine": 153,
+                  "endLine": 177,
                   "startColumn": 16,
-                  "startLine": 153
+                  "startLine": 177
                 }
               }
             }
@@ -365,9 +388,9 @@
                 },
                 "region": {
                   "endColumn": 28,
-                  "endLine": 159,
+                  "endLine": 183,
                   "startColumn": 16,
-                  "startLine": 159
+                  "startLine": 183
                 }
               }
             }
@@ -388,9 +411,9 @@
                 },
                 "region": {
                   "endColumn": 34,
-                  "endLine": 165,
+                  "endLine": 189,
                   "startColumn": 16,
-                  "startLine": 165
+                  "startLine": 189
                 }
               }
             }
@@ -411,9 +434,9 @@
                 },
                 "region": {
                   "endColumn": 36,
-                  "endLine": 171,
+                  "endLine": 195,
                   "startColumn": 16,
-                  "startLine": 171
+                  "startLine": 195
                 }
               }
             }
@@ -434,9 +457,9 @@
                 },
                 "region": {
                   "endColumn": 46,
-                  "endLine": 177,
+                  "endLine": 201,
                   "startColumn": 16,
-                  "startLine": 177
+                  "startLine": 201
                 }
               }
             }
@@ -457,9 +480,9 @@
                 },
                 "region": {
                   "endColumn": 33,
-                  "endLine": 11,
+                  "endLine": 13,
                   "startColumn": 23,
-                  "startLine": 11
+                  "startLine": 13
                 }
               }
             }
