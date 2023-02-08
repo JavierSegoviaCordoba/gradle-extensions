@@ -3,11 +3,17 @@
   "tools inspection": {
     "Code Inspection": 2
   },
+  "linter": "QDJVMC",
   "attributes": {
     "vcs": {
-      "sarifIdea": {}
+      "sarifIdea": {
+        "repositoryUri": "https://github.com/JavierSegoviaCordoba/gradle-extensions",
+        "revisionId": "4b5ca113a0a4988bd7eb9efec7c7015cd937903c",
+        "branch": "main"
+      }
     },
     "deviceId": "200820300000000-50c8-1a29-af5a-6292a9c78008",
-    "jobUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions/actions/runs/4015548121"
+    "jobUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions/actions/runs/4122977875",
+    "repoUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions"
   }
 }
