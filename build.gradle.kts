@@ -8,13 +8,12 @@ hubdle {
         binaryCompatibilityValidator()
         coverage()
         documentation {
+            api()
             changelog()
             readme {
                 badges()
             }
-            site {
-                excludes(projects.integrationTests)
-            }
+            site()
         }
         nexus()
     }

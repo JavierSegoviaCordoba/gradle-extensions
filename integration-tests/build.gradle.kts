@@ -7,31 +7,31 @@ hubdle {
         explicitApi()
     }
     kotlin {
-        gradle {
-            plugin {
-                features {
-                    extendedGradle(enabled = false)
-                }
-                main {
-                    dependencies {
-                        implementation(gradleKotlinDsl())
+        jvm {
+            features {
+                gradle {
+                    plugin {
+                        extendedGradle.set(false)
 
-                        implementation(projects.gradleExtensions)
-                        implementation(projects.gradleTestExtensions)
-                    }
-                }
-
-                rawConfig {
-                    gradlePlugin {
-                        plugins {
-                            create("FakePlugin") {
-                                id = "fake.plugin"
-                                displayName = "Fake Plugin"
-                                description = "Fake Plugin for testing purposes"
-                                implementationClass = "com.javiersc.integration.tests.FakePlugin"
+                        gradlePlugin {
+                            plugins {
+                                create("FakePlugin") {
+                                    id = "fake.plugin"
+                                    displayName = "Fake Plugin"
+                                    description = "Fake Plugin for testing purposes"
+                                    implementationClass = "com.javiersc.integration.tests.FakePlugin"
+                                }
                             }
                         }
                     }
+                }
+            }
+
+            main {
+                dependencies {
+                    implementation(gradleKotlinDsl())
+                    implementation(projects.gradleExtensions)
+                    implementation(projects.gradleTestExtensions)
                 }
             }
         }

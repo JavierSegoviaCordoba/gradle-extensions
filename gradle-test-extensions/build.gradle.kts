@@ -4,23 +4,21 @@ plugins {
 
 hubdle {
     config {
+        documentation {
+            api()
+        }
         explicitApi()
         publishing()
     }
     kotlin {
-        gradle {
-            plugin {
-                features {
-                    extendedGradle(enabled = false)
-                }
-                main {
-                    dependencies {
-                        api(gradleKotlinDsl())
-                        api(javierscKotlinStdlib())
-                        api(projects.gradleTestExtensionsSubprojects.gradleCommonTestExtensions)
-                        api(projects.gradleTestExtensionsSubprojects.gradleProjectTestExtensions)
-                        api(projects.gradleTestExtensionsSubprojects.gradleTestkitTestExtensions)
-                    }
+        jvm {
+            main {
+                dependencies {
+                    api(gradleKotlinDsl())
+                    api(javierscKotlinStdlib())
+                    api(projects.gradleTestExtensionsSubprojects.gradleCommonTestExtensions)
+                    api(projects.gradleTestExtensionsSubprojects.gradleProjectTestExtensions)
+                    api(projects.gradleTestExtensionsSubprojects.gradleTestkitTestExtensions)
                 }
             }
         }

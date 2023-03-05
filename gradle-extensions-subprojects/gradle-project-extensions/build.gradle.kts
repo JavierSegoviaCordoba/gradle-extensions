@@ -4,14 +4,14 @@ plugins {
 
 hubdle {
     config {
+        documentation {
+            api()
+        }
         explicitApi()
         publishing()
     }
     kotlin {
         jvm {
-            features {
-                extendedGradle(enabled = false)
-            }
             main {
                 dependencies {
                     api(gradleKotlinDsl())
