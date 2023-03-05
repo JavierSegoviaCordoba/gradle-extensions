@@ -6,13 +6,19 @@
 
 ### Changed
 
-- `Logging` functions and colors
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### Updated
+
+## [1.0.0-alpha.30] - 2023-03-05
+
+### Changed
+
+- `Logging` functions and colors
 
 ### Updated
 
@@ -307,7 +313,9 @@
 - `gradle-ext` project
 - `gradle-testkit-ext` project
 
-[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.29...HEAD
+[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.30...HEAD
+
+[1.0.0-alpha.30]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.29...1.0.0-alpha.30
 
 [1.0.0-alpha.29]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.28...1.0.0-alpha.29
 
