@@ -68,7 +68,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/112)
+    (0/114)
   </span>
 </td>
 </tr>
@@ -89,7 +89,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     <td class="coverageStat"/>
   </tr>
   <tr>
-    <td class="name">LoggingKt$traceColored$$inlined$ansiColor$1</td>
+    <td class="name">LoggingKt$quietColored$$inlined$ansiColor$1</td>
     <td class="coverageStat"/>
   </tr>
   <tr>
@@ -120,7 +120,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     0%
   </span>
   <span class="absValue">
-    (0/112)
+    (0/114)
   </span>
 </td>
 </tr>
@@ -139,28 +139,28 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;import com.javiersc.kotlin.stdlib.ansiColor
 &nbsp;import org.gradle.api.logging.Logger
 &nbsp;
-<b class="nc">&nbsp;public fun Logger.lifecycleColored(color: AnsiColor = Reset, message: () -&gt; String) {</b>
-<b class="nc">&nbsp;    lifecycle(message().ansiColor(color))</b>
+<b class="nc">&nbsp;public fun Logger.errorColored(color: AnsiColor = Foreground.Red, message: () -&gt; String) {</b>
+<b class="nc">&nbsp;    error(message().ansiColor(color))</b>
 &nbsp;}
 &nbsp;
-<b class="nc">&nbsp;public fun Logger.traceColored(color: AnsiColor = Foreground.Purple, message: () -&gt; String) {</b>
-<b class="nc">&nbsp;    trace(message().ansiColor(color))</b>
-&nbsp;}
-&nbsp;
-<b class="nc">&nbsp;public fun Logger.debugColored(color: AnsiColor = Foreground.Cyan, message: () -&gt; String) {</b>
-<b class="nc">&nbsp;    debug(message().ansiColor(color))</b>
-&nbsp;}
-&nbsp;
-<b class="nc">&nbsp;public fun Logger.infoColored(color: AnsiColor = Foreground.Blue, message: () -&gt; String) {</b>
-<b class="nc">&nbsp;    info(message().ansiColor(color))</b>
+<b class="nc">&nbsp;public fun Logger.quietColored(color: AnsiColor = Reset, message: () -&gt; String) {</b>
+<b class="nc">&nbsp;    quiet(message().ansiColor(color))</b>
 &nbsp;}
 &nbsp;
 <b class="nc">&nbsp;public fun Logger.warnColored(color: AnsiColor = Foreground.Yellow, message: () -&gt; String) {</b>
 <b class="nc">&nbsp;    warn(message().ansiColor(color))</b>
 &nbsp;}
 &nbsp;
-<b class="nc">&nbsp;public fun Logger.errorColored(message: String, color: AnsiColor = Foreground.Red) {</b>
-<b class="nc">&nbsp;    warn(message.ansiColor(color))</b>
+<b class="nc">&nbsp;public fun Logger.lifecycleColored(color: AnsiColor = Foreground.Green, message: () -&gt; String) {</b>
+<b class="nc">&nbsp;    lifecycle(message().ansiColor(color))</b>
+&nbsp;}
+&nbsp;
+<b class="nc">&nbsp;public fun Logger.infoColored(color: AnsiColor = Foreground.Blue, message: () -&gt; String) {</b>
+<b class="nc">&nbsp;    info(message().ansiColor(color))</b>
+&nbsp;}
+&nbsp;
+<b class="nc">&nbsp;public fun Logger.debugColored(color: AnsiColor = Foreground.Cyan, message: () -&gt; String) {</b>
+<b class="nc">&nbsp;    debug(message().ansiColor(color))</b>
 &nbsp;}
 </code>
 </pre>
@@ -185,7 +185,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-03-05 08:49</div>
+    <div style="float:right;">generated on 2023-03-05 16:40</div>
 </div>
 </body>
 </html>
