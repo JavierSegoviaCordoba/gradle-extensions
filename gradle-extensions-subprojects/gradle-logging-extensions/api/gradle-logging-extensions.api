@@ -1,14 +1,14 @@
 public final class com/javiersc/gradle/logging/extensions/LoggingKt {
 	public static final fun debugColored (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;)V
 	public static synthetic fun debugColored$default (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
-	public static final fun errorColored (Lorg/gradle/api/logging/Logger;Ljava/lang/String;Lcom/javiersc/kotlin/stdlib/AnsiColor;)V
-	public static synthetic fun errorColored$default (Lorg/gradle/api/logging/Logger;Ljava/lang/String;Lcom/javiersc/kotlin/stdlib/AnsiColor;ILjava/lang/Object;)V
+	public static final fun errorColored (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;)V
+	public static synthetic fun errorColored$default (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
 	public static final fun infoColored (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;)V
 	public static synthetic fun infoColored$default (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
 	public static final fun lifecycleColored (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;)V
 	public static synthetic fun lifecycleColored$default (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
-	public static final fun traceColored (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;)V
-	public static synthetic fun traceColored$default (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
+	public static final fun quietColored (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;)V
+	public static synthetic fun quietColored$default (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
 	public static final fun warnColored (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;)V
 	public static synthetic fun warnColored$default (Lorg/gradle/api/logging/Logger;Lcom/javiersc/kotlin/stdlib/AnsiColor;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
 }

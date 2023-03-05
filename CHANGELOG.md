@@ -6,6 +6,8 @@
 
 ### Changed
 
+- `Logging` functions and colors
+
 ### Deprecated
 
 ### Removed
