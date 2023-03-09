@@ -4,6 +4,8 @@
 
 ### Added
 
+- `operator fun Project.invoke(action: Project.() -> Unit)`
+
 ### Changed
 
 ### Deprecated

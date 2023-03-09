@@ -10,3 +10,7 @@ public val Project.module: String
 
 public val Project.library: String
     get() = "$group:$name:$version"
+
+public operator fun Project.invoke(action: Project.() -> Unit) {
+    action(this)
+}

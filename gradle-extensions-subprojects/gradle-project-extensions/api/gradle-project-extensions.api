@@ -1,6 +1,7 @@
 public final class com/javiersc/gradle/project/extensions/ProjectKt {
 	public static final fun getLibrary (Lorg/gradle/api/Project;)Ljava/lang/String;
 	public static final fun getModule (Lorg/gradle/api/Project;)Ljava/lang/String;
+	public static final fun invoke (Lorg/gradle/api/Project;Lkotlin/jvm/functions/Function1;)V
 	public static final fun isRootProject (Lorg/gradle/api/Project;)Z
 }
 
