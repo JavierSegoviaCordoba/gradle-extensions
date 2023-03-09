@@ -6,9 +6,14 @@
   "linter": "QDJVMC",
   "attributes": {
     "vcs": {
-      "sarifIdea": {}
+      "sarifIdea": {
+        "repositoryUri": "https://github.com/JavierSegoviaCordoba/gradle-extensions.git",
+        "revisionId": "81bf369d235ecb2384988ae283eb944510de1402",
+        "branch": "main"
+      }
     },
     "deviceId": "200820300000000-50c8-1a29-af5a-6292a9c78008",
-    "jobUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions/actions/runs/4337776561"
+    "jobUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions/actions/runs/4376552823",
+    "repoUrl": "https://github.com/JavierSegoviaCordoba/gradle-extensions.git"
   }
 }
