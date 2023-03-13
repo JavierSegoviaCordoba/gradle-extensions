@@ -12,19 +12,19 @@
         <meta name="author" content="Javier Segovia Córdoba">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Gradle TestKit DSL</title>
+        <title>gradle-plugin-extensions - Gradle TestKit DSL</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
         
           
           
@@ -45,9 +45,9 @@
       
     
     
-      <link rel="stylesheet" href="css/all.css">
+      <link rel="stylesheet" href="../../../../css/all.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gradle-extensions" class="md-skip">
+        <a href="#module-gradle-plugin-extensions" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Gradle TestKit DSL" class="md-header__button md-logo" aria-label="Gradle TestKit DSL" data-md-component="logo">
+    <a href="../../../.." title="Gradle TestKit DSL" class="md-header__button md-logo" aria-label="Gradle TestKit DSL" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              gradle-plugin-extensions
             
           </span>
         </div>
@@ -184,7 +184,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Gradle TestKit DSL" class="md-nav__button md-logo" aria-label="Gradle TestKit DSL" data-md-component="logo">
+    <a href="../../../.." title="Gradle TestKit DSL" class="md-nav__button md-logo" aria-label="Gradle TestKit DSL" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -213,52 +213,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#download-from-mavencentral" class="md-nav__link">
-    Download from MavenCentral
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -271,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CHANGELOG/" class="md-nav__link">
+      <a href="../../../../CHANGELOG/" class="md-nav__link">
         Changelog
       </a>
     </li>
@@ -312,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/" class="md-nav__link">
+      <a href="../../../../api/" class="md-nav__link">
         Latest
       </a>
     </li>
@@ -326,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/snapshot/" class="md-nav__link">
+      <a href="../../../../api/snapshot/" class="md-nav__link">
         Snapshot
       </a>
     </li>
@@ -346,12 +305,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -374,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-extensions/gradle-extensions/" class="md-nav__link">
+      <a href="../../../gradle-extensions/gradle-extensions/" class="md-nav__link">
         gradle-extensions
       </a>
     </li>
@@ -386,12 +347,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
       
       
       
@@ -414,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-extensions-subprojects/gradle-delegated-properties-extensions/gradle-delegated-properties-extensions/" class="md-nav__link">
+      <a href="../../gradle-delegated-properties-extensions/gradle-delegated-properties-extensions/" class="md-nav__link">
         gradle-delegated-properties-extensions
       </a>
     </li>
@@ -428,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-extensions-subprojects/gradle-logging-extensions/gradle-logging-extensions/" class="md-nav__link">
+      <a href="../../gradle-logging-extensions/gradle-logging-extensions/" class="md-nav__link">
         gradle-logging-extensions
       </a>
     </li>
@@ -442,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-extensions-subprojects/gradle-miscellanea-extensions/gradle-miscellanea-extensions/" class="md-nav__link">
+      <a href="../../gradle-miscellanea-extensions/gradle-miscellanea-extensions/" class="md-nav__link">
         gradle-miscellanea-extensions
       </a>
     </li>
@@ -454,11 +417,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="projects/gradle-extensions-subprojects/gradle-plugin-extensions/gradle-plugin-extensions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          gradle-plugin-extensions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         gradle-plugin-extensions
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-from-mavencentral" class="md-nav__link">
+    Download from MavenCentral
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -470,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-extensions-subprojects/gradle-project-extensions/gradle-project-extensions/" class="md-nav__link">
+      <a href="../../gradle-project-extensions/gradle-project-extensions/" class="md-nav__link">
         gradle-project-extensions
       </a>
     </li>
@@ -484,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-extensions-subprojects/gradle-properties-extensions/gradle-properties-extensions/" class="md-nav__link">
+      <a href="../../gradle-properties-extensions/gradle-properties-extensions/" class="md-nav__link">
         gradle-properties-extensions
       </a>
     </li>
@@ -498,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-extensions-subprojects/gradle-tasks-extensions/gradle-tasks-extensions/" class="md-nav__link">
+      <a href="../../gradle-tasks-extensions/gradle-tasks-extensions/" class="md-nav__link">
         gradle-tasks-extensions
       </a>
     </li>
@@ -512,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-extensions-subprojects/gradle-version-catalog-extensions/gradle-version-catalog-extensions/" class="md-nav__link">
+      <a href="../../gradle-version-catalog-extensions/gradle-version-catalog-extensions/" class="md-nav__link">
         gradle-version-catalog-extensions
       </a>
     </li>
@@ -533,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-test-extensions/gradle-test-extensions/" class="md-nav__link">
+      <a href="../../../gradle-test-extensions/gradle-test-extensions/" class="md-nav__link">
         gradle-test-extensions
       </a>
     </li>
@@ -573,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-test-extensions-subprojects/gradle-common-test-extensions/gradle-common-test-extensions/" class="md-nav__link">
+      <a href="../../../gradle-test-extensions-subprojects/gradle-common-test-extensions/gradle-common-test-extensions/" class="md-nav__link">
         gradle-common-test-extensions
       </a>
     </li>
@@ -587,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-test-extensions-subprojects/gradle-project-test-extensions/gradle-project-test-extensions/" class="md-nav__link">
+      <a href="../../../gradle-test-extensions-subprojects/gradle-project-test-extensions/gradle-project-test-extensions/" class="md-nav__link">
         gradle-project-test-extensions
       </a>
     </li>
@@ -601,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projects/gradle-test-extensions-subprojects/gradle-testkit-test-extensions/gradle-testkit-test-extensions/" class="md-nav__link">
+      <a href="../../../gradle-test-extensions-subprojects/gradle-testkit-test-extensions/gradle-testkit-test-extensions/" class="md-nav__link">
         gradle-testkit-test-extensions
       </a>
     </li>
@@ -717,6 +728,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -731,37 +749,31 @@
                 
                   
 
-  <a href="https://github.com/JavierSegoviaCordoba/gradle-testkit-dsl/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/JavierSegoviaCordoba/gradle-testkit-dsl/edit/master/docs/projects/gradle-extensions-subprojects/gradle-plugin-extensions/gradle-plugin-extensions.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<p><img alt="Kotlin version" src="https://img.shields.io/badge/kotlin-1.8.10-blueviolet?logo=kotlin&amp;logoColor=white" />
-<a href="https://repo1.maven.org/maven2/com/javiersc/gradle/gradle-extensions/"><img alt="MavenCentral" src="https://img.shields.io/maven-central/v/com.javiersc.gradle/gradle-extensions?label=MavenCentral" /></a>
-<a href="https://oss.sonatype.org/content/repositories/snapshots/com/javiersc/gradle/gradle-extensions/"><img alt="Snapshot" src="https://img.shields.io/nexus/s/com.javiersc.gradle/gradle-extensions?server=https%3A%2F%2Foss.sonatype.org%2F&amp;label=Snapshot" /></a></p>
-<p><a href="https://github.com/JavierSegoviaCordoba/gradle-extensions/tree/main"><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/JavierSegoviaCordoba/gradle-extensions/build-kotlin.yaml?label=Build&amp;logo=GitHub" /></a>
-<a href="https://sonarcloud.io/dashboard?id=com.javiersc.gradle:gradle-extensions"><img alt="Coverage" src="https://img.shields.io/sonar/coverage/com.javiersc.gradle:gradle-extensions?label=Coverage&amp;logo=SonarCloud&amp;logoColor=white&amp;server=https%3A%2F%2Fsonarcloud.io" /></a>
-<a href="https://sonarcloud.io/dashboard?id=com.javiersc.gradle:gradle-extensions"><img alt="Quality" src="https://img.shields.io/sonar/quality_gate/com.javiersc.gradle:gradle-extensions?label=Quality&amp;logo=SonarCloud&amp;logoColor=white&amp;server=https%3A%2F%2Fsonarcloud.io" /></a>
-<a href="https://sonarcloud.io/dashboard?id=com.javiersc.gradle:gradle-extensions"><img alt="Tech debt" src="https://img.shields.io/sonar/tech_debt/com.javiersc.gradle:gradle-extensions?label=Tech%20debt&amp;logo=SonarCloud&amp;logoColor=white&amp;server=https%3A%2F%2Fsonarcloud.io" /></a></p>
-<h1 id="gradle-extensions">Gradle Extensions<a class="headerlink" href="#gradle-extensions" title="Permanent link">&para;</a></h1>
+<h1 id="module-gradle-plugin-extensions">Module gradle-plugin-extensions<a class="headerlink" href="#module-gradle-plugin-extensions" title="Permanent link">&para;</a></h1>
 <h3 id="download-from-mavencentral">Download from MavenCentral<a class="headerlink" href="#download-from-mavencentral" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// or any subproject</span><span class="w"></span>
-<span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-logging-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-miscellanea-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-plugin-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-project-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-properties-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-tasks-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-version-catalog-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">SomeProjectPlugin</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Plugin</span><span class="o">&lt;</span><span class="n">Project</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-test-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// or any subproject</span><span class="w"></span>
-<span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-common-test-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-project-test-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;com.javiersc.gradle:gradle-testkit-test-extensions:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="n">Project</span><span class="p">.</span><span class="nf">apply</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">TODO</span><span class="p">(</span><span class="s">&quot;Create your project plugin&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">SomeProjectPlugin</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Plugin</span><span class="o">&lt;</span><span class="n">Settings</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="n">Settings</span><span class="p">.</span><span class="nf">apply</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">TODO</span><span class="p">(</span><span class="s">&quot;Create your settings plugin&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 
@@ -783,15 +795,30 @@
     
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
+        
+        <a href="../../gradle-miscellanea-extensions/gradle-miscellanea-extensions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: gradle-miscellanea-extensions" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              gradle-miscellanea-extensions
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="CHANGELOG/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelog" rel="next">
+        <a href="../../gradle-project-extensions/gradle-project-extensions/" class="md-footer__link md-footer__link--next" aria-label="Next: gradle-project-extensions" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Changelog
+              gradle-project-extensions
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -848,10 +875,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>
