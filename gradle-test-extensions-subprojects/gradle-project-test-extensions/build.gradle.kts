@@ -1,7 +1,3 @@
-plugins {
-    alias(libs.plugins.javiersc.hubdle)
-}
-
 hubdle {
     config {
         analysis()
@@ -16,9 +12,9 @@ hubdle {
             main {
                 dependencies {
                     api(gradleKotlinDsl())
-                    api(javierscKotlinStdlib())
-                    api(junitJupiterApi())
-                    api(junitJupiterParams())
+                    api(hubdle.javiersc.kotlin.kotlinStdlib)
+                    api(hubdle.junit.jupiter.junitJupiterApi)
+                    api(hubdle.junit.jupiter.junitJupiterParams)
                     api(projects.gradleTestExtensionsSubprojects.gradleCommonTestExtensions)
                 }
             }

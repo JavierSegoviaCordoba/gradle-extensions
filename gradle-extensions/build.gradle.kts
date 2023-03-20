@@ -1,7 +1,3 @@
-plugins {
-    alias(libs.plugins.javiersc.hubdle)
-}
-
 hubdle {
     config {
         analysis()
@@ -15,7 +11,7 @@ hubdle {
         jvm {
             main {
                 dependencies {
-                    api(javierscKotlinStdlib())
+                    api(hubdle.javiersc.kotlin.kotlinStdlib)
                     api(projects.gradleExtensionsSubprojects.gradleDelegatedPropertiesExtensions)
                     api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)
                     api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)
