@@ -1,64 +1,57 @@
 package com.javiersc.gradle.properties.extensions
 
-import java.io.File
 import org.gradle.api.Project
+import org.gradle.api.provider.Provider
 
-public fun Project.getProperty(name: String): String =
-    localProperties?.getProperty(name)?.also {
-        logger.debug("Property $name found in the project `local.properties` file")
-    }
-        ?: localProperties?.getProperty(name.toSnakeCase())
-            ?: System.getenv(name)?.also {
-            logger.debug("Property $name found in the root `local.properties`file")
-        }
-            ?: System.getenv(name.toSnakeCase())
-            ?: providers.gradleProperty(name).orNull?.also {
-            logger.debug("Property $name found in the environment variables")
-        }
-            ?: providers.gradleProperty(name.toSnakeCase()).orNull.run {
-            checkNotNull(this) {
-                logger.debug("Property $name found in the `gradle.properties` file")
-                val project = this@getProperty
-                val userHomePath = System.getProperty("user.home")
-                """
-                    |The property `$name` is not available in any of the next sources:
-                    |  - ${project.projectDir}${File.separator}local.properties
-                    |  - ${project.rootDir}${File.separator}local.properties
-                    |  - Environment variable
-                    |  - ${project.projectDir}${File.separator}gradle.properties
-                    |  - ${project.rootDir}${File.separator}gradle.properties
-                    |  - $userHomePath${File.separator}.gradle${File.separator}gradle.properties
-                    |  
-                """
-                    .trimMargin()
-            }
-        }
+/**
+ * Get a property with the exact name or the name transformed to SCREAMING_CASE, for example,
+ * `some.prop` or `SOME_PROP` with this ordering:
+ * - Gradle properties from CLI
+ * - Environment variables
+ * - Properties from `gradle-local.properties` files
+ * - Properties from `local.properties` files
+ * - Properties from `gradle.properties` files
+ *
+ * For any kind of file the function tries to find the property in the file next to the project, so
+ * it checks for the project file, later its parent, and so on until stop in the root directory.
+ *
+ * An example of priority
+ * - `/foo/bar/gradle.properties`
+ * - `/foo/gradle.properties`
+ * - `/gradle.properties`
+ *
+ * In the previous example, `/foo/bar/gradle.properties` file has priority, if it wasn't there, then
+ * `/foo/gradle.properties` would have the priority, and if it wasn't there, then
+ * `/gradle.properties` would have the priority.
+ */
+public fun Project.getProperty(name: String): Provider<String> = provider {
+    val projectProperties: MutableMap<String, String> = gradle.startParameter.projectProperties
+    val cliProperty: String? = projectProperties[name] ?: projectProperties[name.toSnakeCase()]
 
-public fun Project.getPropertyOrNull(name: String): String? =
-    runCatching { getProperty(name) }.getOrNull()
+    cliProperty //
+        ?: getEnvironmentVariable(name).orNull //
+         ?: getEnvironmentVariable(name.toSnakeCase()).orNull //
+         ?: getGradleLocalProperty(name).orNull //
+         ?: getGradleLocalProperty(name.toSnakeCase()).orNull //
+         ?: getLocalProperty(name).orNull //
+         ?: getLocalProperty(name.toSnakeCase()).orNull //
+         ?: getGradleProperty(name).orNull //
+         ?: getGradleProperty(name.toSnakeCase()).orNull //
+}
 
-public fun Project.getDoubleProperty(name: String): Double = getProperty(name).toDouble()
+public fun Project.getDoubleProperty(name: String): Provider<Double> =
+    getProperty(name).map(String::toDouble)
 
-public fun Project.getDoublePropertyOrNull(name: String): Double? =
-    getPropertyOrNull(name)?.toDoubleOrNull()
+public fun Project.getIntProperty(name: String): Provider<Int> =
+    getProperty(name).map(String::toInt)
 
-public fun Project.getIntProperty(name: String): Int = getProperty(name).toInt()
+public fun Project.getLongProperty(name: String): Provider<Long> =
+    getProperty(name).map(String::toLong)
 
-public fun Project.getIntPropertyOrNull(name: String): Int? = getPropertyOrNull(name)?.toIntOrNull()
+public fun Project.getBooleanProperty(name: String): Provider<Boolean> =
+    getProperty(name).map(String::toBoolean)
 
-public fun Project.getLongProperty(name: String): Long = getProperty(name).toLong()
-
-public fun Project.getLongPropertyOrNull(name: String): Long? =
-    getPropertyOrNull(name)?.toLongOrNull()
-
-public fun Project.getBooleanProperty(name: String): Boolean = getPropertyOrNull(name).toBoolean()
-
-public fun Project.getBooleanPropertyOrNull(name: String): Boolean? =
-    getPropertyOrNull(name)?.toBoolean()
-
-public fun Project.getStringProperty(name: String): String = getProperty(name)
-
-public fun Project.getStringPropertyOrNull(name: String): String? = getPropertyOrNull(name)
+public fun Project.getStringProperty(name: String): Provider<String> = getProperty(name)
 
 internal fun String.toSnakeCase(): String =
     map { char -> if (char.isUpperCase()) "_$char" else char.uppercaseChar() }

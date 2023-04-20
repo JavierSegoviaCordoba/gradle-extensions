@@ -1,34 +1,45 @@
+public final class com/javiersc/gradle/properties/extensions/EnvironmentVariablesPropertiesKt {
+	public static final fun getEnvironmentVariable (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getEnvironmentVariable (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+}
+
+public final class com/javiersc/gradle/properties/extensions/FilePropertiesKt {
+	public static final fun toProperties (Ljava/io/File;)Ljava/util/Properties;
+}
+
+public final class com/javiersc/gradle/properties/extensions/GradlePropertiesKt {
+	public static final fun getGradleProperties (Lorg/gradle/api/Project;)Ljava/util/Properties;
+	public static final fun getGradleProperties (Lorg/gradle/api/initialization/Settings;)Ljava/util/Properties;
+	public static final fun getGradleProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getGradleProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+}
+
 public final class com/javiersc/gradle/properties/extensions/LocalPropertiesKt {
+	public static final fun getGradleLocalProperties (Lorg/gradle/api/Project;)Ljava/util/Properties;
+	public static final fun getGradleLocalProperties (Lorg/gradle/api/initialization/Settings;)Ljava/util/Properties;
+	public static final fun getGradleLocalProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getGradleLocalProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
 	public static final fun getLocalProperties (Lorg/gradle/api/Project;)Ljava/util/Properties;
 	public static final fun getLocalProperties (Lorg/gradle/api/initialization/Settings;)Ljava/util/Properties;
+	public static final fun getLocalProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getLocalProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
 }
 
 public final class com/javiersc/gradle/properties/extensions/ProjectPropertiesKt {
-	public static final fun getBooleanProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Z
-	public static final fun getBooleanPropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/Boolean;
-	public static final fun getDoubleProperty (Lorg/gradle/api/Project;Ljava/lang/String;)D
-	public static final fun getDoublePropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/Double;
-	public static final fun getIntProperty (Lorg/gradle/api/Project;Ljava/lang/String;)I
-	public static final fun getIntPropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/Integer;
-	public static final fun getLongProperty (Lorg/gradle/api/Project;Ljava/lang/String;)J
-	public static final fun getLongPropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/Long;
-	public static final fun getProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/String;
-	public static final fun getPropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/String;
-	public static final fun getStringProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/String;
-	public static final fun getStringPropertyOrNull (Lorg/gradle/api/Project;Ljava/lang/String;)Ljava/lang/String;
+	public static final fun getBooleanProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getDoubleProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getIntProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getLongProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getStringProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
 }
 
 public final class com/javiersc/gradle/properties/extensions/SettingsPropertiesKt {
-	public static final fun getBooleanProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Z
-	public static final fun getDoubleProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)D
-	public static final fun getDoublePropertyOrNull (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Ljava/lang/Double;
-	public static final fun getIntProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)I
-	public static final fun getIntPropertyOrNull (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Ljava/lang/Integer;
-	public static final fun getLongProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)J
-	public static final fun getLongPropertyOrNull (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Ljava/lang/Long;
-	public static final fun getProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Ljava/lang/String;
-	public static final fun getPropertyOrNull (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Ljava/lang/String;
-	public static final fun getStringProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Ljava/lang/String;
-	public static final fun getStringPropertyOrNull (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Ljava/lang/String;
+	public static final fun getBooleanProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getDoubleProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getIntProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getLongProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+	public static final fun getStringProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
 }
 
