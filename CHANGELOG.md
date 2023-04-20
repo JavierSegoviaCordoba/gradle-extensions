@@ -8,6 +8,8 @@
 
 ### Changed
 
+- all `getProperty` functions
+
 ### Deprecated
 
 ### Removed
