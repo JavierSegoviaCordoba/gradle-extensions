@@ -4,6 +4,13 @@
 
 ### Added
 
+- `Settings.objects: ObjectFactory`
+- `provider` for settings
+- `directoryProvider` for settings
+- `directoryProperty` for settings
+- `regularFileProvider` for settings
+- `fileProperty` for settings
+- `regularFileProperty` for settings
 - `operator fun Project.invoke(action: Project.() -> Unit)`
 
 ### Changed

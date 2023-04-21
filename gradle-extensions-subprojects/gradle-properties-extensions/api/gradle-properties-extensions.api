@@ -14,6 +14,17 @@ public final class com/javiersc/gradle/properties/extensions/GradlePropertiesKt 
 	public static final fun getGradleProperty (Lorg/gradle/api/initialization/Settings;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
 }
 
+public final class com/javiersc/gradle/properties/extensions/LazyPropertiesKt {
+	public static final fun directoryProperty (Lorg/gradle/api/initialization/Settings;Lkotlin/jvm/functions/Function1;)Lorg/gradle/api/file/DirectoryProperty;
+	public static final fun fileProperty (Lorg/gradle/api/initialization/Settings;Lkotlin/jvm/functions/Function1;)Lorg/gradle/api/file/RegularFileProperty;
+	public static final fun regularFileProperty (Lorg/gradle/api/initialization/Settings;Lkotlin/jvm/functions/Function1;)Lorg/gradle/api/file/RegularFileProperty;
+}
+
+public final class com/javiersc/gradle/properties/extensions/LazyProviderKt {
+	public static final fun directoryProvider (Lorg/gradle/api/initialization/Settings;Lkotlin/jvm/functions/Function1;)Lorg/gradle/api/provider/Provider;
+	public static final fun regularFileProvider (Lorg/gradle/api/initialization/Settings;Lkotlin/jvm/functions/Function1;)Lorg/gradle/api/provider/Provider;
+}
+
 public final class com/javiersc/gradle/properties/extensions/LocalPropertiesKt {
 	public static final fun getGradleLocalProperties (Lorg/gradle/api/Project;)Ljava/util/Properties;
 	public static final fun getGradleLocalProperties (Lorg/gradle/api/initialization/Settings;)Ljava/util/Properties;
@@ -32,6 +43,10 @@ public final class com/javiersc/gradle/properties/extensions/ProjectPropertiesKt
 	public static final fun getLongProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
 	public static final fun getProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
 	public static final fun getStringProperty (Lorg/gradle/api/Project;Ljava/lang/String;)Lorg/gradle/api/provider/Provider;
+}
+
+public final class com/javiersc/gradle/properties/extensions/SettingsObjectFactoryKt {
+	public static final fun getObjects (Lorg/gradle/api/initialization/Settings;)Lorg/gradle/api/model/ObjectFactory;
 }
 
 public final class com/javiersc/gradle/properties/extensions/SettingsPropertiesKt {
