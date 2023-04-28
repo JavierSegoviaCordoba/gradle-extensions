@@ -4,6 +4,20 @@
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Updated
+
+## [1.0.0-alpha.31] - 2023-04-28
+
+### Added
+
 - `Settings.objects: ObjectFactory`
 - `provider` for settings
 - `directoryProvider` for settings
@@ -16,12 +30,6 @@
 ### Changed
 
 - all `getProperty` functions
-
-### Deprecated
-
-### Removed
-
-### Fixed
 
 ### Updated
 
@@ -327,7 +335,9 @@
 - `gradle-ext` project
 - `gradle-testkit-ext` project
 
-[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.30...HEAD
+[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.31...HEAD
+
+[1.0.0-alpha.31]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.30...1.0.0-alpha.31
 
 [1.0.0-alpha.30]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.29...1.0.0-alpha.30
 
