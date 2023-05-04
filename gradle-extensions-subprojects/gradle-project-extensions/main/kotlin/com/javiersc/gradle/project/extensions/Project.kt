@@ -14,3 +14,19 @@ public val Project.library: String
 public operator fun Project.invoke(action: Project.() -> Unit) {
     action(this)
 }
+
+public fun Project.withPlugins(vararg pluginIds: String, action: Project.() -> Unit) {
+    check(pluginIds.isNotEmpty()) { "pluginIds must not be empty" }
+
+    val appliedPluginIds: MutableList<String> = mutableListOf()
+
+    for (pluginId in pluginIds) {
+        pluginManager.withPlugin(pluginId) { appliedPluginIds.add(pluginId) }
+    }
+
+    pluginManager.withPlugin(pluginIds.first()) {
+        if (pluginIds.toSortedSet() == appliedPluginIds.toSortedSet()) {
+            action(this)
+        }
+    }
+}
