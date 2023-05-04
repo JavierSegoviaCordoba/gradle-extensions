@@ -4,6 +4,8 @@
 
 ### Added
 
+- `withPlugins` function
+
 ### Changed
 
 ### Deprecated
