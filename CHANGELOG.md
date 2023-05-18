@@ -4,12 +4,6 @@
 
 ### Added
 
-- `withPlugins` function
-- `PluginDependency.artifact: String` function
-- `Provider<PluginDependency>.artifact: Provider<String>`
-- `PluginDependency.module: String`
-- `Provider<PluginDependency>.module: Provider<String>`
-
 ### Changed
 
 ### Deprecated
@@ -17,6 +11,18 @@
 ### Removed
 
 ### Fixed
+
+### Updated
+
+## [1.0.0-alpha.32] - 2023-05-18
+
+### Added
+
+- `withPlugins` function
+- `PluginDependency.artifact: String` function
+- `Provider<PluginDependency>.artifact: Provider<String>`
+- `PluginDependency.module: String`
+- `Provider<PluginDependency>.module: Provider<String>`
 
 ### Updated
 
@@ -344,7 +350,9 @@
 - `gradle-ext` project
 - `gradle-testkit-ext` project
 
-[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.31...HEAD
+[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.32...HEAD
+
+[1.0.0-alpha.32]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.31...1.0.0-alpha.32
 
 [1.0.0-alpha.31]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.30...1.0.0-alpha.31
 
