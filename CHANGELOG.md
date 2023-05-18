@@ -5,6 +5,10 @@
 ### Added
 
 - `withPlugins` function
+- `PluginDependency.artifact: String` function
+- `Provider<PluginDependency>.artifact: Provider<String>`
+- `PluginDependency.module: String`
+- `Provider<PluginDependency>.module: Provider<String>`
 
 ### Changed
 

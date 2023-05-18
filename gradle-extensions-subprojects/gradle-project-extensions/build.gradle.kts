@@ -14,7 +14,7 @@ hubdle {
                     api(gradleKotlinDsl())
                     api(hubdle.javiersc.kotlin.kotlinStdlib)
 
-                    implementation(libs.javiersc.semver.core)
+                    implementation(hubdle.javiersc.semver.core)
                 }
             }
         }

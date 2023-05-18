@@ -5,6 +5,8 @@ package com.javiersc.gradle.extensions.version.catalogs
 import org.gradle.api.artifacts.MinimalExternalModuleDependency
 import org.gradle.api.artifacts.VersionCatalog
 import org.gradle.api.artifacts.VersionCatalogsExtension
+import org.gradle.api.provider.Provider
+import org.gradle.plugin.use.PluginDependency
 
 public fun VersionCatalogsExtension.getLibrariesByGroup(
     group: String
@@ -39,3 +41,15 @@ public fun VersionCatalogsExtension.getLibraries(
 
 public val VersionCatalogsExtension.catalogNamesWithLibsAtFirst: List<String>
     get() = catalogNames.sorted().sortedByDescending { it == "libs" }
+
+public val PluginDependency.artifact: String
+    get() = "$pluginId:$pluginId.gradle.plugin:${version.displayName}"
+
+public val Provider<PluginDependency>.artifact: Provider<String>
+    get() = map { it.artifact }
+
+public val PluginDependency.module: String
+    get() = "$pluginId:$pluginId.gradle.plugin"
+
+public val Provider<PluginDependency>.module: Provider<String>
+    get() = map { it.module }
