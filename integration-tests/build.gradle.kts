@@ -2,6 +2,7 @@ hubdle {
     config {
         explicitApi()
     }
+
     kotlin {
         jvm {
             features {

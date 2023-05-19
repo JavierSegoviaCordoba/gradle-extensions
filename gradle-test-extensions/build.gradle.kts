@@ -1,12 +1,14 @@
 hubdle {
     config {
         analysis()
+        coverage()
         documentation {
             api()
         }
         explicitApi()
         publishing()
     }
+
     kotlin {
         jvm {
             main {
