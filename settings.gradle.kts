@@ -9,6 +9,7 @@ pluginManagement {
         gradlePluginPortal()
         mavenCentral()
         google()
+        mavenLocal()
     }
 
     plugins {
