@@ -13,7 +13,8 @@ public val Project.gradleProperties: Properties?
 public fun Project.getGradleProperty(name: String): Provider<String> = provider {
     val property: String? =
         gradle.startParameter.projectProperties[name]
-            ?: gradleProperties?.getProperty(name) ?: providers.gradleProperty(name).orNull
+            ?: gradleProperties?.getProperty(name)
+            ?: providers.gradleProperty(name).orNull
     if (property != null) propertyNotFound(name, GradlePropertiesFileName)
     property
 }
@@ -25,7 +26,8 @@ public fun Settings.getGradleProperty(name: String): Provider<String> =
     providers.provider {
         val property: String? =
             gradle.startParameter.projectProperties[name]
-                ?: gradleProperties?.getProperty(name) ?: providers.gradleProperty(name).orNull
+                ?: gradleProperties?.getProperty(name)
+                ?: providers.gradleProperty(name).orNull
         if (property != null) propertyNotFound(name, GradlePropertiesFileName)
         property
     }
