@@ -9,14 +9,14 @@ public fun Settings.getProperty(name: String): Provider<String> =
         val cliProperty: String? = projectProperties[name] ?: projectProperties[name.toSnakeCase()]
 
         cliProperty //
-            ?: getEnvironmentVariable(name).orNull //
-             ?: getEnvironmentVariable(name.toSnakeCase()).orNull //
-             ?: getGradleLocalProperty(name).orNull //
-             ?: getGradleLocalProperty(name.toSnakeCase()).orNull //
-             ?: getLocalProperty(name).orNull //
-             ?: getLocalProperty(name.toSnakeCase()).orNull //
-             ?: getGradleProperty(name).orNull //
-             ?: getGradleProperty(name.toSnakeCase()).orNull //
+        ?: getEnvironmentVariable(name).orNull //
+            ?: getEnvironmentVariable(name.toSnakeCase()).orNull //
+            ?: getGradleLocalProperty(name).orNull //
+            ?: getGradleLocalProperty(name.toSnakeCase()).orNull //
+            ?: getLocalProperty(name).orNull //
+            ?: getLocalProperty(name.toSnakeCase()).orNull //
+            ?: getGradleProperty(name).orNull //
+            ?: getGradleProperty(name.toSnakeCase()).orNull //
     }
 
 public fun Settings.getDoubleProperty(name: String): Provider<Double> =

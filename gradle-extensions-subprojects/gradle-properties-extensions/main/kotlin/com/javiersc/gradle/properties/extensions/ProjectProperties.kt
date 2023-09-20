@@ -29,14 +29,14 @@ public fun Project.getProperty(name: String): Provider<String> = provider {
     val cliProperty: String? = projectProperties[name] ?: projectProperties[name.toSnakeCase()]
 
     cliProperty //
-        ?: getEnvironmentVariable(name).orNull //
-         ?: getEnvironmentVariable(name.toSnakeCase()).orNull //
-         ?: getGradleLocalProperty(name).orNull //
-         ?: getGradleLocalProperty(name.toSnakeCase()).orNull //
-         ?: getLocalProperty(name).orNull //
-         ?: getLocalProperty(name.toSnakeCase()).orNull //
-         ?: getGradleProperty(name).orNull //
-         ?: getGradleProperty(name.toSnakeCase()).orNull //
+    ?: getEnvironmentVariable(name).orNull //
+        ?: getEnvironmentVariable(name.toSnakeCase()).orNull //
+        ?: getGradleLocalProperty(name).orNull //
+        ?: getGradleLocalProperty(name.toSnakeCase()).orNull //
+        ?: getLocalProperty(name).orNull //
+        ?: getLocalProperty(name.toSnakeCase()).orNull //
+        ?: getGradleProperty(name).orNull //
+        ?: getGradleProperty(name.toSnakeCase()).orNull //
 }
 
 public fun Project.getDoubleProperty(name: String): Provider<Double> =
