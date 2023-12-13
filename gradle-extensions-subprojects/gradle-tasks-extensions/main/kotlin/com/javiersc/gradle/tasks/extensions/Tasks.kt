@@ -2,27 +2,33 @@ package com.javiersc.gradle.tasks.extensions
 
 import org.gradle.api.Action
 import org.gradle.api.Task
-import org.gradle.api.tasks.TaskCollection
 import org.gradle.api.tasks.TaskContainer
+import org.gradle.api.tasks.TaskProvider
+import org.gradle.kotlin.dsl.named
 import org.gradle.kotlin.dsl.register
-import org.gradle.kotlin.dsl.withType
 
-public inline fun <reified T : Task> TaskContainer.namedLazily(
+@JvmName("maybeNamedTask")
+public fun TaskContainer.maybeNamed(
     name: String,
-    action: Action<in T>? = null,
-): TaskCollection<T> {
-    val collection: TaskCollection<T> = withType<T>().matching { it.name == name }
-    if (action != null) collection.configureEach(action)
-    return collection
-}
+    action: Action<Task> = Action {},
+): TaskProvider<Task>? = if (names.contains(name)) named(name).apply { configure(action) } else null
 
-public inline fun <reified T : Task> TaskContainer.maybeRegisterLazily(
+public inline fun <reified T : Task> TaskContainer.maybeNamed(
     name: String,
-    action: Action<in T>? = null,
-): TaskCollection<T> =
-    if (names.contains(name)) {
-        namedLazily(name = name, action = action)
-    } else {
-        register<T>(name)
-        namedLazily(name = name, action = action)
-    }
+    action: Action<in T> = Action {},
+): TaskProvider<T>? = if (names.contains(name)) named<T>(name).apply { configure(action) } else null
+
+@JvmName("maybeRegisterTask")
+public fun TaskContainer.maybeRegister(
+    name: String,
+    action: Action<Task> = Action {},
+): TaskProvider<Task> =
+    if (!names.contains(name)) register(name).apply { configure(action) }
+    else named(name).apply { configure(action) }
+
+public inline fun <reified T : Task> TaskContainer.maybeRegister(
+    name: String,
+    action: Action<in T> = Action {},
+): TaskProvider<T> =
+    if (!names.contains(name)) register<T>(name).apply { configure(action) }
+    else named<T>(name).apply { configure(action) }

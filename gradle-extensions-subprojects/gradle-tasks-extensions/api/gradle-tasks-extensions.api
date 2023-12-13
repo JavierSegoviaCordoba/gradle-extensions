@@ -1,5 +1,7 @@
-public final class com/javiersc/gradle/tasks/extensions/TasksKt$sam$i$org_gradle_api_specs_Spec$0 : org/gradle/api/specs/Spec {
-	public fun <init> (Lkotlin/jvm/functions/Function1;)V
-	public final synthetic fun isSatisfiedBy (Ljava/lang/Object;)Z
+public final class com/javiersc/gradle/tasks/extensions/TasksKt {
+	public static final fun maybeNamedTask (Lorg/gradle/api/tasks/TaskContainer;Ljava/lang/String;Lorg/gradle/api/Action;)Lorg/gradle/api/tasks/TaskProvider;
+	public static synthetic fun maybeNamedTask$default (Lorg/gradle/api/tasks/TaskContainer;Ljava/lang/String;Lorg/gradle/api/Action;ILjava/lang/Object;)Lorg/gradle/api/tasks/TaskProvider;
+	public static final fun maybeRegisterTask (Lorg/gradle/api/tasks/TaskContainer;Ljava/lang/String;Lorg/gradle/api/Action;)Lorg/gradle/api/tasks/TaskProvider;
+	public static synthetic fun maybeRegisterTask$default (Lorg/gradle/api/tasks/TaskContainer;Ljava/lang/String;Lorg/gradle/api/Action;ILjava/lang/Object;)Lorg/gradle/api/tasks/TaskProvider;
 }
 

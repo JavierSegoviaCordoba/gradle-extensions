@@ -4,11 +4,17 @@
 
 ### Added
 
+- `maybeNamed`
+- `maybeRegister`
+
 ### Changed
 
 ### Deprecated
 
 ### Removed
+
+- `namedLazily`
+- `maybeRegisterLazily`
 
 ### Fixed
 
