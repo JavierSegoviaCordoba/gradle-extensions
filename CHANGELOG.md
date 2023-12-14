@@ -4,21 +4,29 @@
 
 ### Added
 
-- `ExecOperations.echo(vararg arg: String)`
-- `ExecOperations.echo(message: () -> String)`
-- `maybeNamed`
-- `maybeRegister`
-
 ### Changed
 
 ### Deprecated
 
 ### Removed
 
+### Fixed
+
+### Updated
+
+## [1.0.0-alpha.33] - 2023-12-14
+
+### Added
+
+- `ExecOperations.echo(vararg arg: String)`
+- `ExecOperations.echo(message: () -> String)`
+- `maybeNamed`
+- `maybeRegister`
+
+### Removed
+
 - `namedLazily`
 - `maybeRegisterLazily`
-
-### Fixed
 
 ### Updated
 
@@ -361,7 +369,9 @@
 - `gradle-ext` project
 - `gradle-testkit-ext` project
 
-[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.32...HEAD
+[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.33...HEAD
+
+[1.0.0-alpha.33]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.32...1.0.0-alpha.33
 
 [1.0.0-alpha.32]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.31...1.0.0-alpha.32
 
