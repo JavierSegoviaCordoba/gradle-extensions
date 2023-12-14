@@ -4,6 +4,8 @@
 
 ### Added
 
+- `ExecOperations.echo(vararg arg: String)`
+- `ExecOperations.echo(message: () -> String)`
 - `maybeNamed`
 - `maybeRegister`
 
