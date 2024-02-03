@@ -43,13 +43,13 @@ public val VersionCatalogsExtension.catalogNamesWithLibsAtFirst: List<String>
     get() = catalogNames.sorted().sortedByDescending { it == "libs" }
 
 public val PluginDependency.artifact: String
-    get() = "$pluginId:$pluginId.gradle.plugin:${version.displayName}"
+    get() = "$pluginId:$pluginId.gradle.plugin:${version.requiredVersion}"
 
 public val Provider<PluginDependency>.artifact: Provider<String>
-    get() = map { it.artifact }
+    get() = map(PluginDependency::artifact)
 
 public val PluginDependency.module: String
     get() = "$pluginId:$pluginId.gradle.plugin"
 
 public val Provider<PluginDependency>.module: Provider<String>
-    get() = map { it.module }
+    get() = map(PluginDependency::module)

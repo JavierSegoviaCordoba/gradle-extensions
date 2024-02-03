@@ -12,6 +12,8 @@
 
 ### Fixed
 
+- Version catalog `artifact` extension uses incorrect version
+
 ### Updated
 
 - `gradle -> 8.6`
