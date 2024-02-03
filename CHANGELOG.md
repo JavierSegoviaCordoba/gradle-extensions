@@ -12,6 +12,12 @@
 
 ### Fixed
 
+### Updated
+
+## [1.0.0-alpha.34] - 2024-02-03
+
+### Fixed
+
 - Version catalog `artifact` extension uses incorrect version
 
 ### Updated
@@ -373,7 +379,9 @@
 - `gradle-ext` project
 - `gradle-testkit-ext` project
 
-[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.33...HEAD
+[Unreleased]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.34...HEAD
+
+[1.0.0-alpha.34]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.33...1.0.0-alpha.34
 
 [1.0.0-alpha.33]: https://github.com/JavierSegoviaCordoba/gradle-extensions/compare/1.0.0-alpha.32...1.0.0-alpha.33
 
