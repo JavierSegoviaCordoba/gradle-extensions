@@ -14,7 +14,7 @@ hubdle {
             main {
                 dependencies {
                     api(gradleKotlinDsl())
-                    api(hubdle.javiersc.kotlin.kotlinStdlib)
+                    api(hubdle.javiersc.kotlin.stdlib)
                     api(projects.gradleTestExtensionsSubprojects.gradleCommonTestExtensions)
                     api(projects.gradleTestExtensionsSubprojects.gradleProjectTestExtensions)
                     api(projects.gradleTestExtensionsSubprojects.gradleTestkitTestExtensions)

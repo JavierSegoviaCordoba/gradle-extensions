@@ -13,7 +13,7 @@ hubdle {
             main {
                 dependencies {
                     api(gradleKotlinDsl())
-                    api(hubdle.javiersc.kotlin.kotlinStdlib)
+                    api(hubdle.javiersc.kotlin.stdlib)
                 }
             }
         }

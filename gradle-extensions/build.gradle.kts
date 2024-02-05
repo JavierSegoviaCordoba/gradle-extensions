@@ -12,7 +12,7 @@ hubdle {
         jvm {
             main {
                 dependencies {
-                    api(hubdle.javiersc.kotlin.kotlinStdlib)
+                    api(hubdle.javiersc.kotlin.stdlib)
                     api(projects.gradleExtensionsSubprojects.gradleDelegatedPropertiesExtensions)
                     api(projects.gradleExtensionsSubprojects.gradleLoggingExtensions)
                     api(projects.gradleExtensionsSubprojects.gradleMiscellaneaExtensions)
