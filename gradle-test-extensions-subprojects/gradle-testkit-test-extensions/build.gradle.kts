@@ -15,10 +15,10 @@ hubdle {
                 dependencies {
                     api(gradleKotlinDsl())
                     api(gradleTestKit())
-                    api(hubdle.javiersc.kotlin.kotlinStdlib)
-                    api(hubdle.junit.jupiter.junitJupiterApi.moduleAsString())
-                    api(hubdle.junit.jupiter.junitJupiterParams.moduleAsString())
-                    api(platform(hubdle.junit.bom.asString()))
+                    api(hubdle.javiersc.kotlin.stdlib)
+                    api(hubdle.junit.jupiter.junit.jupiter.api.moduleAsString())
+                    api(hubdle.junit.jupiter.junit.jupiter.params.moduleAsString())
+                    api(project.dependencies.platform(hubdle.junit.bom))
                     api(projects.gradleTestExtensionsSubprojects.gradleCommonTestExtensions)
                 }
             }
