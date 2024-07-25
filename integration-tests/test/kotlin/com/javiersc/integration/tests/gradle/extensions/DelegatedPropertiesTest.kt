@@ -16,8 +16,7 @@ class DelegatedPropertiesTest : GradleTestKitTest() {
                         |DELEGATED 1
                         |DELEGATED 2
                     """
-                        .trimMargin()
-                )
+                        .trimMargin())
         }
     }
 }
