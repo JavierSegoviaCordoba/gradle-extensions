@@ -14,8 +14,7 @@ internal class VersionCatalogsTest : GradleTestKitTest() {
                 .shouldContain("Library by module: io.kotest:kotest-assertions-core:5.0.1")
                 .shouldContain("Null library by module: null")
                 .shouldContain(
-                    "Libraries by group: [io.kotest:kotest-assertions-core:5.0.1, io.kotest:kotest-property:5.0.1]"
-                )
+                    "Libraries by group: [io.kotest:kotest-assertions-core:5.0.1, io.kotest:kotest-property:5.0.1]")
         }
     }
 }
