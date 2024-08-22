@@ -18,7 +18,7 @@ public open class GradleTestKitTest : GradleTestKitTestApi {
         debug: Boolean,
         pluginClasspath: Boolean,
         isolated: Boolean,
-        test: TestKitTest
+        test: TestKitTest,
     ) {
         val projectDir = projectDir.resolve(name).apply(File::mkdirs)
 
@@ -63,7 +63,7 @@ public open class GradleTestKitTest : GradleTestKitTestApi {
 
     override fun GradleRunner.testConfigurationCache(
         expectTaskOutcome: TaskOutcome,
-        resultingTask: String?
+        resultingTask: String?,
     ) {
         val taskName =
             checkNotNull(resultingTask ?: arguments.firstOrNull()) {
