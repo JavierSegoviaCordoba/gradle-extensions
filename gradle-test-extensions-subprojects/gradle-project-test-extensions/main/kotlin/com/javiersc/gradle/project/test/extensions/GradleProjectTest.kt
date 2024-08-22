@@ -15,7 +15,7 @@ public open class GradleProjectTest : GradleProjectTestApi {
         name: String,
         parent: Project?,
         gradleUserHomeDir: File?,
-        test: ProjectTest
+        test: ProjectTest,
     ) {
         val projectDir = projectDir.resolve(name).apply(File::mkdirs)
 

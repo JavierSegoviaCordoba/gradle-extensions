@@ -17,7 +17,7 @@ internal class PropertiesTest : GradleTestKitTest() {
                     "ENV_PROP_INT" to "1",
                     "ENV_PROP_LONG" to "123456789012345",
                     "ENV_PROP_STRING" to "hello",
-                ),
+                )
             )
 
             // TODO: Add priority test for each property type (CLI, ENV, GRADLE LOCAL, LOCAL, and

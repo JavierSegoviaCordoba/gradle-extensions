@@ -16,7 +16,7 @@ public operator fun <T> DelegatedProperty<T>.getValue(thisRef: Any?, property: K
 public operator fun <T> DelegatedProperty<T>.setValue(
     thisRef: Any?,
     property: KProperty<*>,
-    value: T
+    value: T,
 ) {
     this.property.convention(value)
 }
