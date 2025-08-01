@@ -6,8 +6,9 @@ import org.gradle.api.file.RegularFile
 import org.gradle.api.initialization.Settings
 import org.gradle.api.provider.Provider
 
-public inline fun <reified T> Settings.provider(crossinline block: Settings.() -> T): Provider<T> =
-    providers.provider { block(this) }
+public inline fun <reified T : Any> Settings.provider(
+    crossinline block: Settings.() -> T
+): Provider<T> = providers.provider { block(this) }
 
 public inline fun Settings.directoryProvider(
     crossinline block: Settings.() -> File

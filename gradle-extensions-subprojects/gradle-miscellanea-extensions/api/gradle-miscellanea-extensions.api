@@ -3,10 +3,6 @@ public final class com/javiersc/gradle/miscellanea/extensions/ExecOperationsKt {
 	public static final fun echo (Lorg/gradle/process/ExecOperations;[Ljava/lang/String;)V
 }
 
-public final class com/javiersc/gradle/miscellanea/extensions/ForUseAtConfigurationTimeKt {
-	public static final fun forUseAtConfigurationTime (Lorg/gradle/api/provider/Provider;)Lorg/gradle/api/provider/Provider;
-}
-
 public final class com/javiersc/gradle/miscellanea/extensions/PluginArtifactKt {
 	public static final fun getPluginLibrary (Lorg/gradle/api/provider/Provider;)Lorg/gradle/api/provider/Provider;
 }
