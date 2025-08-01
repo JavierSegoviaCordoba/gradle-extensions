@@ -12,25 +12,27 @@ import org.gradle.kotlin.dsl.listProperty
 import org.gradle.kotlin.dsl.property
 import org.gradle.kotlin.dsl.setProperty
 
-public inline fun <reified T> Project.property(crossinline block: Project.() -> T): Property<T> =
-    objects.property<T>().convention(provider { block(this) })
+public inline fun <reified T : Any> Project.property(
+    crossinline block: Project.() -> T
+): Property<T> = objects.property<T>().convention(provider { block(this) })
 
-public inline fun <reified T> Settings.property(crossinline block: Settings.() -> T): Property<T> =
-    objects.property<T>().convention(provider { block(this) })
+public inline fun <reified T : Any> Settings.property(
+    crossinline block: Settings.() -> T
+): Property<T> = objects.property<T>().convention(provider { block(this) })
 
-public inline fun <reified T> Project.listProperty(
+public inline fun <reified T : Any> Project.listProperty(
     crossinline block: Project.() -> List<T>
 ): ListProperty<T> = objects.listProperty<T>().convention(provider { block(this) })
 
-public inline fun <reified T> Settings.listProperty(
+public inline fun <reified T : Any> Settings.listProperty(
     crossinline block: Settings.() -> List<T>
 ): ListProperty<T> = objects.listProperty<T>().convention(provider { block(this) })
 
-public inline fun <reified T> Project.setProperty(
+public inline fun <reified T : Any> Project.setProperty(
     crossinline block: Project.() -> Set<T>
 ): SetProperty<T> = objects.setProperty<T>().convention(provider { block(this) })
 
-public inline fun <reified T> Settings.setProperty(
+public inline fun <reified T : Any> Settings.setProperty(
     crossinline block: Settings.() -> Set<T>
 ): SetProperty<T> = objects.setProperty<T>().convention(provider { block(this) })
 

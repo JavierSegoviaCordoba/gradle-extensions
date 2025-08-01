@@ -8,7 +8,7 @@ plugins {
     id("fake.plugin")
 }
 
-fun <T> printlnProperty(prop: String, action: Project.(String) -> Provider<T>) {
+fun <T : Any> printlnProperty(prop: String, action: Project.(String) -> Provider<T>) {
     println("$prop: ${action(prop).orNull}")
 }
 
