@@ -10,6 +10,9 @@ hubdle {
     }
     kotlin {
         jvm {
+            features { //
+                kotest()
+            }
             main {
                 dependencies {
                     api(gradleKotlinDsl())

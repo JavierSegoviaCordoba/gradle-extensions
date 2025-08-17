@@ -1,5 +1,6 @@
 public abstract interface class com/javiersc/gradle/plugin/extensions/Plugin : org/gradle/api/Plugin {
-	public abstract fun javaApply (Ljava/lang/Object;)V
+	public synthetic fun apply (Ljava/lang/Object;)V
+	public fun javaApply (Ljava/lang/Object;)V
 	public abstract fun kotlinApply (Ljava/lang/Object;)V
 }
 
