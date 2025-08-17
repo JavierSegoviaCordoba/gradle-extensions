@@ -17,6 +17,7 @@ public class com/javiersc/gradle/project/test/extensions/GradleProjectTest : com
 
 public abstract interface class com/javiersc/gradle/project/test/extensions/GradleProjectTestApi : com/javiersc/gradle/common/test/extensions/GradleCommonTestApi {
 	public abstract fun gradleProjectTest (Ljava/lang/String;Ljava/lang/String;Lorg/gradle/api/Project;Ljava/io/File;Lcom/javiersc/gradle/project/test/extensions/ProjectTest;)V
+	public static synthetic fun gradleProjectTest$default (Lcom/javiersc/gradle/project/test/extensions/GradleProjectTestApi;Ljava/lang/String;Ljava/lang/String;Lorg/gradle/api/Project;Ljava/io/File;Lcom/javiersc/gradle/project/test/extensions/ProjectTest;ILjava/lang/Object;)V
 }
 
 public final class com/javiersc/gradle/project/test/extensions/GradleProjectTestApi$DefaultImpls {

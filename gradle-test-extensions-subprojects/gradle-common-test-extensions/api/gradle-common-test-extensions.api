@@ -1,16 +1,16 @@
 public abstract interface class com/javiersc/gradle/common/test/extensions/GradleCommonTestApi {
-	public abstract fun buildCache ()Ljava/lang/String;
-	public abstract fun buildValidPathName (Ljava/lang/String;)Ljava/lang/String;
-	public abstract fun configurationCache ()Ljava/lang/String;
-	public abstract fun configurationCacheProblemsWarn ()Ljava/lang/String;
-	public abstract fun info ()Ljava/lang/String;
-	public abstract fun noBuildCache ()Ljava/lang/String;
-	public abstract fun noConfigurationCache ()Ljava/lang/String;
-	public abstract fun projectProperty (Ljava/lang/String;)Ljava/lang/String;
-	public abstract fun resourceFile (Ljava/lang/String;)Ljava/io/File;
-	public abstract fun scan ()Ljava/lang/String;
-	public abstract fun stacktrace ()Ljava/lang/String;
-	public abstract fun systemProperty (Ljava/lang/String;)Ljava/lang/String;
+	public fun buildCache ()Ljava/lang/String;
+	public fun buildValidPathName (Ljava/lang/String;)Ljava/lang/String;
+	public fun configurationCache ()Ljava/lang/String;
+	public fun configurationCacheProblemsWarn ()Ljava/lang/String;
+	public fun info ()Ljava/lang/String;
+	public fun noBuildCache ()Ljava/lang/String;
+	public fun noConfigurationCache ()Ljava/lang/String;
+	public fun projectProperty (Ljava/lang/String;)Ljava/lang/String;
+	public fun resourceFile (Ljava/lang/String;)Ljava/io/File;
+	public fun scan ()Ljava/lang/String;
+	public fun stacktrace ()Ljava/lang/String;
+	public fun systemProperty (Ljava/lang/String;)Ljava/lang/String;
 }
 
 public final class com/javiersc/gradle/common/test/extensions/GradleCommonTestApi$DefaultImpls {
