@@ -13,8 +13,8 @@ class DelegatedPropertiesTest : GradleTestKitTest() {
                 .outputTrimmed
                 .shouldContain(
                     """
-                        |DELEGATED 1
-                        |DELEGATED 2
+                    |DELEGATED 1
+                    |DELEGATED 2
                     """
                         .trimMargin()
                 )
