@@ -22,12 +22,11 @@ public fun Project.getGradleProperty(name: String): Provider<String> = provider 
 public val Settings.gradleProperties: Properties?
     get() = findFileRecursivelyInSettings(GradlePropertiesFileName, this)?.toProperties()
 
-public fun Settings.getGradleProperty(name: String): Provider<String> =
-    providers.provider {
-        val property: String? =
-            gradle.startParameter.projectProperties[name]
-                ?: gradleProperties?.getProperty(name)
-                ?: providers.gradleProperty(name).orNull
-        if (property != null) propertyNotFound(name, GradlePropertiesFileName)
-        property
-    }
+public fun Settings.getGradleProperty(name: String): Provider<String> = providers.provider {
+    val property: String? =
+        gradle.startParameter.projectProperties[name]
+            ?: gradleProperties?.getProperty(name)
+            ?: providers.gradleProperty(name).orNull
+    if (property != null) propertyNotFound(name, GradlePropertiesFileName)
+    property
+}

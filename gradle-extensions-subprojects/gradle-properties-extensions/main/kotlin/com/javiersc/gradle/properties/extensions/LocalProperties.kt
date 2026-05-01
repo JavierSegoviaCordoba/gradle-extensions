@@ -21,12 +21,11 @@ public fun Project.getGradleLocalProperty(name: String): Provider<String> = prov
 public val Settings.gradleLocalProperties: Properties?
     get() = findFileRecursivelyInSettings(GradleLocalPropertiesFileName, this)?.toProperties()
 
-public fun Settings.getGradleLocalProperty(name: String): Provider<String> =
-    providers.provider {
-        gradleLocalProperties?.getProperty(name)?.also {
-            propertyNotFound(name, GradleLocalPropertiesFileName)
-        }
+public fun Settings.getGradleLocalProperty(name: String): Provider<String> = providers.provider {
+    gradleLocalProperties?.getProperty(name)?.also {
+        propertyNotFound(name, GradleLocalPropertiesFileName)
     }
+}
 
 public val Project.localProperties: Properties?
     get() = findFileRecursivelyInProjects(LocalPropertiesFileName, this)?.toProperties()
@@ -38,7 +37,6 @@ public fun Project.getLocalProperty(name: String): Provider<String> = provider {
 public val Settings.localProperties: Properties?
     get() = findFileRecursivelyInSettings(LocalPropertiesFileName, this)?.toProperties()
 
-public fun Settings.getLocalProperty(name: String): Provider<String> =
-    providers.provider {
-        localProperties?.getProperty(name)?.also { propertyNotFound(name, LocalPropertiesFileName) }
-    }
+public fun Settings.getLocalProperty(name: String): Provider<String> = providers.provider {
+    localProperties?.getProperty(name)?.also { propertyNotFound(name, LocalPropertiesFileName) }
+}
