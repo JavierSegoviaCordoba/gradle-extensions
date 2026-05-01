@@ -12,9 +12,8 @@ public fun Project.getEnvironmentVariable(name: String): Provider<String> = prov
     value
 }
 
-public fun Settings.getEnvironmentVariable(name: String): Provider<String> =
-    providers.provider {
-        val value: String? = System.getenv(name)
-        if (value == null) propertyNotFound(name, EnvironmentVariables)
-        value
-    }
+public fun Settings.getEnvironmentVariable(name: String): Provider<String> = providers.provider {
+    val value: String? = System.getenv(name)
+    if (value == null) propertyNotFound(name, EnvironmentVariables)
+    value
+}
