@@ -53,7 +53,8 @@ public fun Project.getBooleanProperty(name: String): Provider<Boolean> =
 
 public fun Project.getStringProperty(name: String): Provider<String> = getProperty(name)
 
-internal fun String.toSnakeCase(): String =
-    map { char -> if (char.isUpperCase()) "_$char" else char.uppercaseChar() }
-        .joinToString("")
-        .replace(".", "_")
+internal fun String.toSnakeCase(): String = map { char ->
+    if (char.isUpperCase()) "_$char" else char.uppercaseChar()
+}
+    .joinToString("")
+    .replace(".", "_")
