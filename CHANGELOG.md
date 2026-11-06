@@ -14,7 +14,7 @@
 
 ### Updated
 
-- `gradle -> 9.8.2`
+- `gradle -> 9.9.0`
 - `com.javiersc.hubdle:com.javiersc.hubdle.gradle.plugin -> 0.20.0`
 
 ## [1.0.0-alpha.34] - 2024-02-03
